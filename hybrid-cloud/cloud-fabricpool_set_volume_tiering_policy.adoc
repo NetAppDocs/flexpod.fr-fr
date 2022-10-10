@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html 
+keywords: volume, tiering, policy, ontap, cli, oncommand, system, manager, cloud, fabricpool 
+summary:  
+---
+= Définition de la règle de Tiering des volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Par défaut, les volumes utilisent la règle de Tiering aucun volume. Une fois la création de volume effectuée, la règle de Tiering des volumes peut être modifiée à l'aide de OnCommand System Manager ou de l'interface de ligne de commande de ONTAP.
+
+Lorsqu'il est utilisé avec FlexPod, FabricPool propose trois règles de Tiering des volumes : automatique, Snapshot uniquement et aucune.
+
+* *Auto*
++
+** Tous les blocs inactifs du volume sont déplacés vers le cloud. Si l'agrégat est utilisé à plus de 50 %, il faut environ 31 jours pour que les blocs inactifs soient à froid. La période de refroidissement automatique est réglable entre 2 jours et 63 jours en utilisant le `tiering-minimum-cooling-days` réglage.
+** Lorsque les blocs inactifs d'un volume dont la règle de Tiering est définie sur Auto sont lus de manière aléatoire, ils sont écrits et mis à chaud sur le Tier de performance.
+** Lorsque les blocs inactifs dans un volume dont la règle de Tiering est définie sur Auto sont lus de manière séquentielle, ils restent inactifs et restent sur le Tier cloud. Ils ne sont pas écrits sur le Tier de performance.
+
+
+* *Instantané uniquement*
++
+** Les blocs de snapshots inactifs dans le volume qui ne sont pas partagés avec le système de fichiers actif sont déplacés vers le Tier cloud. Si l'agrégat est utilisé à plus de 50 %, il faut environ 2 jours pour que les blocs de snapshot inactifs soient inactifs. La période de refroidissement uniquement à snapshot est réglable de 2 à 63 jours en utilisant le `tiering-minimum-cooling-days` réglage.
+** Lorsque les blocs inactifs dans un volume dont la règle de Tiering est définie sur Snapshot uniquement sont lus, ils sont écrits et mis à chaud sur le Tier de performance.
+
+
+* *Aucun (par défaut)*
++
+** Les volumes définis sur aucune n'utilisent la règle de Tiering ne transfèrent pas les données inactives vers le Tier cloud.
+** La définition de la règle de Tiering sur aucun empêche la hiérarchisation.
+** Les données de volume précédemment transférées vers le Tier cloud restent dans le Tier cloud jusqu'à ce qu'elles soient fortement sollicitées et sont automatiquement retransférées vers le Tier de performance.
+
+
+
+
+
+
+== OnCommand System Manager
+
+Pour modifier la règle de hiérarchisation d'un volume à l'aide de OnCommand System Manager, procédez comme suit :
+
+. Lancez OnCommand System Manager.
+. Sélectionnez un volume.
+. Cliquez sur autres actions et sélectionnez Modifier la règle de hiérarchisation.
+. Sélectionnez la règle de Tiering à appliquer au volume.
+. Cliquez sur Enregistrer.
++
+image:cloud-fabricpool_image16.png["Erreur : image graphique manquante"]
+
+
+
+
+
+== INTERFACE DE LIGNE DE COMMANDES DE ONTAP
+
+Pour modifier la règle de hiérarchisation d'un volume à l'aide de l'interface de ligne de commandes ONTAP, exécutez la commande suivante :
+
+....
+volume modify -vserver <svm_name> -volume <volume_name>
+-tiering-policy <auto|snapshot-only|all|none>
+....
+link:cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html["Ensuite, définissez le Tiering des volumes sur les jours de refroidissement minimum."]

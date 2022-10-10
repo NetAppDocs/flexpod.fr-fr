@@ -1,0 +1,133 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_architecture.html 
+keywords: architecture, solution, technology, diagram, hardware, requirements, case, details, software, cloud, insights 
+summary: 'Dans cette section, nous analysons l"architecture d"une infrastructure convergée FlexPod Datacenter, dont un système NetApp AFF A800 surveillé par Cloud Insights.' 
+---
+= Architecture
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Dans cette section, nous analysons l'architecture d'une infrastructure convergée FlexPod Datacenter, dont un système NetApp AFF A800 surveillé par Cloud Insights.
+
+
+
+== Technologie de la solution
+
+La solution de data Center FlexPod comprend les composants minimum suivants afin de fournir un environnement d'infrastructure convergée haute disponibilité, facilement évolutif, validé et pris en charge.
+
+* Deux nœuds de stockage NetApp ONTAP (une paire haute disponibilité)
+* Deux commutateurs réseau pour data Center Cisco Nexus
+* Deux commutateurs de structure Cisco MDS (en option pour les déploiements FC)
+* Deux interconnexions de fabric Cisco UCS
+* Un châssis lame Cisco UCS avec deux serveurs lames Cisco UCS B-Series
+
+
+Ou
+
+* Deux serveurs Cisco UCS C-Series montés en rack
+
+
+Pour que Cloud Insights puisse collecter des données, une entreprise doit déployer une unité d'acquisition en tant que machine virtuelle ou physique dans son environnement FlexPod Datacenter ou sur un emplacement où elle peut contacter les composants à partir desquels elle collecte les données. Vous pouvez installer le logiciel acquisition Unit sur un système exécutant plusieurs systèmes d'exploitation Windows ou Linux pris en charge. Le tableau suivant répertorie les composants de la solution pour ce logiciel.
+
+|===
+| Système d'exploitation | Version 
+
+
+| Microsoft Windows | 10 
+
+
+| Serveur Microsoft Windows | 2012, 2012 R2, 2016, 2019 
+
+
+| Red Hat Enterprise Linux | 7.2 – 7.6 
+
+
+| CentOS | 7.2 – 7.6 
+
+
+| Oracle Enterprise Linux | 7.5 
+
+
+| Debian | 9 
+
+
+| Ubuntu | 18.04 LTS 
+|===
+
+
+== Diagramme architectural
+
+La figure suivante illustre l'architecture de la solution.
+
+image:cloud-insights_image2.png["Erreur : image graphique manquante"]
+
+
+
+== Configuration matérielle requise
+
+Le tableau suivant répertorie les composants matériels requis pour implémenter la solution. Ils peuvent varier selon la mise en œuvre de la solution et les besoins du client.
+
+|===
+| Sous-jacent | Quantité 
+
+
+| Cisco Nexus 9336C-FX2 | 2 
+
+
+| Fabric Interconnect Cisco UCS 6454 | 2 
+
+
+| Châssis lame Cisco UCS 5108 | 1 
+
+
+| Cisco UCS 2408 Fabric Extender | 2 
+
+
+| Lames Cisco UCS B200 M5 | 2 
+
+
+| NetApp AFF A800 | 2 
+|===
+
+
+== Configuration logicielle requise
+
+Le tableau suivant répertorie les composants logiciels requis pour implémenter la solution. Ils peuvent varier selon la mise en œuvre de la solution et les besoins du client.
+
+|===
+| Logiciel | Version 
+
+
+| Firmware Cisco Nexus | 9.3(5) 
+
+
+| Version de Cisco UCS | 4.1(2a) 
+
+
+| Version de NetApp ONTAP | 9.7 
+
+
+| Version de NetApp Cloud Insights | Septembre 2020, Basic 
+
+
+| Red Hat Enterprise Linux | 7.6 
+
+
+| VMware vSphere | 6.7U3 
+|===
+
+
+== Détails du cas d'utilisation
+
+Cette solution s'applique aux cas d'utilisation suivants :
+
+* L'analyse de l'environnement avec des données fournies au conseiller digital NetApp Active IQ pour évaluer les risques liés aux systèmes de stockage et formuler des recommandations sur l'optimisation du stockage.
+* Résolution des problèmes dans le système de stockage ONTAP déployé dans une solution de data Center FlexPod en examinant les statistiques système en temps réel.
+* Création de tableaux de bord personnalisés afin de surveiller facilement les points d'intérêt spécifiques pour les systèmes de stockage ONTAP déployés dans une infrastructure convergée FlexPod Datacenter.
+

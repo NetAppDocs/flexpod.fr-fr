@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__optional_features.html 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+summary: Cette section décrit les fonctionnalités en option de FlexPod Express. 
+---
+= Fonctionnalités en option
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section décrit les fonctionnalités en option de FlexPod Express.
+
+
+
+== Option de démarrage iSCSI
+
+L'architecture FlexPod Express utilise un démarrage iSCSI. La configuration minimale requise pour l'option de démarrage iSCSI est la suivante :
+
+* Licence/fonctionnalité iSCSI activée sur le contrôleur de stockage NetApp
+* Un adaptateur Ethernet 10 Gbit/s à deux ports sur chaque nœud de la paire haute disponibilité du contrôleur de stockage NetApp
+* Un adaptateur du serveur Cisco UCS capable de démarrer iSCSI
+
+
+
+
+== Options de configuration
+
+Cette section fournit des informations supplémentaires sur la configuration requise et validée dans l'architecture FlexPod Express.
+
+
+
+=== FlexPod Express avec Cisco UCS C-Series et AFF C190 Series
+
+La figure suivante montre l'FlexPod Express avec Cisco UCS C-Series et la gamme AFF C190. Cette solution prend en charge les deux liaisons montantes 10 GbE.
+
+image:fp-express-tech-spec_image2.png["Erreur : image graphique manquante"]
+
+Pour plus d'informations sur cette configuration, consultez le Guide de déploiement NVA FlexPod Express avec VMware vSphere 6.7 et NetApp AFF C190 (en cours).
+
+
+
+=== FlexPod Express avec Cisco UCS Mini, AFF A220 et FAS 2750/2720
+
+La figure suivante illustre le modèle FlexPod Express avec la configuration gérée par Cisco UCS.
+
+image:fp-express-tech-spec_image3.png["Erreur : image graphique manquante"]
+
+Pour plus d'informations sur cette configuration, reportez-vous à la section https://www.netapp.com/us/media/nva-1131-deploy.pdf["FlexPod Express avec VMware vSphere 6.7U1 et NetApp AFF A220 avec stockage DAS basé sur IP"^].

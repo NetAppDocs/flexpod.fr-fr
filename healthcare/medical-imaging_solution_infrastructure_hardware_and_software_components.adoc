@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html 
+keywords: harware, software, components, solution, infrastructure, medical, imaging, flexpod 
+summary: 'Les tableaux ci-après répertorient les composants matériels et logiciels, respectivement, de l"infrastructure FlexPod pour le système d"imagerie médicale.' 
+---
+= Composants matériels et logiciels de l'infrastructure de la solution
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les tableaux ci-après répertorient les composants matériels et logiciels, respectivement, de l'infrastructure FlexPod pour le système d'imagerie médicale.
+
+|===
+| Calque | Famille de produits | Quantité et modèle | Détails 
+
+
+.4+| Calcul | Châssis Cisco UCS 5108 | 1 ou 2 | En fonction du nombre de lames nécessaires pour prendre en charge le nombre d'études annuelles 
+
+
+| Les serveurs lames Cisco UCS | B200 M5 | Le nombre de lames basé sur le nombre d'études annuelles avec 2 x 20 cœurs ou plus, 2,7 GHz et 128 Go de RAM 
+
+
+| Carte d'interface virtuelle Cisco UCS (VIC) | Cisco UCS 1440 | Voir la 
+
+
+| 2 interconnexions de fabric Cisco UCS | 6454 ou ultérieure | – 
+
+
+| Le réseau | Commutateurs Cisco Nexus | 2 gammes Cisco Nexus 3000 ou 9000 | – 
+
+
+.2+| Réseau de stockage | Réseau IP pour l'accès au stockage via les protocoles SMB/CIFS, NFS ou iSCSI | Mêmes commutateurs réseau que ci-dessus | – 
+
+
+| Accès au stockage via FC | 2 x Cisco MDS 9132T | – 
+
+
+.3+| Stockage | Système de stockage 100 % Flash NetApp AFF A400 | 1 paire HA ou plus | Cluster avec deux nœuds ou plus 
+
+
+| Tiroir disque | 1 ou plus de tiroirs disques DS224C ou NS224 | Plein avec 24 disques 
+
+
+| SSD | Pour 24, 1,2 To ou plus | – 
+|===
+|===
+| Logiciel | Famille de produits | Version ou version | Détails 
+
+
+.7+| Système d'imagerie médicale d'entreprise |  |  |  
+
+
+| Serveur de base de données MS SQL ou Oracle | Comme le suggère le fournisseur du système d'imagerie médicale |  
+
+
+| Pas de bases de données SQL comme MongoDB Server | Comme le suggère le fournisseur du système d'imagerie médicale |  
+
+
+| Serveurs d'applications | Comme le suggère le fournisseur du système d'imagerie médicale |  
+
+
+| Serveur d'intégration (MS BizTalk, MuleSoft, Rhapsody, TIBCO) | Comme le suggère le fournisseur du système d'imagerie médicale |  
+
+
+| VM | Linux (64 bits) |  
+
+
+| VM | Windows Server (64 bits) |  
+
+
+| Stockage | ONTAP | ONTAP 9.7 ou version ultérieure |  
+
+
+.3+| Le réseau | Fabric Interconnect Cisco UCS | Cisco UCS Manager 4.1 ou version ultérieure |  
+
+
+| Commutateurs Ethernet Cisco | 9.2(3)I7(2) ou ultérieure |  
+
+
+| Cisco FC : Cisco MDS 9132T | 8.4(2) ou ultérieure |  
+
+
+| Hyperviseur | Hyperviseur | VMware vSphere ESXi 6.7 U2 ou version ultérieure |  
+
+
+.3+| Gestion | Système de gestion de l'hyperviseur | VMware vCenter Server 6.7 U1 (vCSA) ou ultérieure |  
+
+
+| NetApp Virtual Storage Console (VSC) | VSC 9.7 ou version ultérieure |  
+
+
+| SnapCenter | SnapCenter 4.3 ou version ultérieure |  
+|===

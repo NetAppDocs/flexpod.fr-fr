@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-solution-overview.html 
+keywords: tr4939, 4939, introduction, audience, solution topology 
+summary: 'Ce rapport technique rassemble la solution d"infrastructure convergée FlexPod, NetApp Cloud Volumes ONTAP sur Google Cloud et Cisco Intersight pour former un data Center dans le cloud hybride pour la reprise après incident. Dans cette solution, nous abordons la conception et l"exécution d"un workflow ONTAP sur site à l"aide de Cisco Intersight Cloud Orchestrator. Nous discutons également du déploiement de NetApp Cloud Volumes ONTAP et de l"orchestration et l"automatisation de la réplication et de la reprise après incident des données entre FlexPod et Cloud Volumes ONTAP à l"aide du service Cisco Intersight pour HashiCorp Terraform.' 
+---
+= Tr-4939 : Cloud hybride FlexPod pour Google Cloud Platform avec NetApp Cloud Volumes ONTAP et Cisco Intersight
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Ruchika Lahoti, NetApp
+
+
+
+== Introduction
+
+L'objectif de protection des données avec reprise après incident est essentiel à la continuité de l'activité. La reprise d'activité permet aux entreprises de basculer leurs opérations sur un emplacement secondaire, puis de restaurer et de rétablir leur fonctionnement vers le site primaire de manière efficace et fiable. Le développement d'une stratégie de reprise après incident est une priorité IT si l'on persiste avec plusieurs problèmes tels que les catastrophes naturelles, les défaillances réseau, les vulnérabilités logicielles et les erreurs humaines.
+
+Pour la reprise après incident, toutes les charges de travail exécutées sur le site primaire doivent être fidèlement reproduites sur le site de DR. Une entreprise doit également disposer d'une copie à jour de toutes les données d'entreprise, y compris la base de données, les services de fichiers, le stockage NFS et iSCSI, etc. Comme les données de l'environnement de production sont constamment mises à jour, les modifications doivent être régulièrement transférées vers le site de reprise.
+
+Néanmoins, pour la plupart des entreprises, déployer de tels environnements de reprise est difficile à concilier avec les exigences d'indépendance de l'infrastructure et du site. Le nombre de ressources requises et les coûts de configuration, de test et de maintenance d'un data Center secondaire peuvent être très élevés, ce qui approche généralement du coût de l'ensemble de l'environnement de production. Il est difficile de minimiser l'empreinte des données avec une protection adéquate, tout en synchronisant les données en continu et en établissant des basculements et des rétablissements transparents. Une fois le site de reprise créé, un autre défi se présente : répliquer les données depuis l'environnement de production et les synchroniser dans la suite.
+
+Ce rapport technique rassemble la solution d'infrastructure convergée FlexPod, NetApp Cloud Volumes ONTAP sur Google Cloud et Cisco Intersight pour former un data Center dans le cloud hybride pour la reprise après incident. Dans cette solution, nous abordons la conception et l'exécution d'un workflow ONTAP sur site à l'aide de Cisco Intersight Cloud Orchestrator. Nous discutons également du déploiement de NetApp Cloud Volumes ONTAP et de l'orchestration et l'automatisation de la réplication et de la reprise après incident des données entre FlexPod et Cloud Volumes ONTAP à l'aide du service Cisco Intersight pour HashiCorp Terraform.
+
+Le schéma suivant fournit une présentation de la solution.
+
+image:gcp-ncvo-image1.png["Présentation de la solution."]
+
+Cette solution offre de nombreux avantages, notamment :
+
+* *Orchestration et automatisation.* Cisco Intersight simplifie les opérations quotidiennes de l'infrastructure de cloud hybride FlexPod en fournissant des frameworks d'orchestration cohérents qui sont proposés via l'automatisation.
+* *Protection personnalisée.* Cloud Volumes ONTAP assure la réplication des données au niveau des blocs depuis ONTAP vers le cloud afin de maintenir la destination à jour grâce à des mises à jour incrémentielles. Les utilisateurs peuvent spécifier une planification de synchronisation toutes les 5 minutes ou toutes les heures, par exemple, en fonction des modifications de la source qui sont transférées.
+* *Basculement et retour arrière transparents* en cas d'incident, les administrateurs du stockage peuvent rapidement basculer vers les volumes cloud. Lorsque le site primaire est restauré, les nouvelles données créées dans l'environnement de reprise sont resynchronisées sur les volumes source et re-établissent la réplication secondaire.
+* *Efficacité :* l'espace de stockage et les coûts pour la copie cloud secondaire sont optimisés grâce à la compression des données, au provisionnement fin et à la déduplication. Les données sont transférées au niveau du bloc sous forme compressée et dédupliquée, ce qui accélère le transfert. Ainsi, les données sont automatiquement transférées vers un stockage objet à faible coût et sont transférées vers un stockage haute performance uniquement lors des accès, comme dans un scénario de reprise après incident. Ceci réduit considérablement les coûts réguliers de stockage.
+* * Augmentation de la productivité INFORMATIQUE.* l'utilisation d'Intersight comme plate-forme d'entreprise unique et sécurisée pour la gestion du cycle de vie de l'infrastructure et des applications simplifie la gestion de la configuration et l'automatisation des tâches manuelles à grande échelle pour la solution.
+
+
+
+
+== Public
+
+Le public visé peut inclure, sans s'y limiter, les ingénieurs commerciaux, les consultants sur le terrain, les services professionnels, les responsables INFORMATIQUES, Ingénieurs partenaires, ingénieurs de fiabilité des sites, architectes cloud, ingénieurs cloud et clients qui souhaitent exploiter une infrastructure conçue pour optimiser l'efficacité IT et favoriser l'innovation IT.
+
+
+
+== Topologie de la solution
+
+Cette section décrit la topologie logique de la solution. La figure ci-dessous illustre la topologie de la solution de l'environnement FlexPod sur site, de NetApp Cloud Volumes ONTAP exécuté sur Google Cloud, Cisco Intersight et NetApp Cloud Manager.
+
+image:gcp-ncvo-image2.png["Topologie de la solution."]
+
+Les plans de contrôle et les plans de données sont clairement indiqués entre les points d'extrémité. Le plan de données utilise une connexion VPN site à site sécurisée pour connecter l'instance ONTAP exécutée sur FlexPod FAS 100 % Flash à l'instance NetApp Cloud Volumes ONTAP sur Google Cloud.
+
+La réplication des données de charge de travail de FlexPod vers NetApp Cloud Volumes ONTAP est gérée par NetApp SnapMirror. Le processus global est orchestré à l'aide de Cisco Intersight Cloud Orchestrator pour les environnements sur site et cloud. Cisco Intersight Cloud Orchestrator utilise les fournisseurs de ressources Terraform pour NetApp Cloud Manager pour effectuer des opérations liées au déploiement de NetApp Cloud Volumes ONTAP et établir des relations de réplication des données.
+
+
+NOTE: Cette solution prend également en charge la sauvegarde et le Tiering des données inactives résidant dans l'instance NetApp Cloud Volumes ONTAP vers Google Cloud Storage.
+
+link:gcp-ncvo-solution-components.html["Ensuite, les composants de la solution."]

@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-cisco-intersight-configuration.html 
+keywords: cisco, intersight, configuration, cvd, flexpod 
+summary: Cette page répertorie les ressources nécessaires pour configurer Cisco Intersight avec FlexPod. 
+---
+= Configuration Cisco Intersight
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-deploy-flexpod.html["Précédent : déployer FlexPod."]
+
+Pour configurer Cisco Intersight et Intersight, consultez les conceptions validées par Cisco pour FlexPod trouvées https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["ici"^].
+
+link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["Suivant : intégration du cloud Terraform avec la condition préalable d'ICO."]

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_conclusion.html 
+keywords: flexpod, express, c, series, c190, deployment, conclusion 
+summary: FlexPod Express propose une solution simple et efficace qui repose sur des composants leaders. 
+---
+= Conclusion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express propose une solution simple et efficace qui repose sur des composants leaders. Les systèmes FlexPod Express peuvent être personnalisés pour répondre à des besoins spécifiques. Le FlexPod Express est destiné aux moyennes entreprises, aux bureaux distants et aux autres entreprises qui ont besoin de solutions dédiées.

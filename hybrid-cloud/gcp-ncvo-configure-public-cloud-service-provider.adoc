@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-configure-public-cloud-service-provider.html 
+keywords: netapp cloud manager, connector 
+summary: Cette page explique comment accéder à NetApp Cloud Manager et déployer Connector. 
+---
+= Configurez le fournisseur de services clouds publics
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["Précédent : intégration du cloud Terraform avec la condition préalable d'ICO."]
+
+
+
+== Procédure 1 : accéder à NetApp Cloud Manager
+
+Pour accéder à NetApp Cloud Manager et aux autres services cloud, vous devez vous inscrire https://cloud.netapp.com/["NetApp Cloud Central"^].
+
+
+NOTE: Pour configurer des espaces de travail et des utilisateurs sur le compte Cloud Central, cliquez sur https://docs.netapp.com/us-en/occm/task_setting_up_cloud_central_accounts.html["ici"^].
+
+
+
+== Procédure 2 : déployer le connecteur
+
+Pour déployer Connector dans Google Cloud, rendez-vous ici https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#creating-a-connector-in-google-cloud["lien"^].
+
+link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Ensuite, déploiement automatisé du stockage NetApp dans le cloud hybride."]

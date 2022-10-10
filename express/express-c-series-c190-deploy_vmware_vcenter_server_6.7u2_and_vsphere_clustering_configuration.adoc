@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html 
+keywords: vmware, vcenter, server, vsphere, clustering, configuration, esxi, host, coredump 
+summary: Pour configurer la mise en cluster de VMware vCenter Server 6.7 et vSphere, suivez les étapes indiquées sur cette page. 
+---
+= Configuration de la mise en cluster VMware vCenter Server 6.7U2 et vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Pour configurer VMware vCenter Server 6.7 et la mise en cluster vSphere, procédez comme suit :
+
+. Accédez à `\https://\<<FQDN or IP of vCenter>>/vsphere-client/`.
+. Cliquez sur lancer vSphere client.
+. Connectez-vous à l'aide du nom d'utilisateur mailto:administrator@vspehre.lockup[Administrator^]@vsphere.local et du mot de passe SSO que vous avez saisi lors du processus d'installation de VCSA.
+. Cliquez avec le bouton droit de la souris sur le nom du vCenter et sélectionnez Nouveau centre de données.
+. Entrez un nom pour le centre de données et cliquez sur OK.
+
+
+
+
+== Créez un cluster vSphere
+
+Pour créer un cluster vSphere, procédez comme suit :
+
+. Cliquez avec le bouton droit de la souris sur le nouveau centre de données et sélectionnez Nouveau cluster.
+. Indiquez un nom pour le cluster.
+. Activez la reprise sur incident et vSphere HA en cochant les cases.
+. Cliquez sur OK.
++
+image:express-c-series-c190-deploy_image45.png["Erreur : image graphique manquante"]
+
+
+
+
+
+== Ajoutez les hôtes ESXi au cluster
+
+Pour ajouter les hôtes ESXi au cluster, procédez comme suit :
+
+. Cliquez avec le bouton droit de la souris sur le cluster et sélectionnez Ajouter un hôte.
++
+image:express-c-series-c190-deploy_image46.png["Erreur : image graphique manquante"]
+
+. Pour ajouter un hôte ESXi au cluster, procédez comme suit :
++
+.. Entrez l'IP ou le FQDN de l'hôte. Cliquez sur Suivant.
+.. Entrez le nom d'utilisateur root et le mot de passe. Cliquez sur Suivant.
+.. Cliquez sur Oui pour remplacer le certificat de l'hôte par un certificat signé par le serveur de certificats VMware.
+.. Cliquez sur Suivant sur la page Récapitulatif de l'hôte.
+.. Cliquez sur l'icône verte + pour ajouter une licence à l'hôte vSphere.
+
+
+. Si vous le souhaitez, cette étape peut être effectuée ultérieurement.
++
+.. Cliquez sur Suivant pour laisser le mode de verrouillage désactivé.
+.. Cliquez sur Next (Suivant) sur la page VM location.
+.. Consultez la page prêt à terminer. Utilisez le bouton Retour pour effectuer des modifications ou sélectionnez Terminer.
+
+
+. Répétez les étapes 1 et 2 pour l'hôte Cisco UCS B.
++
+
+NOTE: Ce processus doit être effectué pour tout hôte supplémentaire ajouté à la configuration FlexPod Express.
+
+
+
+
+
+== Configurer coredump sur les hôtes ESXi
+
+Pour configurer coredump sur les hôtes ESXi, procédez comme suit :
+
+. Connectez-vous à https:// https://172.21.181.105:5480/ui/services["VCenter"^] IP:5480/, entrez root pour le nom d'utilisateur et entrez le mot de passe root.
+. Cliquez sur services et sélectionnez VMware vSphere ESXI Dump Collector.
+. Démarrez le service VMware vSphere ESXI Dump Collector.
++
+image:express-c-series-c190-deploy_image47.png["Erreur : image graphique manquante"]
+
+. À l'aide de SSH, connectez-vous à l'hôte IP ESXi de gestion, entrez root pour le nom d'utilisateur et entrez le mot de passe racine.
+. Exécutez les commandes suivantes :
++
+....
+esxcli system coredump network set -i ip_address_of_core_dump_collector -v vmk0 -o 6500
+esxcli system coredump network set --enable=true
+esxcli system coredump network check
+....
+. Le message `Verified the configured netdump server is running` s'affiche après la saisie de la commande finale.
++
+image:express-c-series-c190-deploy_image48.png["Erreur : image graphique manquante"]
+
++
+
+NOTE: Ce processus doit être effectué pour tout hôte supplémentaire ajouté à FlexPod Express.
+
++
+
+NOTE: `ip_address_of_core_dump_collector` Cette validation correspond à l'adresse IP de vCenter.
+
+
+
+link:express-c-series-c190-design_netapp_virtual_storage_console_9.6_deployment_procedures.html["Suivant : procédures de déploiement de NetApp Virtual Storage Console 9.6"]

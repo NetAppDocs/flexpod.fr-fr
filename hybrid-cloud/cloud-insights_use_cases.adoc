@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases.html 
+keywords: target, cases, audience, cloud, insights, flexpod, ontap 
+summary: 'Le public et les cas cibles pour lesquels cette solution s"applique sont répertoriés dans cette section.' 
+---
+= Cas d'utilisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette solution s'applique aux cas d'utilisation suivants :
+
+* Organisations qui souhaitent surveiller différentes ressources et l'utilisation de leur système de stockage ONTAP déployé dans le cadre d'une solution FlexPod.
+* Les entreprises qui souhaitent résoudre les problèmes et réduire le temps de résolution des incidents survenant dans la solution FlexPod avec leurs systèmes AFF ou FAS.
+* Les entreprises intéressées par des projections d'optimisation des coûts, notamment des tableaux de bord personnalisés qui fournissent des informations détaillées sur la perte de ressources et permettent de réaliser des économies dans leur environnement FlexPod, y compris ONTAP.
+
+
+
+
+== Public visé
+
+La solution cible plusieurs groupes d'utilisateurs :
+
+* Cadres informatiques et ceux chargés de l'optimisation des coûts et de la continuité de l'activité.
+* Architectes de solutions intéressés par la conception et la gestion de data centers ou de clouds hybrides.
+* Ingénieurs du support technique chargés du dépannage et de la résolution d'incident.
+
+
+Vous pouvez configurer Cloud Insights pour fournir plusieurs types de données utiles que vous pouvez utiliser pour vous aider dans la planification, la résolution de problèmes, la maintenance et la continuité de l'activité. En surveillant la solution de data Center de FlexPod avec Cloud Insights et présentant les données agrégées sous forme de tableaux de bord personnalisés facilement digestibles ; non seulement il est possible de prévoir quand les ressources d'un déploiement doivent évoluer pour répondre à leurs besoins, mais également d'identifier des applications ou des volumes de stockage spécifiques qui causent des problèmes au sein du système. Cela permet de s’assurer que l’infrastructure surveillée est prévisible et fonctionne selon les attentes, ce qui permet à une organisation de respecter les SLA définis et de faire évoluer l’infrastructure en fonction des besoins, éliminant ainsi le gaspillage et les coûts supplémentaires.

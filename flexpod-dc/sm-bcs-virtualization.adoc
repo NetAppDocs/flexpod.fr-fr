@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-virtualization.html 
+keywords: network connectivity, virtual networking, vm-host, affinity, groups, rules, vsphere ha heartbeat 
+summary: 'Dans la solution multisite FlexPod SM-BC, un seul VMware vCenter gère les ressources de l"infrastructure virtuelle pour l"ensemble de la solution. Les hôtes des deux data centers font partie du cluster haute disponibilité VMware unique qui s"étend sur les deux data centers. Les hôtes ont accès à la solution NetApp SM-BC où le stockage avec des relations SM-BC définies est accessible depuis les deux sites.' 
+---
+= Validation de la solution : virtualisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-storage.html["Précédente : validation de la solution - stockage."]
+
+Dans la solution multisite FlexPod SM-BC, un seul VMware vCenter gère les ressources de l'infrastructure virtuelle pour l'ensemble de la solution. Les hôtes des deux data centers font partie du cluster haute disponibilité VMware unique qui s'étend sur les deux data centers. Les hôtes ont accès à la solution NetApp SM-BC où le stockage avec des relations SM-BC définies est accessible depuis les deux sites.
+
+Le stockage de la solution SM-BC est conforme au modèle d'accès uniforme de la fonctionnalité VMware vSphere Metro Storage Cluster (vMSC) afin d'éviter les incidents et les temps d'indisponibilité. Pour des performances optimales des machines virtuelles, les disques de ces machines doivent être hébergés sur les systèmes locaux AFF A250 de NetApp. La latence et le trafic sur les liaisons WAN doivent ainsi être minimisés en cas de fonctionnement normal.
+
+Dans le cadre de la mise en œuvre de la conception, il est nécessaire de déterminer la répartition des machines virtuelles entre les deux sites. Vous pouvez déterminer l'affinité de site et la distribution des applications de cette machine virtuelle sur les deux sites en fonction des préférences de votre site et des exigences de vos applications. Les groupes VM/hôtes du cluster VMware et les règles VM/hôte sont utilisés pour configurer l'affinité VM/hôte afin de s'assurer que les VM s'exécutent sur les hôtes du site souhaité.
+
+Toutefois, les configurations permettant d'exécuter des machines virtuelles sur les deux sites garantissent la résilience de la solution pour redémarrer les ordinateurs virtuels sur les hôtes du site distant. Pour que les machines virtuelles s'exécutent sur les deux sites, tous les datastores iSCSI partagés doivent être montés sur tous les hôtes ESXi afin de garantir un fonctionnement vMotion fluide des machines virtuelles entre les sites.
+
+La figure suivante montre une vue de virtualisation de la solution FlexPod SM-BC haut de gamme incluant à la fois des fonctionnalités VMware HA et vMSC afin d'offrir la haute disponibilité des services de calcul et de stockage. L'architecture de solution de data Center actif-actif permet la mobilité de la charge de travail entre les sites et assure la reprise après incident et la continuité de l'activité.
+
+image:sm-bcs-image39.png["Erreur : image graphique manquante"]
+
+
+
+== Connectivité réseau de bout en bout
+
+La solution FlexPod SM-BC comprend des infrastructures FlexPod sur chaque site, une connectivité réseau entre les sites et un médiateur ONTAP déployé sur un troisième site afin d'atteindre les objectifs RPO et RTO requis. La figure suivante montre une connectivité réseau de bout en bout entre les serveurs Cisco UCS B200M5 sur chaque site et le système de stockage NetApp disposant de fonctionnalités SM-BC sur un site et sur plusieurs sites.
+
+image:sm-bcs-image40.png["Erreur : image graphique manquante"]
+
+L'architecture de déploiement FlexPod est identique sur chaque site pour la validation de cette solution. Cependant, elle prend en charge les déploiements asymétriques et peut également être ajoutée aux solutions FlexPod existantes s'ils répondent aux exigences.
+
+Une architecture étendue couche 2 est utilisée pour une Data Fabric multisite transparente qui offre une connectivité entre les ressources de calcul Cisco UCS et le stockage NetApp bâbord dans chaque data Center, ainsi que la connectivité entre les data centers. La configuration du canal de port et la configuration du canal de port virtuel, le cas échéant, sont utilisées pour l'agrégation de la bande passante et la tolérance aux pannes entre les couches de calcul, de réseau et de stockage, ainsi que pour les liens intersites. Par conséquent, les serveurs lames UCS offrent une connectivité et un accès multivoie aux systèmes de stockage NetApp locaux et distants.
+
+
+
+== La mise en réseau virtuelle
+
+Chaque hôte du cluster est déployé à l'aide d'une mise en réseau virtuelle identique, quel que soit son emplacement. La conception sépare les différents types de trafic à l'aide de commutateurs virtuels VMware (vSwitch) et de switchs virtuels VMware (VDS). Le vSwitch VMware est utilisé principalement pour les réseaux d'infrastructure FlexPod et VDS pour les réseaux d'applications, mais il n'est pas nécessaire.
+
+Les commutateurs virtuels (vSwitch, VDS) sont déployés avec deux liaisons ascendantes par commutateur virtuel. Les liaisons ascendantes au niveau de l'hyperviseur ESXi sont appelées vmnics et vNIC virtuels (vNIC) sur le logiciel Cisco UCS. Les vNIC sont créés sur l'adaptateur Cisco UCS VIC de chaque serveur en utilisant des profils de service Cisco UCS. Six vNIC sont définis, deux pour vSwitch0, deux pour vDS0, deux pour vSwitch1 et deux pour les liaisons montantes iSCSI, comme illustré dans la figure suivante.
+
+image:sm-bcs-image41.png["Erreur : image graphique manquante"]
+
+VSwitch0 est défini lors de la configuration hôte VMware ESXi. Il contient le VLAN de gestion de l'infrastructure FlexPod et les ports VMK (hôte ESXi) pour la gestion. Un groupe de ports de machine virtuelle de gestion d'infrastructure est également placé sur vSwitch0 pour les machines virtuelles de gestion d'infrastructure stratégiques requises.
+
+Il est important de placer ces machines virtuelles d'infrastructure de gestion sur vSwitch0 plutôt que dans le VDS, car si l'infrastructure FlexPod est arrêtée ou mise hors tension et que vous tentez d'activer cette machine virtuelle de gestion sur un hôte autre que l'hôte sur lequel elle était exécutée à l'origine, Il démarre très bien sur le réseau sur vSwitch0. Ce processus est particulièrement important si VMware vCenter est la machine virtuelle de gestion. Si vCenter se trouvaient sur le VDS et était déplacé vers un autre hôte puis démarré, il ne serait pas connecté au réseau après le démarrage.
+
+Deux vswitches de démarrage iSCSI sont utilisés dans cette conception. Le démarrage iSCSI Cisco UCS nécessite des vNIC distincts pour le démarrage iSCSI. Ces vNIC utilisent le VLAN iSCSI de la structure appropriée en tant que VLAN natif et sont connectés au vSwitch de démarrage iSCSI approprié. Vous pouvez également déployer des réseaux iSCSI sur VDS en déployant un nouveau VDS ou en utilisant une existante.
+
+
+
+== Règles et groupes d'affinité VM-Host
+
+Pour que les machines virtuelles s'exécutent sur n'importe quel hôte ESXi des deux sites SM-BC, tous les hôtes ESXi doivent monter les datastores iSCSI des deux sites. Si les datastores des deux sites sont correctement montés par tous les hôtes ESXi, vous pouvez migrer une machine virtuelle entre tous les hôtes avec vMotion et la machine virtuelle conserve toujours l'accès à tous ses disques virtuels créés à partir de ces datastores.
+
+Dans le cas d'une machine virtuelle utilisant des datastores locaux, son accès aux disques virtuels devient distant s'il est migré vers un hôte du site distant et augmente ainsi la latence des opérations de lecture en raison de la distance physique entre les sites. Par conséquent, il est recommandé de conserver les machines virtuelles sur les hôtes locaux et d'utiliser le stockage local sur le site.
+
+En utilisant un mécanisme d'affinité VM/hôte, vous pouvez utiliser des groupes VM/hôtes pour créer un groupe de VM et un groupe d'hôtes pour les machines virtuelles et les hôtes situés sur un site particulier. Les règles VM/hôte vous permettent de spécifier la règle à suivre pour les VM et les hôtes. Pour permettre la migration de la machine virtuelle entre les sites pendant un scénario de maintenance de site ou de sinistre, utilisez la spécification de stratégie « devrait s'exécuter sur les hôtes du groupe » pour cette flexibilité.
+
+La capture d'écran suivante montre que deux groupes d'hôtes et deux groupes de machines virtuelles sont créés pour les hôtes et les machines virtuelles du site A et du site B.
+
+image:sm-bcs-image42.png["Erreur : image graphique manquante"]
+
+En outre, les deux figures suivantes montrent les règles VM/hôte créées pour les machines virtuelles du site A et du site B à exécuter sur les hôtes de leurs sites respectifs à l'aide de la stratégie « devrait s'exécuter sur les hôtes du groupe ».
+
+image:sm-bcs-image43.png["Erreur : image graphique manquante"]
+
+image:sm-bcs-image44.png["Erreur : image graphique manquante"]
+
+
+
+== Pulsation vSphere HA
+
+VMware vSphere HA dispose d'un mécanisme de pulsation pour la validation de l'état hôte. Le mécanisme de pulsation principal passe par le réseau, tandis que le mécanisme de pulsation secondaire se fait par l'intermédiaire du datastore. Si les signaux ne sont pas reçus, il décide alors s'ils sont isolés du réseau en envoyant une commande ping à la passerelle par défaut ou aux adresses d'isolation configurées manuellement. Pour le signal de détection du datastore, VMware recommande d'augmenter les datastores de signal de détection de deux à quatre pour un cluster étendu.
+
+Pour la validation de la solution, les deux adresses IP de gestion de cluster ONTAP sont utilisées comme adresse d'isolation. En outre, l'option avancée vSphere HA est recommandée `ds.heartbeatDsPerHost` avec une valeur de 4 a été ajoutée comme indiqué dans la figure suivante.
+
+image:sm-bcs-image45.png["Erreur : image graphique manquante"]
+
+Pour le datastore de signal de détection, spécifiez les quatre datastores partagés du cluster et complétez automatiquement, comme illustré dans la figure suivante.
+
+image:sm-bcs-image46.png["Erreur : image graphique manquante"]
+
+Pour connaître les meilleures pratiques et les configurations pour VMware HA Cluster et VMware vSphere Metro Storage Cluster, consultez https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["Création et utilisation de clusters HA vSphere"^], https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["Cluster de stockage Metro VMware vSphere (vMSC)"^] Et VMware KB pour https://kb.vmware.com/s/article/83370["NetApp ONTAP avec NetApp SnapMirror Business Continuity (SM-BC) et VMware vSphere Metro Storage Cluster (vMSC)"^].
+
+link:sm-bcs-validated-scenarios.html["La validation des solutions : scénarios validés"]

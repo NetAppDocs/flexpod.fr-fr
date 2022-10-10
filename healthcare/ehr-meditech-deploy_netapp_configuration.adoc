@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_netapp_configuration.html 
+keywords: configuration, storage, meditech, software, environments, controllers, hardware, takeover, licenses 
+summary: 'Les solutions de stockage NetApp déployées pour les environnements logiciels MEDITECH utilisent des contrôleurs de stockage et une configuration de paires haute disponibilité. Le stockage doit être présenté des deux contrôleurs aux serveurs de base de données MEDITECH via le protocole FC. La configuration présente le stockage des deux contrôleurs afin d"équilibrer uniformément la charge applicative pendant le fonctionnement normal.' 
+---
+= Configuration NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les solutions de stockage NetApp déployées pour les environnements logiciels MEDITECH utilisent des contrôleurs de stockage et une configuration de paires haute disponibilité. Le stockage doit être présenté des deux contrôleurs aux serveurs de base de données MEDITECH via le protocole FC. La configuration présente le stockage des deux contrôleurs afin d'équilibrer uniformément la charge applicative pendant le fonctionnement normal.
+
+
+
+== Configuration ONTAP
+
+Cette section décrit un exemple de procédures de déploiement et de provisionnement qui utilisent les commandes ONTAP appropriées. L'accent est mis sur le provisionnement du stockage pour implémenter l'infrastructure de stockage recommandée par NetApp, qui utilise une paire de contrôleurs haute disponibilité. L'un des principaux avantages de ONTAP est la possibilité d'évoluer horizontalement sans perturber les paires haute disponibilité existantes.
+
+
+
+=== Licences ONTAP
+
+Une fois que vous avez configuré les contrôleurs de stockage, appliquez les licences pour activer les fonctionnalités de ONTAP recommandées par NetApp. Les licences pour les charges de travail MEDITECH sont : FC, CIFS et NetApp Snapshot, SnapRestore, FlexClone et Et aux technologies SnapMirror.
+
+Pour configurer les licences, ouvrez NetApp ONTAP System Manager, accédez à Configuration-Licenses, puis ajoutez les licences appropriées.
+
+Vous pouvez également exécuter la commande suivante pour ajouter des licences à l'aide de l'interface de ligne de commande :
+
+....
+license add -license-code <code>
+....
+
+
+=== Configuration AutoSupport
+
+L'outil NetApp AutoSupport envoie à NetApp des informations récapitulatives sur le support en HTTPS. Pour configurer AutoSupport, lancer les commandes ONTAP suivantes :
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== Configuration hardware-Assisted Takeover
+
+Sur chaque nœud, activez le basculement assisté par matériel pour réduire le temps nécessaire au lancement d'un basculement dans l'éventualité peu probable d'une défaillance de contrôleur. Pour configurer le basculement assisté par matériel, procédez comme suit :
+
+. Exécutez la commande ONTAP suivante sur xxx.
++
+Définissez l'option d'adresse du partenaire sur l'adresse IP du port de gestion pour `prod1-01`.
+
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. Exécutez la commande ONTAP suivante sur xxx :
++
+Définissez l'option d'adresse du partenaire sur l'adresse IP du port de gestion pour `cluster1-02`.
+
++
+....
+MEDITECH::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. Exécutez la commande ONTAP suivante pour activer le basculement assisté par matériel sur les deux `prod1-01` et le `prod1-02` Paire de contrôleurs HAUTE DISPONIBILITÉ.
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist true
+MEDITECH::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+link:ehr-meditech-deploy_aggregate_configuration.html["Next : configuration de l'agrégat."]

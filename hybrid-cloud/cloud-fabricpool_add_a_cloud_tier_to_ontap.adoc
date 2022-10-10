@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html 
+keywords: add, cloud, tier, ontap, aggregate, storage, fabricpool, flexpod, ontap, cli, oncommand, manager 
+summary: 'Avant de pouvoir joindre un magasin d"objets à un agrégat, il doit être ajouté à et identifié par ONTAP. Cette tâche peut être effectuée avec OnCommand System Manager ou l"interface de ligne de commandes de ONTAP.' 
+---
+= Ajoutez un Tier cloud à ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Avant de pouvoir joindre un magasin d'objets à un agrégat, il doit être ajouté à et identifié par ONTAP. Cette tâche peut être effectuée avec OnCommand System Manager ou l'interface de ligne de commandes de ONTAP.
+
+FabricPool prend en charge Amazon S3, IBM Object Cloud Storage et les magasins d'objets Microsoft Azure Blob Storage en tant que tiers cloud.
+
+Vous avez besoin des informations suivantes :
+
+* Nom de serveur (FQDN) ; par exemple, `s3.amazonaws.com`
+* ID de clé d'accès
+* Clé secrète
+* Nom du conteneur (nom de compartiment)
+
+
+
+
+== OnCommand System Manager
+
+Pour ajouter un Tier cloud avec OnCommand System Manager, procédez comme suit :
+
+. Lancez OnCommand System Manager.
+. Cliquez sur stockage.
+. Cliquez sur Aggregates & disques.
+. Cliquez sur Cloud tiers.
+. Sélectionnez un fournisseur de magasin d'objets.
+. Renseignez les champs de texte requis pour le fournisseur de magasin d'objets.
++
+Dans le champ Nom du conteneur, entrez le nom de compartiment ou du conteneur du magasin d'objets.
+
+. Cliquez sur Save and Attach Aggregates.
+
+
+image:cloud-fabricpool_image13.png["Erreur : image graphique manquante"]
+
+
+
+== INTERFACE DE LIGNE DE COMMANDES DE ONTAP
+
+Pour ajouter un Tier cloud à l'aide de l'interface de ligne de commandes ONTAP, entrez les commandes suivantes :
+
+....
+object-store config create
+-object-store-name <name>
+-provider-type <AWS>
+-port <443/8082> (AWS)
+-server <name>
+-container-name <bucket-name>
+-access-key <string>
+-secret-password <string>
+-ssl-enabled true
+-ipspace default
+....
+link:cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html["Ensuite, associez un Tier cloud à un agrégat ONTAP."]

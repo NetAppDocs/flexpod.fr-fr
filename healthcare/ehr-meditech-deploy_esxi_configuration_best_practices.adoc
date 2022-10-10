@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html 
+keywords: esxi, configuration, practices, vsc, vmware, vaai, host, multipathing 
+summary: 'Pour la configuration côté hôte VMware ESXi, configurez les hôtes VMware comme vous exécuterait une charge de travail de base de données d"entreprise.' 
+---
+= Meilleures pratiques de configuration ESXi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Pour la configuration côté hôte ESXi, configurez les hôtes VMware comme vous exécuteraient toute charge de travail de base de données d'entreprise :
+
+* VSC for VMware vSphere vérifie et définit les paramètres de chemins d'accès multiples de l'hôte ESXi ainsi que les paramètres de délai d'expiration de l'adaptateur HBA qui fonctionnent mieux avec les systèmes de stockage NetApp. Les valeurs des jeux de VSC sont basées sur des tests internes rigoureux menés par NetApp.
+* Pour des performances de stockage optimales, envisagez l'utilisation de matériel de stockage prenant en charge VAAI (VMware vStorage APIs - Array Integration). Le plug-in NetApp pour VAAI est une bibliothèque logicielle qui intègre les bibliothèques de disques virtuels VMware installées sur l'hôte ESXi. Le package VMware VAAI permet de décharger certaines tâches des hôtes physiques vers la baie de stockage.
++
+Vous pouvez effectuer des tâches telles que le provisionnement fin et l'accélération matérielle au niveau de la baie afin de réduire la charge de travail sur les hôtes ESXi. La fonctionnalité de déchargement de copies et de réservation d'espace améliorent les performances des opérations VSC. Vous pouvez télécharger le pack d'installation du plug-in et obtenir les instructions d'installation du plug-in sur le site de support NetApp.
+
++
+La console VSC définit les délais d'expiration des hôtes ESXi, les paramètres de chemins d'accès multiples, et les paramètres d'expiration des HBA, ainsi que d'autres valeurs pour des performances optimales et un basculement réussi des contrôleurs de stockage NetApp. Voici la procédure à suivre :
+
++
+.. Sur la page d'accueil du client Web VMware vSphere, sélectionnez vCenter > hosts.
+.. Cliquez avec le bouton droit sur un hôte, puis sélectionnez actions > NetApp VSC > définir les valeurs recommandées.
+.. Dans la boîte de dialogue Paramètres recommandés par NetApp, sélectionnez les valeurs qui conviennent le mieux à votre système.
++
+Les valeurs standard recommandées sont définies par défaut.
+
++
+image:ehr-meditech-deploy_image7.png["Erreur : image graphique manquante"]
+
+.. Cliquez sur OK.
+
+
+
+
+link:ehr-meditech-deploy_netapp_configuration.html["Suivant : configuration NetApp."]

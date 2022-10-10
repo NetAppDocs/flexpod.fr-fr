@@ -1,0 +1,192 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-network.html 
+keywords: network, connectivity, port channel, virtual port channels, vlan 
+summary: 'La configuration réseau de la solution FlexPod SM-BC suit les meilleures pratiques typiques des solutions FlexPod sur chaque site. Pour la connectivité entre sites, la configuration de validation de la solution connecte les switchs FlexPod Nexus sur les deux sites afin d"assurer une connectivité entre sites qui étend les VLAN entre les deux sites. Les sections suivantes mettent en évidence certaines des connexions et configurations utilisées pour la validation.' 
+---
+= Validation de la solution : réseau
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-compute.html["Précédente : validation de la solution - calcul."]
+
+La configuration réseau de la solution FlexPod SM-BC suit les meilleures pratiques typiques des solutions FlexPod sur chaque site. Pour la connectivité entre sites, la configuration de validation de la solution connecte les switchs FlexPod Nexus sur les deux sites afin d'assurer une connectivité entre sites qui étend les VLAN entre les deux sites. Les sections suivantes mettent en évidence certaines des connexions et configurations utilisées pour la validation.
+
+
+
+== Connectivité
+
+Les switchs FlexPod Nexus de chaque site procurent une connectivité locale entre le calcul UCS et le stockage ONTAP dans une configuration haute disponibilité. Les composants redondants et la connectivité redondante offrent la résilience aux scénarios de point de défaillance unique.
+
+Le schéma suivant présente la connectivité locale du commutateur Nexus sur chaque site. Outre ce qui est illustré dans le schéma, il existe aussi des connexions au réseau de gestion et de console pour chaque composant qui ne sont pas affichés. Les câbles de dérivation 40G à 4 x 10G sont utilisés pour connecter les commutateurs Nexus aux serveurs d'accès UCS ainsi qu'aux contrôleurs de stockage ONTAP AFF A250. Il est également possible d'utiliser des câbles de dérivation 100G à 4 x 25G pour accroître la vitesse de communication entre les commutateurs Nexus et les contrôleurs de stockage AFF A250. Pour plus de simplicité, les deux contrôleurs AFF A250 sont présentés côte à côte pour illustrer le câblage. Les deux connexions entre les deux contrôleurs de stockage permettent au système de stockage de former un cluster sans commutateur.
+
+image:sm-bcs-image20.png["Erreur : image graphique manquante"]
+
+Le tableau suivant montre la connectivité entre les switchs Nexus et les contrôleurs de stockage AFF A250 sur chaque site.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| Nexus A | 24/10/1 | AFF A250 A | e1a 
+
+
+|  | 24/10/2 |  | e1b 
+
+
+|  | 24/10/3 | AFF A250 B | e1a 
+
+
+|  | 24/10/4 |  | e1b 
+
+
+| Nexus B | 24/10/1 | AFF A250 A | e1c 
+
+
+|  | 24/10/2 |  | e1d 
+
+
+|  | 24/10/3 | AFF A250 B | e1c 
+
+
+|  | 24/10/4 |  | e1d 
+|===
+La connectivité entre les commutateurs FlexPod du site A et du site B est illustrée dans la figure suivante avec les détails de câblage répertoriés dans le tableau ci-dessous. Les connexions entre les deux commutateurs de chaque site correspondent aux liaisons VPC Peer. D'autre part, les connexions entre les commutateurs entre les sites fournissent les liaisons intersites. Les liaisons étendent les VLAN sur plusieurs sites pour la communication intercluster, la réplication des données SM-BC, la gestion intrabande et l'accès aux données pour les ressources des sites distants.
+
+image:sm-bcs-image21.png["Erreur : image graphique manquante"]
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| Commutateur a du site | 33 | Commutateur a du site B | 31 
+
+
+|  | 34 |  | 32 
+
+
+|  | 25 | Commutateur du site A B | 25 
+
+
+|  | 26 |  | 26 
+
+
+| Commutateur du site A B | 33 | Commutateur du site B | 31 
+
+
+|  | 34 |  | 32 
+
+
+|  | 25 | Commutateur a du site | 25 
+
+
+|  | 26 |  | 26 
+
+
+| Commutateur a du site B | 31 | Commutateur a du site | 33 
+
+
+|  | 32 |  | 34 
+
+
+|  | 25 | Commutateur du site B | 25 
+
+
+|  | 26 |  | 26 
+
+
+| Commutateur du site B | 31 | Commutateur du site A B | 33 
+
+
+|  | 32 |  | 34 
+
+
+|  | 25 | Commutateur a du site B | 25 
+
+
+|  | 26 |  | 26 
+|===
+
+NOTE: Le tableau ci-dessus répertorie la connectivité du point de vue de chaque commutateur FlexPod. Par conséquent, le tableau contient des informations dupliquées pour leur lisibilité.
+
+
+
+== Canal de port et canal de port virtuel
+
+Le canal de port active l'agrégation de liens à l'aide du protocole LACP (Link Aggregation Control Protocol) pour l'agrégation de la bande passante et la résilience des pannes de liaison. Le canal de port virtuel (VPC) permet que les connexions des canaux de port entre deux commutateurs Nexus apparaissent logiquement comme une seule. Ceci améliore davantage la résilience des pannes pour les situations telles qu'une panne de liaison unique ou une défaillance de commutateur unique.
+
+Le trafic du serveur UCS vers le système de stockage chemins entre l'E/S A et LES E/S B et LA FI B avant d'atteindre les commutateurs Nexus. Au fur et à mesure que les connexions FI aux commutateurs Nexus utilisent le canal de port du côté FI et le canal de port virtuel du côté du commutateur Nexus, le serveur UCS peut utiliser efficacement les chemins via les deux commutateurs Nexus et résister aux scénarios de défaillance unique. Entre les deux sites, les commutateurs Nexus sont interconnectés, comme illustré dans la figure précédente. Il y a deux liaisons pour connecter les paires de commutateurs entre les sites et ils utilisent également une configuration de canal de port.
+
+La connectivité des protocoles de stockage des données intrabande, inter-cluster et iSCSI/NFS est assurée par l'interconnexion des contrôleurs de stockage de chaque site aux switchs Nexus locaux dans une configuration redondante. Chaque contrôleur de stockage est relié à deux commutateurs Nexus. Les quatre connexions sont configurées en tant que partie d'un groupe d'interface sur le stockage pour une résilience améliorée. Du côté du commutateur Nexus, ces ports font également partie d'un VPC entre les commutateurs.
+
+Le tableau suivant répertorie l'ID et l'utilisation du canal de port sur chaque site.
+
+|===
+| ID de canal de port | Du stockage 
+
+
+| 10 | Lien homologue Nexus local 
+
+
+| 15 | Fabric Interconnect A liens 
+
+
+| 16 | Liaisons Fabric Interconnect B 
+
+
+| 27 | Le contrôleur de stockage A relie 
+
+
+| 28 | Liaisons du contrôleur de stockage B 
+
+
+| 100 | Liaisons a du commutateur inter-site 
+
+
+| 200 | Liaisons du commutateur intersite B 
+|===
+
+
+== VLAN
+
+Le tableau suivant répertorie les réseaux VLAN configurés pour la configuration de l'environnement de validation de la solution FlexPod SM-BC et leur utilisation.
+
+|===
+| Nom | ID VLAN | Du stockage 
+
+
+| VLAN natif | 2 | VLAN 2 utilisé comme VLAN natif au lieu du VLAN par défaut (1) 
+
+
+| OOB-MGMT-VLAN | 3333 | VLAN de gestion hors bande pour les périphériques 
+
+
+| IB-MGMT-VLAN | 3334 | VLAN de gestion intrabande pour les hôtes ESXi, la gestion des VM, etc 
+
+
+| NFS-VLAN | 3335 | VLAN NFS facultatif pour le trafic NFS 
+
+
+| ISCSI-A-VLAN | 3336 | San iSCSI-A Fabric pour le trafic iSCSI 
+
+
+| ISCSI-B-VLAN | 3337 | San fabric iSCSI-B pour le trafic iSCSI 
+
+
+| VMotion-VLAN | 3338 | VLAN pour le trafic VMware vMotion 
+
+
+| VM-trafic-VLAN | 3339 | VLAN pour le trafic des machines virtuelles VMware 
+
+
+| VLAN-intercluster | 3340 | VLAN intercluster pour les communications entre clusters ONTAP 
+|===
+
+NOTE: Bien que SM-BC ne prend pas en charge les protocoles NFS ou CIFS pour la continuité de l'activité, vous pouvez les utiliser pour les workloads qui n'ont pas besoin d'être protégés pour la continuité de l'activité. Les datastores NFS n'ont pas été créés pour cette validation.
+
+link:sm-bcs-storage.html["Suivant : validation de la solution - stockage."]

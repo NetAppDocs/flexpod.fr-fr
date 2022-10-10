@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: healthcare/flexpod-genomics-conclusion.html 
+keywords: conclusion 
+summary: De nombreuses organisations du secteur de la santé à travers le monde ont choisi FlexPod comme plateforme commune. FlexPod vous permet de déployer des capacités médicales en toute confiance. 
+---
+= Conclusion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-genomics-appendix-d-gpu-setup.html["Précédent : configuration du GPU."]
+
+De nombreuses organisations du secteur de la santé à travers le monde ont choisi FlexPod comme plateforme commune. FlexPod vous permet de déployer des capacités médicales en toute confiance. FlexPod avec NetApp ONTAP est fourni de série avec la capacité d'implémenter un ensemble de protocoles de pointe, clé en main. Quelle que soit l'origine de la demande d'exécution de la génomique d'un patient donné, une plateforme FlexPod assure l'interopérabilité, l'accessibilité, la disponibilité et l'évolutivité. Lorsqu'elle est standardisée sur une plate-forme FlexPod, la culture de l'innovation devient contagieuse.
+
+
+
+== Où trouver des informations complémentaires
+
+Pour en savoir plus sur les informations données dans ce livre blanc, consultez ces documents et sites web :
+
+* FlexPod Datacenter pour l'IA/ML avec Cisco UCS 480 ML pour le deep learning
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.pdf["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.pdf"^]
+
+* FlexPod Datacenter avec VMware vSphere 7.0 et NetApp ONTAP 9.7
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html"^]
+
+* Centre de documentation ONTAP 9
++
+http://docs.netapp.com["http://docs.netapp.com"^]
+
+* Agile et efficace : FlexPod favorise la modernisation des data centers
++
+https://www.flexpod.com/idc-white-paper/["https://www.flexpod.com/idc-white-paper/"^]
+
+* L'IA dans le domaine de la santé
++
+https://www.netapp.com/us/media/na-369.pdf["https://www.netapp.com/us/media/na-369.pdf"^]
+
+* FlexPod pour le secteur de la santé facilite votre transformation
++
+https://flexpod.com/solutions/verticals/healthcare/["https://flexpod.com/solutions/verticals/healthcare/"^]
+
+* FlexPod de Cisco et NetApp
++
+https://flexpod.com/["https://flexpod.com/"^]
+
+* IA et analytique pour le secteur de la santé (NetApp)
++
+https://www.netapp.com/us/artificial-intelligence/healthcare-ai-analytics/index.aspx["https://www.netapp.com/us/artificial-intelligence/healthcare-ai-analytics/index.aspx"^]
+
+* Des choix d'infrastructure intelligents pour le secteur de la santé favorisent la réussite
++
+https://www.netapp.com/pdf.html?item=/media/7410-wp-7314.pdf["https://www.netapp.com/pdf.html?item=/media/7410-wp-7314.pdf"^]
+
+* FlexPod Datacenter avec ONTAP 9.8, ONTAP Storage Connector for Cisco Intersight et Cisco Intersight Managed mode.
++
+https://www.netapp.com/pdf.html?item=/media/25001-tr-4883.pdf["https://www.netapp.com/pdf.html?item=/media/25001-tr-4883.pdf"^]
+
+* FlexPod Datacenter avec Red Hat Enterprise Linux OpenStack Platform
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openstack_osp6.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openstack_osp6.html"^]
+
+
+
+
+
+== Historique des versions
+
+|===
+| Version | Date | Historique des versions du document 
+
+
+| Version 1.0 | Novembre 2021 | Version initiale. 
+|===

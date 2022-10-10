@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_volume_configuration.html 
+keywords: volume, provisioning, snapshot, copy, volume, default, aggregate, reallocate, schedule 
+summary: 'Les volumes MEDITECH dédiés aux hôtes MEDITECH peuvent être provisionnés de manière non fine ou avec un provisionnement fin et être accessibles à l"aide des copies Snapshot. Cette fonctionnalité optimise la disposition des données sur disque en vue d"améliorer les latences en écriture et l"accès en lecture séquentielle.' 
+---
+= Configuration de volume
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Provisionnement de volume
+
+Les volumes MEDITECH dédiés aux hôtes MEDITECH peuvent être avec un provisionnement fin ou non fin.
+
+
+
+== Copies Snapshot par défaut au niveau des volumes
+
+Les copies Snapshot sont créées dans le cadre du workflow de sauvegarde. Chaque copie Snapshot peut être utilisée pour accéder aux données stockées dans les LUN MEDITECH à différents moments. La solution de sauvegarde approuvée par MEDITECH crée des volumes FlexClone à provisionnement fin et basés sur ces copies Snapshot afin de fournir des copies instantanées des LUN MEDITECH. L'environnement MEDITECH est intégré avec une solution logicielle de sauvegarde et Par conséquent, NetApp recommande de désactiver le planning de copies Snapshot par défaut sur chaque volume NetApp FlexVol qui constitue les LUN de base de données de production MEDITECH.
+
+*Important :* les volumes FlexClone partagent l'espace du volume de données parent. Il est donc essentiel que le volume dispose d'un espace suffisant pour les LUN de données MEDITECH et les volumes FlexClone créés par les serveurs de sauvegarde. Les volumes FlexClone n'occupent pas plus d'espace que les volumes de données. S'il y a des suppressions considérables sur les LUN MEDITECH dans un court moment, les volumes de clonage peuvent croître.
+
+
+
+== Nombre de volumes par agrégat
+
+Pour un système NetApp FAS qui utilise la mise en cache Flash Pool ou NetApp Flash cache, NetApp recommande de provisionner au moins trois volumes par agrégat dédiés au stockage du programme MEDITECH, du dictionnaire et des fichiers de données.
+
+Pour les systèmes AFF, NetApp recommande de dédier quatre volumes ou plus par agrégat pour stocker le programme MEDITECH, le dictionnaire et les fichiers de données.
+
+
+
+== Planification des réaffectations au niveau des volumes
+
+La disposition des données du stockage s'avère moins optimale au fil du temps, en particulier lorsqu'elle est utilisée par des charges de travail exigeantes en écriture, telles que les plateformes MEDITECH, 6.x et C/S 5.x. Au fil du temps, cette situation peut augmenter la latence des lectures séquentielles, ce qui allonge le délai de la sauvegarde. Une disposition ou une fragmentation des données incorrectes peuvent également affecter la latence d'écriture. Cette fonctionnalité optimise la disposition des données sur disque en vue d'améliorer les latences en écriture et l'accès en lecture séquentielle. L'amélioration de la disposition du stockage permet d'effectuer la sauvegarde dans la fenêtre de temps allouée de 8 heures.
+
+|===
+| Et des meilleures pratiques 
+
+
+ a| 
+Au moins, NetApp vous recommande de mettre en œuvre une planification hebdomadaire de réaffectation des volumes pour exécuter les opérations de réaffectation pendant les temps d'indisponibilité de la maintenance alloués ou durant les heures creuses sur le site de production.
+
+
+NOTE: NetApp vous recommande fortement d'exécuter la tâche de réaffectation sur un volume à la fois par contrôleur.
+
+|===
+Pour plus d'informations sur la définition d'une planification appropriée de réaffectation de volumes pour le stockage de votre base de données de production, reportez-vous à la section 3.12 du https://fieldportal.netapp.com/content/192896["NetApp TR-3929 : Guide des meilleures pratiques de réaffectation"^]. Cette section vous indique également comment créer un programme de réaffectation hebdomadaire pour un site occupé.
+
+link:ehr-meditech-deploy_lun_configuration.html["Suivant : configuration de LUN."]

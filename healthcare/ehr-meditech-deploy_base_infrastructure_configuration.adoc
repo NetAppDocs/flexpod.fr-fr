@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html 
+keywords: base, infrastructure, configuration, network, storage, connections, software, host 
+summary: 'Les connexions réseau, connexions de stockage et logiciels suivants doivent être en place pour configurer l"infrastructure.' 
+---
+= Configuration de l'infrastructure de base
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Connectivité réseau
+
+Les connexions réseau suivantes doivent être en place avant de configurer l'infrastructure :
+
+* L'agrégation de liens qui utilise des canaux de port et des canaux de port virtuels (VPC) est utilisée dans tout l'ensemble, ce qui permet d'obtenir une bande passante et une haute disponibilité plus élevées :
++
+** Le VPC est utilisé entre les commutateurs Cisco FI et Cisco Nexus.
+** Chaque serveur dispose de cartes réseau virtuelles (vNIC) qui offrent une connectivité redondante à la structure unifiée. Le basculement de carte réseau est utilisé entre les interfaces de redondance.
+** Chaque serveur dispose d'adaptateurs de bus hôte virtuels (vHBA) avec connectivité redondante à la structure unifiée.
+
+
+* Le SYSTÈME Cisco UCS FI est configuré en mode hôte final comme recommandé, pour l'épinglage dynamique des vNIC sur les commutateurs de liaison ascendante.
+
+
+
+
+== Connectivité du stockage
+
+Les connexions de stockage suivantes doivent être en place avant de configurer l'infrastructure :
+
+* Groupes d'interfaces des ports de stockage (ifgroups, VPC)
+* Lien 10 Gb vers le commutateur N9K-A
+* Liaison 10 Gb pour le commutateur N9K-B.
+* Gestion intrabande (liaison active-passive) :
++
+** Liaison 1 Go au commutateur de gestion N9K-A
+** Liaison 1 Go au commutateur de gestion N9K-B.
+
+
+* Connectivité FC 32 Gb de bout en bout via des switchs Cisco MDS ; segmentation à un seul initiateur configurée
+* Le démarrage SAN FC pour obtenir un calcul sans état ; les serveurs sont démarrés à partir de LUN dans le volume de démarrage hébergé sur le cluster de stockage AFF
+* Toutes les charges de travail MEDITECH sont hébergées sur les LUN FC et réparties entre les nœuds du contrôleur de stockage
+
+
+
+
+== Logiciel hôte
+
+Le logiciel suivant doit être installé :
+
+* ESXi est installé sur les serveurs lames Cisco UCS
+* VMware vCenter installé et configuré (avec tous les hôtes enregistrés dans vCenter)
+* VSC a été installé et enregistré dans VMware vCenter
+* Cluster NetApp configuré
+
+
+link:ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html["Suivant : configuration du serveur lame et des commutateurs Cisco UCS."]

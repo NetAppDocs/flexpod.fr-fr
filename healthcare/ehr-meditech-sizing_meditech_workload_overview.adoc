@@ -1,0 +1,195 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_meditech_workload_overview.html 
+keywords: meditech, workload, backup, cisco, ucs, reference, architecture, platforms 
+summary: Cette section décrit les types de charges de travail de calcul et de stockage que les environnements MEDITECH peuvent trouver. 
+---
+= Présentation de la charge de travail MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section décrit les types de charges de travail de calcul et de stockage que les environnements MEDITECH peuvent trouver.
+
+
+
+== MEDITECH et charges de travail de sauvegarde
+
+Lorsque vous dimensionnez les systèmes de stockage NetApp pour les environnements MEDITECH, il est nécessaire d'examiner à la fois le workload de production MEDITECH et le workload de sauvegarde.
+
+|===
+| Hôte MEDITECH 
+
+
+| Un hôte MEDITECH est un serveur de base de données. Cet hôte est également appelé serveur de fichiers MEDITECH (pour la plate-forme ÉTENDUE, 6.x ou C/S 5.x) ou UNE machine MAGIC (pour la plate-forme MAGIC). Ce document utilise l'hôte du terme MEDITECH pour faire référence au serveur de fichiers MEDITECH et à une machine MAGIC. 
+|===
+Les sections qui suivent décrivent les caractéristiques d'E/S et les exigences de performance de ces deux charges de travail.
+
+
+
+== Charge de travail MEDITECH
+
+Dans l'environnement MEDITECH, plusieurs serveurs qui exécutent le logiciel MEDITECH effectuent différentes tâches sous forme de système intégré appelé système MEDITECH. Pour en savoir plus sur le système MEDITECH, consultez la documentation du MEDITECH :
+
+* Pour les environnements de production MEDITECH, consultez la documentation appropriée pour déterminer le nombre d'hôtes MEDITECH et la capacité de stockage qui doit être incluse dans le dimensionnement du système de stockage NetApp.
+* Pour les nouveaux environnements MEDITECH, consultez le document de proposition de configuration matérielle. Pour les environnements MEDITECH existants, consultez le document des tâches d'évaluation du matériel. La tâche d'évaluation matérielle est associée à un ticket MEDITECH. Les clients peuvent demander l'un ou l'autre de ces documents MEDITECH.
+
+
+Vous pouvez faire évoluer le système MEDITECH pour accroître la capacité et les performances en ajoutant des hôtes. Chaque hôte a besoin d'une capacité de stockage pour ses fichiers de base de données et d'applications. Le stockage disponible pour chaque hôte MEDITECH doit également prendre en charge les E/S générées par l'hôte. Pour les environnements MEDITECH, une LUN est disponible pour chaque hôte et elle prend en charge les besoins de stockage des applications et des bases de données de cet hôte. Le type de catégorie MEDITECH et le type de plateforme que vous déployez déterminent les caractéristiques de charge de travail de chaque hôte MEDITECH et, par conséquent, du système dans son ensemble.
+
+
+
+=== Catégories MEDITECH
+
+MEDITECH associe la taille du déploiement à des numéros de catégorie allant de 1 à 6. La catégorie 1 représente les plus petits déploiements MEDITECH : cette catégorie 6 est celle qui est la plus importante. Les caractéristiques de l'application MEDITECH associées à chaque catégorie incluent notamment des indicateurs de mesure :
+
+* Nombre de lits d'hôpital
+* Patients hospitalisés par an
+* Patients externes par an
+* Visites en salle d'urgence par an
+* Examens par an
+* Prescriptions d'hospitalisation par jour
+* Prescriptions ambulatoires par jour
+
+
+Pour en savoir plus sur les catégories MEDITECH, consultez la fiche de référence des catégories MEDITECH. Cette fiche peut être obtenue du client MEDITECH ou avec le programme d'installation du système MEDITECH.
+
+
+
+=== Plateformes MEDITECH
+
+MEDITECH possède quatre plateformes :
+
+* ÉTENDUE
+* MEDITECH 6.x
+* Client/serveur 5.x (C/S 5.x)
+* MAGIE
+
+
+Pour les plates-formes MEDITECH, 6.x et C/S 5.x, les caractéristiques d'E/S de chaque hôte sont définies comme étant aléatoires à 100 % avec une taille de demande de 4,000. Pour la plateforme MEDITECH MAGIC, les caractéristiques d'E/S de chaque hôte sont définies comme étant aléatoires à 100 % avec une taille de demande de 8,000 ou 16,000. Selon MEDITECH, le volume des demandes d'un déploiement de production MAGIC est de 8,000 ou 16,000.
+
+Le rapport entre les lectures et les écritures varie en fonction de la plateforme déployée. MEDITECH estime la proportion moyenne de lectures et d'écritures, puis les exprime sous forme de pourcentages. MEDITECH estime également la valeur moyenne des IOPS requises pour chaque hôte MEDITECH sur une plateforme MEDITECH particulière. Le tableau ci-dessous résume les caractéristiques des E/S spécifiques à la plateforme fournies par MEDITECH.
+
+|===
+| Catégorie MEDITECH | Plateforme MEDITECH | Pourcentage moyen de lecture aléatoire | Pourcentage moyen d'écriture aléatoire | IOPS moyennes durables par hôte MEDITECH 
+
+
+| 1 | ÉTENDUE, 6.x | 20 | 80 | 750 
+
+
+.4+| 2-6 | ÉTENDUE | 20 | 80 | 750 
+
+
+| 6.x | 20 | 80 | 750 
+
+
+| C/S 5.x | 40 | 60 | 600 
+
+
+| MAGIE | 90 | 10 | 400 
+|===
+Dans un système MEDITECH, le niveau d'IOPS moyen de chaque hôte doit être égal aux valeurs d'IOPS définies dans le tableau ci-dessus. Pour déterminer le dimensionnement correct du stockage basé sur chaque plateforme, les valeurs d'IOPS spécifiées dans le tableau ci-dessus sont utilisées dans le cadre de la méthodologie de dimensionnement décrite dans le link:ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html["Spécifications techniques pour les petites, moyennes et grandes architectures"] section.
+
+MEDITECH nécessite une latence moyenne en écriture aléatoire inférieure à 1 ms pour chaque hôte. Cependant, les augmentations temporaires de la latence d'écriture jusqu'à 2 ms durant les tâches de sauvegarde et de réaffectation sont considérées comme acceptables. MEDITECH nécessite également une latence en lecture aléatoire moyenne inférieure à 7 ms pour les hôtes de catégorie 1 et inférieure à 5 ms pour les hôtes de catégorie 2. Ces exigences de latence s'appliquent à chaque hôte, quelle que soit la plateforme MEDITECH utilisée.
+
+Le tableau ci-dessous récapitule les caractéristiques d'E/S que vous devez prendre en compte pour le dimensionnement du stockage NetApp pour les charges de travail MEDITECH.
+
+|===
+| Paramètre | Catégorie MEDITECH | ÉTENDUE | MEDITECH 6.x | C/S 5.x | MAGIE 
+
+
+| Taille de la requête .2+| 1-6 | 4K | 4K | 4K | 8K ou 16K 
+
+
+| Aléatoires et séquentielles | 100 % aléatoire | 100 % aléatoire | 100 % aléatoire | 100 % aléatoire 
+
+
+.2+| IOPS moyennes en continu | 1 | 750 | 750 | S/O | S/O 
+
+
+| 2-6 | 750 | 750 | 600 | 400 
+
+
+| Ratio lecture/écriture .2+| 1-6 | 20 % en lecture, 80 % en écriture | 20 % en lecture, 80 % en écriture | 40 % en lecture, 60 % en écriture | 90 % en lecture, 10 % en écriture 
+
+
+| Latence d'écriture | < 1 ms. | < 1 ms. | < 1 ms. | < 1 ms. 
+
+
+| Latence d'écriture de pic temporaire | 1-6 | <2 ms. | <2 ms. | <2 ms. | <2 ms. 
+
+
+.2+| Latence en lecture | 1 | <7 ms | <7 ms | S/O | S/O 
+
+
+| 2-6 | <5 ms. | <5 ms. | <5 ms. | <5 ms. 
+|===
+
+NOTE: LES hôtes MEDITECH des catégories 3 à 6 ont les mêmes caractéristiques d'E/S que les catégories 2. Pour les catégories MEDITECH 2 à 6, le nombre d'hôtes déployés dans chaque catégorie est différent.
+
+La baie de stockage NetApp doit être dimensionnée pour répondre aux exigences de performances décrites aux sections précédentes. Outre la charge de travail de production MEDITECH, le système de stockage NetApp doit être en mesure d'assurer et de maintenir les objectifs de performance fixés pour les opérations de sauvegarde, comme décrit dans la section suivante.
+
+
+
+== Description de la charge de travail de sauvegarde
+
+Le logiciel de sauvegarde certifié MEDITECH sauvegarde les LUN utilisées par chaque hôte MEDITECH d'un système MEDITECH. Pour que les sauvegardes soient cohérentes avec les applications, le logiciel de sauvegarde arrête le système MEDITECH et interrompt les demandes d'E/S au disque. Lorsque le système est mis en veille, le logiciel de sauvegarde émet une commande vers le système de stockage NetApp pour créer une copie NetApp Snapshot des volumes contenant les LUN. Ensuite, le logiciel de sauvegarde arrête le système MEDITECH, qui permet de continuer les demandes d'E/S de production vers la base de données. Le logiciel crée un volume NetApp FlexClone basé sur la copie Snapshot. Ce volume est utilisé par la source de sauvegarde pendant que les demandes d'E/S de production se poursuivent sur les volumes parents qui hébergent les LUN.
+
+La charge de travail générée par le logiciel de sauvegarde s'effectue à partir de la lecture séquentielle des LUN résidant sur les volumes FlexClone. La charge de travail est définie en tant que charge de travail en lecture séquentielle à 100 % avec une taille de requête de 64,000. Pour la charge de travail de production MEDITECH, le critère de performance est de maintenir les IOPS requises et les niveaux de latence de lecture et d'écriture associés. Toutefois, pour la charge de travail de sauvegarde, l'attention porte sur le débit de données global (Mbit/s) généré au cours de l'opération de sauvegarde. Les sauvegardes LUN DE MEDITECH doivent être effectuées dans une fenêtre de sauvegarde de huit heures, mais NetApp recommande de réaliser la sauvegarde de toutes les LUN MEDITECH en six heures ou moins. Comme le but d'effectuer une sauvegarde en moins de six heures est de limiter les événements : une augmentation non planifiée de la charge de travail MEDITECH, les opérations d'arrière-plan NetApp ONTAP et une croissance du volume des données au fil du temps. L'un de ces événements peut entraîner un temps de sauvegarde supplémentaire. Quelle que soit la quantité de données applicatives stockées, le logiciel de sauvegarde effectue une sauvegarde complète au niveau des blocs de l'intégralité du LUN pour chaque hôte MEDITECH.
+
+Calculez le débit de lecture séquentielle requis pour terminer la sauvegarde dans cette fenêtre en fonction des autres facteurs impliqués :
+
+* La durée de sauvegarde souhaitée
+* Nombre de LUN
+* Taille de chaque LUN à sauvegarder
+
+
+Par exemple, pour un environnement MEDITECH à 50 hôtes dont la taille de LUN de chaque hôte est de 200 Go, la capacité totale de LUN à sauvegarder est de 10 To.
+
+Pour sauvegarder 10 To de données en huit heures, le débit suivant est requis :
+
+* = (10 x 10^6)Mo (8 x 3,600)s
+* = 347.2MBps
+
+
+Toutefois, pour prendre en compte les événements non planifiés, une fenêtre de sauvegarde prudente de 5.5 heures est sélectionnée pour bénéficier d'une marge au-delà des six heures recommandées.
+
+Pour sauvegarder 10 To de données en huit heures, le débit suivant est requis :
+
+* = (10 x 10^6)Mo (5.5 x 3,600)s
+* = 500 Mbit/s.
+
+
+Avec un débit de 500 Mbit/s, la sauvegarde peut être effectuée dans un délai de 5.5 heures, sans problème dans un délai de 8 heures.
+
+Le tableau ci-dessous résume les caractéristiques d'E/S de la charge de travail de sauvegarde à utiliser pour la taille du système de stockage.
+
+|===
+| Paramètre | Toutes les plateformes 
+
+
+| Taille de la requête | 64 KO 
+
+
+| Aléatoires et séquentielles | 100 % séquentiel 
+
+
+| Ratio lecture/écriture | 100 % lecture 
+
+
+| Débit moyen | Dépend du nombre d'hôtes MEDITECH et de la taille de chaque LUN : la sauvegarde doit s'effectuer dans un délai de 8 heures. 
+
+
+| Durée de sauvegarde requise | 8 heures 
+|===
+
+
+== Architecture de référence Cisco UCS pour MEDITECH
+
+L'architecture pour MEDITECH sur FlexPod est basée sur les conseils des clients MEDITECH, Cisco et NetApp et l'expérience du partenaire et elle est établie avec les clients MEDITECH de toutes les tailles. L'architecture est adaptable et applique les bonnes pratiques pour MEDITECH, selon la stratégie de data Center du client : petite ou grande, centralisée, distribuée ou mutualisée.
+
+Pour déployer MEDITECH, Cisco a conçu les architectures de référence Cisco UCS et qui s'alignent directement avec les meilleures pratiques du MEDITECH. Cisco UCS propose une solution étroitement intégrée qui offre des performances élevées, une haute disponibilité, une fiabilité et une évolutivité élevées afin de prendre en charge les cabinets médicaux et les systèmes hospitaliers disposant de plusieurs milliers de lits.

@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_where_to_find_additional_information.html 
+keywords: additional, information, links, flexpod, meditech, deployment 
+summary: Pour en savoir plus sur les informations données dans ce livre blanc, consultez ces documents ou sites web. 
+---
+= Où trouver des informations complémentaires
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Pour en savoir plus sur les informations données dans ce livre blanc, consultez ces documents ou sites web :
+
+
+
+== Zone de conception FlexPod
+
+* https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["Zone de conception FlexPod"^]
+* https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["FlexPod Data Center avec stockage FC (commutateurs MDS) et NetApp AFF, vSphere 6.5U1 et Cisco UCS Manager"^]
+
+
+
+
+== Rapports techniques NetApp
+
+* https://fieldportal.netapp.com/content/192896["Tr-3929 : Guide des meilleures pratiques de réaffectation"^]
+* https://fieldportal.netapp.com/content/248308["Tr-3987 : plug-in Snap Creator Framework pour InterSystems caché"^]
+* https://fieldportal.netapp.com/content/310932["Tr-4300i : Guide des meilleures pratiques des systèmes de stockage 100 % Flash et FAS pour les environnements MEDITECH"^]
+* http://media.netapp.com/documents/tr-4017.pdf["Tr-4017 : meilleures pratiques relatives à SAN FC"^]
+* http://media.netapp.com/documents/tr-3446.pdf["Tr-3446 : Guide des meilleures pratiques et présentation du mode asynchrone de SnapMirror"^]
+
+
+
+
+== Documentation ONTAP
+
+* https://www.netapp.com/us/documentation/index.aspx["Documentation produit NetApp"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30048["Virtual Storage Console (VSC) pour la documentation vSphere"]
+* http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^]:
++
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-fc-esx-cpg/home.html["Guide FC Express pour ESXi"^]
+
+
+* https://mysupport.netapp.com/documentation/docweb/index.html?productID=62579["Documentation All ONTAP 9.3"^]:
++
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html?lang=dot-cm-ssg["Guide de configuration logicielle"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-psmg/home.html?lang=dot-cm-psmg["Guide d'alimentation des disques et des agrégats"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html?lang=dot-cm-sanag["Guide d'administration DU SAN"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html?lang=dot-cm-sanconf["Guide de configuration SAN"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-fc-cpg/home.html?lang=exp-fc-cpg["Guide de configuration FC pour Windows Express"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-fcsan-optaff-sg/home.html?lang=cdot-fcsan-optaff-sg["Guide d'installation de la solution AFF optimisée pour SAN FC"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-hacg/home.html?lang=dot-cm-hacg["Guide de configuration haute disponibilité"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html?lang=dot-cm-vsmg["Guide de gestion du stockage logique"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-perf-mon/home.html?lang=pow-perf-mon["Guide d'alimentation de gestion des performances"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-cifs-cg/home.html?lang=pow-cifs-cg["Guide d'alimentation de la configuration SMB/CIFS"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-cifs/home.html?lang=cdot-famg-cifs["Référence SMB/CIFS"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-dap/home.html?lang=pow-dap["Guide d'alimentation de la protection des données"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ptbrg/home.html?lang=dot-cm-ptbrg["Guide de protection, de sauvegarde sur bandes et de restauration des données"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-nve/home.html?lang=pow-nve["Guide d'alimentation du cryptage NetApp"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/home.html?lang=dot-cm-nmg["Guide de gestion de réseaux"^]
+** http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-cmpr-930/home.html?lang=dot-cm-cmpr-930["Commandes : Manuel de référence des pages pour ONTAP 9.3"^]
+
+
+
+
+
+
+== Guides Cisco Nexus, MDS, Cisco UCS et Cisco UCS Manager
+
+* https://www.cisco.com/c/en/us/products/servers-unified-computing/index.html["Présentation des serveurs Cisco UCS"^]
+* https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/index.html["Présentation des serveurs lames Cisco UCS"^]
+* https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/index.html["Fiche technique Cisco UCS B200 M5"]
+* https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-manager/index.html["Présentation de Cisco UCS Manager"^]
+* https://software.cisco.com/download/home/283612660/type/283655658/release/3.2%25283a%2529["Offre groupée d'infrastructure Cisco UCS Manager 3.2(3a)"^] (Autorisation Cisco.com requise)
+* https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html["Commutateurs de plateforme Cisco Nexus 9300"^]
+* https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-c78-739613.html["Commutateur Cisco MDS 9132T FC"^]
+

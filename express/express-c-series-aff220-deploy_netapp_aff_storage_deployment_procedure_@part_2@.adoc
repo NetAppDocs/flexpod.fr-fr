@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html 
+keywords: san, map, boot, storage, setup, aff, deployment, procedure, igroups 
+summary: 'Pour créer des igroups, vous avez besoin des IQN de l"initiateur iSCSI et devez effectuer les étapes suivantes.' 
+---
+= Procédure de déploiement du stockage NetApp AFF (2e partie)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Configuration du stockage de démarrage SAN ONTAP
+
+
+
+=== Création des igroups iSCSI
+
+Pour créer des igroups, effectuez l'étape suivante :
+
+Pour cette étape, vous avez besoin des IQN de l'initiateur iSCSI de la configuration du serveur.
+
+. Depuis la connexion SSH du nœud de gestion du cluster, exécutez les commandes suivantes. Pour afficher les trois groupes initiateurs créés lors de cette étape, exécutez la commande igroup show.
++
+....
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-A –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_a_iSCSI-A_vNIC_IQN>>, <<var_vm_host_infra_a_iSCSI-B_vNIC_IQN>>
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-B –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_b_iSCSI-A_vNIC_IQN>>, <<var_vm_host_infra_b_iSCSI-B_vNIC_IQN>>
+....
++
+
+NOTE: Cette étape doit être effectuée lors de l'ajout de serveurs Cisco UCS C- Series supplémentaires.
+
+
+
+
+
+== Mappez les LUN de démarrage sur les igroups
+
+Pour mapper les LUN de démarrage sur les igroups, exécutez les commandes suivantes depuis la connexion SSH de gestion du cluster :
+
+....
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igroup VM-Host-Infra- A –lun-id 0
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- B –igroup VM-Host-Infra- B –lun-id 0
+....
+
+NOTE: Cette étape doit être effectuée lors de l'ajout de serveurs Cisco UCS C-Series supplémentaires.
+
+link:express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html["Suivant : procédure de déploiement de VMware vSphere 6.7."]

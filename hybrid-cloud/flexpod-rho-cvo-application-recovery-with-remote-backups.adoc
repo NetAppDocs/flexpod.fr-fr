@@ -1,0 +1,277 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-application-recovery-with-remote-backups.html 
+keywords: application-consistent backup, recovery, use case, remote, backup, operatorhub 
+summary: 'Avec Astra, vous pouvez effectuer une sauvegarde complète et cohérente avec les applications qui permet de restaurer les données de votre application vers un autre cluster Kubernetes qui s"exécute dans un data Center sur site ou dans un cloud public. Pour valider la restauration d"application, simulez une défaillance sur site d"une application exécutée sur le système FlexPod et restaurez l"application sur un cluster K8s dans le cloud à l"aide d"une sauvegarde à distance.' 
+---
+= Restauration d'applications avec sauvegardes distantes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-validation_overview.html["Précédent : présentation de la validation de la solution."]
+
+Avec Astra, vous pouvez effectuer une sauvegarde complète et cohérente avec les applications qui permet de restaurer les données de votre application vers un autre cluster Kubernetes qui s'exécute dans un data Center sur site ou dans un cloud public.
+
+Pour valider la restauration d'application, simulez une défaillance sur site d'une application exécutée sur le système FlexPod et restaurez l'application sur un cluster K8s dans le cloud à l'aide d'une sauvegarde à distance.
+
+L'exemple d'application est une application de liste de prix qui utilise MySQL pour la base de données. Pour automatiser le déploiement, nous avons utilisé le https://argo-cd.readthedocs.io/en/stable/["CD Argo"^] outil. Argo CD est un outil de livraison continue déclaratif, GitOps.
+
+. Connectez-vous au cluster OpenShift sur site et créez un nouveau projet sous son nom `argocd`.
++
+image:flexpod-rho-cvo-image34.png["Erreur : image graphique manquante"]
+
+. Dans OperatorHub, recherchez `argocd` Et sélectionnez opérateur du CD Argo.
++
+image:flexpod-rho-cvo-image35.png["Erreur : image graphique manquante"]
+
+. Installer l'opérateur dans le `argocd` espace de noms.
++
+image:flexpod-rho-cvo-image36.png["Erreur : image graphique manquante"]
+
+. Accédez à l'opérateur et cliquez sur Créer un ArgoCD.
++
+image:flexpod-rho-cvo-image37.png["Erreur : image graphique manquante"]
+
+. Pour déployer l'instance de CD Argo dans le `argocd` Donnez un nom au projet, puis cliquez sur Créer.
++
+image:flexpod-rho-cvo-image38.png["Erreur : image graphique manquante"]
+
+. Pour vous connecter au CD Argo, l'utilisateur par défaut est admin et le mot de passe se trouve dans un fichier secret portant le nom `argocd-netapp-cluster`.
++
+image:flexpod-rho-cvo-image39.png["Erreur : image graphique manquante"]
+
+. Dans le menu latéral, sélectionnez routes > emplacement et cliquez sur l'URL de l' `argocd` itinéraires. Entrez le nom d'utilisateur et le mot de passe.
++
+image:flexpod-rho-cvo-image40.png["Erreur : image graphique manquante"]
+
+. Ajoutez le cluster OpenShift sur site au CD Argo via l'interface de ligne de commande.
++
+....
+####Login to Argo CD####
+abhinav3@abhinav-ansible$ argocd-linux-amd64 login argocd-netapp-server-argocd.apps.ocp.flexpod.netapp.com --insecure
+Username: admin
+Password:
+'admin:login' logged in successfully
+Context'argocd-netapp-server-argocd.apps.ocp.flexpod.netapp.com' updated
+####List the On-Premises OpenShift cluster####
+abhinav3@abhinav-ansible$ argocd-linux-amd64 cluster add
+ERRO[0000] Choose a context name from:
+CURRENT  NAME                                                          CLUSTER              SERVER
+*        default/api-ocp-flexpod-netapp-com:6443/abhinav3              api-ocp-flexpod-netapp-com:6443   https://api.ocp.flexpod.netapp.com:6443
+         default/api-ocp1-flexpod-netapp-com:6443/abhinav3             api-ocp1-flexpod-netapp-com:6443  https://api.ocp1.flexpod.netapp.com:6443
+####Add On-Premises OpenShift cluster###
+abhinav3@abhinav-ansible$ argocd-linux-amd64 cluster add default/api-ocp1-flexpod-netapp-com:6443/abhinav3
+WARNING: This will create a service account `argocd-manager` on the cluster referenced by context `default/api-ocp1-flexpod-netapp-com:6443/abhinav3` with full cluster level admin privileges. Do you want to continue [y/N]? y
+INFO[0002] ServiceAccount "argocd-manager" already exists in namespace "kube-system"
+INFO[0002] ClusterRole "argocd-manager-role" updated
+INFO[0002] ClusterRoleBinding "argocd-manager-role-binding" updated
+Cluster 'https://api.ocp1.flexpod.netapp.com:6443' added
+....
+. Dans l'interface utilisateur ArgoCD, cliquez sur NOUVELLE APPLICATION et entrez les détails du nom de l'application et du référentiel de code.
++
+image:flexpod-rho-cvo-image41.png["Erreur : image graphique manquante"]
+
+. Entrez le cluster OpenShift où l'application sera déployée avec le namespace.
++
+image:flexpod-rho-cvo-image42.png["Erreur : image graphique manquante"]
+
+. Pour déployer l'application sur le cluster OpenShift sur site, cliquez sur SYNC.
++
+image:flexpod-rho-cvo-image43.png["Erreur : image graphique manquante"]
+
+. Dans la console OpenShift Container Platform, accédez à la liste des tarifs du projet et, sous Storage, vérifiez le nom et la taille de la demande de volume persistant.
++
+image:flexpod-rho-cvo-image44.png["Erreur : image graphique manquante"]
+
+. Connectez-vous à System Manager et vérifiez le volume persistant.
++
+image:flexpod-rho-cvo-image45.png["Erreur : image graphique manquante"]
+
+. Une fois les pods en cours d'exécution, sélectionnez réseau > routes dans le menu latéral, puis cliquez sur l'URL sous emplacement.
++
+image:flexpod-rho-cvo-image46.png["Erreur : image graphique manquante"]
+
+. La page d'accueil de l'application Tarifs s'affiche.
++
+image:flexpod-rho-cvo-image47.png["Erreur : image graphique manquante"]
+
+. Créez quelques enregistrements sur la page Web.
++
+image:flexpod-rho-cvo-image48.png["Erreur : image graphique manquante"]
+
+. L'application est découverte dans Astra Control Center. Pour gérer l'application, accédez à applications > découverte, sélectionnez l'application Barème des prix, puis cliquez sur gérer les applications sous actions.
++
+image:flexpod-rho-cvo-image49.png["Erreur : image graphique manquante"]
+
+. Cliquez sur l'application Barème des prix et sélectionnez protection des données. À ce stade, il ne doit y avoir aucun Snapshot ni aucune sauvegarde. Cliquez sur Créer un snapshot pour créer un snapshot à la demande.
++
+image:flexpod-rho-cvo-image50.png["Erreur : image graphique manquante"]
+
++
+
+NOTE: Le NetApp Astra Control Center prend en charge à la demande et les sauvegardes Snapshot et planifiées.
+
+. Une fois le snapshot créé et l'état fonctionnel, créez une sauvegarde à distance à l'aide de ce snapshot. Cette sauvegarde est stockée dans le compartiment S3.
++
+image:flexpod-rho-cvo-image51.png["Erreur : image graphique manquante"]
+
+. Sélectionnez le compartiment AWS S3 et lancez l'opération de sauvegarde.
++
+image:flexpod-rho-cvo-image52.png["Erreur : image graphique manquante"]
+
+. L'opération de sauvegarde doit créer un dossier contenant plusieurs objets dans le compartiment AWS S3.
++
+image:flexpod-rho-cvo-image53.png["Erreur : image graphique manquante"]
+
+. Une fois la sauvegarde à distance terminée, simulez un incident sur site en arrêtant la machine virtuelle de stockage (SVM) qui héberge le volume de support du volume persistant.
++
+image:flexpod-rho-cvo-image54.png["Erreur : image graphique manquante"]
+
+. Actualisez la page Web pour confirmer l'interruption. La page Web n'est pas disponible.
++
+image:flexpod-rho-cvo-image55.png["Erreur : image graphique manquante"]
+
++
+Comme on pouvait s'y attendre, le site Web est en panne. Restaurez rapidement l'application à partir de la sauvegarde à distance en utilisant Astra vers le cluster OpenShift exécuté dans AWS.
+
+. Dans Astra Control Center, cliquez sur l'application Pricelist et sélectionnez protection des données > sauvegardes. Sélectionnez la sauvegarde, puis cliquez sur Restaurer l'application sous action.
++
+image:flexpod-rho-cvo-image56.png["Erreur : image graphique manquante"]
+
+. Sélectionnez `ocp-aws` comme cluster de destination et donner un nom au namespace. Cliquez sur sauvegarde à la demande, puis sur Suivant, puis sur Restaurer.
++
+image:flexpod-rho-cvo-image57.png["Erreur : image graphique manquante"]
+
+. Une nouvelle application portant le nom `pricelist-app` Est mise à la disposition du cluster OpenShift exécuté dans AWS.
++
+image:flexpod-rho-cvo-image58.png["Erreur : image graphique manquante"]
+
+. Vérifiez la même chose dans la console web OpenShift.
++
+image:flexpod-rho-cvo-image59.png["Erreur : image graphique manquante"]
+
+. Après toutes les gousses sous le `pricelist-aws` Le projet est en cours d'exécution, accédez aux itinéraires et cliquez sur l'URL pour lancer la page Web.
++
+image:flexpod-rho-cvo-image60.png["Erreur : image graphique manquante"]
+
+
+
+Ce processus valide la restauration de l'application prichère et le maintien de l'intégrité des données sur le cluster OpenShift fonctionnant de façon transparente sur AWS avec l'aide d'Astra Control Center.
+
+
+
+== Protection des données avec les copies Snapshot et mobilité des applications pour DevTest
+
+Ce cas d'utilisation se compose de deux parties, comme décrit dans les sections suivantes.
+
+
+
+=== Partie 1
+
+Avec Astra Control Center, vous pouvez créer des snapshots respectueux des applications pour une protection locale des données. Si vous supprimez ou corrompre accidentellement vos données, vous pouvez restaurer vos applications et les données associées à un état correct connu à l'aide d'un instantané précédemment enregistré.
+
+Dans ce scénario, une équipe de développement et de test (DevTest) déploie un exemple d'application avec état (site de blog) qui est une application de blog Ghost, ajoute du contenu et met à niveau l'application vers la dernière version disponible. L'application Ghost utilise SQLite pour la base de données. Avant de mettre à niveau l'application, un snapshot (à la demande) est utilisé avec Astra Control Center pour la protection des données. Les étapes détaillées sont les suivantes :
+
+. Déployez l'application exemple de blogging et synchronisez-la à partir d'ArgoCD.
++
+image:flexpod-rho-cvo-image61.png["Erreur : image graphique manquante"]
+
+. Connectez-vous au premier cluster OpenShift, accédez à Project et entrez Blog dans la barre de recherche.
++
+image:flexpod-rho-cvo-image62.png["Erreur : image graphique manquante"]
+
+. Dans le menu latéral, sélectionnez réseau > routes et cliquez sur l'URL.
++
+image:flexpod-rho-cvo-image63.png["Erreur : image graphique manquante"]
+
+. La page d'accueil du blog s'affiche. Ajoutez du contenu au site du blog et publiez-le.
++
+image:flexpod-rho-cvo-image64.png["Erreur : image graphique manquante"]
+
+. Rendez-vous à Astra Control Center. Commencez par gérer l'application à partir de l'onglet découverte, puis effectuez une copie Snapshot.
++
+image:flexpod-rho-cvo-image65.png["Erreur : image graphique manquante"]
+
++
+
+NOTE: Vous pouvez également protéger vos applications en créant des snapshots, des sauvegardes ou les deux à un calendrier défini. Pour plus d'informations, voir https://docs.netapp.com/us-en/astra-control-center/use/protect-apps.html["Protéger les applications avec les snapshots et les sauvegardes"^].
+
+. Une fois le snapshot à la demande créé, mettez l'application à niveau vers la dernière version. La version actuelle de l'image est `ghost: 3.6-alpine` et la version cible est `ghost:latest`. Pour mettre à niveau l'application, apportez directement des modifications au référentiel Git et synchronisez-les sur le CD Argo.
++
+image:flexpod-rho-cvo-image66.png["Erreur : image graphique manquante"]
+
+. Vous pouvez voir que la mise à niveau directe vers la dernière version n'est pas prise en charge car le site du blog est en panne et l'application entière est corrompue.
++
+image:flexpod-rho-cvo-image67.png["Erreur : image graphique manquante"]
+
+. Pour confirmer l'indisponibilité du site du blog, actualisez l'URL.
++
+image:flexpod-rho-cvo-image68.png["Erreur : image graphique manquante"]
+
+. Restaurez l'application à partir du snapshot.
++
+image:flexpod-rho-cvo-image69.png["Erreur : image graphique manquante"]
+
+. L'application est restaurée sur le même cluster OpenShift.
++
+image:flexpod-rho-cvo-image70.png["Erreur : image graphique manquante"]
+
+. Le processus de restauration des applications démarre immédiatement.
++
+image:flexpod-rho-cvo-image71.png["Erreur : image graphique manquante"]
+
+. En quelques minutes, l'application est restaurée à partir du snapshot disponible.
++
+image:flexpod-rho-cvo-image72.png["Erreur : image graphique manquante"]
+
+. Pour voir si la page Web est disponible, actualisez l'URL.
++
+image:flexpod-rho-cvo-image73.png["Erreur : image graphique manquante"]
+
+
+
+Avec l'aide d'Astra Control Center, une équipe DevTest peut réussir la récupération d'une application de blog et de ses données associées à l'aide de la capture d'écran.
+
+
+
+=== Partie 2
+
+Avec Astra Control Center, vous pouvez déplacer l'ensemble d'une application avec ses données d'un cluster Kubernetes vers un autre, quel que soit l'emplacement des clusters (sur site ou dans le cloud).
+
+. L'équipe DevTest met initialement à niveau l'application vers la version prise en charge (`ghost-4.6-alpine`) avant la mise à niveau vers la version finale (`ghost-latest`) pour la préparer à la production. Ils publient ensuite une mise à niveau de l'application clonée vers le cluster OpenShift de production s'exécutant sur un autre système FlexPod.
+. À ce stade, l'application est mise à niveau vers la dernière version et prête à être clonée sur le cluster de production.
++
+image:flexpod-rho-cvo-image74.png["Erreur : image graphique manquante"]
+
+. Pour vérifier le nouveau thème, actualisez le site du blog.
++
+image:flexpod-rho-cvo-image75.png["Erreur : image graphique manquante"]
+
+. À partir d'Astra Control Center, clonez l'application vers l'autre cluster OpenShift de production qui s'exécute sur VMware vSphere.
++
+image:flexpod-rho-cvo-image76.png["Erreur : image graphique manquante"]
+
++
+Un nouveau clone d'application est désormais provisionné dans le cluster OpenShift de production.
+
++
+image:flexpod-rho-cvo-image77.png["Erreur : image graphique manquante"]
+
+. Connectez-vous au cluster OpenShift de production et recherchez le blog du projet.
++
+image:flexpod-rho-cvo-image78.png["Erreur : image graphique manquante"]
+
+. Dans le menu latéral, sélectionnez réseau > itinéraires et cliquez sur l'URL sous emplacement. La même page d'accueil avec le contenu s'affiche.
++
+image:flexpod-rho-cvo-image79.png["Erreur : image graphique manquante"]
+
+
+
+La validation de la solution Astra Control Center est maintenant terminée. Vous pouvez désormais cloner une application et ses données d'un cluster Kubernetes à un autre, quel que soit l'emplacement du cluster Kubernetes.
+
+link:flexpod-rho-cvo-conclusion.html["Suivant: Conclusion."]

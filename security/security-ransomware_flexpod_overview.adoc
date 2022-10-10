@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_flexpod_overview.html 
+keywords: flexpod, predesigned, integrated, validated, architecture, cisco, ucs, ransomware 
+summary: 'FlexPod est une architecture préconçue, intégrée et validée qui combine les serveurs Cisco Unified Computing System (Cisco UCS), la gamme de commutateurs Cisco Nexus, les commutateurs Cisco MDS Fabric et les baies de stockage NetApp dans une architecture unique et flexible.' 
+---
+= Présentation de FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod est une architecture préconçue, intégrée et validée qui combine les serveurs Cisco Unified Computing System (Cisco UCS), la gamme de commutateurs Cisco Nexus, les commutateurs Cisco MDS Fabric et les baies de stockage NetApp dans une architecture unique et flexible. Les solutions FlexPod sont conçues pour la haute disponibilité sans points de défaillance uniques, tout en garantissant à moindre coût et flexibilité de conception afin de prendre en charge un large éventail de charges de travail. Une conception FlexPod peut prendre en charge plusieurs hyperviseurs et serveurs sans système d'exploitation. Elle peut également être dimensionnée et optimisée en fonction des exigences des charges de travail des clients.
+
+La figure ci-dessous illustre l'architecture FlexPod et met en évidence la haute disponibilité sur l'ensemble des couches de la pile. Les composants d'infrastructure du stockage, du réseau et du calcul sont configurés de telle sorte que les opérations puissent basculer instantanément vers le partenaire survivant en cas de panne de l'un des composants.
+
+image:security-ransomware_image2.png["Erreur : image graphique manquante"]
+
+L'un des principaux avantages d'un système FlexPod est qu'il est prédéfini, intégré et validé pour plusieurs charges de travail. Des guides détaillés de conception et de déploiement sont publiés pour chaque validation des solutions. Ces documents comprennent les bonnes pratiques à suivre pour exécuter des charges de travail de façon transparente sur FlexPod. Ces solutions sont construites avec les meilleurs produits de calcul, de réseau et de stockage, ainsi qu'avec un ensemble de fonctionnalités dédiées à la sécurité et au renforcement de l'ensemble de l'infrastructure.
+
+https://newsroom.ibm.com/2018-04-04-IBM-X-Force-Report-Fewer-Records-Breached-In-2017-As-Cybercriminals-Focused-On-Ransomware-And-Destructive-Attacks["Indice X-Force Threat Intelligence d'IBM"^] états-unis, « l’erreur humaine responsable des deux tiers des enregistrements compromis, y compris l’historique 424 % des erreurs de configuration dans l’infrastructure cloud ».
+
+Avec un système FlexPod, vous pouvez éviter toute erreur de configuration de votre infrastructure grâce à l'automatisation, via des playbooks Ansible qui réalisent une configuration de bout en bout de l'infrastructure selon les meilleures pratiques décrites dans les conceptions validées de Cisco (CVD) et les architectures vérifiées NetApp (NVA).

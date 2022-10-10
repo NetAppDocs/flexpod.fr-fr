@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, minimum, techincal, datacenter, specifications 
+summary: 'La conception d"une FlexPod présente des exigences minimales en matière d"alimentation et de câblage.' 
+---
+= Exigences en matière de puissance électrique et de câblage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La conception d'une FlexPod présente des exigences minimales en matière d'alimentation et de câblage.
+
+
+
+== Les besoins en alimentation électrique
+
+Les exigences en termes d'alimentation pour le data Center FlexPod diffèrent selon l'emplacement où la configuration FlexPod Datacenter est installée.
+
+Pour plus de données sur la puissance maximale requise et pour obtenir d'autres informations détaillées sur l'alimentation, consultez les spécifications techniques de chaque composant matériel répertorié dans la section link:dc-tech-spec_technical_specifications_and_references.html["Spécifications techniques et références : composants matériels"].
+
+Pour en savoir plus sur les données de puissance Cisco UCS, consultez le http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Calculateur de puissance Cisco UCS"^].
+
+Pour connaître les données d'alimentation des contrôleurs de stockage NetApp, consultez le http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe"^]. Sous les plateformes, sélectionnez la plateforme de stockage à utiliser dans la configuration (FAS/V-Series ou AFF). Sélectionnez la version ONTAP et le contrôleur de stockage, puis cliquez sur le bouton Afficher les résultats.
+
+
+
+== Exigences minimales en matière de câblage
+
+Le nombre et le type de câbles et d'adaptateurs requis varient selon le déploiement de FlexPod Datacenter. Le type de câble, le type d'émetteur-récepteur et le numéro sont déterminés pendant le processus de conception en fonction de vos besoins. Le tableau ci-dessous répertorie le nombre minimal de câbles requis.
+
+|===
+| Sous-jacent | Numéro de modèle | Câbles requis 
+
+
+| Châssis Cisco UCS | Cisco UCS 5108 | Au moins deux câbles Twinax par module Cisco UCS 2104XP, 2204XP ou 2208XP 
+
+
+.6+| Interconnexions de fabric Cisco UCS | Cisco UCS 6248UP  a| 
+* Deux câbles Cat5e pour les ports de gestion
+* Deux câbles Cat5e pour les interconnexions L1 et L2, par paire d'interconnexions de fabric
+* Au moins quatre câbles Twinax par interconnexion de fabric
+* Au moins quatre câbles FC par Fabric Interconnect
+
+
+
+
+| Cisco UCS 6296UP 
+
+
+| Cisco UCS 6332-16UP 
+
+
+| Cisco UCS 6454 
+
+
+| Cisco UCS 6332  a| 
+* Deux câbles Cat5e pour les ports de gestion
+* Deux câbles Cat5e pour les interconnexions L1 et L2, par paire d'interconnexions de fabric
+* Au moins quatre câbles Twinax par interconnexion de fabric
+
+
+
+
+| Cisco UCS 6324  a| 
+* Deux ports de gestion 10/100/1000Mbps
+* Au moins deux câbles Twinax par interconnexion de structure
+
+
+
+
+.2+| Commutateurs Cisco Nexus 5000 et 7000 | Cisco Nexus 5000 Series  a| 
+* Au moins deux câbles fibre 10 GbE ou Twinax par commutateur
+* Au moins deux câbles FC par commutateur (si la connectivité FC/FCoE est requise)
+
+
+
+
+| Cisco Nexus 7000 Series 
+
+
+| Commutateurs Cisco Nexus 9000 Series | Cisco Nexus 9000 Series | Au moins deux câbles 10GbE par commutateur 
+
+
+.2+| Contrôleurs NetApp FAS | Gamme AFF A-Series  a| 
+* Paire de câbles SAS ou SATA par contrôleur de stockage
+* En cas d'utilisation d'un câble FC existant, au moins deux câbles FC par contrôleur
+* Au moins deux câbles 10GbE par contrôleur
+* Au moins un câble GbE pour la gestion par contrôleur
+* Pour ONTAP, huit câbles Twinax courts sont requis par paire de commutateurs d'interconnexion de cluster
+
+
+
+
+| Gamme FAS 
+
+
+.4+| Tiroirs disques NetApp | DS212C .3+| Deux câbles SAS, SATA ou FC par tiroir disque 
+
+
+| DS224C 
+
+
+| DS460C 
+
+
+| NS224 | Deux câbles cuivre 100 Gbit/s par tiroir disque 
+|===

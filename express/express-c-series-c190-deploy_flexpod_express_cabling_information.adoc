@@ -1,0 +1,131 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_flexpod_express_cabling_information.html 
+keywords: flexpod, express, cabling, information, storage, controller, switch, cisco, nexus 
+summary: Cette validation de référence est câblée comme indiqué dans les figures et tableaux suivants. 
+---
+= Informations sur le câblage FlexPod Express
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette validation de référence est câblée comme indiqué dans les figures et tableaux suivants.
+
+Cette figure illustre le câblage de validation de référence.
+
+image:express-c-series-c190-deploy_image3.png["Erreur : image graphique manquante"]
+
+Le tableau suivant répertorie les informations de câblage du commutateur Cisco Nexus 31108PC-V-A.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.10+| Commutateur Cisco Nexus 31108PC-V A | Eth1/1 | Contrôleur A de stockage NetApp AFF C190 | e0c 
+
+
+| Eth1/2 | Contrôleur de stockage NetApp AFF C190 B | e0c 
+
+
+| Eth1/3 | Serveur autonome Cisco UCS C220 C-Series A | MLOM0 
+
+
+| Eth1/4 | Serveur autonome Cisco UCS C220 C-Series B | MLOM0 
+
+
+| Eth1/5 | Serveur autonome Cisco UCS C220 C-Series A | MLOM1 
+
+
+| Eth1/6 | Serveur autonome Cisco UCS C220 C-Series B | MLOM1 
+
+
+| Eth1/25 | Commutateur Cisco Nexus 31108PC-V B | Eth1/25 
+
+
+| Eth1/26 | Commutateur Cisco Nexus 31108PC-V B | Eth1/26 
+
+
+| Eth1/33 | Contrôleur A de stockage NetApp AFF C190 | E0M 
+
+
+| Eth1/34 | Serveur autonome Cisco UCS C220 C-Series A | CIMC (FEX135/1/25) 
+|===
+Ce tableau répertorie les informations de câblage du commutateur Cisco Nexus 31108PC-V- B.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.10+| Commutateur Cisco Nexus 31108PC-V B | Eth1/1 | Contrôleur A de stockage NetApp AFF C190 | e0d 
+
+
+| Eth1/2 | Contrôleur de stockage NetApp AFF C190 B | e0d 
+
+
+| Eth1/3 | Serveur autonome Cisco UCS C220 C-Series A | MLOM2 
+
+
+| Eth1/4 | Serveur autonome Cisco UCS C220 C-Series B | MLOM2 
+
+
+| Eth1/5 | Serveur autonome Cisco UCS C220 C-Series A | MLOM3 
+
+
+| Eth1/6 | Serveur autonome Cisco UCS C220 C-Series B | MLOM3 
+
+
+| Eth1/25 | Commutateur Cisco Nexus 31108 A | Eth1/25 
+
+
+| Eth1/26 | Commutateur Cisco Nexus 31108 A | Eth1/26 
+
+
+| Eth1/33 | Contrôleur de stockage NetApp AFF C190 B | E0M 
+
+
+| Eth1/34 | Serveur autonome Cisco UCS C220 C-Series B | CIMC (FEX135/1/26) 
+|===
+Ce tableau répertorie les informations de câblage du contrôleur de stockage NetApp AFF C190 A.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.5+| Contrôleur A de stockage NetApp AFF C190 | e0a | Contrôleur de stockage NetApp AFF C190 B | e0a 
+
+
+| e0b | Contrôleur de stockage NetApp AFF C190 B | e0b 
+
+
+| e0c | Commutateur Cisco Nexus 31108PC-V A | Eth1/1 
+
+
+| e0d | Commutateur Cisco Nexus 31108PC-V B | Eth1/1 
+
+
+| E0M | Commutateur Cisco Nexus 31108PC-V A | Eth1/33 
+|===
+Ce tableau répertorie les informations de câblage du contrôleur de stockage B. AFF C190 de NetApp
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.5+| Contrôleur de stockage NetApp AFF C190 B | e0a | Contrôleur A de stockage NetApp AFF C190 | e0a 
+
+
+| e0b | Contrôleur A de stockage NetApp AFF C190 | e0b 
+
+
+| e0c | Commutateur Cisco Nexus 31108PC-V A | Eth1/2 
+
+
+| e0d | Commutateur Cisco Nexus 31108PC-V B | Eth1/2 
+
+
+| E0M | Commutateur Cisco Nexus 31108PC-V B | Eth1/33 
+|===

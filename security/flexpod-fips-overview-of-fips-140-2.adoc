@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-overview-of-fips-140-2.html 
+keywords: fips 120-2, cryptographic module, security level, 
+summary: La norme FIPS 140-2 spécifie les exigences de sécurité pour un module cryptographique utilisé dans un système de sécurité qui protège les informations sensibles dans les systèmes informatiques et de télécommunication. 
+---
+= Présentation de la norme FIPS 140-2
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Précédent : cyber-menaces dans le domaine de la santé."]
+
+https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["FIPS 140-2"^] spécifie les exigences de sécurité pour un module cryptographique utilisé dans un système de sécurité qui protège les informations sensibles dans les systèmes informatiques et de télécommunication. Un module cryptographique doit être un ensemble de matériel, de logiciels, de micrologiciels ou une combinaison. FIPS s'applique aux algorithmes cryptographiques, à la génération de clés et aux gestionnaires de clés contenus dans une limite cryptographique. Il est important de comprendre que la norme FIPS 140-2 s'applique spécifiquement au module cryptographique et non au produit, à l'architecture, aux données ou à l'écosystème. Le module cryptographique, qui est défini dans les termes clés plus loin dans ce document, est le composant spécifique (qu'il s'agisse du matériel, du logiciel et/ou du micrologiciel) qui implémente des fonctions de sécurité approuvées. La norme FIPS 140-2 spécifie également quatre niveaux. Les algorithmes cryptographiques approuvés sont communs à tous les niveaux. Voici les éléments clés et exigences de chaque niveau de sécurité :
+
+* *Niveau de sécurité 1*
++
+** Spécifie les exigences de sécurité de base pour un module cryptographique (au moins un algorithme ou une fonction de sécurité approuvé est nécessaire).
+** Aucun mécanisme de sécurité physique spécifique n'est requis pour le niveau 1 au-delà des exigences de base pour les composants de qualité de production.
+
+
+* *Niveau de sécurité 2*
++
+** Améliore les mécanismes de sécurité physique en ajoutant la nécessité de preuves d'inviolabilité en utilisant des solutions inviolables telles que des revêtements ou des joints, des verrous sur des capots ou portes amovibles des modules cryptographiques.
+** Exige, au minimum, que le contrôle d'accès basé sur des rôles (RBAC) dans lequel le module cryptographique authentifie l'autorisation d'un opérateur ou d'un administrateur d'assumer un rôle spécifique et exécute un ensemble de fonctions correspondant.
+
+
+* *Niveau de sécurité 3*
++
+** S'appuie sur les exigences inviolables du niveau 2 et tente d'empêcher un accès plus poussé aux paramètres de sécurité critiques (CSP) au sein du module cryptographique.
+** Les mécanismes de sécurité physique requis au niveau 3 sont destinés à avoir une forte probabilité de détecter et de répondre aux tentatives d'accès physique ou à toute utilisation ou modification du module cryptographique. Il peut s'agir, par exemple, de boîtiers forts, d'une détection d'autosurveillance et de circuits de réponse qui zéros tous les CSP en texte clair lorsqu'un capot amovible sur le module cryptographique est ouvert.
+** Nécessite des mécanismes d'authentification basés sur les identités pour renforcer la sécurité des mécanismes RBAC spécifiés au niveau 2. Un module cryptographique authentifie l'identité d'un opérateur et vérifie que celui-ci est autorisé à utiliser un rôle et à exécuter les fonctions du rôle.
+
+
+* *Niveau de sécurité 4*
++
+** Le plus haut niveau de sécurité de la norme FIPS 140-2.
+** Le niveau le plus utile pour les opérations dans les environnements physiquement non protégés.
+** À ce niveau, les mécanismes de sécurité physique sont conçus pour fournir une protection complète autour du module cryptographique, qui est responsable de détecter et de répondre à toute tentative non autorisée d'accès physique.
+** La pénétration ou l'exposition du module cryptographique devrait avoir une forte probabilité de détection et entraîner la mise à zéro immédiate de tous les CSP non sécurisés ou en texte clair.
+
+
+
+
+link:flexpod-fips-control-plane-versus-data-plane.html["Ensuite, plan de contrôle et plan de données."]

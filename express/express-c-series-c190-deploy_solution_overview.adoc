@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_solution_overview.html 
+keywords: solution, overview, flexpod, express,c, series, deployment, infrastructure, verified, architecture, converged, case 
+summary: 'Cette solution FlexPod Express fait partie du programme d"infrastructure convergée FlexPod.' 
+---
+= Présentation de la solution
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette solution FlexPod Express fait partie du programme d'infrastructure convergée FlexPod.
+
+
+
+== Programme d'infrastructure convergée FlexPod
+
+Les architectures de référence FlexPod sont fournies sous la forme de conceptions validées par Cisco (CVD) ou d'architectures vérifiées NetApp (NVA). Les écarts en fonction des exigences du client par rapport à un CVD ou à une NVA donné sont autorisés si ces variations ne créent pas de configuration non prise en charge.
+
+Le programme FlexPod comprend deux solutions : FlexPod Express et FlexPod Datacenter.
+
+* *FlexPod Express.* offre aux clients une solution d'entrée de gamme dotée de technologies Cisco et NetApp.
+* *FlexPod Datacenter.* offre une base polyvalente optimale pour diverses charges de travail et applications.
+
+
+image:express-c-series-c190-deploy_image1.png["Erreur : image graphique manquante"]
+
+
+
+== Programme d'architecture vérifiée NetApp
+
+Le programme d'architecture vérifiée NetApp propose une architecture validée pour les solutions NetApp Une architecture vérifiée NetApp fournit une architecture de solution NetApp qui apporte les qualités suivantes :
+
+* Tests approfondis
+* Normative par nature
+* Risques de déploiement minimisés
+* Réduction du délai de mise sur le marché
+
+
+Ce guide détaille la conception de FlexPod Express avec VMware vSphere. Cette conception utilise également le tout nouveau système AFF C190 (exécutant NetApp ONTAP® 9.6), le Cisco Nexus 31108 et les serveurs Cisco UCS C-Series C220 M5 comme nœuds d'hyperviseur.
+
+
+
+== Technologie de la solution
+
+Cette solution tire parti des dernières technologies de NetApp, Cisco et VMware. Cette solution comprend le nouveau système NetApp AFF C190 exécutant ONTAP 9.6, deux switchs Cisco Nexus 31108 et des serveurs rack Cisco UCS C220 M5 exécutant VMware vSphere 6.7U2. Cette solution validée utilise une technologie 10GbE. Des recommandations sont également fournies quant à la manière de faire évoluer les capacités de calcul en ajoutant deux nœuds d'hyperviseur à la fois afin que l'architecture FlexPod Express puisse s'adapter aux besoins métier en constante évolution de l'entreprise.
+
+image:express-c-series-c190-deploy_image2.png["Erreur : image graphique manquante"]
+
+
+NOTE: Pour utiliser les quatre ports 10GbE physiques sur le VIC 1457 de manière efficace, créez deux liaisons supplémentaires entre chaque serveur et les commutateurs du rack supérieur.
+
+
+
+== Récapitulatif du cas d'utilisation
+
+La solution FlexPod Express peut être appliquée à plusieurs cas d'utilisation, notamment :
+
+* Bureaux distants ou succursales
+* Moyennes entreprises
+* Les environnements qui nécessitent une solution dédiée et économique
+
+
+FlexPod Express est parfaitement adapté aux charges de travail virtualisées et mixtes. Bien que cette solution ait été validée avec vSphere 6.7U2, elle prend en charge toute version vSphere qualifiée avec les autres composants par l'outil de matrice d'interopérabilité NetApp. NetApp recommande de déployer vSphere 6.7U2 pour ses correctifs et ses fonctionnalités améliorées, telles que :
+
+* Prise en charge des nouveaux protocoles pour la sauvegarde et la restauration d'une appliance serveur vCenter, notamment HTTP, HTTPS, FTP, FTPS, SCP, NFS ET SMB.
+* Nouvelle fonctionnalité lors de l'utilisation de la bibliothèque de contenus. La synchronisation des modèles VM natifs entre les bibliothèques de contenu est désormais disponible lorsque vCenter Server est configuré pour un mode lié amélioré.
+* Une page de plug-in client mise à jour.
+* Améliorations ajoutées dans vSphere Update Manager (VUM) et le client vSphere. Vous pouvez maintenant effectuer les actions de rattachement, de vérification de conformité et de correction, le tout à partir d'un seul écran.
+
+
+Pour plus d'informations sur ce sujet, reportez-vous au https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["Page vSphere 6.7U2"^] et le https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["Notes de mise à jour de vCenter Server 6.7U2"^].

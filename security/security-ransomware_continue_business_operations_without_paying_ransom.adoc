@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_continue_business_operations_without_paying_ransom.html 
+keywords: ransom, pay, business, operations, restore, data, attack, prevent, recover 
+summary: 'Les fonctionnalités NetApp décrites dans ce document vous aident à restaurer les données en quelques minutes après une attaque et à éviter les attaques en premier lieu, afin de pouvoir continuer l"activité sans faire l"obstacle.' 
+---
+= Continuez vos activités sans payer de rançon
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les fonctionnalités NetApp décrites dans ce document vous aident à restaurer les données en quelques minutes après une attaque et à éviter les attaques en premier lieu, afin de pouvoir continuer l'activité sans faire l'obstacle.
+
+Un planning de copies Snapshot peut être défini pour atteindre l'objectif de point de récupération souhaité. Les opérations de restauration basées sur des copies Snapshot sont très rapides. Par conséquent, il est possible d'atteindre un objectif de durée de restauration (RTO) très faible.
+
+Par-dessus tout, vous n'avez pas à payer de rançon suite à une attaque, et vous pouvez rapidement revenir à la normale.

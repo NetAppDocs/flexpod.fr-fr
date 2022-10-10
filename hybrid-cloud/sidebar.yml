@@ -1,0 +1,126 @@
+---
+section: hybrid-cloud
+title: Cloud hybride
+entries:
+- title: FlexPod Cloud hybride pour Google Cloud Platform avec NetApp Cloud Volumes
+    ONTAP et Cisco Intersight
+  type: solutions
+  entries:
+  - title: Présentation de la solution
+    url: "/hybrid-cloud/gcp-ncvo-solution-overview.html"
+  - title: Composants de la solution
+    url: "/hybrid-cloud/gcp-ncvo-solution-components.html"
+  - title: Installation et configuration
+    entries:
+    - title: Déployez FlexPod
+      url: "/hybrid-cloud/gcp-ncvo-deploy-flexpod.html"
+    - title: Configuration Cisco Intersight
+      url: "/hybrid-cloud/gcp-ncvo-cisco-intersight-configuration.html"
+    - title: Terraform intégration au cloud avec une condition préalable de l'ICO
+      url: "/hybrid-cloud/gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html"
+    - title: Configurez le fournisseur de services clouds publics
+      url: "/hybrid-cloud/gcp-ncvo-configure-public-cloud-service-provider.html"
+    - title: Déploiement automatisé du stockage de cloud hybride NetApp
+      url: "/hybrid-cloud/gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html"
+    - title: Workflow de reprise d'activité
+      url: "/hybrid-cloud/gcp-ncvo-dr-workflow.html"
+    - title: Exécution Terraform à partir du contrôleur
+      url: "/hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html"
+  - title: Validation des solutions
+    url: "/hybrid-cloud/gcp-ncvo-solution-validation.html"
+  - title: Conclusion
+    url: "/hybrid-cloud/gcp-ncvo-conclusion.html"
+- title: Cloud hybride FlexPod avec NetApp Astra et Cisco Intersight pour Red Hat
+    OpenShift
+  type: solutions
+  entries:
+  - title: Présentation de la solution
+    url: "/hybrid-cloud/flexpod-rho-cvo-solution-overview.html"
+  - title: Composants de la solution
+    url: "/hybrid-cloud/flexpod-rho-cvo-solution-components.html"
+  - title: Installation et configuration
+    entries:
+    - title: Installation de FlexPod pour OpenShift Container Platform 4 sans système
+        d'exploitation
+      url: "/hybrid-cloud/flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html"
+    - title: Red Hat OpenShift sur AWS
+      url: "/hybrid-cloud/flexpod-rho-cvo-red-hat-openshift-on-aws.html"
+    - title: NetApp Cloud Volumes ONTAP
+      url: "/hybrid-cloud/flexpod-rho-cvo-netapp-cloud-volumes-ontap.html"
+    - title: Installation d'Astra Control Center sur OpenShift Container Platform
+      url: "/hybrid-cloud/flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html"
+  - title: Validation des solutions
+    entries:
+    - title: Présentation
+      url: "/hybrid-cloud/flexpod-rho-cvo-solution-validation_overview.html"
+    - title: Restauration d'applications avec sauvegardes distantes
+      url: "/hybrid-cloud/flexpod-rho-cvo-application-recovery-with-remote-backups.html"
+  - title: Conclusion
+    url: "/hybrid-cloud/flexpod-rho-cvo-conclusion.html"
+- title: NetApp Cloud Insights pour FlexPod
+  type: solutions
+  entries:
+  - title: Présentation
+    url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
+  - title: Cas d'utilisation
+    url: "/hybrid-cloud/cloud-insights_use_cases.html"
+  - title: Architecture
+    url: "/hybrid-cloud/cloud-insights_architecture.html"
+  - title: Considérations relatives à la conception
+    url: "/hybrid-cloud/cloud-insights_design_considerations.html"
+  - title: Déployez Cloud Insights pour FlexPod
+    url: "/hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html"
+  - title: Cas d'utilisation
+    url: "/hybrid-cloud/cloud-insights_use_cases_01.html"
+  - title: Vidéos et démonstrations
+    url: "/hybrid-cloud/cloud-insights_videos_and_demos.html"
+  - title: Informations supplémentaires
+    url: "/hybrid-cloud/cloud-insights_additional_information.html"
+- title: 'FlexPod avec FabricPool : Tiering des données inactives vers Amazon AWS
+    S3'
+  type: solutions
+  entries:
+  - title: Présentation
+    url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
+  - title: Présentation et architecture de FlexPod
+    url: "/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html"
+  - title: FabricPool
+    url: "/hybrid-cloud/cloud-fabricpool_fabricpool.html"
+  - title: Conditions requises pour le FabricPool
+    url: "/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html"
+  - title: Configuration
+    entries:
+    - title: Révisions du logiciel FabricPool
+      url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
+    - title: Installez la licence FabricPool
+      url: "/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html"
+    - title: Création d'un compartiment AWS S3
+      url: "/hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html"
+    - title: Ajoutez un Tier cloud à ONTAP
+      url: "/hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html"
+    - title: Association d'un Tier cloud à un agrégat ONTAP
+      url: "/hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html"
+    - title: Définition de la règle de Tiering des volumes
+      url: "/hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html"
+    - title: Définissez le Tiering des volumes sur les jours de refroidissement minimum
+      url: "/hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html"
+  - title: Performances
+    url: "/hybrid-cloud/cloud-fabricpool_performance_considerations.html"
+  - title: Le coût de possession
+    url: "/hybrid-cloud/cloud-fabricpool_cost_of_ownership.html"
+  - title: Conclusion
+    url: "/hybrid-cloud/cloud-fabricpool_conclusion.html"
+  - title: Où trouver des informations complémentaires
+    url: "/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html"
+- title: FlexPod Datacenter avec IBM Cloud Private, Cisco UCS Manager, NetApp ONTAP
+    9.3 AFF et VMware vSphere 6.5U1 [conception]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html
+- title: FlexPod Datacenter pour plateforme en tant que service avec Apprenda 8.2,
+    Cisco ACI 3.1 et Kubernetes 1.9.4 [Design]
+  url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf
+- title: FlexPod Datacenter pour le cloud hybride avec Cisco CloudCenter et NetApp
+    Private Storage [Design}
+  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html
+- title: FlexPod Datacenter pour le cloud hybride avec Cisco CloudCenter et NetApp
+    Private Storage [déployer]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html

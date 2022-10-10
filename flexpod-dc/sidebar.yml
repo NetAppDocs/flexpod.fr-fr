@@ -1,0 +1,60 @@
+---
+section: flexpod-dc
+title: Data Center FlexPod
+entries:
+- title: FlexPod datacenter avec NetApp SnapMirror Business Continuity et ONTAP 9.10
+  type: solutions
+  entries:
+  - title: Introduction
+    url: "/flexpod-dc/sm-bcs-introduction.html"
+  - title: Solution FlexPod SM-BC
+    url: "/flexpod-dc/sm-bcs-flexpod-sm-bc-solution.html"
+  - title: Validation des solutions
+    entries:
+    - title: Présentation
+      url: "/flexpod-dc/sm-bcs-solution-validation_overview.html"
+    - title: Calcul
+      url: "/flexpod-dc/sm-bcs-compute.html"
+    - title: Le réseau
+      url: "/flexpod-dc/sm-bcs-network.html"
+    - title: Stockage
+      url: "/flexpod-dc/sm-bcs-storage.html"
+    - title: Virtualisation
+      url: "/flexpod-dc/sm-bcs-virtualization.html"
+    - title: Des scénarios validés
+      url: "/flexpod-dc/sm-bcs-validated-scenarios.html"
+  - title: Conclusion
+    url: "/flexpod-dc/sm-bcs-conclusion.html"
+  - title: Où trouver des informations supplémentaires et l'historique des versions
+    url: "/flexpod-dc/sm-bcs-where-to-find-additional-information-and-version-history.html"
+- title: 'FlexPod Datacenter avec VMware vSphere 7.0, Cisco VXLAN structure sur site
+    unique et NetApp ONTAP 9.7 : Guide de conception'
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html
+- title: FlexPod Datacenter avec VMware vSphere 7.0 et NetApp ONTAP 9.7
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html
+- title: 'FlexPod Datacenter avec NetApp ONTAP 9.7, Cisco Intersight et VMware vSphere
+    6.7 U3 : conception'
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+- title: 'FlexPod Datacenter avec NetApp ONTAP 9.7, Cisco Intersight et VMware vSphere
+    6.7 U3 : déploiement'
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html
+- title: Guide de design de FlexPod Datacenter avec Cisco Intersight et NetApp ONTAP
+    9.7
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+- title: FlexPod Datacenter avec NetApp ONTAP 9.6, Cisco UCS 4e génération, VMware
+    vSphere 6.7U2 (CVD)
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html
+- title: FlexPod Datacenter avec VMware vSphere 6.7 U1, Cisco UCS de 4e génération
+    et systèmes NetApp AFF A-Series - Design
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html
+- title: FlexPod Datacenter avec VMware vSphere 6.7 U1, Cisco UCS de 4e génération
+    et systèmes NetApp AFF A-Series - déploiement
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html
+- title: Introduction à la technologie NVMe de bout en bout pour FlexPod
+  url: https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html
+- title: Guide de design de FlexPod Datacenter avec Cisco ACI Multi-Pod, NetApp MetroCluster
+    IP et VMware vSphere 6.7
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html
+- title: Guide de déploiement de FlexPod Datacenter avec Cisco ACI Multi-Pod, NetApp
+    MetroCluster IP et VMware vSphere 6.7
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html

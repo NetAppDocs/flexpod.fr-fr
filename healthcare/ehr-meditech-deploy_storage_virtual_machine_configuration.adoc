@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html 
+keywords: storage, virtual, machine, configuration, svm, meditech, host, luns, language, encoding 
+summary: Cette section se rapporte au déploiement sur ONTAP 8.3 et versions ultérieures. 
+---
+= Configuration des serveurs virtuels de stockage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section se rapporte au déploiement sur ONTAP 8.3 et versions ultérieures.
+
+
+NOTE: Un SVM (Storage Virtual machine) est également appelé vServer dans l'API ONTAP et dans l'interface de ligne de commande de ONTAP.
+
+
+
+== SVM pour les LUN hôtes MEDITECH
+
+Il est conseillé de créer un SVM dédié par cluster de stockage ONTAP pour posséder et gérer les agrégats contenant les LUN des hôtes MEDITECH.
+
+
+
+== Paramètre de codage du langage SVM
+
+NetApp vous recommande de définir le codage du langage pour tous les SVM. Si aucun paramètre de codage de langue n'est spécifié au moment de la création du SVM, le paramètre de codage de langue par défaut est utilisé. Le paramètre de codage de langue par défaut est .UTF-8 pour ONTAP. Une fois le codage de langue défini, vous ne pouvez pas modifier par la suite la langue d'un SVM avec Infinite Volume.
+
+Les volumes associés à la SVM héritent du paramètre de codage du langage SVM, sauf si vous spécifiez explicitement un autre paramètre lors de la création des volumes. Pour permettre certaines opérations de fonctionner, vous devez utiliser le paramètre de codage de langue de manière cohérente dans tous les volumes de votre site. Par exemple, SnapMirror nécessite que les SVM source et destination aient le même paramètre de codage du langage.
+
+link:ehr-meditech-deploy_volume_configuration.html["Suivant : configuration de volume."]

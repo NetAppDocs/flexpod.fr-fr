@@ -1,0 +1,148 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-compute.html 
+keywords: compute, connectivity, service profiles, san boot 
+summary: La configuration de calcul de la solution FlexPod SM-BC suit les bonnes pratiques des solutions FlexPod classiques. Les sections suivantes mettent en évidence certaines des connexions et configurations utilisées pour la validation. Certaines des considérations liées au SM-BC sont également mises en évidence pour fournir des références et des conseils sur la mise en œuvre. 
+---
+= Validation des solutions : calcul
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-solution-validation_overview.html["Preivous : validation de la solution - Présentation."]
+
+La configuration de calcul de la solution FlexPod SM-BC suit les bonnes pratiques des solutions FlexPod classiques. Les sections suivantes mettent en évidence certaines des connexions et configurations utilisées pour la validation. Certaines des considérations liées au SM-BC sont également mises en évidence pour fournir des références et des conseils sur la mise en œuvre.
+
+
+
+== Connectivité
+
+La connectivité entre les serveurs lames UCS B200 et les IOM est fournie par la carte VIC UCS 5108 via les connexions de fond de panier du châssis UCS. UCS 2204XP Fabric Extender utilisé pour la validation possède 16 ports 10G chacun pour la connexion aux huit serveurs lames demi-largeur, par exemple deux pour chaque serveur. Pour augmenter la bande passante de connectivité du serveur, vous pouvez ajouter un VIC supplémentaire basé sur mezzanine pour connecter le serveur au module UCS 2408 IOM alternatif qui fournit quatre connexions 10G à chaque serveur.
+
+image:sm-bcs-image17.png["Erreur : image graphique manquante"]
+
+La connectivité entre le châssis UCS 5108 et les IF UCS 6454 utilisés pour la validation sont assurées par le module IOM 2204XP qui utilise quatre connexions 10G. Les ports FI 1 à 4 sont configurés comme ports serveur pour ces connexions. Les ports FI 25 à 28 sont configurés en tant que ports de liaison ascendante du réseau vers les commutateurs Nexus A et B du site local. Les figures et tableaux suivants présentent le schéma de connectivité et les détails de connexion des ports pour les serveurs UCS 6454 IFF permettant de se connecter au châssis UCS 5108 et aux switchs Nexus.
+
+image:sm-bcs-image18.png["Erreur : image graphique manquante"]
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| UCS 6454 FI A | 1 | MODULE D'E/S A | 1 
+
+
+|  | 2 |  | 2 
+
+
+|  | 3 |  | 3 
+
+
+|  | 4 |  | 4 
+
+
+|  | 25 | Nexus A | 24/13/1 
+
+
+|  | 26 |  | 24/13/2 
+
+
+|  | 27 | Nexus B | 24/13/3 
+
+
+|  | 28 |  | 24/13/4 
+
+
+|  | L1 | UCS 6454 FI B | L1 
+
+
+|  | L2 |  | L2 
+
+
+| UCS 6454 FI B | 1 | MODULE D'E/S B | 1 
+
+
+|  | 2 |  | 2 
+
+
+|  | 3 |  | 3 
+
+
+|  | 4 |  | 4 
+
+
+|  | 25 | Nexus A | 24/13/3 
+
+
+|  | 26 |  | 24/13/4 
+
+
+|  | 27 | Nexus B | 24/13/1 
+
+
+|  | 28 |  | 24/13/2 
+
+
+|  | L1 | UCS 6454 FI A | L1 
+
+
+|  | L2 |  | L2 
+|===
+
+NOTE: Les connexions ci-dessus sont similaires pour les deux sites A et B, malgré l'utilisation du site A avec des switchs Nexus 9336C-FX2et du site B avec des switchs Nexus 3232C. Des câbles de dérivation 40G à 4x10G sont utilisés pour les connexions Nexus vers FI. Les connexions FI au Nexus utilisent le canal de port et les canaux de port virtuel sont configurés sur les commutateurs Nexus afin d'agréger les connexions à chaque FI.
+
+
+NOTE: Si vous utilisez une autre combinaison de composants IOM, FI et Nexus, veillez à utiliser les câbles et la vitesse de port appropriés pour la combinaison d'environnement.
+
+
+NOTE: Une bande passante supplémentaire peut être obtenue en utilisant des composants qui prennent en charge des connexions plus rapides ou plus de connexions. Pour assurer une redondance supplémentaire, il est possible d'ajouter des connexions supplémentaires avec des composants qui les prennent en charge.
+
+
+
+== Profils de services
+
+Un châssis de serveur lame avec des Fabric Interconnect gérés par UCS Manager (UCSM) ou Cisco Intersight peut extraire les serveurs à l'aide des profils de service disponibles dans UCSM et les profils de serveurs. Cette validation utilise UCSM et les profils de service pour simplifier la gestion des serveurs. Avec les profils de service, il est possible de remplacer ou mettre à niveau un serveur simplement en associant le profil de service d'origine au nouveau matériel.
+
+Les profils de service créés prennent en charge les éléments suivants pour les hôtes VMware ESXi :
+
+* Démarrage SAN depuis le système de stockage AFF A250 sur n'importe quel site, au moyen du protocole iSCSI.
+* Six vNIC sont créés pour les serveurs où :
++
+** Deux cartes vNIC redondantes (vSwitch0-A et vSwitch0-B) transportent le trafic de gestion sur bande. Éventuellement, ces vNIC peuvent également être utilisés par des données de protocole NFS qui ne sont pas protégées par SM-BC.
+** Deux vNIC redondants (VDS-A et VDS-B) sont utilisés par le commutateur distribué vSphere pour supporter le trafic VMware vMotion et d'autres applications.
+** ISCSI-A vNIC utilisé par iSCSI-A vSwitch pour fournir un accès au chemin iSCSI-A.
+** VNIC iSCSI-B utilisé par le vSwitch iSCSI-B pour fournir un accès au chemin iSCSI-B.
+
+
+
+
+
+
+== Démarrage SAN
+
+Dans le cas de la configuration de démarrage SAN iSCSI, les paramètres de démarrage iSCSI sont définis pour autoriser le démarrage iSCSI à partir des deux matrices iSCSI. Pour prendre en charge le scénario de basculement SM-BC dans lequel une LUN de démarrage SAN iSCSI est desservie à partir du cluster secondaire lorsque le cluster principal n'est pas disponible, la configuration cible statique iSCSI doit inclure des cibles à partir du site A et du site B. De plus, pour optimiser la disponibilité des LUN de démarrage, configurez les paramètres de démarrage iSCSI pour qu'ils démarrent à partir de tous les contrôleurs de stockage.
+
+La cible statique iSCSI peut être configurée dans la stratégie d'amorçage des modèles de profil de service sous la boîte de dialogue définir le paramètre d'amorçage iSCSI, comme illustré dans la figure suivante. La configuration recommandée des paramètres d'amorçage iSCSI est indiquée dans le tableau suivant, qui implémente la stratégie d'amorçage décrite ci-dessus pour obtenir une haute disponibilité.
+
+image:sm-bcs-image19.png["Erreur : image graphique manquante"]
+
+|===
+| Structure iSCSI | Priorité | Cible iSCSI | LIF iSCSI 
+
+
+| ISCSI A | 1 | Site Une cible iSCSI | Site A Controller 1 iSCSI A LIF 
+
+
+|  | 2 | Cible iSCSI du site B | Contrôleur B 2 iSCSI A LIF 
+
+
+| ISCSI B | 1 | Cible iSCSI du site B | Contrôleur B 1 LIF iSCSI B du site B 
+
+
+|  | 2 | Site Une cible iSCSI | Site A contrôleur 2 iSCSI B LIF 
+|===
+link:sm-bcs-network.html["Suivant : validation de la solution - réseau."]

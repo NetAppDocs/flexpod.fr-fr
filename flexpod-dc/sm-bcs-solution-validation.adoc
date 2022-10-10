@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: sm-bcs-solution-validation.html 
+keywords:  
+summary:  
+---
+= Validation des solutions
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+

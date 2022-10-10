@@ -1,0 +1,116 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html 
+keywords: benefits, hardware, software, 
+summary: 'Pour démontrer la configuration FIPS sur un système FlexPod, nous avons utilisé un système de DME open source et un système de communication et d"archivage des images open source pour la configuration en laboratoire et la validation des charges de travail sur le système FlexPod.' 
+---
+= Avantages de la solution de l'infrastructure convergée FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["Précédent : stockage NetApp ONTAP de FlexPod et FIPS 140-2."]
+
+Les organismes de santé disposent de plusieurs systèmes stratégiques. Deux des systèmes les plus critiques sont les systèmes de dossiers médicaux électroniques (DME) et les systèmes d'imagerie médicale. Pour démontrer la configuration FIPS sur un système FlexPod, nous avons utilisé un système de DME open source et un système de communication et d'archivage des images open source pour la configuration en laboratoire et la validation des charges de travail sur le système FlexPod. Pour obtenir la liste complète des fonctionnalités EHR, des composants d'application logique EHR et les avantages des systèmes EHR lorsqu'ils sont implémentés sur un système FlexPod, consultez la section https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["Tr-4881 : FlexPod pour les systèmes de dossiers de santé électroniques"^]. Pour obtenir la liste complète des fonctionnalités d'un système d'imagerie médicale, des composants d'application logique et des avantages des systèmes d'imagerie médicale lorsqu'ils sont implémentés sur FlexPod, consultez la section https://www.netapp.com/media/19793-tr-4865.pdf["Tr-4865 : FlexPod pour l'imagerie médicale"^].
+
+Lors de la configuration de FIPS et de la validation des charges de travail, nous avons exercé les caractéristiques de workloads représentatives d'un organisme de santé typique. Par exemple, nous avons exercé un système open source EHR afin d'inclure des scénarios réalistes d'accès aux données des patients et de changement. Par ailleurs, nous avons exercé les charges de travail d'imagerie médicale incluant l'imagerie numérique et les communications dans des objets médicaux (DICOM) dans un `*. dcm` format de fichier. Les objets DICOM avec métadonnées étaient stockés dans le stockage de fichiers et en blocs. De plus, nous avons mis en œuvre des fonctionnalités de chemins d'accès multiples à partir d'un serveur virtualisé RedHat Enterprise Linux (RHEL). Nous stockons des objets DICOM sur un système NFS, des LUN montées à l'aide d'iSCSI et des LUN montées à l'aide de FC. Lors de la configuration et de la validation FIPS, nous avons observé que l'infrastructure convergée FlexPod dépassait nos attentes.
+
+La figure suivante décrit le système FlexPod utilisé pour la configuration et la validation de FIPS. Nous avons utilisé https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod Datacenter avec VMware vSphere 7.0 et NetApp ONTAP 9.7 conception validée par Cisco (CVD)"^] pendant le processus de configuration.
+
+image:flexpod-fips-image6.png["Erreur : image graphique manquante"]
+
+
+
+== Composants matériels et logiciels de l'infrastructure de la solution
+
+Les deux figures suivantes illustrent respectivement les composants matériels et logiciels utilisés lors du test FIPS lors de l'activation sur un FlexPod. Les recommandations présentées dans ces tableaux sont des exemples. Vous devez collaborer avec votre expert technique NetApp pour vous assurer que les composants sont adaptés à votre entreprise. Assurez-vous également que les composants et versions sont pris en charge dans le https://mysupport.netapp.com/matrix/["Matrice d'interopérabilité NetApp"^] (IMT) et https://ucshcltool.cloudapps.cisco.com/public/["Liste de compatibilité matérielle Cisco (HCL)"^].
+
+|===
+| Calque | Famille de produits | Quantité et modèle | Détails 
+
+
+| Calcul | Châssis Cisco UCS 5108 | 1 ou 2 |  
+
+
+|  | Les serveurs lames Cisco UCS | 3 B200 M5 | Chacun doté de 2 20 cœurs ou plus, de 2,7 GHz et de 128 Go de RAM 
+
+
+|  | Carte d'interface virtuelle Cisco UCS (VIC) | Cisco UCS 1440 | Voir la 
+
+
+|  | 2 interconnexions de fabric Cisco UCS | 6332 | - 
+
+
+| Le réseau | Commutateurs Cisco Nexus | 2 x Cisco Nexus 9332 | - 
+
+
+| Réseau de stockage | Réseau IP pour l'accès au stockage via les protocoles SMB/CIFS, NFS ou iSCSI | Mêmes commutateurs réseau que ci-dessus | - 
+
+
+|  | Accès au stockage via FC | 2 x Cisco MDS 9148S | - 
+
+
+| Stockage | Système de stockage 100 % Flash NetApp AFF A700 | 1 Cluster | Cluster à deux nœuds 
+
+
+|  | Tiroir disque | Un tiroir disque DS224C ou NS224 | Plein avec 24 disques 
+
+
+|  | SSD | Pour 24, 1,2 To ou plus | - 
+|===
+|===
+| Logiciel | Famille de produits | Version ou version | Détails 
+
+
+| Divers | Linux | RHEL 7.X. | - 
+
+
+|  | Répertoires de base | Windows Server 2012 R2 (64 bits) | - 
+
+
+|  | NetApp ONTAP | ONTAP 9.7 ou version ultérieure | - 
+
+
+|  | Fabric Interconnect Cisco UCS | Cisco UCS Manager 4.1 ou version ultérieure | - 
+
+
+|  | Switchs Cisco Ethernet 3000 ou 9000 | Pour la série 9000, 7.0(3)I7(7) ou ultérieure pour la série 3000, 9.2(4) ou ultérieure | - 
+
+
+|  | Cisco FC : Cisco MDS 9132T | 8.4(1a) ou ultérieure | - 
+
+
+|  | Hyperviseur | VMware vSphere ESXi 6.7 U2 ou version ultérieure | - 
+
+
+| Stockage | Système de gestion de l'hyperviseur | VMware vCenter Server 6.7 U3 (vCSA) ou version ultérieure | - 
+
+
+| Le réseau | NetApp Virtual Storage Console (VSC) | VSC 9.7 ou version ultérieure | - 
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 ou version ultérieure | - 
+
+
+|  | Cisco UCS Manager | 4.1(1c) ou ultérieure |  
+
+
+| Hyperviseur | VMware ESXi |  |  
+
+
+| Gestion | Système de gestion de l'hyperviseur VMware vCenter Server 6.7 U3 (vCSA) ou version ultérieure |  |  
+
+
+|  | NetApp Virtual Storage Console (VSC) | VSC 9.7 ou version ultérieure |  
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 ou version ultérieure |  
+
+
+|  | Cisco UCS Manager | 4.1(1c) ou ultérieure |  
+|===
+link:flexpod-fips-additional-flexpod-security-consideration.html["Ensuite, d'autres considérations relatives à la sécurité FlexPod."]

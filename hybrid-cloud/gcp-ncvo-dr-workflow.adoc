@@ -1,0 +1,766 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-dr-workflow.html 
+keywords: workflow, new volume, storage export policy, workspace, terraform plan, sleep task, synchronization 
+summary: 'Cette page répertorie les 11 procédures nécessaires à la mise en œuvre d"un workflow de reprise après incident.' 
+---
+= Workflow de reprise d'activité
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Précédent : déploiement automatisé du stockage NetApp dans le cloud hybride."]
+
+Les étapes sont les suivantes :
+
+. Définir le flux de travail.
++
+** Créez un nom court et convivial pour le flux de travail, tel que Disaster Recovery Workflow.
+
+
+. Définissez l'entrée du flux de travail. Nous utilisons les données d'entrée suivantes pour ce flux de travail :
++
+** Options de volume (nom du volume, chemin de montage)
+** Capacité du volume
+** Data Center associé au nouveau datastore
+** Cluster sur lequel le datastore est hébergé
+** Nom du nouveau datastore à créer dans vCenter
+** Type et version du nouveau datastore
+** Nom de l'organisation Terraform
+** Espace de travail Terraform
+** Description de l'espace de travail Terraform
+** Variables (sensibles et non sensibles) requises pour exécuter la configuration Terraform
+** Motif du démarrage du plan
+
+
+. Ajoutez les tâches du flux de travail.
++
+Les tâches liées aux opérations dans FlexPod incluent les tâches suivantes :
+
++
+** Création de volumes dans FlexPod.
+** Ajout de l'export policy de stockage au volume créé
+** Mappez le nouveau volume sur un datastore dans VMware vCenter.
++
+Tâches liées à la création d'un cluster Cloud Volumes ONTAP :
+
+** Ajouter un espace de travail Terraform
+** Ajouter des variables Terraform
+** Ajoutez des variables sensibles à Terraform
+** Démarrez un nouveau plan Terraform
+** Confirmez l'exécution de Terraform
+
+
+. Validation du flux de travail
+
+
+
+
+== Procédure 1 : créez le flux de travail
+
+. Cliquez sur *orchestration* dans le volet de navigation de gauche et cliquez sur *Créer un flux de travail*.
+. Dans l'onglet *général* :
++
+.. Indiquez le nom d'affichage (flux de travail de reprise après sinistre).
+.. Sélectionnez l'organisation, définissez les balises et fournissez une description.
+
+
+. Cliquez sur Enregistrer.
++
+image:gcp-ncvo-image7.png["Capture d'écran affichant l'écran de saisie variable."]
+
+
+
+
+
+== Procédure 2. Créer un nouveau volume dans FlexPod
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *stockage > Nouveau volume de stockage* de la section *Outils* dans la zone *Design*.
+. Cliquez sur *Nouveau volume de stockage*.
++
+image:gcp-ncvo-image8.png["Capture d'écran montrant le nouveau volume de stockage."]
+
+. Dans la zone *Propriétés de tâche*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche. Dans cet exemple, le nom de la tâche est *Créer un volume dans FlexPod*.
++
+image:gcp-ncvo-image9.png["Capture d'écran montrant une nouvelle connexion."]
+
+. Dans la zone *Propriétés de tâche*, cliquez sur *entrées*.
+. Cliquez sur *Map* dans le champ *Storage Device*.
++
+image:gcp-ncvo-image10.png["Capture d'écran affichant l'étape de mappage."]
+
+. Choisissez *valeur statique* et cliquez sur *Sélectionner le périphérique de stockage*.
+. Cliquez sur la cible de stockage ajoutée et cliquez sur *Sélectionner*.
++
+image:gcp-ncvo-image11.png["Capture d'écran indiquant comment sélectionner une cible de stockage."]
+
+. Cliquez sur *carte*.
++
+image:gcp-ncvo-image12.png["Capture d'écran montrant la saisie de tâche de carte."]
+
+. Cliquez sur *Map* dans le champ *Storage Vendor Virtual machine*.
++
+image:gcp-ncvo-image13.png["Capture d'écran affichant le champ Storage Vendor Virtual machine (machine virtuelle du fournisseur de stockage)."]
+
+. Choisissez *valeur statique* et cliquez sur *Sélectionner Storage Virtual machine*.
++
+image:gcp-ncvo-image14.png["Capture d'écran montrant comment sélectionner une machine virtuelle de stockage."]
+
+. Sélectionnez la machine virtuelle de stockage sur laquelle le volume doit être créé et cliquez sur *Sélectionner*.
++
+image:gcp-ncvo-image15.png["Capture d'écran indiquant la machine virtuelle de stockage sur laquelle le volume doit être créé."]
+
+. Cliquez sur *carte*.
++
+image:gcp-ncvo-image16.png["Capture d'écran affichant l'étape de mappage."]
+
+. Cliquez sur *Map* dans le champ *Storage Vendor Aggregate*.
++
+image:gcp-ncvo-image17.png["Capture d'écran affichant le champ agrégat du fournisseur de stockage."]
+
+. Choisissez *valeur statique* et cliquez sur *Sélectionner l'agrégat de stockage*. Choisissez l'agrégat et cliquez sur *Select*.
++
+image:gcp-ncvo-image18.png["Capture d'écran montrant comment sélectionner un agrégat de stockage."]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Storage Vendor Volume Options*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
++
+image:gcp-ncvo-image19.png["Capture d'écran affichant l'entrée de la tâche de carte."]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Assurez-vous que *Storage Vendor Volume Options* est sélectionné pour *Type*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Cliquez sur *requis*.
+.. Définissez *Type de plateforme* sur *NetApp Active IQ Unified Manager*.
+.. Indiquez une valeur par défaut pour le volume créé sous *Volume*.
+.. Cliquez sur *NFS*. Si NFS est défini, un volume NFS est créé. Si cette valeur est définie sur FALSE, un volume SAN est créé.
+.. Indiquez un chemin de montage et cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image20.png["Capture d'écran affichant l'écran de saisie Ajouter un workflow."]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Volume Capacity*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
++
+image:gcp-ncvo-image21.png["Capture d'écran montrant comment créer un nom dans l'écran de saisie de tâche de carte."]
+
+. Dans l'assistant Ajouter une entrée :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Cliquez sur *requis*.
+.. Pour *Type*, sélectionnez *capacité de stockage*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Indiquez une valeur par défaut pour la taille du volume et l'unité.
+.. Cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image22.png["Capture d'écran affiche les données saisies pour l'assistant d'ajout d'entrées."]
+
+
+
+. Cliquez sur *carte*.
+. Avec Connector, créez une connexion entre les tâches *Démarrer* et *Créer un volume dans FlexPod*, puis cliquez sur *Enregistrer*.
++
+image:gcp-ncvo-image23.png["Erreur : la capture d'écran montre comment créer une connexion entre les tâches Démarrer et Créer un volume dans FlexPod."]
+
++
+
+NOTE: Ignorer l'erreur pour l'instant. Cette erreur s'affiche car il n'y a pas de connectivité entre les tâches *Créer un volume dans FlexPod* et *succès* qui est nécessaire pour spécifier la transition réussie.
+
+
+
+
+
+== Procédure 3 : ajout d'une règle d'exportation de stockage
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *stockage > Ajouter une stratégie d'exportation de stockage au volume* à partir de la section *Outils* de la zone *Design*.
+. Cliquez sur *Ajouter une stratégie d'exportation de stockage au volume*. Dans la zone *Propriétés de tâche*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche. Dans cet exemple, le nom de la tâche est Ajouter une stratégie d'exportation de stockage.
+. Utilisez Connector pour établir une connexion entre les tâches *Créer un volume dans FlexPod* et *Ajouter une stratégie d'exportation de stockage*. Cliquez sur *Enregistrer*.
++
+image:gcp-ncvo-image24.png["Capture d'écran indiquant comment établir une connexion entre les tâches Créer un volume dans FlexPod et Ajouter une stratégie d'exportation de stockage."]
+
+. Dans la zone *Propriétés de tâche*, cliquez sur *entrées*.
+. Cliquez sur *Map* dans le champ *Storage Device*.
++
+image:gcp-ncvo-image25.png["Capture d'écran affichant l'étape de mappage."]
+
+. Choisissez *valeur statique* et cliquez sur *Sélectionner le périphérique de stockage*. Sélectionnez la même cible de stockage ajoutée lors de la création de la tâche précédente de création d'un volume de stockage.
+. Cliquez sur *carte*.
++
+image:gcp-ncvo-image26.png["Capture d'écran montrant la partie 2 de l'étape de mappage."]
+
+. Cliquez sur *Map* dans le champ *Storage Vendor Virtual machine*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner Storage Virtual machine*. Sélectionnez la même machine virtuelle de stockage ajoutée lors de la création de la précédente tâche de création d'un volume de stockage.
++
+image:gcp-ncvo-image27.png["Capture d'écran indiquant comment choisir une valeur statique et cliquer sur Sélectionner une machine virtuelle de stockage."]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Volume*.
+. Cliquez sur *Nom de la tâche*, puis sur *Créer un volume dans FlexPod*. Cliquez sur *Nom de sortie*, puis sur *Volume*.
++
+
+NOTE: Dans Cisco Intersight Cloud Orchestrator, vous pouvez fournir la sortie d'une tâche précédente comme entrée pour une nouvelle tâche. Dans cet exemple, les détails *Volume* ont été fournis à partir de la tâche *Créer un volume dans FlexPod* sous forme d'entrée pour la tâche *Ajouter une stratégie d'exportation de stockage*.
+
++
+image:gcp-ncvo-image28.png["Capture d'écran indiquant comment fournir la sortie d'une tâche précédente comme entrée pour une nouvelle tâche."]
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *politique d'exportation*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner stratégie d'exportation*. Sélectionner la export policy créée.
++
+image:gcp-ncvo-image29.png["Capture d'écran"]
+
+. Cliquez sur *carte*, puis sur *Enregistrer*.
++
+
+NOTE: L'ajout d'une export-policy au volume est maintenant terminé. Ensuite, vous créez un nouveau datastore mappant le volume créé.
+
+
+
+
+
+== Procédure 4 : mappe de volumes FlexPod sur le datastore
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *virtualisation > Nouveau datastore d'hyperviseur* de la section *Outils* de la zone *Design*.
+. Utilisez Connector pour établir une connexion entre les tâches *Ajouter stratégie d'exportation de stockage* et *Nouveau datastore d'hyperviseur*. Cliquez sur *Enregistrer*.
++
+image:gcp-ncvo-image30.png["Capture d'écran"]
+
+. Cliquez sur *Nouveau datastore d'hyperviseur*. Dans la zone *Propriétés de tâche*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche. Dans cet exemple, le nom de la tâche est *mapper le volume sur le datastore*.
++
+image:gcp-ncvo-image31.png["Capture d'écran"]
+
+. Dans la zone *Propriétés de tâche*, cliquez sur *entrées*.
+. Cliquez sur *Map* dans le champ *Hypervisor Manager*.
+. Choisissez *valeur statique* et cliquez sur *Select Hypervisor Manager*. Cliquez sur la cible VMware vCenter.
++
+image:gcp-ncvo-image32.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
++
+image:gcp-ncvo-image33.png["Capture d'écran"]
+
+. Cliquez sur *carte* dans le champ *Data Center*. Il s'agit du data Center associé au nouveau datastore.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée*, puis sur *Créer entrée de flux de travail*.
++
+image:gcp-ncvo-image34.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Sélectionnez *Datacenter* comme type.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Cliquez sur *Select Datacenter*.
+.. Cliquez sur le centre de données associé au nouveau datastore, puis sur *Select*.
++
+image:gcp-ncvo-image35.png["Capture d'écran"]
+
++
+*** Cliquez sur *Ajouter*.
+
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Cluster*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
++
+image:gcp-ncvo-image36.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Cliquez sur *requis*.
+.. Sélectionnez Cluster comme type.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Cliquez sur *Sélectionner un cluster*.
+.. Cliquez sur le cluster associé au nouveau datastore.
+.. Cliquez sur *Sélectionner*.
++
+image:gcp-ncvo-image37.png["Capture d'écran"]
+
+.. Cliquez sur *Ajouter*.
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Host*.
++
+image:gcp-ncvo-image38.png["Capture d'écran"]
+
+. Choisissez *valeur statique* et cliquez sur l'hôte sur lequel le datastore sera hébergé. Si un cluster est spécifié, l'hôte est ignoré.
++
+image:gcp-ncvo-image39.png["Capture d'écran"]
+
+. Cliquez sur *Sélectionner et carte*.
+. Cliquez sur *Map* dans le champ *datastore*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
++
+image:gcp-ncvo-image40.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Cliquez sur *requis*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Indiquez une valeur par défaut pour le datastore et cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image41.png["Capture d'écran"]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ de saisie *Type de datastore*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
++
+image:gcp-ncvo-image42.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif) et cliquez sur *requis*.
+.. Assurez-vous de sélectionner le type *types de datastore* et cliquez sur *définir la valeur par défaut et remplacer*.
++
+image:gcp-ncvo-image43.png["Capture d'écran"]
+
+.. Indiquez le chemin distant. Il s'agit du chemin d'accès distant du point de montage NFS.
+.. Indiquez les noms d'hôte ou les adresses IP du serveur NFS distant dans l'adresse du serveur NFS.
+.. Cliquez sur le *mode d'accès*. Le mode d'accès est destiné au serveur NFS. Cliquez sur lecture seule si les volumes sont exportés en lecture seule. Cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image44.png["Capture d'écran"]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *Enregistrer*.
++
+image:gcp-ncvo-image30.png["Capture d'écran"]
+
+
+
+La tâche de création du datastore est terminée. Toutes les tâches effectuées dans le data Center FlexPod sur site sont effectuées.
+
+image:gcp-ncvo-image45.png["Capture d'écran"]
+
+
+
+== Procédure 5 : Ajout d'un nouvel espace de travail Terraform
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *Terraform Cloud > Ajouter un espace de travail Terraform* dans la section Outils de la zone conception.
+. Utilisez Connector pour connecter les tâches *Map volume au datastore* et *Add Terraform Workspace* et cliquez sur *Save*.
+. Cliquez sur *Ajouter un espace de travail Terraform*. Dans la zone Propriétés de la tâche, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche.
++
+image:gcp-ncvo-image46.png["Capture d'écran"]
+
+. Dans la zone Propriétés de la tâche, cliquez sur *entrées*.
+. Cliquez sur *carte* dans le champ de saisie *Terraform Cloud Target*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner la cible de nuage Terraform*. Sélectionnez le compte Terraform Cloud for Business ajouté comme expliqué dans link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["Configurez Cisco Intersight Service pour HashiCorp Terraform"^]. ».
++
+image:gcp-ncvo-image47.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ de saisie *Nom de l'organisation Terraform*.
+. Choisissez *valeur statique*, puis cliquez sur *Sélectionner l'organisation Terraform*. Sélectionnez le nom de l'organisation Terraform dont vous faites partie dans votre compte Terraform Cloud for Business.
++
+image:gcp-ncvo-image48.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Nom de l'espace de travail Terraform*. Il s'agit du nouvel espace de travail dans le compte Terraform Cloud for Business.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
++
+image:gcp-ncvo-image49.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Cliquez sur *requis*.
+.. Assurez-vous de sélectionner *String* pour *Type*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Indiquez un nom par défaut pour l'espace de travail.
+.. Cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image50.png["Capture d'écran"]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Description de l'espace de travail*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
++
+image:gcp-ncvo-image51.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Assurez-vous de sélectionner *String* pour *Type*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Fournissez une description de l'espace de travail et cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image52.png["Capture d'écran"]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Execution mode*.
+. Choisissez *valeur statique*, cliquez sur *mode d'exécution*, puis sur *remote*.
++
+image:gcp-ncvo-image53.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *appliquer méthode*.
+. Choisissez *valeur statique* et cliquez sur *appliquer méthode*. Cliquez sur *application manuelle*.
++
+image:gcp-ncvo-image54.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *User interface*.
+. Choisissez *valeur statique* et cliquez sur *interface utilisateur*. Cliquez sur *interface utilisateur de la console*.
++
+image:gcp-ncvo-image55.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ de saisie et sélectionnez votre flux de travail.
+. Sélectionnez *valeur statique*, puis cliquez sur *Choisissez votre flux de travail*. Cliquez sur *version Control Workflow*.
++
+image:gcp-ncvo-image56.png["Capture d'écran"]
+
+. Fournissez les informations suivantes sur le référentiel GitHub :
++
+.. Dans *Nom du référentiel*, entrez le nom du référentiel détaillé dans la section link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »"].
+.. Indiquez l'ID de token OAuth comme détaillé dans la section link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »"].
+.. Sélectionnez l'option *déclenchement automatique*.
++
+image:gcp-ncvo-image57.png["Capture d'écran"]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *Enregistrer*.
+
+
+Cela termine la création d'un espace de travail dans un compte Terraform Cloud for Business.
+
+
+
+== Procédure 6 : ajoutez des variables non sensibles à l'espace de travail
+
+. Accédez à l'onglet *Designer* et cliquez sur la section *workflows à partir d'Outils*.
+. Faites glisser et déposez le flux de travail *Terraform > Ajouter des variables Terraform* à partir de la section *Tools* de la zone *Design*.
+. Utilisez Connector pour connecter les tâches *Add Terraform Workspace* et *Add Terraform variables*. Cliquez sur *Enregistrer*.
+. Cliquez sur *Ajouter variables Terraform*. Dans la zone *Propriétés du flux de travail*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche.
++
+image:gcp-ncvo-image58.png["Capture d'écran"]
+
+. Dans la zone *Propriétés du workflow*, cliquez sur *entrées*.
+. Cliquez sur *carte* dans le champ *Terraform Cloud Target*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner la cible de nuage Terraform*. Sélectionnez le compte Terraform Cloud for Business ajouté comme expliqué dans link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["Configurez Cisco Intersight Service pour HashiCorp Terraform"^]. ».
++
+image:gcp-ncvo-image59.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Nom de l'organisation Terraform *.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner l'organisation Terraform*. Sélectionnez le nom de l'organisation Terraform dont vous faites partie dans votre compte Terraform Cloud for Business.
++
+image:gcp-ncvo-image60.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Nom de l'espace de travail Terraform*.
+. Choisissez *mappage direct* et cliquez sur *sortie tâche*.
+. Cliquez sur *Nom de la tâche* et cliquez sur *Ajouter un espace de travail Terraform*.
++
+image:gcp-ncvo-image61.png["Capture d'écran"]
+
+. Cliquez sur *Nom de sortie* et cliquez sur *Nom d'espace de travail*.
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Add variables Options*.
+. Choisissez *mappage direct* et cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
++
+image:gcp-ncvo-image62.png["Capture d'écran"]
+
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Assurez-vous de sélectionner *String* pour *Type*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Cliquez sur *Type de variable*, puis sur *variables non sensibles*.
+
+
+. Dans la section *Ajouter des variables Terraform*, fournissez les informations suivantes :
++
+** *Clé.* `name_of_on-prem-ontap`
+** *Valeur.* indiquer le nom de ONTAP sur site.
+** *Description.* Nom du ONTAP sur place.
+
+
+. Cliquez sur *+* pour ajouter d'autres variables.
++
+image:gcp-ncvo-image63.png["Capture d'écran"]
+
+. Ajoutez toutes les variables Terraform comme indiqué dans le tableau suivant. Vous pouvez également fournir une valeur par défaut.
++
+|===
+| Nom de la variable Terraform | Description 
+
+
+| nom_of_on-ontap sur site | Nom du ONTAP sur site (FlexPod) 
+
+
+| ip_cluster_ontap_sur site | L'adresse IP de l'interface de gestion du cluster de stockage 
+
+
+| nom_utilisateur_ontap_sur site | Nom d'utilisateur admin pour le cluster de stockage 
+
+
+| Zone | Région GCP dans laquelle l'environnement de travail sera créé 
+
+
+| id_sous-réseau | ID de sous-réseau GCP dans lequel l'environnement de travail sera créé 
+
+
+| id_vpc | ID VPC dans lequel l'environnement de travail sera créé 
+
+
+| capacity_package_name | Type de licence à utiliser 
+
+
+| volume_source | Nom du volume source 
+
+
+| nom_vm_stockage_source | Nom du SVM source 
+
+
+| volume_destination | Nom du volume sur Cloud Volumes ONTAP 
+
+
+| schedule_of_replication | La valeur par défaut est 1 heure 
+
+
+| nom_du_volume_to_create_on_cvo | Nom du volume cloud 
+
+
+| id_espace_de_travail | Espace de travail_ID où l'environnement de travail sera créé 
+
+
+| ID_projet | ID_projet où l'environnement de travail sera créé 
+
+
+| nom_du_cluster_cvo | Nom de l'environnement de travail Cloud Volumes ONTAP 
+
+
+| compte_service_gcp | gcp_service_compte de l'environnement de travail Cloud Volumes ONTAP 
+|===
+. Cliquez sur *carte*, puis sur *Enregistrer*.
++
+image:gcp-ncvo-image64.png["Capture d'écran"]
+
+
+
+La tâche d'ajout des variables Terraform requises à l'espace de travail est alors terminée. Ajoutez ensuite les variables Terraform sensibles requises à l'espace de travail. Vous pouvez également les combiner en une seule tâche.
+
+
+
+== Procédure 7 : ajoutez des variables sensibles à un espace de travail
+
+. Accédez à l'onglet *Designer* et cliquez sur *workflows* dans la section *Outils*.
+. Faites glisser et déposez le flux de travail *Terraform > Ajouter des variables Terraform* à partir de la section *Tools* de la zone *Design*.
+. Utilisez Connector pour connecter les deux tâches *Ajouter un espace de travail Terraform*. Cliquez sur *Enregistrer*.
++
+
+NOTE: Un avertissement s'affiche pour indiquer que les deux tâches ont le même nom. Ignorer l'erreur pour l'instant car vous modifiez le nom de la tâche à l'étape suivante.
+
+. Cliquez sur *Ajouter variables Terraform*. Dans la zone *Propriétés du flux de travail*, cliquez sur l'onglet *général*. Modifiez le nom en *Ajouter des variables sensibles Terraform*.
++
+image:gcp-ncvo-image65.png["Capture d'écran"]
+
+. Dans la zone *Propriétés du workflow*, cliquez sur *entrées*.
+. Cliquez sur *carte* dans le champ *Terraform Cloud Target*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner la cible de nuage Terraform*. Sélectionnez le compte Terraform Cloud for Business ajouté dans la section link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["Configurez Cisco Intersight Service pour HashiCorp Terraform"^]. »
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Nom de l'organisation Terraform*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner l'organisation Terraform*. Sélectionnez le nom de l'organisation Terraform dont vous faites partie dans votre compte Terraform Cloud for Business.
+. Cliquez sur *carte*.
+. Cliquez sur *carte* dans le champ *Nom de l'espace de travail Terraform*.
+. Choisissez *mappage direct* et cliquez sur *sortie tâche*.
+. Cliquez sur *Nom de la tâche*, puis sur *Ajouter un espace de travail Terraform*.
+. Cliquez sur *Nom de sortie* et cliquez sur sortie *Nom d'espace de travail*.
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Add variables Options*.
+. Choisissez *mappage direct*, puis cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée* et *Créer une entrée de flux de travail*.
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Assurez-vous de sélectionner *Terraform Ajouter des variables Options* pour le type.
+.. Cliquez sur *définir la valeur par défaut*.
+.. Cliquez sur *Type de variable*, puis sur *variables sensibles*.
+.. Cliquez sur *Ajouter*.
++
+image:gcp-ncvo-image66.png["Capture d'écran"]
+
+
+
+. Dans la section *Ajouter des variables Terraform*, fournissez les informations suivantes :
++
+** *Clé.* `cloudmanager_refresh_token`.
+** *Valeur.* saisissez le jeton d'actualisation pour les opérations de l'API NetApp Cloud Manager.
+** *Description.* Actualiser jeton.
++
+
+NOTE: Pour en savoir plus sur l'obtention d'un jeton de mise à jour pour les opérations de l'API NetApp Cloud Manager, consultez la section link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »."]
+
++
+image:gcp-ncvo-image67.png["Capture d'écran"]
+
+
+
+. Ajoutez toutes les variables sensibles à la Terraform comme indiqué dans le tableau ci-dessous. Vous pouvez également fournir une valeur par défaut.
++
+|===
+| Nom de variable sensible Terraform | Description 
+
+
+| cloudmanager_refresh_token | Actualiser le jeton. Vous pouvez l'obtenir auprès de : 
+
+
+| id_connecteur | L'ID client du connecteur Cloud Manager. Obtenez-le à partir de 
+
+
+| cvo_admin_password | Mot de passe d'administration pour Cloud Volumes ONTAP 
+
+
+| mot_de_passe_utilisateur_ontap_sur site | Mot de passe d'administration pour le cluster de stockage 
+|===
+. Cliquez sur *Map*.cette opération permet d'ajouter les variables sensibles Terraform requises à l'espace de travail. Ensuite, démarrez un nouveau plan Terraform dans l'espace de travail configuré.
+
+
+
+
+== Procédure 8 : démarrez un nouveau plan Terraform
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *Terraform Cloud > Start New Terraform Plan* de la section *Tools* de la zone *Design*.
+. Utilisez Connector pour vous connecter entre les tâches *Ajouter des variables sensibles Terraform* et *Démarrer de nouvelles tâches Terraform Plan*. Cliquez sur *Enregistrer*.
+. Cliquez sur *Démarrer Nouveau plan Terraform*. Dans la zone *Propriétés de tâche*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche.
++
+image:gcp-ncvo-image68.png["Capture d'écran"]
+
+. Dans la zone *Propriétés de tâche*, cliquez sur *entrées*.
+. Cliquez sur *carte* dans le champ *Terraform Cloud Target*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner la cible de nuage Terraform*. Sélectionnez le compte Terraform Cloud for Business ajouté dans la section « Configuration de Cisco Intersight Service for HashiCorp Terraform ».
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Workspace ID*.
+. Choisissez *mappage direct* et cliquez sur *sortie tâche*.
+. Cliquez sur *Nom de la tâche*, puis sur *Ajouter un espace de travail Terraform*.
++
+image:gcp-ncvo-image69.png["Capture d'écran"]
+
+. Cliquez sur *Nom de sortie*, *ID d'espace de travail*, puis sur *carte*.
+. Cliquez sur *carte* dans le champ *motif de démarrage du plan*.
+. Choisissez *mappage direct*, puis cliquez sur *entrée de flux de travail*.
+. Cliquez sur *Nom d'entrée*, puis sur *Créer entrée de flux de travail*.
+. Dans l'assistant Ajouter une entrée, procédez comme suit :
++
+.. Indiquez un nom d'affichage et un nom de référence (facultatif).
+.. Assurez-vous de sélectionner *String* pour *Type*.
+.. Cliquez sur *définir la valeur par défaut et remplacer*.
+.. Entrez une valeur par défaut pour *Reason for Starting plan* et cliquez sur *Add*.
++
+image:gcp-ncvo-image70.png["Capture d'écran"]
+
+
+
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Plan Operation*.
+. Choisissez *valeur statique* et cliquez sur *opération de plan*. Cliquez sur *New plan*.
++
+image:gcp-ncvo-image71.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Enregistrer*.
+
+
+Cela complète la tâche d'ajout d'un plan Terraform dans le compte Terraform Cloud for Business. Ensuite, créez une tâche de veille pendant quelques secondes.
+
+
+
+== Procédure 9 : tâche de veille pour la synchronisation
+
+Terraform Apply nécessite un runId, qui est généré dans le cadre de la tâche Plan Terraform. L'attente de quelques secondes entre le Plan Terraform et les actions d'application Terraform évite les problèmes de synchronisation.
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *Core Tasks > Sleep Task* dans la section *Tools* de la zone *Design*.
+. Utilisez Connector pour connecter les tâches *Démarrer Nouveau plan Terraform* et *tâche veille*. Cliquez sur *Enregistrer*.
++
+image:gcp-ncvo-image72.png["Capture d'écran"]
+
+. Cliquez sur *tâche veille*. Dans la zone *Propriétés de tâche*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche. Dans cet exemple, le nom de la tâche est *Synchroniser*.
+. Dans la zone *Propriétés de tâche*, cliquez sur *entrées*.
+. Cliquez sur *carte* dans le champ *temps de veille en secondes*.
+. Choisissez *valeur statique* et saisissez *15* dans pour le *temps de veille en secondes*.
++
+image:gcp-ncvo-image73.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Enregistrer*.
+
+
+La tâche de veille est terminée. Ensuite, créez la dernière tâche de ce flux de travail, en confirmant et en appliquant l'exécution Terraform.
+
+
+
+== Procédure 10 : confirmer et appliquer Terraform Run
+
+. Accédez à l'onglet *Designer* et cliquez sur *tâches* dans la section *Outils*.
+. Faites glisser et déposez la tâche *Terraform Cloud > confirmer et appliquer Terraform Run* à partir de la section *Tools* de la zone *Design*.
+. Utilisez Connector pour connecter les tâches *Synchroniser* et *confirmer et appliquer Terraform Run*. Cliquez sur *Enregistrer*.
+. Cliquez sur *confirmer* et *appliquer Terraform Run*. Dans la zone *Propriétés de tâche*, cliquez sur l'onglet *général*. Vous pouvez également modifier le nom et la description de cette tâche.
++
+image:gcp-ncvo-image74.png["Capture d'écran"]
+
+. Dans la zone *Propriétés de tâche*, cliquez sur *entrées*.
+. Cliquez sur *carte* dans le champ *Terraform Cloud Target*.
+. Choisissez *valeur statique* et cliquez sur *Sélectionner la cible de nuage Terraform*. Sélectionnez le compte Terraform Cloud for Business ajouté dans link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["Configurez Cisco Intersight Service pour HashiCorp Terraform"^]. »
+. Cliquez sur *carte*.
+. Cliquez sur *Map* dans le champ *Run ID*.
+. Choisissez *mappage direct* et cliquez sur *sortie tâche*.
+. Cliquez sur *Nom de la tâche* et cliquez sur *Démarrer Nouveau plan Terraform*.
+. Cliquez sur *Nom de sortie*, puis sur *ID d'exécution*.
++
+image:gcp-ncvo-image75.png["Capture d'écran"]
+
+. Cliquez sur *carte*.
+. Cliquez sur *Enregistrer*.
+. Cliquez sur *alignement automatique du flux de travail* pour que toutes les tâches soient alignées. Cliquez sur *Enregistrer*.
++
+image:gcp-ncvo-image76.png["Capture d'écran"]
+
+
+
+La tâche confirmer et appliquer Terraform Run est terminée. Utilisez Connector pour vous connecter entre la tâche *confirmer et appliquer Terraform Run* et les tâches *Success* et *failed*.
+
+
+
+== Procédure 11 : importation d'un flux de travail conçu par Cisco
+
+Cisco Intersight Cloud Orchestrator vous permet d'exporter des workflows d'un compte Cisco Intersight vers votre système, puis de les importer dans un autre compte. Un fichier JSON a été créé en exportant le flux de travail créé qui peut être importé vers votre compte.
+
+Un fichier JSON pour le composant de flux de travail est disponible dans https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows["Référentiel GitHub"^].
+
+link:gcp-ncvo-terraform-execution-from-controller.html["Next : exécution Terraform à partir du contrôleur."]

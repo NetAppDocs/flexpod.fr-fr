@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html 
+keywords: attach, cloud, tier, ontap, aggregate, fabricpool, flexpod, ontap, cli, oncommand, system, manager 
+summary: 'Lorsqu"un magasin d"objets est ajouté à et identifié par ONTAP, il doit être associé à un agrégat pour créer une FabricPool. Pour ce faire, utilisez OnCommand System Manager ou l"interface de ligne de commandes de ONTAP.' 
+---
+= Association d'un Tier cloud à un agrégat ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Lorsqu'un magasin d'objets est ajouté à et identifié par ONTAP, il doit être associé à un agrégat pour créer une FabricPool. Pour ce faire, utilisez OnCommand System Manager ou l'interface de ligne de commandes de ONTAP.
+
+Plusieurs types de magasin d'objets peuvent être connectés à un cluster, mais un seul type de magasin d'objets peut être associé à chaque agrégat. Par exemple, un agrégat peut utiliser Google Cloud et un autre agrégat peut utiliser Amazon S3, mais un autre ne peut pas être associé aux deux.
+
+
+NOTE: L'association d'un Tier cloud à un agrégat est une opération permanente. Un niveau de cloud ne peut pas être dérattaché à un agrégat auquel il est rattaché.
+
+
+
+== OnCommand System Manager
+
+Pour rattacher un Tier cloud à un agrégat via OnCommand System Manager, effectuez les opérations suivantes :
+
+. Lancez OnCommand System Manager.
+. Cliquez sur applications et niveaux.
++
+image:cloud-fabricpool_image14.png["Erreur : image graphique manquante"]
+
+. Cliquez sur niveaux de stockage.
+. Cliquer sur un agrégat.
+. Cliquez sur actions et sélectionnez attacher Cloud Tier.
++
+image:cloud-fabricpool_image15.png["Erreur : image graphique manquante"]
+
+. Sélectionnez un Tier cloud.
+. Afficher et mettre à jour les règles de Tiering des volumes sur l'agrégat (facultatif). Par défaut, la règle de Tiering du volume est définie comme Snapshot uniquement.
+. Cliquez sur Enregistrer.
+
+
+
+
+== INTERFACE DE LIGNE DE COMMANDES DE ONTAP
+
+Pour attacher un Tier cloud à un agrégat via l'interface de ligne de commandes ONTAP, exécutez les commandes suivantes :
+
+....
+storage aggregate object-store attach
+-aggregate <name>
+-object-store-name <name>
+....
+Exemple :
+
+....
+storage aggregate object-store attach -aggregate aggr1 -object-store-name - aws_infra_fp_bk_1
+....
+link:cloud-fabricpool_set_volume_tiering_policy.html["Ensuite : définissez la règle de Tiering du volume."]

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_claim_targets.html 
+keywords: cisco, intersight, netapp, ontap, connector, claim, targets, active iq unified manager, AIQ UM 
+summary: Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp. 
+---
+= Objectifs de demande de remboursement
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp. Revenez à la page *Intersights Targets* et ajoutez vos cibles Active IQ Unified Manager vCenter et NetApp. Pour en savoir plus sur le processus de réclamation, regardez la vidéo https://tv.netapp.com/detail/video/6228080442001["Demander une cible via Cisco Intersight."^]
+
+
+NOTE: Assurez-vous que la passerelle d'API NetApp Active IQ Unified Manager (AIQ MU) est activée.
+
+Depuis NetApp IQ Unified Manager, accédez à *Paramètres > général > Paramètres des fonctionnalités*.
+
+image:ci-qsg_image7.png["Capture d'écran de la passerelle d'API NetApp AIQ MU UM activée"]
+
+L'exemple suivant montre la cible de demande NetApp AIQ UM faisant l'objet d'une demande auprès de Cisco Intersight.
+
+
+NOTE: Lorsque vous demandez la cible UM NetApp AIQ, tous les clusters gérés par Active IQ Unified Manager sont automatiquement ajoutés à InterSight.
+
+image:ci-qsg_image8.png["Capture d'écran de la cible de copie NetApp AIQ UM faisant l'objet d'une demande de Cisco Intersight"]

@@ -1,0 +1,191 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html 
+keywords: cloud, insights, service, vmware, vm, rhel, red, hat, enterprise, acquisition, unit, flexpod, datacenter 
+summary: Les tâches suivantes doivent être effectuées pour déployer Cloud Insights pour FlexPod. 
+---
+= Déployez Cloud Insights pour FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Pour déployer la solution, vous devez effectuer les tâches suivantes :
+
+. Abonnez-vous au service Cloud Insights
+. Créez une machine virtuelle VMware (VM) à configurer comme unité d'acquisition
+. Installez l'hôte Red Hat Enterprise Linux (RHEL)
+. Créez une instance d'unité d'acquisition dans le portail Cloud Insights et installez le logiciel
+. Ajoutez le système de stockage surveillé du data Center FlexPod à Cloud Insights.
+
+
+
+
+== Abonnez-vous au service NetApp Cloud Insights
+
+Pour vous inscrire au service NetApp Cloud Insights, procédez comme suit :
+
+. Accédez à https://cloud.netapp.com/cloud-insights["https://cloud.netapp.com/cloud-insights"^]
+. Cliquez sur le bouton au centre de l'écran pour lancer l'essai gratuit de 14 jours ou sur le lien en haut à droite pour vous inscrire ou vous connecter à un compte NetApp Cloud Central.
+
+
+
+
+== Créez une machine virtuelle VMware à configurer en tant qu'unité d'acquisition
+
+Pour créer un VM VMware à configurer comme unité d'acquisition, procédez comme suit :
+
+. Lancez un navigateur Web, connectez-vous à VMware vSphere et sélectionnez le cluster que vous souhaitez héberger.
+. Cliquez avec le bouton droit de la souris sur ce cluster et sélectionnez Créer Une machine virtuelle dans le menu.
++
+image:cloud-insights_image3.png["Erreur : image graphique manquante"]
+
+. Dans l'assistant New Virtual machine (Nouvelle machine virtuelle), cliquez sur Next (Suivant).
+. Indiquez le nom de la machine virtuelle, puis sélectionnez le data Center auquel vous souhaitez l'installer, puis cliquez sur Next (Suivant).
+. Sur la page suivante, sélectionnez le cluster, les nœuds ou le groupe de ressources auquel vous souhaitez installer la machine virtuelle, puis cliquez sur Suivant.
+. Sélectionnez le datastore partagé qui héberge vos machines virtuelles et cliquez sur Next (Suivant).
+. Vérifiez que le mode de compatibilité de la machine virtuelle est défini sur `ESXi 6.7 or later` Et cliquez sur Suivant.
+. Sélectionnez Guest OS Family Linux, Guest OS version : Red Hat Enterprise Linux 7 (64 bits).
++
+image:cloud-insights_image4.png["Erreur : image graphique manquante"]
+
+. La page suivante permet la personnalisation des ressources matérielles sur la machine virtuelle. L'unité d'acquisition Cloud Insights nécessite les ressources suivantes. Une fois les ressources sélectionnées, cliquez sur Suivant :
++
+.. Deux processeurs
+.. 8 Go de RAM
+.. 100 Go d'espace disque
+.. Réseau pouvant accéder aux ressources dans le centre de données FlexPod et le serveur Cloud Insights via une connexion SSL sur le port 443.
+.. Image ISO de la distribution Linux choisie (Red Hat Enterprise Linux) à partir de laquelle démarrer.
++
+image:cloud-insights_image5.png["Erreur : image graphique manquante"]
+
+
+
+. Pour créer la machine virtuelle, sur la page Ready to Complete (prêt à terminer), vérifiez les paramètres et cliquez sur Finish (Terminer).
+
+
+
+
+== Installez Red Hat Enterprise Linux
+
+Pour installer Red Hat Enterprise Linux, procédez comme suit :
+
+. Mettez la machine virtuelle sous tension, cliquez sur la fenêtre pour lancer la console virtuelle, puis sélectionnez l'option d'installation de Red Hat Enterprise Linux 7.6.
++
+image:cloud-insights_image6.png["Erreur : image graphique manquante"]
+
+. Sélectionnez la langue de votre choix et cliquez sur Continuer.
++
+La page suivante est le résumé de l'installation. Les paramètres par défaut doivent être acceptables pour la plupart de ces options.
+
+. Vous devez personnaliser l'organisation du stockage en effectuant les options suivantes :
++
+.. Pour personnaliser le partitionnement du serveur, cliquez sur destination de l'installation.
+.. Vérifier que le disque virtuel VMware de 100 Gio est sélectionné avec une coche noire et sélectionner le bouton radio I will configure Partitioning.
++
+image:cloud-insights_image7.png["Erreur : image graphique manquante"]
+
+.. Cliquez sur terminé.
++
+Un nouveau menu s'affiche pour vous permettre de personnaliser la table de partition. Dédier 25 Go à chaque `/opt/netapp` et `/var/log/netapp`. Vous pouvez allouer automatiquement le reste du stockage au système.
+
++
+image:cloud-insights_image8.png["Erreur : image graphique manquante"]
+
+.. Pour revenir au résumé de l'installation, cliquez sur terminé.
+
+
+. Cliquez sur Nom du réseau et de l'hôte.
++
+.. Entrez un nom d'hôte pour le serveur.
+.. Activez la carte réseau en cliquant sur le curseur. Si le protocole DHCP (Dynamic Host Configuration Protocol) est configuré sur votre réseau, vous recevrez une adresse IP. Si ce n'est pas le cas, cliquez sur configurer et attribuez une adresse manuellement.
++
+image:cloud-insights_image9.png["Erreur : image graphique manquante"]
+
+.. . Cliquez sur terminé pour revenir au résumé de l'installation.
+
+
+. Sur la page Récapitulatif d'installation, cliquez sur commencer l'installation.
+. Sur la page progression de l'installation, vous pouvez définir le mot de passe racine ou créer un compte utilisateur local. Une fois l'installation terminée, cliquez sur redémarrer pour redémarrer le serveur.
++
+image:cloud-insights_image10.png["Erreur : image graphique manquante"]
+
+. Une fois le système redémarré, connectez-vous à votre serveur et enregistrez-le à l'aide de Red Hat Subscription Manager.
++
+image:cloud-insights_image11.png["Erreur : image graphique manquante"]
+
+. Joignez un abonnement disponible à Red Hat Enterprise Linux.
++
+image:cloud-insights_image12.png["Erreur : image graphique manquante"]
+
+
+
+
+
+== Créez une instance d'unité d'acquisition dans le portail Cloud Insights et installez le logiciel
+
+Pour créer une instance d'unité d'acquisition sur le portail Cloud Insights et installer le logiciel, procédez comme suit :
+
+. Sur la page d'accueil de Cloud Insights, passez le curseur de la souris sur l'entrée Admin du menu principal vers la gauche et sélectionnez Data Collectors dans le menu.
++
+image:cloud-insights_image13.png["Erreur : image graphique manquante"]
+
+. En haut au centre de la page collecteurs de données, cliquez sur le lien unités d'acquisition.
++
+image:cloud-insights_image14.png["Erreur : image graphique manquante"]
+
+. Pour créer une nouvelle unité d'acquisition, cliquez sur le bouton à droite.
++
+image:cloud-insights_image15.png["Erreur : image graphique manquante"]
+
+. Sélectionnez le système d'exploitation que vous souhaitez utiliser pour héberger votre unité d'acquisition et suivez les étapes pour copier le script d'installation à partir de la page Web.
++
+Dans cet exemple, il s'agit d'un serveur Linux, qui fournit un fragment et un jeton à coller dans la CLI de notre hôte. La page Web attend que l'unité d'acquisition se connecte.
+
++
+image:cloud-insights_image16.png["Erreur : image graphique manquante"]
+
+. Collez le fragment dans la CLI de la machine Red Hat Enterprise Linux qui a été provisionnée, puis cliquez sur entrée.
++
+image:cloud-insights_image17.png["Erreur : image graphique manquante"]
+
++
+Le programme d'installation télécharge un package compressé et commence l'installation. Une fois l'installation terminée, vous recevez un message indiquant que l'unité d'acquisition a été enregistrée auprès de NetApp Cloud Insights.
+
++
+image:cloud-insights_image18.png["Erreur : image graphique manquante"]
+
+
+
+
+
+== Ajoutez le système de stockage surveillé du data Center FlexPod à Cloud Insights
+
+Pour ajouter le système de stockage ONTAP à partir d'un déploiement FlexPod, procédez comme suit :
+
+. Revenez à la page unités d'acquisition sur le portail Cloud Insights et recherchez l'unité nouvellement enregistrée. Pour afficher un résumé de l'unité, cliquez sur l'unité.
++
+image:cloud-insights_image19.png["Erreur : image graphique manquante"]
+
+. Pour démarrer un assistant pour ajouter le système de stockage, sur la page Résumé, cliquez sur le bouton de création d'un collecteur de données. La première page affiche tous les systèmes à partir desquels les données peuvent être collectées. Utilisez la barre de recherche pour rechercher ONTAP.
++
+image:cloud-insights_image20.png["Erreur : image graphique manquante"]
+
+. Sélectionnez logiciel de gestion des données ONTAP.
++
+Une page s'affiche pour vous permettre de nommer votre déploiement et de sélectionner l'unité d'acquisition que vous souhaitez utiliser. Vous pouvez fournir les informations d'identification et les informations de connectivité du système ONTAP et tester la connexion pour confirmer.
+
++
+image:cloud-insights_image21.png["Erreur : image graphique manquante"]
+
+. Cliquez sur Terminer la configuration.
++
+Le portail revient sur la page Data Collectors et le collecteur de données commence son premier sondage pour collecter les données du système de stockage ONTAP dans le FlexPod Datacenter.
+
++
+image:cloud-insights_image22.png["Erreur : image graphique manquante"]
+
+

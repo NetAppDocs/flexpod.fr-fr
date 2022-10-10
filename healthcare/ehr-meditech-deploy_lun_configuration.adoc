@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_lun_configuration.html 
+keywords: lun, configuration, provisioning, operating, system, type, size, presentation 
+summary: 'Le nombre d"hôtes MEDITECH dans votre environnement détermine le nombre de LUN qui sont créées avec le système NetApp FAS et AFF. La proposition de configuration matérielle spécifie la taille de chaque LUN.' 
+---
+= Configuration du LUN
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Le nombre d'hôtes MEDITECH dans votre environnement détermine le nombre de LUN qui sont créées avec le système NetApp FAS et AFF. La proposition de configuration matérielle spécifie la taille de chaque LUN.
+
+
+
+== Provisionnement de LUN
+
+Les LUN MEDITECH dédiées aux hôtes MEDITECH peuvent être provisionnées très lourd ou léger.
+
+
+
+== Type de système d'exploitation LUN
+
+Pour aligner correctement les LUN qui sont créées, vous devez définir correctement le type de système d'exploitation pour les LUN. Un mauvais alignement des LUN entraîne une surcharge d'opérations d'écriture inutile et l'erreur d'alignement des LUN est coûteuse.
+
+Le serveur hôte MEDITECH s'exécute en général dans l'environnement Windows Server virtualisé et utilise l'hyperviseur VMware vSphere. Le serveur hôte peut également être exécuté dans l'environnement Windows Server sur un serveur bare-Metal. Pour déterminer la valeur correcte du type de système d'exploitation à définir, reportez-vous à la section « LUN Create » du https://library.netapp.com/ecm/ecm_download_file/ECMP1366832["Commandes clustered Data ONTAP 8.3 : référence manuelle des pages"^].
+
+
+
+== Taille de la LUN
+
+Pour déterminer la taille des LUN pour chaque hôte MEDITECH, consultez le document proposition de configuration matérielle (nouveau déploiement) et le document tâche d'évaluation du matériel (déploiement existant) du MEDITECH.
+
+
+
+== Présentation de LUN
+
+MEDITECH nécessite que le stockage des fichiers de programme, de dictionnaire et de données soit présenté aux hôtes MEDITECH sous forme de LUN à l'aide du protocole FC. Dans l'environnement virtuel VMware, les LUN sont présentées aux serveurs VMware ESXi qui hébergent les hôtes MEDITECH. Ensuite, chaque LUN présentée au serveur VMware ESXi est mappée à chaque machine virtuelle hôte MEDITECH en utilisant RDM en mode de compatibilité physique.
+
+Vous devez présenter les LUN aux hôtes MEDITCH en utilisant les conventions de dénomination des LUN appropriées. Par exemple, pour faciliter l'administration, vous devez présenter la LUN `MTFS01E` À l'hôte MEDITECH `mt-host-01`.
+
+Pour consulter la proposition de configuration matérielle MEDITECH, contactez le programme d'installation du système de sauvegarde et MEDITECH afin de définir une convention de nommage des LUN utilisées par les hôtes MEDITECH.
+
+Voici un exemple de nom de LUN MEDITECH `MTFS05E`, dans laquelle:
+
+* `MTFS` Indique le serveur de fichiers MEDITECH (pour l'hôte MEDITECH).
+* `05` indique le numéro d'hôte 5.
+* `E` Indique le lecteur Windows E.
+
+
+link:ehr-meditech-deploy_initiator_group_configuration.html["Suivant : configuration du groupe initiateur."]

@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, information, validation, cisco, nexus, switches 
+summary: Cette section fournit des informations de référence pour le câblage et la validation des commutateurs Cisco Nexus 3172P A et B et les contrôleurs de stockage NetApp AFF A220 A et B. 
+---
+= Informations sur le câblage FlexPod Express
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La figure suivante montre le câblage de validation de référence.
+
+image:express-c-series-aff220-deploy_image5.png["Erreur : image graphique manquante"]
+
+Le tableau suivant présente les informations de câblage du commutateur Cisco Nexus 3172P A.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| Commutateur Cisco Nexus 3172P A | Eth1/1 | Contrôleur de stockage A AFF A220 NetApp | e0c 
+
+
+|  | Eth1/2 | Contrôleur de stockage B AFF A220 NetApp | e0c 
+
+
+|  | Eth1/3 | Serveur autonome Cisco UCS C220 C-Series A | MLOM1 avec adaptateur CVR-QSFP-SFP10G 
+
+
+|  | Eth1/4 | Serveur autonome Cisco UCS C220 C-Series B | MLOM1 avec adaptateur CVR-QSFP-SFP10G 
+
+
+|  | Eth1/25 | Commutateur Cisco Nexus 3172P B | Eth1/25 
+
+
+|  | Eth1/26 | Commutateur Cisco Nexus 3172P B | Eth1/26 
+
+
+|  | Eth1/33 | Contrôleur de stockage A AFF A220 NetApp | E0M 
+
+
+|  | Eth1/34 | Serveur autonome Cisco UCS C220 C-Series A | CIMC 
+|===
+Le tableau suivant présente les informations de câblage du commutateur Cisco Nexus 3172P B.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| Commutateur Cisco Nexus 3172P B | Eth1/1 | Contrôleur de stockage A AFF A220 NetApp | e0d 
+
+
+|  | Eth1/2 | Contrôleur de stockage B AFF A220 NetApp | e0d 
+
+
+|  | Eth1/3 | Serveur autonome Cisco UCS C220 C-Series A | MLOM2 avec adaptateur CVR-QSFP-SFP10G 
+
+
+|  | Eth1/4 | Serveur autonome Cisco UCS C220 C-Series B | MLOM2 avec adaptateur CVR-QSFP-SFP10G 
+
+
+|  | Eth1/25 | Commutateur Cisco Nexus 3172P A | Eth1/25 
+
+
+|  | Eth1/26 | Commutateur Cisco Nexus 3172P A | Eth1/26 
+
+
+|  | Eth1/33 | Contrôleur de stockage B AFF A220 NetApp | E0M 
+
+
+|  | Eth1/34 | Serveur autonome Cisco UCS C220 C-Series B | CIMC 
+|===
+Le tableau suivant présente les informations de câblage pour le contrôleur de stockage NetApp AFF A220 A.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| Contrôleur de stockage A AFF A220 NetApp | e0a | Contrôleur de stockage B AFF A220 NetApp | e0a 
+
+
+|  | e0b | Contrôleur de stockage B AFF A220 NetApp | e0b 
+
+
+|  | e0c | Commutateur Cisco Nexus 3172P A | Eth1/1 
+
+
+|  | e0d | Commutateur Cisco Nexus 3172P B | Eth1/1 
+
+
+|  | E0M | Commutateur Cisco Nexus 3172P A | Eth1/33 
+|===
+Le tableau suivant présente les informations de câblage pour le contrôleur de stockage AFF A220 B.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+| Contrôleur de stockage B AFF A220 NetApp | e0a | Contrôleur de stockage A AFF A220 NetApp | e0a 
+
+
+|  | e0b | Contrôleur de stockage A AFF A220 NetApp | e0b 
+
+
+|  | e0c | Commutateur Cisco Nexus 3172P A | Eth1/2 
+
+
+|  | e0d | Commutateur Cisco Nexus 3172P B | Eth1/2 
+
+
+|  | E0M | Commutateur Cisco Nexus 3172P B | Eth1/33 
+|===

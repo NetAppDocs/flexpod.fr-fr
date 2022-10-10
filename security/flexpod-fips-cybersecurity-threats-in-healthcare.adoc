@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-cybersecurity-threats-in-healthcare.html 
+keywords: ransomware, malware, extortion, data breach, malicious agents 
+summary: 'Les menaces pour les soins de santé sont multidimensionnelles dans la nature et dans l"impact. Les gouvernements du monde entier ont adopté diverses dispositions pour sécuriser les renseignements médicaux personnels. Les effets néfastes et la nature évolutive des menaces qui pèsent sur les soins de santé rendent difficile la défense de toutes les menaces.' 
+---
+= Cyber-menaces dans le secteur de la santé
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-introduction.html["Précédent : introduction."]
+
+Chaque problème représente une nouvelle opportunité : la pandémie de COVID donne un exemple. Selon un https://www.hhs.gov/sites/default/files/2020-hph-cybersecurty-retrospective-tlpwhite.pdf["rapport"^] Par le programme de cybersécurité du ministère de la Santé et des Services sociaux (HHS), la réponse de la COVID a entraîné l'augmentation du nombre d'attaques par ransomware. Il y avait 6,000 nouveaux domaines Internet enregistrés juste au cours de la troisième semaine de mars 2020. Plus de 50 % des domaines ont hébergé des programmes malveillants. Les attaques par ransomware étaient responsables de près de 50 % de l'ensemble des violations de données de santé en 2020 et touchent plus de 630 organismes de santé et environ 29 millions de dossiers médicaux. Dix-neuf béchers/sites ont doublé l'extorsion. Avec un taux de 24.5 %, le secteur de la santé a été considéré comme la plus forte violation de données en 2020.
+
+Les agents malveillants ont tenté de violer la sécurité et la confidentialité des informations médicales protégées (PHI) en vendant ces informations ou en menaçant de les détruire ou de les exposer. Des tentatives ciblées et de diffusion en masse sont fréquemment effectuées pour obtenir un accès non autorisé à l'ePHI. Environ 75 % des dossiers patient exposés au cours de la seconde moitié de 2020 étaient dus à des relations professionnelles compromises.
+
+La liste suivante des organismes de soins de santé était ciblée par les agents malveillants :
+
+* Systèmes hospitaliers
+* Laboratoires de sciences de la vie
+* Laboratoires de recherche
+* Installations de réhabilitation
+* Hôpitaux et cliniques communautaires
+
+
+La diversité des applications qui constituent une organisation de soins de santé est indéniable et de plus en plus complexe. Les bureaux de la sécurité de l'information doivent assurer la gouvernance d'une grande variété de systèmes ET ressources IT. La figure suivante illustre les capacités cliniques d'un système hospitalier type.
+
+image:flexpod-fips-image2.png["Erreur : image graphique manquante"]
+
+Les données patient sont au cœur de cette image. La perte de données sur les patients et la stigmatisation associée aux affections médicales sensibles sont très réelles. Parmi les autres questions sensibles figurent le risque d’exclusion sociale, le chantage, le profilage, la vulnérabilité au marketing ciblé, l’exploitation et la responsabilité financière potentielle envers les payeurs à propos de l’information médicale au-delà des privilèges du payeur.
+
+Les menaces pour les soins de santé sont multidimensionnelles dans la nature et dans l'impact. Les gouvernements du monde entier ont adopté diverses dispositions pour sécuriser les renseignements médicaux personnels. Les effets néfastes et la nature évolutive des menaces qui pèsent sur les soins de santé rendent difficile la défense de toutes les menaces.
+
+Voici une liste de menaces courantes identifiées dans le domaine de la santé :
+
+* Attaques par ransomware
+* Perte ou vol d'équipement ou de données contenant des informations sensibles
+* Attaques de phishing
+* Attaques contre des dispositifs médicaux connectés pouvant affecter la sécurité du patient
+* Envoyez un e-mail aux attaques de phishing
+* Perte ou vol d'équipement ou de données
+* Compromis sur le protocole des postes de travail à distance
+* Vulnérabilité logicielle
+
+
+Les établissements de santé opèrent dans un environnement juridique et réglementaire aussi complexe que leurs écosystèmes numériques. Cet environnement inclut, sans s'y limiter, les éléments suivants :
+
+* Bureau du coordonnateur national (pour la technologie des soins de santé) normes d'interopérabilité des technologies de l'information en santé électroniques certifiées ONC
+* Accès à l’assurance-santé et Loi sur la réautorisation du Programme d’assurance-santé pour enfants (MACRA)/utilisation significative
+* Obligations multiples en vertu de la Food and Drug Administration (FDA)
+* Les processus d'accréditation de la Commission mixte
+* Exigences HIPAA
+* Exigences HITECH
+* Normes de risque minimales acceptables pour les payeurs
+* Règles de confidentialité et de sécurité
+* Loi fédérale sur la modernisation de la sécurité de l'information exigences intégrées aux contrats fédéraux et aux subventions de recherche par l'intermédiaire d'organismes comme les National Institutes of Health
+* Norme de sécurité de l'industrie des cartes de paiement (PCI-DSS)
+* Exigences relatives à la gestion des services de santé mentale et de toxicomanie (SAMHSA)
+* Loi Gramm-Leach-Bliley pour le traitement financier
+* La loi Stark en ce qui concerne la prestation de services aux organisations affiliées
+* Loi sur les droits à l'éducation familiale et la protection des renseignements personnels (FERPA) pour les institutions qui participent à l'enseignement supérieur
+* Loi sur la non-discrimination en matière d'information génétique (GINA)
+* Le nouveau Règlement général sur la protection des données (RGPD) dans l'Union européenne
+
+
+Les normes d'architecture de sécurité évoluent rapidement pour empêcher les acteurs malveillants d'affecter les systèmes d'information de santé. L'une de ces normes est la norme FIPS 140-2, définie par l'Institut national des normes et de la technologie (NIST). La publication FIPS 140-2 détaille le niveau américain exigences gouvernementales pour un module cryptographique. Les exigences de sécurité couvrent les domaines liés à la conception et à l'implémentation sécurisées d'un module cryptographique et peuvent être appliqués à HIT. Les frontières cryptographiques bien définies facilitent la gestion de la sécurité tout en restant à jour avec les modules cryptographiques. Ces limites permettent d'éviter les faibles modules de cryptage qui peuvent être facilement exploités par des acteurs malveillants. Ils permettent également d'éviter les erreurs humaines lors de la gestion de modules cryptographiques standard.
+
+Le NIST, de concert avec le Centre de sécurité des communications (CSE), a mis en place le Programme de validation du module cryptographique (CMVP) pour certifier les modules cryptographiques des niveaux de validation FIPS 140-2. Grâce à un module certifié FIPS 140-2-2, les organismes fédéraux doivent protéger leurs données sensibles ou précieuses tout en transit. En raison de sa réussite dans la protection des informations sensibles ou précieuses, de nombreux systèmes de santé ont choisi de crypter les informations médicales confidentielles à l'aide de modules cryptographiques FIPS 140-2 au-delà du niveau de sécurité minimum requis par la loi.
+
+L'exploitation et la mise en œuvre des fonctionnalités FlexPod FIPS 140-2 ne prennent que des heures (et non plusieurs jours). La plupart des organismes de santé, quelle que soit leur taille, sont à la portée de la conformité avec la norme FIPS. Avec des limites de chiffrement clairement définies et des étapes de mise en œuvre simples et bien documentées, une architecture FlexPod conforme à la norme FIPS 140-2 peut constituer une base de sécurité solide pour l'infrastructure. De plus, des améliorations simples permettent d'améliorer encore la protection contre les menaces de sécurité.
+
+link:flexpod-fips-overview-of-fips-140-2.html["Présentation de la norme FIPS 140-2."]

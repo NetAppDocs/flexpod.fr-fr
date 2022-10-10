@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html 
+keywords: google cloud, Cloud Volumes ONTAP, google cloud, environmental prerequisites, github repository, NetApp Cloud Manager API 
+summary: Cette section décrit le déploiement automatisé du stockage NetApp dans le cloud hybride. 
+---
+= Déploiement automatisé du stockage de cloud hybride NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-configure-public-cloud-service-provider.html["Précédent : configuration du fournisseur de services clouds publics."]
+
+
+
+== Google Cloud
+
+Vous devez d'abord activer des API et créer un compte de service qui fournit à Cloud Manager des autorisations pour déployer et gérer des systèmes Cloud Volumes ONTAP dans le même projet que celui du connecteur ou dans des projets différents.
+
+Avant de déployer un connecteur dans un projet Google Cloud, vérifiez que ce connecteur ne s'exécute pas sur vos sites ou dans un autre fournisseur cloud.
+
+Deux ensembles d'autorisations doivent être en place avant de déployer un connecteur directement depuis Cloud Manager :
+
+* Vous devez déployer Connector à l'aide d'un compte Google qui dispose d'autorisations pour lancer l'instance de VM Connector à partir de Cloud Manager.
+* Lors du déploiement de Connector, vous êtes invité à sélectionner l'instance de VM. Cloud Manager obtient les autorisations du compte de service pour créer et gérer les systèmes Cloud Volumes ONTAP en votre nom. Les autorisations sont fournies en ajoutant un rôle personnalisé au compte de service.vous devez configurer deux fichiers YAML qui incluent les autorisations requises pour l'utilisateur et le compte de service. Découvrez comment utiliser https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["Les fichiers YAML pour configurer les autorisations"^] ici.
+
+
+Voir https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6["cette vidéo détaillée"^] pour tous les prérequis requis.
+
+
+
+=== Architecture et modes de déploiement Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP est disponible dans Google Cloud sous forme de système à un seul nœud et en tant que paire de nœuds à haute disponibilité. En fonction de ces exigences, nous pouvons choisir le mode de déploiement Cloud Volumes ONTAP. La mise à niveau d'un système à un seul nœud vers une paire haute disponibilité n'est pas prise en charge. Si vous souhaitez passer d'un système à un seul nœud à une paire HA, vous devez déployer un nouveau système et répliquer les données du système existant vers le nouveau.
+
+
+
+=== Haute disponibilité de Cloud Volumes ONTAP dans Google Cloud
+
+Google Cloud prend en charge le déploiement de ressources dans plusieurs régions géographiques et zones géographiques. Le déploiement HA comprend deux nœuds ONTAP qui utilisent de puissants types de machines standard n1 ou n2 disponibles dans Google Cloud. Les données sont répliquées de manière synchrone entre les deux nœuds Cloud Volumes ONTAP afin d'assurer la disponibilité en cas de défaillance. Le déploiement HAUTE DISPONIBILITÉ de Cloud Volumes ONTAP requiert quatre VPC et un sous-réseau privé dans chaque VPC. Les sous-réseaux des quatre VPC doivent être configurés avec des plages CIDR non chevauchantes.
+
+Les quatre VPC sont utilisés à des fins suivantes :
+
+* VPC 0 permet la communication entrante aux nœuds de données et Cloud Volumes ONTAP.
+* VPC 1 assure la connectivité du cluster entre les nœuds Cloud Volumes ONTAP.
+* VPC 2 permet la réplication des RAM non volatiles (NVRAM) entre les nœuds.
+* VPC 3 est utilisé pour la connectivité à l'instance de médiateur HA et au trafic de réplication de disque pour les reconstructions de nœuds.
+
+
+L'image suivante montre un Cloud Volumes ONTAP hautement disponible dans Goggle Cloud.
+
+image:gcp-ncvo-image6.png["Cette image montre un Cloud Volumes ONTAP hautement disponible dans Goggle Cloud."]
+
+Pour plus de détails, voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["ce lien"^].
+
+Pour connaître les exigences de mise en réseau pour Cloud Volumes ONTAP dans Google Cloud, consultez https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-gcp.html["ce lien"^].
+
+Pour plus d'informations sur le Tiering des données, voir https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["ce lien"^].
+
+
+
+=== Configurez les conditions préalables à l'environnement
+
+La création automatisée de clusters Cloud Volumes ONTAP, la configuration SnapMirror entre un volume sur site et un volume cloud, la création d'un volume cloud, etc., s'effectue à l'aide de la configuration Terraform. Ces configurations Terraform sont hébergées sur un compte Terraform Cloud for Business. Avec Intersight Cloud Orchestrator, vous orchestrez des tâches telles que la création d'un espace de travail dans un compte Terraform Cloud for Business, l'ajout de toutes les variables requises à l'espace de travail, l'exécution d'un plan Terraform, etc.
+
+Pour ces tâches d'automatisation et d'orchestration, quelques exigences et données sont nécessaires, comme décrit dans les sections suivantes.
+
+
+
+=== Référentiel GitHub
+
+Vous avez besoin d'un compte GitHub pour héberger votre code Terraform. Intersight Orchestrator crée un nouvel espace de travail dans le compte Terraform Cloud for Business. Cet espace de travail est configuré avec un workflow de contrôle de version. À cette fin, vous devez conserver la configuration Terraform dans un référentiel GitHub et la fournir comme entrée lors de la création de l'espace de travail.
+
+https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["Lien GitHub"^] Fournit la configuration Terraform avec diverses ressources. Vous pouvez forer ce référentiel et en faire une copie dans votre compte GitHub.
+
+Dans ce référentiel, `provider.tf` A la définition du fournisseur Terraform requis. Le fournisseur Terraform pour NetApp Cloud Manager est utilisé.
+
+`variables.tf` dispose de toutes les déclarations de variables. La valeur de ces variables est entrée en tant qu'entrée de workflow d'Intersight Cloud Orchestrator. Cela permet de transmettre des valeurs à un espace de travail et d'exécuter la configuration Terraform.
+
+`resources.tf` Définit les diverses ressources nécessaires pour ajouter un système ONTAP sur site à l'environnement de travail, créer un cluster Cloud Volumes ONTAP à nœud unique sur Google Cloud, établir une relation SnapMirror entre l'infrastructure sur site et Cloud Volumes ONTAP, créer un volume cloud sur Cloud Volumes ONTAP, etc.
+
+Dans ce référentiel :
+
+* `provider.tf` Définit NetApp Cloud Manager comme fournisseur Terraform requis.
+* `variables.tf` Dispose des déclarations de variables utilisées comme entrée pour le workflow Intersight Cloud Orchestrator. Cela permet de transmettre des valeurs à l'espace de travail et d'exécuter la configuration Terraform.
+* `resources.tf` Définit diverses ressources pour ajouter une ONTAP sur site à l'environnement de travail, créer un cluster Cloud Volumes ONTAP à un seul nœud sur Google Cloud, établir une relation SnapMirror entre l'infrastructure sur site et Cloud Volumes ONTAP, créer un volume cloud sur Cloud Volumes ONTAP, etc.
+
+
+Vous pouvez ajouter un bloc de ressources supplémentaire pour créer plusieurs volumes sur Cloud Volumes ONTAP, ou utiliser count ou `for_each` Constructions Terraform.
+
+Pour connecter des espaces de travail Terraform, des modules et des jeux de règles aux référentiels git contenant des configurations Terraform, Terraform Cloud doit accéder à votre GitHub repo.
+
+Ajoutez un client et l’ID Token OAuth du client est utilisé comme l’une des entrées de workflow d’InterSight Cloud Orchestrator.
+
+. Connectez-vous à votre compte Terraform Cloud for Business. Accédez à *Paramètres > fournisseurs*.
+. Cliquez sur *Ajouter un fournisseur VCS*.
+. Sélectionnez votre version.
+. Suivez les étapes de la section *configurer fournisseur*.
+. Vous voyez le client ajouté dans *VCS Providers*. Notez l'ID du token OAuth.
+
+
+
+
+=== Jeton d'actualisation pour les opérations de l'API NetApp Cloud Manager
+
+En plus de l'interface du navigateur Web, Cloud Manager dispose d'une API REST qui permet aux développeurs de logiciels d'accéder directement à la fonctionnalité Cloud Manager via l'interface SaaS. Le service Cloud Manager comprend plusieurs composants distincts qui forment collectivement une plateforme de développement extensible. Le jeton d'actualisation vous permet de générer des jetons d'accès que vous ajoutez à l'en-tête autorisation pour chaque appel d'API.
+
+Sans appeler directement une API, le fournisseur netapp-cloudManager utilise un jeton d'actualisation et convertit les ressources Terraform en appels d'API correspondants. Vous devez générer un jeton d'actualisation pour les opérations de l'API NetApp Cloud Manager à partir de https://services.cloud.netapp.com/refresh-token["NetApp Cloud Central"^].
+
+Vous devez disposer de l'ID client du connecteur Cloud Manager pour créer des ressources dans Cloud Manager, par exemple pour créer un cluster Cloud Volumes ONTAP, configurer SnapMirror, etc.
+
+. Connectez-vous à Cloud Manager : https://cloudmanager.netapp.com/["https://cloudmanager.netapp.com/"^].
+. Cliquez sur *connecteur*.
+. Cliquez sur *gérer les connecteurs*.
+. Cliquez sur les points de suspension et copiez l'ID du connecteur.
+
+
+
+
+== Développez le workflow Cisco Intersight Cloud Orchestrator
+
+Cisco Intersight Cloud Orchestrator est disponible dans Cisco Intersight si :
+
+* Vous avez installé la licence InterSight Premier.
+* Vous êtes administrateur de compte, administrateur de stockage, administrateur de virtualisation ou administrateur de serveurs et avez au moins un serveur qui vous est attribué.
+
+
+
+
+=== Concepteur de flux de travail
+
+Le concepteur de flux de travail vous aide à créer de nouveaux flux de travail (ainsi que des tâches et des types de données) et à modifier des flux de travail existants pour gérer des cibles dans Cisco Intersight.
+
+Pour lancer Workflow Designer, accédez à *orchestration > workflows*. Un tableau de bord affiche les détails suivants sous les onglets *Mes workflows*, *modèles de flux de travail* et *tous les workflows* :
+
+* État de validation
+* Statut de la dernière exécution
+* Flux de travail par nombre d'exécution
+* Principales catégories de flux de travail
+* Nombre de flux de travail définis par le système
+* Principaux flux de travail par cible
+
+
+Le tableau de bord vous permet de créer, modifier, cloner ou supprimer un onglet. Pour créer votre propre onglet de vue personnalisée, cliquez sur *+*, spécifiez un nom, puis sélectionnez les paramètres requis à afficher dans les colonnes, les colonnes de balises et les widgets. Vous pouvez renommer un onglet s’il ne possède pas d’icône *Lock*.
+
+Sous le tableau de bord, vous trouverez une liste tabulaire des flux de production affichant les informations suivantes :
+
+* Afficher le nom
+* Description
+* Défini par le système
+* Version par défaut
+* Exécutions
+* Statut de la dernière exécution
+* État de validation
+* Dernière mise à jour
+* Entreprise
+
+
+La colonne actions vous permet d'effectuer les actions suivantes :
+
+* *Exécuter.* exécute le flux de travail.
+* *Historique.* affiche l'historique d'exécution du flux de travail.
+* *Gérer les versions.* Créer et gérer des versions pour les flux de travail.
+* *Supprimer.* Supprimer un flux de travail.
+* *Réessayer.* Réessayer un flux de travail échoué.
+
+
+
+
+=== Flux de travail
+
+Créer un flux de travail composé des étapes suivantes :
+
+* *Définition d'un flux de travail.* spécifier le nom d'affichage, la description et d'autres attributs importants.
+* *Définir les entrées de flux de travail et les sorties de flux de travail.* spécifier les paramètres d'entrée obligatoires pour l'exécution du flux de travail et les sorties générées lors de l'exécution réussie
+* *Ajouter des tâches de flux de travail.* Ajouter une ou plusieurs tâches de flux de travail dans le concepteur de flux de travail qui sont nécessaires pour que le flux de travail puisse exécuter sa fonction.
+* *Valider le flux de travail. *Valider un flux de travail pour s'assurer qu'il n'y a pas d'erreurs dans la connexion des entrées et sorties de tâche.
+
+
+
+
+=== Créez des workflows de stockage FlexPod sur site
+
+Pour configurer un workflow pour le stockage FlexPod sur site, reportez-vous à la section https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["ce lien"^].
+
+link:gcp-ncvo-dr-workflow.html["Suivant : workflow de reprise après incident."]

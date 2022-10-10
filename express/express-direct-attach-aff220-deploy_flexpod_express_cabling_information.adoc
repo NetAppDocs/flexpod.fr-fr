@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, express, information, cisco, nexus, switch, aff, storage, controller, ucs, fabric 
+summary: Le câblage de la validation de référence est décrit dans les tableaux suivants. 
+---
+= Informations sur le câblage FlexPod Express
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Le câblage de la validation de référence est décrit dans les tableaux suivants.
+
+Le tableau suivant répertorie les informations de câblage du commutateur Cisco Nexus 31108PCV A.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.6+| Commutateur Cisco Nexus 31108PCV A | Eth1/1 | Contrôleur de stockage A AFF A220 NetApp | E0M 
+
+
+| Eth1/2 | Cisco UCS-mini FI-A | mgmt0 
+
+
+| Eth1/3 | Cisco UCS-mini FI-A | Eth1/1 
+
+
+| ETH 1/4 | Cisco UCS-mini FI-B | Eth1/1 
+
+
+| ETH 1/13 | CISCO NX 31108PCV B | ETH 1/13 
+
+
+| ETH 1/14 | CISCO NX 31108PCV B | ETH 1/14 
+|===
+Le tableau suivant répertorie les informations de câblage du commutateur Cisco Nexus 31108PCV B.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.6+| Commutateur Cisco Nexus 31108PCV B | Eth1/1 | Contrôleur de stockage B AFF A220 NetApp | E0M 
+
+
+| Eth1/2 | Cisco UCS-mini FI-B | mgmt0 
+
+
+| Eth1/3 | Cisco UCS-mini FI-A | Eth1/2 
+
+
+| ETH 1/4 | Cisco UCS-mini FI-B | Eth1/2 
+
+
+| ETH 1/13 | CISCO NX 31108PCV A | ETH 1/13 
+
+
+| ETH 1/14 | CISCO NX 31108PCV A | ETH 1/14 
+|===
+Le tableau suivant répertorie les informations de câblage pour le contrôleur de stockage AFF A220 NetApp
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.5+| Contrôleur de stockage A AFF A220 NetApp | e0a | Contrôleur de stockage B AFF A220 NetApp | e0a 
+
+
+| e0b | Contrôleur de stockage B AFF A220 NetApp | e0b 
+
+
+| e0e | Cisco UCS-mini FI-A | Eth1/3 
+
+
+| e0f | Cisco UCS-mini FI-B | Eth1/3 
+
+
+| E0M | CISCO NX 31108PCV A | Eth1/1 
+|===
+Le tableau suivant répertorie les informations de câblage pour le contrôleur de stockage B AFF A220 NetApp
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.5+| Contrôleur de stockage B AFF A220 NetApp | e0a | Contrôleur de stockage B AFF A220 NetApp | e0a 
+
+
+| e0b | Contrôleur de stockage B AFF A220 NetApp | e0b 
+
+
+| e0e | Cisco UCS-mini FI-A | Eth1/4 
+
+
+| e0f | Cisco UCS-mini FI-B | Eth1/4 
+
+
+| E0M | CISCO NX 31108PCV B | Eth1/1 
+|===
+Le tableau suivant répertorie les informations de câblage pour Cisco UCS Fabric Interconnect A.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.5+| Interconnexion de fabric Cisco UCS A | Eth1/1 | CISCO NX 31108PCV A | Eth1/3 
+
+
+| Eth1/2 | CISCO NX 31108PCV B | Eth1/3 
+
+
+| Eth1/3 | Contrôleur de stockage A AFF A220 NetApp | e0e 
+
+
+| Eth1/4 | Contrôleur de stockage B AFF A220 NetApp | e0e 
+
+
+| mgmt0 | CISCO NX 31108PCV A | Eth1/2 
+|===
+Le tableau suivant répertorie les informations de câblage pour Cisco UCS Fabric Interconnect B.
+
+|===
+| Périphérique local | Port local | Périphérique distant | Port distant 
+
+
+.5+| Interconnexion de fabric Cisco UCS B | Eth1/1 | CISCO NX 31108PCV A | Eth1/4 
+
+
+| Eth1/2 | CISCO NX 31108PCV B | Eth1/4 
+
+
+| Eth1/3 | Contrôleur de stockage A AFF A220 NetApp | e0f 
+
+
+| Eth1/4 | Contrôleur de stockage B AFF A220 NetApp | e0f 
+
+
+| mgmt0 | CISCO NX 31108PCV B | Eth1/2 
+|===

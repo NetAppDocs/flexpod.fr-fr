@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, legacy, storage, controller, fas, disk, shelf 
+summary: Cette section répertorie les anciens tiroirs disques NetApp, les contrôleurs FAS et les contrôleurs de stockage. 
+---
+= Équipement existant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Le tableau suivant répertorie les options de contrôleurs de stockage NetApp classiques.
+
+|===
+| Contrôleur de stockage | Référence FAS | Caractéristiques techniques 
+
+
+| FAS2520 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2552 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2554 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS8020 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+Le tableau suivant répertorie les options de tiroirs disques NetApp pour NetApp FAS.
+
+|===
+| Tiroir disque | Numéro de référence | Caractéristiques techniques 
+
+
+| DE1600 | E-X5682A-DM-0E-R6-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Tiroirs disques spécifications techniques disques pris en charge disques sur NetApp Hardware Universe"] 
+
+
+| DE5600 | E-X4041A-12-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Tiroirs disques spécifications techniques disques pris en charge disques sur NetApp Hardware Universe"] 
+
+
+| DE6600 | X-48564-00-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Tiroirs disques spécifications techniques disques pris en charge disques sur NetApp Hardware Universe"] 
+|===
+
+
+== Contrôleurs FAS NetApp hérités
+
+Le tableau suivant répertorie les options de contrôleurs NetApp FAS hérités.
+
+|===
+| Composant actuel | FAS2554 | FAS2552 | FAS2520 
+
+
+| Configuration | 2 contrôleurs dans un châssis 4U | 2 contrôleurs dans un châssis 2U | 2 contrôleurs dans un châssis 2U 
+
+
+| Capacité brute maximale | 576 TO | 509 TO | 36 TO 
+
+
+| Disques internes | 24 | 24 | 12 
+
+
+| Nombre maximal de disques (internes plus externes) | 144 | 144 | 84 
+
+
+| Taille maximale des volumes 3+| 60 TO 
+
+
+| Taille maximale des agrégats 3+| 120 TO 
+
+
+| Nombre maximal de LUN 3+| 2,048 par contrôleur 
+
+
+| Réseaux de stockage pris en charge 2+| ISCSI, FC, FCoE, NFS et CIFS | ISCSI, NFS et CIFS 
+
+
+| Nombre maximal de volumes NetApp FlexVol 3+| 1,000 par contrôleur 
+
+
+| Nombre maximal de copies NetApp Snapshot 3+| 255,000 par contrôleur 
+|===
+
+NOTE: Pour plus de modèles NetApp FAS, consultez le https://hwu.netapp.com/Controller/Index?platformTypeId=2032["Section modèles FAS"^] Dans le Hardware Universe.

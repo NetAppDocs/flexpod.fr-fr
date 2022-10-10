@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_meditech_modules_and_components.html 
+keywords: meditech, modules, components, application, function, type 
+summary: 'L"application MEDITECH couvre plusieurs modules et composants.' 
+---
+= Modules ET composants MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+L'application MEDITECH couvre plusieurs modules et composants. Le tableau suivant répertorie les fonctions couvertes par ces modules. Pour plus d'informations sur la configuration et le déploiement de ces modules, consultez la documentation MEDITECH.
+
+|===
+| Fonction | Type 
+
+
+| Connectivité  a| 
+* Serveur Web
+* Serveur d'applications en direct (WI – intégration Web)
+* Test du serveur d'applications (WI)
+* Serveur d'authentification SAML (WI)
+* Serveur proxy SAML (WI)
+* Serveur de base de données
+
+
+
+
+| Infrastructures  a| 
+* Serveur de fichiers
+* Client de travail en arrière-plan
+* Serveur de connexion
+* Serveur de transactions
+
+
+
+
+| Numérisation et archivage  a| 
+* Serveur d'images
+
+
+
+
+| Référentiel de données  a| 
+* Serveur SQL
+
+
+
+
+| Analyses commerciales et cliniques  a| 
+* Serveur d'intelligence dynamique (BCA)
+* Serveur d'intelligence de test (BCA)
+* Serveur de base de données (BCA)
+
+
+
+
+| Soins à domicile  a| 
+* Solution pour sites distants
+* Connectivité
+* Infrastructures
+* Impression
+* Périphériques de terrain
+* Numérisation
+* Exigences relatives au site hébergé
+* Configuration du pare-feu
+
+
+
+
+| Assistance  a| 
+* Client de travail en arrière-plan (licences d'accès client)
+
+
+
+
+| Terminaux d'utilisateurs  a| 
+* Tablettes
+* Périphériques fixes
+
+
+
+
+| Impression  a| 
+* Serveur d'impression en réseau direct (requis ; peut déjà exister)
+* Test du serveur d'impression réseau (requis ; peut déjà exister)
+
+
+
+
+| Exigences tierces  a| 
+* First Databank (FDB) MedKnowledge Framework version 4.3
+
+
+|===

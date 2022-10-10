@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_cost_of_ownership.html 
+keywords: cost, ownership, evaluator, group, savings, fabricpool, cloud 
+summary: 'Le calculateur économique FabricPool est disponible auprès du cabinet d"analyse indépendant Evaluator Group pour vous aider à réduire les coûts entre votre infrastructure sur site et le cloud pour le stockage des données inactives.' 
+---
+= Le coût de possession
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Le https://www.evaluatorgroup.com/FabricPool/["Calculateur économique FabricPool"^] Disponible auprès du cabinet d'analyse indépendant Evaluator Group, cabinet d'analyse IT indépendant, afin de réaliser des économies sur site et dans le cloud pour le stockage des données inactives. Ce calculateur fournit une interface simple qui détermine le coût de stockage des données peu utilisées sur un Tier de performance plutôt que de les transférer vers un Tier cloud pour le reste du cycle de vie des données. Sur la base d'un calcul effectué sur 5 ans, les quatre facteurs clés (la capacité source, la croissance des données, la capacité Snapshot et le pourcentage de données inactives) sont utilisés pour déterminer les coûts de stockage sur la période.

@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html 
+keywords: netapp, storage, cisco intersight, monitor, orchestrate, orchestration, storage inventory, storage widgets 
+summary: 'Une fois les cibles réclamées, les widgets de stockage NetApp, l"inventaire du stockage et les onglets de virtualisation deviennent disponibles si vous disposez d"une licence Advantage Tier. Des onglets d"orchestration sont disponibles si vous disposez d"une licence Premier Tier.' 
+---
+= Surveiller le stockage NetApp depuis Cisco InterSight
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Une fois les cibles réclamées, les widgets de stockage NetApp, l'inventaire du stockage et les onglets de virtualisation deviennent disponibles si vous disposez d'une licence Advantage Tier. Des onglets d'orchestration sont disponibles si vous disposez d'une licence Premier Tier.
+
+
+
+== Présentation de l'inventaire du stockage
+
+La capture d'écran suivante affiche l'écran * opération > stockage*.
+
+image:ci-qsg_image9.png["La capture d'écran affiche l'écran opération > stockage"]
+
+La capture d'écran ci-dessous présente la présentation du cluster de stockage.
+
+
+NOTE: Le récapitulatif des mesures de performance suivantes n'apparaît que si la baie de stockage est contrôlée par NetApp Active IQ Unified Manager 9.9 ou version ultérieure.
+
+image:ci-qsg_image10.png["la capture d'écran affiche la présentation du cluster de stockage"]
+
+
+
+== Widgets de stockage
+
+Pour afficher les widgets de stockage, accédez à *surveillance > tableaux de bord > Afficher les widgets de stockage NetApp*.
+
+* La capture d'écran suivante affiche le widget Récapitulatif de la version de stockage.
+
+
+image:ci-qsg_image11.jpg["La capture d'écran affiche le widget Récapitulatif de la version de stockage"]
+
+* Cette capture d'écran présente le widget Capacity Utilization des 5 baies de stockage les plus populaires.
+
+
+image:ci-qsg_image12.png["La capture d'écran présente le widget Capacity Utilization des 5 baies de stockage"]
+
+* Cette capture d'écran présente le widget Capacity Utilization des 5 premiers volumes de stockage.
+
+
+image:ci-qsg_image13.png["La capture d'écran présente le widget Volume de stockage parmi les 5 premiers en fonction de l'utilisation de la capacité"]

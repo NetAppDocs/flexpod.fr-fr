@@ -1,0 +1,206 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html 
+keywords: technical, specifications, small, medium, large, architectures, bill, material 
+summary: Cette section présente un exemple de nomenclature pour des architectures de stockage de différentes tailles. 
+---
+= Spécifications techniques des petites, moyennes et grandes architectures
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section présente un exemple de nomenclature pour des architectures de stockage de différentes tailles.
+
+
+
+== Nomenclature pour les petites, moyennes et grandes architectures.
+
+La conception du système FlexPod est une infrastructure flexible qui englobe de nombreux composants et versions logicielles différents. Utiliser https://fieldportal.netapp.com/content/443847["Tr-4036 : spécifications techniques de FlexPod"^] Pour faciliter l'assemblage d'une configuration FlexPod valide. Les configurations du tableau ci-dessous représentent les exigences minimales pour FlexPod et ne sont qu'un exemple. La configuration peut être étendue pour chaque famille de produits, selon les besoins pour différents environnements et cas d'utilisation.
+
+Pour cet exercice de dimensionnement, petit correspond à un environnement MEDITECH de catégorie 3, moyen à une catégorie 5 et grand à une catégorie 6.
+
+|===
+|  | Petit | Moyen | Grand 
+
+
+| Plateforme | Une paire haute disponibilité du système de stockage 100 % Flash NetApp AFF A220 | Une paire haute disponibilité NetApp AFF A220 | Une paire haute disponibilité de systèmes de stockage 100 % Flash NetApp AFF A300 
+
+
+| Tiroirs disques | 9 To x 3,8 To | 13 To x 3,8 To | 19 To x 3,8 To 
+
+
+| Taille de la base DE données MEDITECH | 3TO-12 TO | 17 TO | > 30 TO 
+
+
+| IOPS DE MEDITECH | <22,000 000 IOPS | > 25,000 IOPS | > 32,000 IOPS 
+
+
+| IOPS total | 22000 | 27000 | 35000 
+
+
+| Brut | 34,2 TO | 49,4 TO | 68,4 TO 
+
+
+| Capacité exploitable | 18,53 Tio | 27,96 Tio | 33,82 Tio 
+
+
+| Capacité réelle (efficacité du stockage 2:1) | 55,6 Tio | 83,89Tio | 101,47 Tio 
+|===
+
+NOTE: Certains environnements client peuvent exécuter plusieurs charges de travail de production MEDITECH simultanément ou avec des besoins en IOPS plus élevés. Dans de tels cas, contactez l'équipe NetApp en charge des comptes pour dimensionner les systèmes de stockage en fonction des IOPS et de la capacité requises. Vous devez être en mesure de déterminer la plateforme adaptée aux charges de travail. Par exemple, les entreprises exécutent efficacement plusieurs environnements MEDITECH sur une paire haute disponibilité du système de stockage 100 % Flash AFF de NetApp.
+
+Le tableau suivant présente les logiciels standard requis pour les configurations MEDITECH.
+
+|===
+| Logiciel | Famille de produits | Version ou version | Détails 
+
+
+| Stockage | ONTAP | ONTAP 9.4 - disponibilité générale (GA) |  
+
+
+.3+| Le réseau | Interconnexions de fabric Cisco UCS | Cisco UCSM 4.x | Version actuelle recommandée 
+
+
+| Commutateurs Ethernet Cisco Nexus | 7.0(3)I7(6) | Version actuelle recommandée 
+
+
+| Cisco FC : Cisco MDS 9132T | 8.3(2) | Version actuelle recommandée 
+
+
+| Hyperviseur | Hyperviseur | VMware vSphere ESXi 6.7 |  
+
+
+|  | Machines virtuelles (VM) | Windows 2016 |  
+
+
+.4+| Gestion | Système de gestion de l'hyperviseur | VMware vCenter Server 6.7 U1 (VCSA) |  
+
+
+| NetApp Virtual Storage Console (VSC) | VSC 7.0P1 |  
+
+
+| NetApp SnapCenter | SnapCenter 4.0 |  
+
+
+| Cisco UCS Manager | 4.x |  
+|===
+Le tableau suivant présente un petit exemple de configuration (catégorie 3) : composants d'infrastructure.
+
+|===
+| Calque | Famille de produits | Quantité et modèle | Détails 
+
+
+.5+| Calcul | Châssis Cisco UCS 5108 | 1 | Prend en charge jusqu'à huit lames demi-largeur ou quatre lames pleine largeur. Ajout de châssis à mesure que les besoins en serveurs augmentent. 
+
+
+| Modules d'E/S de châssis Cisco | 2 x 2208 | Ports uplink 8 Go x 10 Go 
+
+
+| Les serveurs lames Cisco UCS | 4 x B200 M5 | Chacun avec 2 x 14 cœurs, une vitesse d'horloge de 2,6 GHz ou plus et BIOS 3.2 384 Go (3#) 
+
+
+| Cartes d'interface virtuelle Cisco UCS | 4 x UCS 1440 | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (voir matrice d'interopérabilité : https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| 2 interconnexions de fabric Cisco UCS (FI) | 2 X UCS 6454 FI | Fabric Interconnect de 4e génération prenant en charge les protocoles Ethernet 10/25 Gb et FC 32 Gb 
+
+
+| Le réseau | Commutateurs Ethernet Cisco | 2 x Nexus 9336c-FX2 | 1 GO, 10 GO, 25 GO, 40 GO, 100 GO 
+
+
+.2+| Réseau de stockage | Réseau IP Nexus 9k pour stockage BLOB |  | Châssis FI et UCS 
+
+
+| FC : CISCO MDS 9132T |  | Deux commutateurs Cisco 9132T 
+
+
+.3+| Stockage | Système de stockage 100 % Flash NetApp AFF A300 | 1 paire HA | Cluster à 2 nœuds pour toutes les charges de travail MEDITECH (serveur de fichiers, image Server, SQL Server, VMware, etc.) 
+
+
+| Tiroir disque DS224C | 1 tiroir disque DS224C |  
+
+
+| Disque SSD | 9 x 3,8 To |  
+|===
+Le tableau suivant présente un exemple de configuration moyenne (catégorie 5) – composants d'infrastructure
+
+|===
+| Calque | Famille de produits | Quantité et modèle | Détails 
+
+
+.5+| Calcul | Châssis Cisco UCS 5108 | 1 | Prend en charge jusqu'à huit lames demi-largeur ou quatre lames pleine largeur. Ajout de châssis à mesure que les besoins en serveurs augmentent. 
+
+
+| Modules d'E/S de châssis Cisco | 2 x 2208 | Ports uplink 8 Go x 10 Go 
+
+
+| Les serveurs lames Cisco UCS | 6 x B200 M5 | Chacun avec 2 x 16 cœurs, une vitesse d'horloge de 2,5 GHz/ou plus, et 384 Go ou plus de mémoire BIOS 3.2 (3#) 
+
+
+| Carte d'interface virtuelle Cisco UCS (VIC) | 6 x UCS 1440 VICS | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (voir matrice d'interopérabilité : ) 
+
+
+| 2 interconnexions de fabric Cisco UCS (FI) | 2 X UCS 6454 FI | Fabric Interconnect de 4e génération prenant en charge les protocoles Ethernet 10 Gb/25 Gb et FC 32 Gb 
+
+
+| Le réseau | Commutateurs Ethernet Cisco | 2 x Nexus 9336c-FX2 | 1 GO, 10 GO, 25 GO, 40 GO, 100 GO 
+
+
+.2+| Réseau de stockage | Réseau IP Nexus 9k pour stockage BLOB |  |  
+
+
+| FC : CISCO MDS 9132T |  | Deux commutateurs Cisco 9132T 
+
+
+.3+| Stockage | Système de stockage 100 % Flash AFF A220 NetApp | 2 paire HA | Cluster à 2 nœuds pour toutes les charges de travail MEDITECH (serveur de fichiers, image Server, SQL Server, VMware, etc.) 
+
+
+| Tiroir disque DS224C | 1 tiroir disque DS224C |  
+
+
+| SSD | 13 x 3,8 To |  
+|===
+Le tableau suivant présente un grand exemple de configuration (catégorie 6) – composants d'infrastructure.
+
+|===
+| Calque | Famille de produits | Quantité et modèle | Détails 
+
+
+.5+| Calcul | Châssis Cisco UCS 5108 | 1 |  
+
+
+| Modules d'E/S de châssis Cisco | 2 x 2208 | 8 ports de liaison ascendante 10 Go 
+
+
+| Les serveurs lames Cisco UCS | 8 x B200 M5 | Chacun avec 2 x 24 cœurs, 2,7 GHz et 768 Go de BIOS 3.2 (3#) 
+
+
+| Carte d'interface virtuelle Cisco UCS (VIC) | 8 x UCS 1440 VICS | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (consultez la matrice d'interopérabilité : https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| 2 interconnexions de fabric Cisco UCS (FI) | 2 X UCS 6454 FI | Fabric Interconnect de 4e génération prenant en charge les protocoles Ethernet 10 Gb/25 Gb et FC 32 Gb 
+
+
+| Le réseau | Commutateurs Ethernet Cisco | 2 x Nexus 9336c-FX2 | 2 x Cisco Nexus 9332PQ1, 10 Go, 25 Go, 40 Go, 100 Go 
+
+
+.2+| Réseau de stockage | IP Network N9k pour le stockage BLOB |  |  
+
+
+| FC : CISCO MDS 9132T |  | Deux commutateurs Cisco 9132T 
+
+
+.3+| Stockage | AFF A300 | 1 paire HA | Cluster à 2 nœuds pour toutes les charges de travail MEDITECH (serveur de fichiers, image Server, SQL Server, VMware, etc.) 
+
+
+| Tiroir disque DS224C | 1 tiroir disque DS224C |  
+
+
+| SSD | 19 x 3,8 To |  
+|===
+
+NOTE: Ces configurations constituent un point de départ pour les conseils de dimensionnement. Certains environnements client peuvent avoir plusieurs charges de travail de production MEDITECH et non-MEDITECH exécutées simultanément, ou elles peuvent avoir des exigences d'IOPS plus élevées. En collaboration avec l'équipe de gestion de compte NetApp, vous devez dimensionner les systèmes de stockage en fonction des IOPS, des charges de travail et de la capacité requises pour déterminer la plateforme la mieux adaptée aux charges de travail.

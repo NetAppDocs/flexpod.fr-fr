@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_conclusion.html 
+keywords: ransomware, attack, data, backup, recovery, business, planning 
+summary: 'Les auteurs recommandent de ne pas payer une rançon en cas d"attaque, car cela renforce la foi de l"attaquant dans leur modèle d"entreprise. Les opérations de sauvegarde et de restauration de données jouent un rôle important dans la restauration par ransomware. Par conséquent, ils doivent être inclus dans la planification des activités.' 
+---
+= Conclusion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les ransomwares sont un produit de la criminalité organisée et ils n'ont pas d'ordre éthique. Ils peuvent s'abstenir de fournir la clé pour le décryptage même après avoir reçu la rançon. La victime perd non seulement ses données mais aussi une quantité importante d'argent et devra faire face à des conséquences liées à la perte de données de production.
+
+Selon un https://www.forbes.com/sites/leemathews/2018/03/09/why-you-should-never-pay-a-ransomware-ransom/["Article Forbes"^], seuls 19 % des victimes d'attaques par ransomware récupèrent leurs données pour autant. Par conséquent, les auteurs recommandent de ne pas payer une rançon en cas d'attaque, car cela renforce la foi de l'attaquant dans leur modèle d'entreprise.
+
+Les opérations de sauvegarde et de restauration de données jouent un rôle important dans la restauration par ransomware. Par conséquent, ils doivent être inclus dans la planification des activités. La mise en œuvre de ces opérations doit être budgétisée de sorte à ce que les capacités de restauration ne puissent faire l'objet d'aucun compromis en cas d'attaque.
+
+Il est important de choisir le partenaire technologique adéquat pour cette transition, et FlexPod propose la plupart des fonctionnalités de manière native, sans frais supplémentaires dans un système FAS 100 % Flash.

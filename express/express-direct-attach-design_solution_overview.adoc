@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-design_solution_overview.html 
+keywords: virtualization, FAS27xx, AFF220, express, VMware vSphere, 
+summary: FlexPod Express est conçu pour exécuter des charges de travail de virtualisation mixtes. Elle est destinée aux bureaux distants, aux succursales et aux moyennes entreprises. Il convient également aux grandes entreprises qui souhaitent mettre en œuvre une solution dédiée. Le principal pilote de la nouvelle solution FlexPod Express consiste à ajouter de nouvelles technologies telles que ONTAP 9.5, *, * et AFF220, VMware vSphere 6.7U1 vers FlexPod Express. 
+---
+= Présentation de la solution
+:allow-uri-read: 
+
+
+FlexPod Express est conçu pour exécuter des charges de travail de virtualisation mixtes. Elle est destinée aux bureaux distants, aux succursales et aux moyennes entreprises. Il convient également aux grandes entreprises qui souhaitent mettre en œuvre une solution dédiée. Le principal pilote de la nouvelle solution FlexPod Express consiste à ajouter de nouvelles technologies telles que ONTAP 9.5, 8xx/AFF220, VMware vSphere 6.7U1 vers FlexPod Express.
+
+La figure suivante présente les composants matériels inclus dans la solution FlexPod Express.
+
+image:express-direct-attach-design_image2.png["Erreur : image graphique manquante"]
+
+
+
+== Public visé
+
+Ce document est destiné aux personnes qui souhaitent tirer parti d'une infrastructure conçue pour optimiser l'efficacité IT et favoriser l'innovation IT. Le public cible de ce document inclut, sans s'y limiter, les ingénieurs commerciaux, les consultants sur le terrain, le personnel des services professionnels, les responsables INFORMATIQUES, les ingénieurs partenaires et les clients.
+
+
+
+== Technologie de la solution
+
+Cette solution utilise les dernières technologies NetApp, Cisco et VMware. Celui-ci repose sur NetApp AFF A220 exécutant ONTAP 9.5, deux commutateurs Cisco Nexus 31108VPC et des serveurs Cisco UCS B200 M5 exécutant VMware vSphere 6.7U1. Cette solution validée utilise le stockage IP Direct Connect sur la technologie 10GbE.
+
+La figure suivante présente FlexPod Express avec VMware vSphere 6.7U1 Architecture Direct Connect basée sur IP.
+
+image:express-direct-attach-design_image3.png["Erreur : image graphique manquante"]
+
+
+
+== Récapitulatif du cas d'utilisation
+
+La solution FlexPod Express peut être appliquée à plusieurs cas d'utilisation, notamment :
+
+* ROBO
+* Moyennes entreprises
+* Les environnements qui nécessitent une solution dédiée et économique FlexPod Express sont particulièrement adaptés aux charges de travail virtualisées et mixtes.
+
+
+link:express-direct-attach-design_technology_requirements.html["Ensuite, les exigences technologiques."]

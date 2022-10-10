@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_netapp_components.html 
+keywords: storage, controllers, cluster, interconnect, switches, drives, disk, shelves, licensing, options 
+summary: 'Les contrôleurs de stockage NetApp constituent la base du stockage de l"architecture FlexPod pour le stockage des données de démarrage et d"applications. Les composants NetApp sont notamment des contrôleurs de stockage, des commutateurs d"interconnexion de cluster, des disques et des tiroirs disques, ainsi que des options de licence.' 
+---
+= Composants NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les contrôleurs de stockage NetApp constituent la base du stockage de l'architecture FlexPod pour le stockage des données de démarrage et d'applications. Les composants NetApp sont notamment des contrôleurs de stockage, des commutateurs d'interconnexion de cluster, des disques et des tiroirs disques, ainsi que des options de licence.
+
+
+
+== Options de contrôleurs de stockage NetApp
+
+Des contrôleurs NetApp FAS, AFF ou AFF ASA redondants sont requis dans l'architecture FlexPod. Ils exécutent le logiciel ONTAP. Lorsque les contrôleurs de stockage sont commandés, la version logicielle préférée peut être préchargée sur les contrôleurs. Pour ONTAP, un cluster complet est commandé. Un cluster complet inclut une paire de contrôleurs de stockage et une interconnexion de cluster (commutateur ou sans commutateur).
+
+Différentes options et configurations sont disponibles, en fonction de la plateforme de stockage sélectionnée. Pour plus d'informations sur ces composants supplémentaires, adressez-vous à votre représentant commercial.
+
+Les gammes de contrôleurs répertoriées dans le tableau ci-dessous peuvent être utilisées dans une solution de data Center FlexPod, car leur connexion aux commutateurs Cisco Nexus est transparente. Voir la https://hwu.netapp.com/["NetApp Hardware Universe"^] pour en savoir plus sur la compatibilité de chaque modèle de contrôleur.
+
+|===
+| Gamme de contrôleurs de stockage | Caractéristiques techniques 
+
+
+| Gamme AFF A-Series | https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["Documentation AFF A-Series"] 
+
+
+| GAMME AFF ASA A-SERIES | https://www.netapp.com/data-storage/san-storage-area-network/documentation/["Documentation AFF ASA A-Series"] 
+
+
+| Gamme FAS | https://mysupport.netapp.com/documentation/productsatoz/index.html#F["Documentation sur la gamme FAS"] 
+|===
+
+
+== Options de commutateurs d'interconnexion de cluster
+
+Le tableau suivant répertorie les commutateurs d'interconnexion de cluster Nexus disponibles pour les architectures FlexPod. Par ailleurs, FlexPod prend en charge tous les commutateurs en cluster pris en charge par ONTAP, y compris les commutateurs non Cisco, à condition qu'ils soient compatibles avec la version de ONTAP déployée. Voir la https://hwu.netapp.com/["NetApp Hardware Universe"^] pour plus de détails sur la compatibilité des modèles de commutateurs spécifiques.
+
+|===
+
+
+| Commutateur d'interconnexion de cluster | Caractéristiques techniques 
+
+
+| Cisco Nexus 3132Q-V | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["Documentation NetApp : commutateurs Cisco Nexus 3132Q-V"] 
+
+
+| Cisco Nexus 9336C-FX2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336/9336-overview.html["Documentation NetApp : commutateurs Cisco Nexus 9336C-FX2"] 
+|===
+
+
+== Options de tiroirs disques et de disques NetApp
+
+Tous les contrôleurs de stockage doivent utiliser un minimum d'un tiroir disque NetApp.
+
+Le type de tiroir NetApp sélectionné détermine les types de disques disponibles dans ce tiroir.
+
+
+NOTE: Pour connaître les références de tous les tiroirs disques et des disques, adressez-vous à votre ingénieur commercial.
+
+Pour plus d'informations sur les disques pris en charge, cliquez sur le lien NetApp Hardware Universe dans le tableau suivant, puis sélectionnez disques pris en charge.
+
+|===
+| Tiroir disque | Caractéristiques techniques 
+
+
+| DS224C .4+| http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Tiroirs disques et supports de stockage disques pris en charge sur NetApp Hardware Universe"] 
+
+
+| DS212C 
+
+
+| DS460C 
+
+
+| NS224 
+|===
+
+
+== Options NetApp de licences logicielles
+
+Le tableau suivant répertorie les options de licence logicielle NetApp disponibles pour l'architecture FlexPod Datacenter. Le logiciel NetApp est sous licence au niveau du contrôleur FAS et AFF.
+
+|===
+| Licences logicielles NetApp | Numéro de référence | Caractéristiques techniques 
+
+
+| SW, BNDL complet (contrôleur), -C. | SW-8XXX-COMP-BNDL-C. .2+| http://mysupport.netapp.com/documentation/productsatoz/index.html["Bibliothèque de produits A–Z."] 
+
+
+| SW, ONTAP Essentials (contrôleur), -C. | SW-8XXX-ONTAP 9-C. 
+|===
+
+
+== Options de licences de support NetApp
+
+Des licences NetApp SupportEdge Premium sont requises pour l'architecture FlexPod, mais les références associées à ces licences varient en fonction des options sélectionnées dans la conception FlexPod. Par exemple, les références des licences logicielles diffèrent en fonction du contrôleur FAS choisi. Pour plus d'informations sur les numéros de référence exacts des licences d'assistance individuelles, consultez votre représentant commercial. Le tableau ci-dessous présente un exemple de licence SupportEdge.
+
+|===
+| Licences de support NetApp | Numéro de référence | Caractéristiques techniques 
+
+
+| SupportEdge Premium 4 heures sur site (mois : 36) | CS-O2-4HR | https://www.netapp.com/us/media/supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"] 
+|===

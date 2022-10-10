@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_program_summary.html 
+keywords: summary, infrastructure, cisco, ucs, flexpod, datacenter 
+summary: 'Les tendances du secteur témoignent d"une vaste transformation des data centers en infrastructure partagée et cloud computing. Elles recherchent par ailleurs une solution simple et efficace pour les succursales et les bureaux distants, exploitant la technologie qu"elles connaissent bien dans leur data Center.' 
+---
+= NVA-1123-DEPLOY : guide de déploiement de FlexPod Express avec VMware vSphere 6.7 et NetApp AFF A220
+:allow-uri-read: 
+
+
+Savita Kumari, NetApp
+
+En partenariat avec :image:cisco logo.png["Erreur : image graphique manquante"]
+
+Les tendances du secteur témoignent d'une vaste transformation des data centers en infrastructure partagée et cloud computing. Elles recherchent par ailleurs une solution simple et efficace pour les succursales et les bureaux distants, exploitant la technologie qu'elles connaissent bien dans leur data Center.
+
+FlexPod Express est une architecture de data Center préconçue et conforme aux bonnes pratiques. Elle repose sur la plateforme Cisco Unified Computing System (Cisco UCS), la gamme de commutateurs Cisco Nexus et les technologies de stockage NetApp. Ce sont les composants d'un système FlexPod Express qui ressemble à ceux de leurs homologues FlexPod Datacenter, ce qui favorise une synergie de gestion dans l'ensemble de l'environnement d'infrastructure IT à plus petite échelle. Les plateformes FlexPod Datacenter et FlexPod Express sont optimales pour la virtualisation, et pour les systèmes d'exploitation sans système d'exploitation et les charges de travail d'entreprise.
+
+Les solutions FlexPod Datacenter et FlexPod Express proposent une configuration de base et peuvent être dimensionnées et optimisées pour prendre en charge de nombreux cas d'utilisation et besoins. Les clients FlexPod Datacenter existants peuvent gérer leur système FlexPod Express avec les outils auxquels ils sont habitués. Les nouveaux clients FlexPod Express peuvent facilement s'adapter à la gestion d'FlexPod Datacenter à mesure que leur environnement se développe.
+
+FlexPod Express constitue une infrastructure idéale pour les bureaux distants, les succursales et les moyennes entreprises. Il s'agit également d'une solution idéale pour les clients qui souhaitent mettre en place une infrastructure pour une charge de travail dédiée.
+
+FlexPod Express offre une infrastructure facile à gérer qui convient à quasiment tous les workloads.

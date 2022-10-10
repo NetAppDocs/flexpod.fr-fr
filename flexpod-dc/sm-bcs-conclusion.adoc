@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-conclusion.html 
+keywords: conclusion 
+summary: 'Le FlexPod Datacenter avec SM-BC utilise une conception de data Center actif-actif afin d"assurer la continuité de l"activité et la reprise après incident pour les workloads stratégiques. La solution interconnecte généralement deux data centers déployés dans des sites séparés géographiquement dispersés dans une zone métropolitaine. La solution NetApp SM-BC utilise une réplication synchrone pour protéger les services de données stratégiques contre une panne sur site. La solution requiert que les deux sites de déploiement FlexPod offrent une latence réseau aller-retour inférieure à 10 millisecondes.' 
+---
+= Conclusion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-validated-scenarios.html["Précédent : validation des solutions - scénarios validés"]
+
+Le FlexPod Datacenter avec SM-BC utilise une conception de data Center actif-actif afin d'assurer la continuité de l'activité et la reprise après incident pour les workloads stratégiques. La solution interconnecte généralement deux data centers déployés dans des sites séparés géographiquement dispersés dans une zone métropolitaine. La solution NetApp SM-BC utilise une réplication synchrone pour protéger les services de données stratégiques contre une panne sur site. La solution requiert que les deux sites de déploiement FlexPod offrent une latence réseau aller-retour inférieure à 10 millisecondes.
+
+Le médiateur NetApp ONTAP déployé sur un site tiers surveille la solution SM-BC et permet un basculement automatisé en cas d'incident sur site. VMware vCenter avec VMware HA et étendu la configuration du cluster de stockage Metro VMware vSphere fonctionne en toute transparence avec NetApp SM-BC, afin de permettre à la solution de respecter le RPO nul et les objectifs de durée de restauration proches de zéro.
+
+La solution FlexPod SM-BC peut également être déployée sur les infrastructures FlexPod existantes s'ils répondent aux exigences ou en ajoutant une solution FlexPod supplémentaire à un FlexPod existant pour atteindre les objectifs de continuité de l'activité. Des outils supplémentaires de gestion, de contrôle et d'automatisation tels que Cisco InterSight, Ansible et HashiCorp Terraform Automation sont disponibles auprès de NetApp et Cisco. Vous pouvez facilement surveiller la solution, obtenir des informations sur ses opérations et automatiser son déploiement et ses opérations.
+
+Du point de vue d'une application stratégique telle que Microsoft SQL Server, une base de données résidant sur un datastore VMware protégé par une relation de groupe de cohérence ONTAP SM-BC reste disponible malgré une panne du stockage sur site. Comme vérifié lors du test de validation, après une panne de courant du cluster de stockage où réside la base de données, un basculement de la relation SM-BC CG CG CG se produit et les transactions Microsoft SQL Server reprennent sans interruption des applications.
+
+Grâce à la protection granulaire des données des applications, vous pouvez créer des relations ONTAP SM-BC CG pour vos applications stratégiques afin de répondre aux exigences RPO zéro et RTO quasi nul. Afin que le cluster VMware sur lequel l'application Microsoft SQL Server s'exécute puisse survivre à une panne de stockage de site, les LUN de démarrage des hôtes ESXi de chaque site sont également protégées par une relation SM-BC CG CG CG CG.
+
+La flexibilité et l'évolutivité de FlexPod vous permettent de démarrer avec une infrastructure correctement dimensionnée qui peut évoluer et évoluer en fonction des exigences de votre entreprise. Cette conception validée vous permet de déployer de manière fiable un cloud privé VMware vSphere sur une infrastructure intégrée et distribuée. Vous bénéficiez ainsi d'une solution résiliente à de nombreux scénarios de défaillance unique, ainsi qu'une défaillance d'un site, pour protéger les services de données stratégiques.
+
+link:sm-bcs-where-to-find-additional-information-and-version-history.html["Suivant : où trouver des informations supplémentaires et l'historique des versions ?"]

@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_flexpod_rules.html 
+keywords: flexpod, rules, design, infrastructure, software, versions, components 
+summary: La conception du système FlexPod permet de créer une infrastructure flexible qui englobe de nombreux composants et versions logicielles différents. 
+---
+= Règles FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+La conception du système FlexPod permet de créer une infrastructure flexible qui englobe de nombreux composants et versions logicielles différents.
+
+Utilisez les jeux de règles comme guide pour construire ou assembler une configuration FlexPod valide. Les chiffres et les règles indiqués dans ce document représentent le minimum requis pour FlexPod. Ils peuvent être étendus aux familles de produits incluses, si nécessaire pour différents environnements et cas d'utilisation.

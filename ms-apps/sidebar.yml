@@ -1,0 +1,12 @@
+---
+section: ms-apps
+title: Applications Microsoft
+entries:
+- title: FlexPod Datacenter avec Microsoft Exchange 2013, F5 BIG-IP et Cisco ACI [Design]
+  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware_design.html
+- title: FlexPod Datacenter avec Microsoft Exchange 2013, F5 BIG-IP et Cisco ACI [déployer]
+  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware.html
+- title: FlexPod Datacenter avec Microsoft SharePoint 2013 et Cisco ACI [Design]
+  url: http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware.pdf
+- title: FlexPod Datacenter avec Microsoft SharePoint 2013 et l'ACI Cisco [déployer]
+  url: http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware_deploy.pdf

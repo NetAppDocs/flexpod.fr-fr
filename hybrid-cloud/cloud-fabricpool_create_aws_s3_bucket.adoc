@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html 
+keywords: create, aws, s3, bucket, cloud, fabricpool, flexpod, tiers, create 
+summary: 'Les compartiments sont des conteneurs de stockage objet qui hébergent les données. Vous devez fournir le nom et l"emplacement du compartiment dans lequel les données sont stockées avant de pouvoir être ajoutées à un agrégat en tant que Tier cloud.' 
+---
+= Création d'un compartiment AWS S3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les compartiments sont des conteneurs de stockage objet qui hébergent les données. Vous devez fournir le nom et l'emplacement du compartiment dans lequel les données sont stockées avant de pouvoir être ajoutées à un agrégat en tant que Tier cloud.
+
+
+NOTE: Les compartiments ne peuvent pas être créés à l'aide de OnCommand System Manager, OnCommand Unified Manager ou ONTAP.
+
+FabricPool prend en charge la connexion d'un compartiment par agrégat, comme illustré dans la figure suivante. Un seul compartiment peut être associé à un seul agrégat et un seul compartiment peut être relié à plusieurs agrégats. Toutefois, un seul agrégat ne peut pas être associé à plusieurs compartiments. Bien qu'un compartiment unique puisse être connecté à plusieurs agrégats du cluster, NetApp ne recommande pas de connecter un compartiment unique à des agrégats dans plusieurs clusters.
+
+Lors de la planification d'une architecture de stockage, réfléchissez à l'impact possible de la relation entre compartiment et agrégat sur les performances. De nombreux fournisseurs de magasin d'objets définissent un nombre maximal d'IOPS pris en charge au niveau du compartiment ou du conteneur. Les environnements qui requièrent des performances maximales doivent utiliser plusieurs compartiments pour réduire l'éventualité où les limites des IOPS du stockage objet pouvaient affecter les performances de plusieurs agrégats FabricPool. Il est préférable de connecter un compartiment ou un conteneur unique à tous les agrégats FabricPool d'un cluster pour des environnements qui privilégient les performances de Tier cloud.
+
+image:cloud-fabricpool_image10.png["Erreur : image graphique manquante"]
+
+
+
+== Créer un compartiment S3
+
+. Dans la console de gestion AWS depuis la page d'accueil, entrez S3 dans la barre de recherche.
+. Sélectionnez stockage évolutif S3 dans le cloud.
++
+image:cloud-fabricpool_image11.png["Erreur : image graphique manquante"]
+
+. Sur la page d'accueil S3, sélectionnez Créer un compartiment.
+. Entrez un nom compatible DNS et choisissez la région pour créer le compartiment.
++
+image:cloud-fabricpool_image12.png["Erreur : image graphique manquante"]
+
+. Cliquez sur Créer pour créer le compartiment de stockage d'objets.
+
+
+link:cloud-fabricpool_add_a_cloud_tier_to_ontap.html["Ensuite, ajoutez un Tier cloud à ONTAP"]

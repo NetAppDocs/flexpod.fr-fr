@@ -1,0 +1,16 @@
+---
+section: infrastructure
+title: Infrastructures
+entries:
+- title: NVMe de bout en bout pour FlexPod avec Cisco UCSM, VMware vSphere 7.0 et
+    NetApp ONTAP 9
+  type: solutions
+  entries:
+  - title: Introduction
+    url: "/infrastructure/nvme-vsphere-introduction.html"
+  - title: Approche de test
+    url: "/infrastructure/nvme-vsphere-testing-approach.html"
+  - title: Résultats du test
+    url: "/infrastructure/nvme-vsphere-test-results.html"
+  - title: Conclusion
+    url: "/infrastructure/nvme-vsphere-conclusion.html"

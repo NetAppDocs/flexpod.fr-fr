@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, cisco, end, life, eol, flexpod, datacenter, technical, specifications 
+summary: 'FlexPod est une solution flexible qui vous permet d"utiliser votre équipement existant et vos nouveaux équipements actuellement commercialisés par Cisco et NetApp. Il arrive que certains modèles d"équipements Cisco et NetApp soient fin de vie.' 
+---
+= Équipement existant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod est une solution flexible qui vous permet d'utiliser votre équipement existant et vos nouveaux équipements actuellement commercialisés par Cisco et NetApp. Il arrive que certains modèles d'équipements Cisco et NetApp soient fin de vie.
+
+Bien que ces modèles d'équipement ne soient plus disponibles, si vous avez acheté un de ces modèles avant la date de fin de disponibilité, vous pouvez utiliser cet équipement dans une configuration FlexPod. Vous pouvez consulter la liste complète des anciens modèles pris en charge par FlexPod et non commercialisés sur le https://mysupport.netapp.com/info/eoa/index.html["Index de fin de disponibilité des programmes de services et de produits NetApp"^].
+
+Pour plus d'informations sur les équipements Cisco hérités, consultez les avis de fin de vie et de fin de disponibilité de Cisco pour http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Serveurs en rack Cisco UCS C-Series"^], http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/eos-eol-notice-listing.html["Serveurs lames Cisco UCS B-Series"^], et https://www.cisco.com/c/en/us/products/eos-eol-listing.html["Commutateurs Nexus"^].
+
+La prise en charge du protocole FC existant inclut les éléments suivants :
+
+* Fabric 2 Go
+* Structure 4 Go
+
+
+Les logiciels hérités incluent les éléments suivants :
+
+* NetApp Data ONTAP 7-mode, version 7.3.5 et ultérieure
+* ONTAP 8.1.x à 9.0.x
+* Cisco UCS Manager 1.3 et versions ultérieures
+* Cisco UCS Manager 2.1 à 2.2.7
+

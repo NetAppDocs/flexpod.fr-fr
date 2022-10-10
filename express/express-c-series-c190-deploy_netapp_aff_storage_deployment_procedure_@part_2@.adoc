@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html 
+keywords: aff, storage, deployment, procedure, create, iscsi, igroups, ontap, san, boot 
+summary: Pour créer des igroups, exécutez les commandes suivantes depuis la connexion SSH du nœud de gestion du cluster. 
+---
+= Procédure de déploiement du stockage NetApp AFF (2e partie)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Configuration du stockage de démarrage SAN ONTAP
+
+
+
+=== Création des igroups iSCSI
+
+
+NOTE: Pour cette étape, vous avez besoin des IQN de l'initiateur iSCSI de la configuration du serveur.
+
+Pour créer des igroups, exécutez les commandes suivantes depuis la connexion SSH du nœud de gestion du cluster. Pour afficher les trois groupes initiateurs créés au cours de cette étape, exécutez la `igroup show` commande.
+
+....
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-A –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_a_iSCSI-A_vNIC_IQN>>,<<var_vm_host_infra_a_iSCSI-B_vNIC_IQN>>
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-B –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_b_iSCSI-A_vNIC_IQN>>,<<var_vm_host_infra_b_iSCSI-B_vNIC_IQN>>
+....
+
+NOTE: Cette étape doit être effectuée lors de l'ajout de serveurs Cisco UCS C-Series supplémentaires.
+
+
+
+== Mappez les LUN de démarrage sur les igroups
+
+....
+To map boot LUNs to igroups, run the following commands from the cluster management SSH connection:
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra-A –igroup VM-Host-Infra-A –lun-id 0
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra-B –igroup VM-Host-Infra-B –lun-id 0
+....
+
+NOTE: Cette étape doit être effectuée lors de l'ajout de serveurs Cisco UCS C-Series supplémentaires.
+
+link:express-c-series-c190-design_vmware_vsphere_6.7u2_deployment_procedure.html["Suivant : procédure de déploiement de VMware vSphere 6.7U2"]

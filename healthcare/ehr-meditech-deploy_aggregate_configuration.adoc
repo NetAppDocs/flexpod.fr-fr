@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_aggregate_configuration.html 
+keywords: aggregate, configuration, raid, groups, dp, storage, expansion, snapshot, copy, 
+summary: 'NetApp recommande la technologie NetApp RAID DP en tant que type RAID pour tous les agrégats d"un système NetApp FAS ou AFF, y compris les agrégats NetApp Flash Pool réguliers. La documentation DE MEDITECH peut préciser l"utilisation du RAID 10, mais MEDITECH a approuvé l"utilisation de RAID DP.' 
+---
+= Configuration d'agrégat
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== NetApp RAID DP
+
+NetApp recommande la technologie NetApp RAID DP en tant que type RAID pour tous les agrégats d'un système NetApp FAS ou AFF, y compris les agrégats NetApp Flash Pool réguliers. La documentation DE MEDITECH peut préciser l'utilisation du RAID 10, mais MEDITECH a approuvé l'utilisation de RAID DP.
+
+
+
+== Taille et nombre de groupes RAID
+
+La taille du groupe RAID par défaut est 16. Cette taille peut être ou non optimale pour les agrégats pour les hôtes MEDITECH de votre site. Pour connaître le nombre de disques que NetApp recommande d'utiliser au sein d'un groupe RAID, reportez-vous à la section https://fieldportal.netapp.com/content/190829["NetApp TR-3838 : Guide de configuration du sous-système de stockage"^].
+
+La taille du groupe RAID est importante pour l'extension du stockage car NetApp recommande d'ajouter des disques à un agrégat avec un ou plusieurs groupes de disques identiques à la taille du groupe RAID. Le nombre de groupes RAID dépend du nombre de disques de données et de la taille du groupe RAID. Pour déterminer le nombre de disques de données nécessaires, utilisez l'outil de dimensionnement NetApp System Performance Modeler (SPM). Une fois le nombre de disques de données déterminé, ajustez la taille du groupe RAID afin de réduire le nombre de disques de parité dans la plage recommandée pour la taille de groupe RAID par type de disque.
+
+Pour en savoir plus sur l'utilisation de l'outil de dimensionnement SPM pour les environnements MEDITECH, consultez le site https://fieldportal.netapp.com/content/198446["NetApp TR-4190 : Guide de dimensionnement des environnements MEDITECH"^].
+
+
+
+== Considérations relatives à l'extension du stockage
+
+Lorsque vous développez des agrégats avec plus de disques, ajoutez les disques des groupes qui sont égaux à la taille du groupe RAID de l'agrégat. La mise en œuvre de cette approche permet d'assurer la cohérence des performances dans l'ensemble de l'agrégat.
+
+Par exemple, pour ajouter du stockage à un agrégat créé avec une taille de groupe RAID de 20, le nombre de disques que NetApp recommande d'ajouter est un ou plusieurs groupes de 20 disques. Vous devez donc ajouter 20, 40, 60, etc., des disques.
+
+Une fois les agrégats créés, vous pouvez améliorer les performances en exécutant des tâches de réaffectation sur les volumes ou l'agrégat concernés, afin de répartir les bandes de données existantes sur les nouveaux disques. Cette action est utile, notamment si l'agrégat existant était presque plein.
+
+
+NOTE: Nous vous conseillons de planifier la réaffectation du planning pendant les heures hors production, car cette tâche consomme énormément de ressources de processeur et de disques.
+
+Pour plus d'informations sur l'utilisation de la fonctionnalité reallocation après une extension d'agrégat, reportez-vous à la section https://fieldportal.netapp.com/content/192896["NetApp TR-3929 : Guide des meilleures pratiques de réaffectation"^].
+
+
+
+== Copies Snapshot au niveau de l'agrégat
+
+Définissez la réserve NetApp Snapshot de niveau de l'agrégat sur zéro et désactivez la planification Snapshot de l'agrégat par défaut. Supprimez, si possible, des copies Snapshot au niveau des agrégats préexistantes.
+
+link:ehr-meditech-deploy_storage_virtual_machine_configuration.html["Suivant : configuration de l'ordinateur virtuel de stockage."]

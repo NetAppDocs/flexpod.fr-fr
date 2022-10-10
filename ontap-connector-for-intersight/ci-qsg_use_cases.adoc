@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_use_cases.html 
+keywords: netapp, ontap, cisco, intersight, storage, use cases, monitor, monitoring, orchestration, reference workflows, custom workflows, storage inventory, widgets 
+summary: 'Il s"agit de quelques exemples de cas d"utilisation pour le contrôle et l"orchestration du stockage NetApp auprès de Cisco Intersight.' 
+---
+= Cas d'utilisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Il s'agit de quelques exemples de cas d'utilisation pour le contrôle et l'orchestration du stockage NetApp auprès de Cisco Intersight.
+
+
+
+== Cas d'utilisation 1 : surveillance de l'inventaire du stockage NetApp et des widgets
+
+Lorsque l'environnement de stockage NetApp est disponible dans Cisco Intersight, vous pouvez surveiller les objets de stockage NetApp en détail à partir de l'inventaire du stockage et obtenir une vue d'ensemble à partir des widgets de stockage.
+
+. Déployer InterSight Assist OVA (tâche Onsite dans l'environnement vCenter).
+. Ajouter des systèmes NetApp AIQ MU dans InterSight Assist.
+. Accédez à *stockage* et naviguez dans l'inventaire du stockage NetApp.
+. Ajoutez *Widgets* pour le stockage NetApp à votre *Monitor Dashboard*.
++
+Voici un https://tv.netapp.com/detail/video/6228096841001["lien"^] Vers la vidéo montrant les fonctionnalités ONTAP de surveillance du stockage de Cisco Intersight.
+
+
+
+
+
+== Cas d'utilisation 2 : orchestration du stockage NetApp à l'aide des workflows de référence
+
+Lorsque vous disposez d'un système de stockage NetApp et d'environnements vCenter dans Cisco Intersight, vous pouvez exécuter des flux de travail de référence de bout en bout disponibles clé en main incluant des tâches de stockage et de virtualisation.
+
+. Déployer InterSight Assist OVA (tâche Onsite dans l'environnement vCenter).
+. Ajouter des systèmes NetApp AIQ MU dans InterSight Assist.
+. Ajoutez la cible vCenter à InterSight via InterSight Assist.
+. Exécuter les flux de travail de référence clé en main.
++
+Voici une liste des workflows de référence :
+
++
+** Nouveau datastore NAS
+** Nouvelle politique d'exportation du stockage
+** Nouvel hôte de stockage
+** Nouvelle interface de stockage
+** Nouvel ordinateur virtuel de stockage
+** Nouvel ordinateur virtuel
+** Nouveau datastore VMFS
+** Supprimer le datastore NAS
+** Supprimer la stratégie d'exportation de stockage
+** Supprimer l'hôte de stockage
+** Supprimer le datastore VMFS
+** Mettre à jour le datastore NAS
+** Mettre à jour l'hôte de stockage
+** Mettre à jour le datastore VMFS
+
+
+
+
+
+
+== Cas d'utilisation 3 : flux de travail personnalisés utilisant un format sans design
+
+Lorsque les environnements NetApp Storage et vCenter sont disponibles dans Cisco InterSight, vous pouvez créer des flux de travail personnalisés en utilisant les tâches de stockage et de virtualisation NetApp.
+
+. Déployer InterSight Assist OVA (tâche Onsite dans l'environnement vCenter)
+. Ajouter des systèmes NetApp AIQ MU dans InterSight Assist.
+. Ajoutez la cible vCenter à InterSight via InterSight Assist.
+. Accédez à l'onglet *orchestration* dans Intersight.
+. Sélectionnez *Créer un flux de travail*.
+. Ajoutez des tâches de stockage et de virtualisation à vos flux de production.
++
+Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :
+
++
+** Ajouter la stratégie d'exportation de stockage au volume
+** Connectez les initiateurs à l'hôte de stockage
+** Déconnectez la stratégie d'exportation du stockage du volume
+** Modifiez les agrégats pour Storage Virtual machine
+** Modifier la règle de stratégie d'exportation de stockage
+** Modifier la règle Snapshot de stockage
+** Modifier la planification de la règle Snapshot de stockage
+** Développez LUN de stockage
+** Étendez le volume de stockage
+** Recherchez le mappage de LUN d'un groupe initiateur NetApp
+** Rechercher LUN de stockage par ID
+** Recherchez le volume de stockage par ID
+** Nouvelle politique d'exportation du stockage
+** Nouvelle règle de politique d'exportation du stockage
+** Nouvelle interface de stockage Fibre Channel de NetApp
+** Nouvel hôte de stockage
+** Nouvelle interface IP de stockage
+** Nouveau LUN de stockage
+** Nouvel ID de LUN de stockage
+** Nouveau volume intelligent NAS de NetApp Storage
+** Nouvelle LUN intelligente de stockage NetApp
+** Nouvelle règle Snapshot de stockage
+** Planification de la nouvelle règle Snapshot de stockage
+** Nouvel ordinateur virtuel de stockage
+** Nouveau volume de stockage
+** Nouveau snapshot du volume de stockage
+** Supprimer l'export policy de stockage
+** Supprimer la règle de stratégie d'exportation de stockage
+** Suppression de l'interface Storage FC
+** Supprimer l'hôte de stockage
+** Supprimer l'interface IP de stockage
+** Supprimer la LUN de stockage
+** Supprimer l'ID de LUN de stockage
+** Supprimez NetApp Storage Smart LUN
+** Supprimer la règle Snapshot de stockage
+** Supprimer la planification de la règle Snapshot de stockage
+** Supprimer Storage Virtual machine (SVM
+** Retirez le volume de stockage
+** Supprimer l'instantané du volume de stockage
+** Renommer le snapshot du volume de stockage
++
+
+NOTE: Les nouvelles tâches Smart Volume et Nouveau stockage NAS Smart LUN ne fonctionnent qu'avec ONTAP 9.8 et versions ultérieures. ONTAP 9.7P1 est actuellement la version minimale prise en charge.
+
+
+
+
+
+Pour en savoir plus sur la personnalisation des flux de travail avec les tâches de stockage et de virtualisation NetApp, regardez la vidéo https://tv.netapp.com/detail/video/6228095945001["Orchestration du stockage NetApp ONTAP dans Cisco Intersight"^].

@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_sizing.html 
+keywords: solution, sizing, storage, comput, network, cisco, ucs, infrastructure 
+summary: 'Cette section décrit le nombre d"études et les exigences d"infrastructure correspondantes.' 
+---
+= Dimensionnement de la solution
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Dimensionnement du stockage
+
+Cette section décrit le nombre d'études et les exigences d'infrastructure correspondantes.
+
+Les besoins en stockage répertoriés dans le tableau suivant supposent que les données existantes valent 1 an et que la croissance prévue pour un an d'étude dans le système primaire (niveau 1, 2). Les besoins en stockage supplémentaires liés à la croissance prévue d'au 3-delà des 2 premières années sont répertoriés séparément.
+
+|===
+|  | Petit | Moyen | Grand 
+
+
+| Études annuelles | <250 000 études | 250 000 à 500 000 études | 500 000 à 1 million d'études 
+
+
+4+| Stockage de niveau 1 
+
+
+| IOPS (moyenne) | 1,5 K À 5 KO | DE 5 000 À 15 000 TR/MIN | 15 000 À 40 000 
+
+
+| IOPS (pic) | 5 000 | 20K | 65 000 
+
+
+| Débit | 50–100 Mbit/s | 50–150 Mbit/s | 100–300 Mbit/s. 
+
+
+| Data Center de capacité 1 (1 an de données anciennes et 1 an de nouvelle étude) | 70 TO | 140 TO | 260 TO 
+
+
+| Data Center de capacité 1 (besoin supplémentaire de 4 ans pour la nouvelle étude) | 25 TO | 45 TO | 80 TO 
+
+
+| Data Center de capacité 2 (1 an de données anciennes et 1 an de nouvelle étude) | 45 TO | 110TO | 165 TO 
+
+
+| Data Center de capacité 2 (besoin supplémentaire de 4 ans pour une nouvelle étude) | 25 TO | 45 TO | 80 TO 
+
+
+4+| Stockage de niveau 2 
+
+
+| IOPS (moyenne) | 1 000 | 2K | 3K 
+
+
+| Data Center de capacité 1 | 320 TO | 800 TO | 2000 TO 
+|===
+
+
+== Dimensionnement des ressources de calcul
+
+Le tableau ci-dessous répertorie les exigences de calcul des systèmes d'imagerie médicale de petite, moyenne et grande taille.
+
+|===
+|  | Petit | Moyen | Grand 
+
+
+| Études annuelles | <250 000 études | 250 000 à 500 000 études | 500 000 à 1 million d'études 
+
+
+4+| Data Center 1 
+
+
+| Nombre de VM | 21 | 27 | 35 
+
+
+| Nombre total de processeurs virtuels (CPU virtuels) | 56 | 124 | 220 
+
+
+| Mémoire totale requise | 225GO | 450 GO | 900 GO 
+
+
+| Spécifications du serveur physique (lames) (1 vCPU :=1 cœur) | 4 serveurs avec 20 cœurs et 192 Go de RAM chacun | 8 serveurs avec 20 cœurs et 128 Go de RAM chacun | 14 serveurs avec 20 cœurs et 128 Go de RAM chacun 
+
+
+4+| Data Center 2 
+
+
+| Nombre de VM | 15 | 17 | 22 
+
+
+| Nombre total de vCPU | 42 | 72 | 140 
+
+
+| Mémoire totale requise | 179 GO | 243GB | 513 GO 
+
+
+| Spécifications des serveurs physiques (lames) (1 CPU virtuel = 1 cœur) | 3 serveurs avec 20 cœurs et 168 Go de RAM chacun | 6 serveurs avec 20 cœurs et 128 Go de RAM chacun | 8 serveurs avec 24 cœurs et 128 Go de RAM chacun 
+|===
+
+
+== Mise en réseau et dimensionnement de l'infrastructure Cisco UCS
+
+Le tableau ci-dessous répertorie les exigences de l'infrastructure réseau et Cisco UCS pour les systèmes d'imagerie médicale de petite, moyenne et grande taille.
+
+|===
+|  | Petit | Moyen | Grand 
+
+
+4+| Data Center 1 
+
+
+| Nombre de ports du nœud de stockage | 2 adaptateurs réseau convergés (CNA) ; 2 CNA | 2 CNA ; 2 CNA | 2 CNA ; 2 CNA 
+
+
+| Ports switchs réseau IP (Cisco Nexus 9000) | commutateur 48 ports | commutateur 48 ports | commutateur 48 ports 
+
+
+| Commutateur FC (Cisco MDS) | commutateur 32 ports | commutateur 32 ports | commutateur 48 ports 
+
+
+| Nombre de châssis Cisco UCS | 1 x 5108 | 1 x 5108 | 2 x 5108 
+
+
+| Fabric Interconnect Cisco UCS | 2 x 6332 | 2 x 6332 | 2 x 6332 
+
+
+4+| Data Center 2 
+
+
+| Nombre de châssis Cisco UCS | 1 x 5108 | 1 x 5108 | 1 x 5108 
+
+
+| Fabric Interconnect Cisco UCS | 2 x 6332 | 2 x 6332 | 2 x 6332 
+
+
+| Nombre de ports du nœud de stockage | 2 CNA ; 2 CNA | 2 CNA ; 2 CNA | 2 CNA ; 2 CNA 
+
+
+| Ports switchs réseau IP (Cisco Nexus 9000) | commutateur 48 ports | commutateur 48 ports | commutateur 48 ports 
+
+
+| Commutateur FC (Cisco MDS) | commutateur 32 ports | commutateur 32 ports | commutateur 48 ports 
+|===

@@ -1,0 +1,160 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases_01.html 
+keywords: use, cases, active, iq, integration, dashboards, troubleshooting, storage, optimization, custom, real, time 
+summary: 'Grâce à l"installation et à la configuration de Cloud Insights, nous FlexPod examinons certaines des tâches que vous pouvez effectuer sur le tableau de bord afin d"évaluer et de contrôler votre environnement. Dans cette section, nous mettons en avant les cinq principales utilisations d"Cloud Insights.' 
+---
+= Cas d'utilisation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Grâce à l'installation et à la configuration de Cloud Insights, nous FlexPod examinons certaines des tâches que vous pouvez effectuer sur le tableau de bord afin d'évaluer et de contrôler votre environnement. Dans cette section, nous nous concentrons sur cinq cas d'utilisation principaux de Cloud Insights :
+
+* Intégration avec Active IQ
+* Exploration des tableaux de bord en temps réel
+* Création de tableaux de bord personnalisés
+* Dépannage avancé
+* Optimisation du stockage
+
+
+
+
+== Intégration avec Active IQ
+
+Cloud Insights est totalement intégré à la plateforme de surveillance du stockage Active IQ. Un système ONTAP, déployé dans le cadre d'une solution de data Center FlexPod, est automatiquement configuré pour renvoyer les informations à NetApp via la fonction AutoSupport, qui est intégrée à chaque système. Ces rapports sont générés de manière programmée ou dynamique lorsqu'une panne est détectée dans le système. Les données communiquées via AutoSupport sont agrégées et affichées dans des tableaux de bord facilement accessibles sous le menu Active IQ de Cloud Insights.
+
+
+
+=== Accédez aux informations Active IQ via le tableau de bord Cloud Insights
+
+Pour accéder aux informations de Active IQ via le tableau de bord Cloud Insights, effectuez les opérations suivantes :
+
+. Cliquez sur l'option Data Collector dans le menu Admin à gauche.
++
+image:cloud-insights_image13.png["Erreur : image graphique manquante"]
+
+. Filtre pour le Data Collector spécifique à votre environnement. Dans cet exemple, nous filtrons par le terme FlexPod.
++
+image:cloud-insights_image23.png["Erreur : image graphique manquante"]
+
+. Cliquez sur le Data Collector pour obtenir un résumé de l'environnement et des périphériques surveillés par ce collecteur.
++
+image:cloud-insights_image24.png["Erreur : image graphique manquante"]
+
++
+Sous la liste des périphériques en bas, cliquez sur le nom du système de stockage ONTAP surveillé. Un tableau de bord des informations collectées à propos du système s'affiche, avec les informations suivantes :
+
++
+** Modèle
+** Famille
+** Version ONTAP
+** Capacité brute
+** IOPS moyennes
+** Latence moyenne
+** Débit moyen
++
+image:cloud-insights_image25.png["Erreur : image graphique manquante"]
+
++
+De plus, sur cette page, sous la section politiques de performances, vous trouverez un lien vers NetApp Active IQ.
+
++
+image:cloud-insights_image26.png["Erreur : image graphique manquante"]
+
+
+
+. Pour ouvrir un nouvel onglet de navigateur et accéder à la page de réduction des risques, qui affiche les nœuds concernés et les risques critiques, et les actions à entreprendre pour corriger les problèmes identifiés, cliquez sur le lien Active IQ.
++
+image:cloud-insights_image27.png["Erreur : image graphique manquante"]
+
+
+
+
+
+=== Explorez les tableaux de bord en temps réel
+
+Cloud Insights peut afficher les tableaux de bord en temps réel des informations interrogées à partir du système de stockage ONTAP déployé dans une solution de data Center FlexPod. L'unité d'acquisition Cloud Insights collecte les données à intervalles réguliers et renseigne le tableau de bord du système de stockage par défaut avec les informations collectées.
+
+
+
+==== Accédez aux graphiques en temps réel à partir du tableau de bord Cloud Insights
+
+À partir du tableau de bord du système de stockage, vous pouvez voir la dernière mise à jour des informations par le Data Collector. La figure ci-dessous en est un exemple.
+
+image:cloud-insights_image28.png["Erreur : image graphique manquante"]
+
+Par défaut, le tableau de bord du système de stockage affiche plusieurs graphiques interactifs qui présentent les metrics système de stockage interrogés ou à partir de chaque nœud, notamment la latence, les IOPS et le débit. La figure ci-dessous présente des exemples de ces graphiques par défaut.
+
+image:cloud-insights_image29.png["Erreur : image graphique manquante"]
+
+Par défaut, les graphiques affichent des informations des trois dernières heures, mais vous pouvez les définir sur un certain nombre de valeurs différentes ou sur une valeur personnalisée dans la liste déroulante située en haut à droite du tableau de bord du système de stockage. Ceci est illustré dans la figure ci-dessous.
+
+image:cloud-insights_image30.png["Erreur : image graphique manquante"]
+
+
+
+=== Création de tableaux de bord personnalisés
+
+Outre l'utilisation des tableaux de bord par défaut qui affichent des informations à l'échelle du système, vous pouvez utiliser Cloud Insights pour créer des tableaux de bord entièrement personnalisés qui vous permettent de donner la priorité à l'utilisation des ressources pour des volumes de stockage spécifiques dans la solution FlexPod Datacenter, les applications déployées dans l'infrastructure convergée qui dépendent de ces volumes peuvent donc s'exécuter efficacement. Ainsi, vous pouvez améliorer la visualisation des applications spécifiques et des ressources utilisées dans l'environnement du centre de données.
+
+
+
+==== Création d'un tableau de bord personnalisé pour évaluer les ressources de stockage
+
+Pour créer un tableau de bord personnalisé afin d'évaluer les ressources de stockage, effectuez les opérations suivantes :
+
+. Pour créer un tableau de bord personnalisé, placez le pointeur de la souris sur tableaux de bord dans le menu principal de Cloud Insights, puis cliquez sur + Nouveau tableau de bord dans la liste déroulante.
++
+image:cloud-insights_image31.png["Erreur : image graphique manquante"]
+
++
+La fenêtre Nouveau tableau de bord s'ouvre.
+
+. Nommez le tableau de bord et sélectionnez le type de widget utilisé pour afficher les données. Vous pouvez choisir parmi un certain nombre de types de graphique, même des notes ou des types de table pour présenter les données collectées.
++
+image:cloud-insights_image32.png["Erreur : image graphique manquante"]
+
+. Choisissez des variables personnalisées dans le menu Ajouter une variable.
++
+Cela permet de concentrer les données présentées pour afficher des facteurs plus spécifiques ou plus spécialisés.
+
++
+image:cloud-insights_image33.png["Erreur : image graphique manquante"]
+
+. Pour créer un tableau de bord personnalisé, sélectionnez le type de widget que vous souhaitez utiliser, par exemple, un graphique à secteurs pour afficher l'utilisation du stockage par volume :
++
+.. Sélectionnez le widget Pie Chart dans la liste déroulante Ajouter un widget.
+.. Nommez le widget avec un identificateur descriptif, tel que `Capacity Used`.
+.. Sélectionnez l'objet à afficher. Par exemple, vous pouvez effectuer une recherche à l'aide de la touche terme volume et sélectionner `volume.performance.capacity.used`.
+.. Pour les filtrer par système de stockage, utilisez le filtre et tapez le nom du système de stockage de la solution FlexPod Datacenter.
+.. Personnalisez les informations à afficher. Par défaut, cette sélection affiche les volumes de données ONTAP et liste les 10 premiers.
+.. Pour enregistrer le tableau de bord personnalisé, cliquez sur Enregistrer.
++
+image:cloud-insights_image34.png["Erreur : image graphique manquante"]
+
++
+Après avoir enregistré le widget personnalisé, le navigateur retourne à la page Nouveau tableau de bord, où il affiche le widget nouvellement créé et permet de réaliser une action interactive, telle que la modification de la période d'interrogation des données.
+
++
+image:cloud-insights_image35.png["Erreur : image graphique manquante"]
+
+
+
+
+
+
+
+=== Dépannage avancé
+
+Cloud Insights permet d'appliquer des méthodes avancées de dépannage à n'importe quel environnement de stockage d'une infrastructure convergée FlexPod Datacenter. À l'aide des composants de chacune des fonctionnalités mentionnées ci-dessus : intégration d'Active IQ, tableaux de bord par défaut avec statistiques en temps réel et tableaux de bord personnalisés, les problèmes susceptibles d'apparaître sont détectés rapidement et résolus. Grâce à la liste des risques dans Active IQ, un client peut trouver des erreurs de configuration signalées qui pourraient entraîner un problème ou la détection de bogues qui ont été signalés et corrigés des versions de code, ce qui peut les résoudre. Les tableaux de bord en temps réel sur la page d'accueil de Cloud Insights permettent d'identifier des modèles de performances système qui pourraient être un indicateur précoce d'un problème en hausse et aider à le résoudre rapidement. Enfin, la possibilité de créer des tableaux de bord personnalisés permet aux clients de se concentrer sur les ressources les plus importantes de leur infrastructure et de les surveiller directement pour assurer la continuité de leurs objectifs.
+
+
+
+=== Optimisation du stockage
+
+Outre la résolution de problèmes, Cloud Insights peut utiliser les données collectées pour optimiser le système de stockage ONTAP déployé dans une solution d'infrastructure convergée FlexPod Datacenter. Si un volume présente une latence élevée, peut-être parce que plusieurs ordinateurs virtuels exigeant des performances élevées partagent le même datastore, ces informations sont affichées dans le tableau de bord de Cloud Insights. Avec ces informations, l'administrateur de stockage peut choisir de migrer un ou plusieurs VM vers d'autres volumes, de migrer des volumes de stockage entre les niveaux d'agrégats ou entre les nœuds du système de stockage ONTAP, pour obtenir un environnement optimisé pour les performances. Les informations fournies par l'intégration de Active IQ à Cloud Insights permettent de mettre en évidence les problèmes de configuration qui entraînent des performances supérieures aux prévisions et de proposer les actions correctives recommandées qui, si elles sont mises en œuvre, peuvent résoudre les problèmes et garantir un système de stockage parfaitement réglé.

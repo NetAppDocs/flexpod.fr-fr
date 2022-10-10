@@ -1,0 +1,470 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html 
+keywords: vmware, vsphere, hosts, esxi, iscsi, cimc, cisco 
+summary: 'Cette section décrit les procédures d"installation de VMware ESXi 6.7 dans une configuration FlexPod Express.' 
+---
+= Procédure de déploiement de VMware vSphere 6.7
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section décrit les procédures d'installation de VMware ESXi 6.7 dans une configuration FlexPod Express. Les procédures de déploiement suivantes sont personnalisées pour inclure les variables d'environnement décrites dans les sections précédentes.
+
+Il existe plusieurs méthodes pour installer VMware ESXi dans un tel environnement. Cette procédure utilise la console KVM virtuelle et les fonctions de média virtuel de l'interface CIMC pour les serveurs Cisco UCS C-Series pour mapper les supports d'installation à distance à chaque serveur.
+
+
+NOTE: Cette procédure doit être effectuée pour le serveur Cisco UCS A et le serveur Cisco UCS B.
+
+Cette procédure doit être effectuée pour tout nœud ajouté au cluster.
+
+
+
+== Connectez-vous à l'interface CIMC pour les serveurs autonomes Cisco UCS C-Series
+
+La procédure suivante décrit en détail la méthode de connexion à l'interface CIMC pour les serveurs autonomes Cisco UCS C-Series. Vous devez vous connecter à l'interface CIMC pour exécuter le KVM virtuel, ce qui permet à l'administrateur de commencer l'installation du système d'exploitation par le biais du média distant.
+
+
+
+=== Tous les hôtes
+
+. Accédez à un navigateur Web et entrez l'adresse IP de l'interface CIMC pour Cisco UCS C-Series. Cette étape lance l'application IUG de CIMC.
+. Connectez-vous à l'interface utilisateur de CIMC à l'aide du nom d'utilisateur et des informations d'identification de l'administrateur.
+. Dans le menu principal, sélectionnez l'onglet serveur.
+. Cliquez sur lancer la console KVM.
++
+image:express-c-series-aff220-deploy_image21.png["Erreur : image graphique manquante"]
+
+. Dans la console KVM virtuelle, sélectionnez l'onglet Média virtuel.
+. Sélectionnez carte CD/DVD.
++
+
+NOTE: Vous devrez peut-être d'abord cliquer sur Activer les périphériques virtuels. Sélectionnez accepter cette session si vous y êtes invité.
+
+. Accédez au fichier image ISO du programme d'installation de VMware ESXi 6.7 et cliquez sur Ouvrir. Cliquez sur mapper le périphérique.
+. Sélectionnez le menu Marche/Arrêt et choisissez système de cycle d'alimentation (démarrage à froid). Cliquez sur Oui.
+
+
+
+
+== Installez VMware ESXi
+
+La procédure suivante décrit l'installation de VMware ESXi sur chaque hôte.
+
+
+
+=== Téléchargez l'image personnalisée DE VMWARE ESXI 6.7 Cisco
+
+. Accédez au https://my.vmware.com/web/vmware/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/6_7["Page de téléchargement de VMware vSphere"^] Pour les ISO personnalisées.
+. Cliquez sur Go to Downloads en regard du CD d'installation de Cisco Custom image for ESXi 6.7 GA.
+. Téléchargez le CD d'installation Cisco Custom image for ESXi 6.7 GA (ISO).
+
+
+
+
+=== Tous les hôtes
+
+. Lors du démarrage du système, la machine détecte la présence du support d'installation VMware ESXi.
+. Sélectionnez le programme d'installation de VMware ESXi dans le menu qui s'affiche.
++
+Le programme d'installation se charge. Cette opération prend plusieurs minutes.
+
+. Une fois le chargement terminé par le programme d'installation, appuyez sur entrée pour poursuivre l'installation.
+. Après avoir lu le contrat de licence de l'utilisateur final, acceptez-le et poursuivez l'installation en appuyant sur F11.
+. Sélectionnez le LUN NetApp précédemment configuré comme disque d'installation pour ESXi, et appuyez sur entrée pour poursuivre l'installation.
++
+image:express-c-series-aff220-deploy_image22.png["Erreur : image graphique manquante"]
+
+. Sélectionnez la disposition de clavier appropriée et appuyez sur entrée.
+. Saisissez et confirmez le mot de passe racine, puis appuyez sur entrée.
+. Le programme d'installation vous avertit que les partitions existantes sont supprimées du volume. Poursuivre l'installation en appuyant sur F11. Le serveur redémarre après l'installation de ESXi.
+
+
+
+
+== Configurer la mise en réseau de gestion d'hôte VMware ESXi
+
+La procédure suivante décrit comment ajouter le réseau de gestion pour chaque hôte VMware ESXi.
+
+
+
+=== Tous les hôtes
+
+. Une fois le redémarrage du serveur terminé, entrez l'option permettant de personnaliser le système en appuyant sur F2.
+. Connectez-vous avec root en tant que nom de connexion et mot de passe racine entrés précédemment au cours du processus d'installation.
+. Sélectionnez l'option configurer le réseau de gestion.
+. Sélectionnez cartes réseau et appuyez sur entrée.
+. Sélectionnez les ports souhaités pour vSwitch0. Appuyez sur entrée.
++
+
+NOTE: Sélectionnez les ports qui correspondent à eth0 et eth1 dans CIMC.
+
++
+image:express-c-series-aff220-deploy_image23.png["Erreur : image graphique manquante"]
+
+. Sélectionnez VLAN (facultatif) et appuyez sur entrée.
+. Saisissez l'ID du VLAN `\<<mgmt_vlan_id>>`. Appuyez sur entrée.
+. Dans le menu configurer le réseau de gestion, sélectionnez Configuration IPv4 pour configurer l'adresse IP de l'interface de gestion. Appuyez sur entrée.
+. Utilisez les touches fléchées pour mettre en surbrillance définir l'adresse IPv4 statique et utilisez la barre d'espace pour sélectionner cette option.
+. Entrez l'adresse IP de gestion de l'hôte VMware ESXi `\<<esxi_host_mgmt_ip>>`.
+. Saisissez le masque de sous-réseau de l'hôte VMware ESXi `\<<esxi_host_mgmt_netmask>>.`
+. Entrez la passerelle par défaut de l'hôte VMware ESXi `\<<esxi_host_mgmt_gateway>>`.
+. Appuyez sur entrée pour accepter les modifications apportées à la configuration IP.
+. Accédez au menu de configuration IPv6.
+. Utilisez la barre d'espace pour désactiver IPv6 en désélectionnant l'option Activer IPv6 (redémarrage requis). Appuyez sur entrée.
+. Accédez au menu pour configurer les paramètres DNS.
+. Étant donné que l'adresse IP est attribuée manuellement, les informations DNS doivent également être saisies manuellement.
+. Entrez l'adresse IP du serveur DNS principal.
+. (Facultatif) Entrez l'adresse IP du serveur DNS secondaire.
+. Entrez le FQDN du nom d'hôte VMware ESXi :.
+. Appuyez sur entrée pour accepter les modifications apportées à la configuration DNS.
+. Quittez le sous-menu configurer le réseau de gestion en appuyant sur la touche Echap.
+. Appuyez sur y pour confirmer les modifications et redémarrer le serveur.
+. Déconnectez-vous de la console VMware en appuyant sur la touche Echap.
+
+
+
+
+== Configurer l'hôte ESXi
+
+Vous avez besoin des informations du tableau suivant pour configurer chaque hôte ESXi.
+
+|===
+| Détails | Valeur 
+
+
+| Nom d'hôte ESXi |  
+
+
+| IP de gestion d'hôte ESXi |  
+
+
+| Masque de gestion d'hôte ESXi |  
+
+
+| Passerelle de gestion de l'hôte ESXi |  
+
+
+| IP NFS de l'hôte ESXi |  
+
+
+| Masque NFS hôte ESXi |  
+
+
+| Passerelle NFS de l'hôte ESXi |  
+
+
+| IP vMotion hôte ESXi |  
+
+
+| Masque vMotion hôte ESXi |  
+
+
+| Passerelle vMotion de l'hôte ESXi |  
+
+
+| Hôte ESXi iSCSI-A IP |  
+
+
+| Masque iSCSI-A de l'hôte ESXi |  
+
+
+| Passerelle iSCSI-A de l'hôte ESXi |  
+
+
+| Adresse IP iSCSI-B de l'hôte ESXi |  
+
+
+| Masque iSCSI-B de l'hôte ESXi |  
+
+
+| Passerelle iSCSI-B de l'hôte ESXi |  
+|===
+
+
+=== Connectez-vous à l'hôte ESXi
+
+. Ouvrez l'adresse IP de gestion de l'hôte dans un navigateur Web.
+. Connectez-vous à l'hôte ESXi à l'aide du compte racine et du mot de passe que vous avez spécifié lors du processus d'installation.
+. Lisez la déclaration relative au Programme d'amélioration de l'expérience client VMware. Après avoir sélectionné la bonne réponse, cliquez sur OK.
+
+
+
+
+=== Configurez le démarrage iSCSI
+
+. Sélectionnez réseau sur la gauche.
+. Sur la droite, sélectionnez l'onglet commutateurs virtuels.
++
+image:express-c-series-aff220-deploy_image24.png["Erreur : image graphique manquante"]
+
+. Cliquez sur iSciBootvSwitch.
+. Sélectionnez Modifier les paramètres.
+. Définissez la MTU sur 9000 et cliquez sur Enregistrer.
+. Cliquez sur réseau dans le volet de navigation de gauche pour revenir à l'onglet commutateurs virtuels.
+. Cliquez sur Ajouter un commutateur virtuel standard.
+. Indiquez le nom `iScsiBootvSwitch-B` Pour le nom du vSwitch.
++
+** Définissez la MTU sur 9000.
+** Sélectionnez vmnic3 dans les options Uplink 1.
+** Cliquez sur Ajouter.
++
+
+NOTE: Vmnic2 et vmnic3 sont utilisés pour le démarrage iSCSI dans cette configuration. Si vous disposez de cartes réseau supplémentaires dans votre hôte ESXi, vous pourriez avoir différents numéros vmnic. Pour vérifier quelles cartes réseau sont utilisées pour le démarrage iSCSI, faites correspondre les adresses MAC des cartes vNIC iSCSI dans CIMC aux adresses vmnics dans ESXi.
+
+
+
+. Dans le volet central, sélectionnez l'onglet VMkernel NIC.
+. Sélectionnez Ajouter une carte réseau VMkernel.
++
+** Spécifiez un nouveau nom de groupe de ports de `iScsiBootPG-B`.
+** Sélectionnez iSssiBootvSwitch-B pour le commutateur virtuel.
+** Entrez `\<<iscsib_vlan_id>>` Pour l'ID VLAN.
+** Remplacez la MTU par 9000.
+** Développez Paramètres IPv4.
+** Sélectionnez Configuration statique.
+** Entrez `\<<var_hosta_iscsib_ip>>` Pour adresse.
+** Entrez `\<<var_hosta_iscsib_mask>>` Pour masque de sous-réseau.
+** Cliquez sur Créer .
++
+image:express-c-series-aff220-deploy_image25.png["Erreur : image graphique manquante"]
+
++
+
+NOTE: Définissez la MTU sur 9000 activé `iScsiBootPG- A.`
+
+
+
+
+
+
+
+=== Configurez les chemins d'accès multiples iSCSI
+
+Pour configurer les chemins d'accès multiples iSCSI sur les hôtes ESXi, procédez comme suit :
+
+. Sélectionnez stockage dans le volet de navigation de gauche. Cliquez sur adaptateurs.
+. Sélectionnez la carte logicielle iSCSI et cliquez sur configurer iSCSI.
++
+image:express-c-series-aff220-deploy_image26.png["Erreur : image graphique manquante"]
+
+. Sous cibles dynamiques, cliquez sur Ajouter une cible dynamique.
++
+image:express-c-series-aff220-deploy_image27.png["Erreur : image graphique manquante"]
+
+. Saisissez l'adresse IP `iscsi_lif01a`.
++
+** Répétez l'opération avec les adresses IP `iscsi_lif01b`, `iscsi_lif02a`, et `iscsi_lif02b`.
+** Cliquez sur Enregistrer la configuration.
++
+image:express-c-series-aff220-deploy_image28.png["Erreur : image graphique manquante"]
+
+
+
+
+
+
+NOTE: Vous pouvez trouver les adresses IP de la LIF iSCSI en exécutant la commande `network interface show `sur le cluster NetApp ou en consultant l'onglet Network interfaces dans OnCommand System Manager.
+
+
+
+=== Configurer l'hôte ESXi
+
+. Dans le volet de navigation de gauche, sélectionnez réseau.
+. Sélectionnez vSwitch0.
++
+image:express-c-series-aff220-deploy_image29.png["Erreur : image graphique manquante"]
+
+. Sélectionnez Modifier les paramètres.
+. Remplacez la MTU par 9000.
+. Développez agrégation de cartes réseau et vérifiez que vmnic0 et vmnic1 sont tous les deux définis sur actif.
+
+
+
+
+=== Configuration des groupes de ports et des NIC VMkernel
+
+. Dans le volet de navigation de gauche, sélectionnez réseau.
+. Cliquez avec le bouton droit de la souris sur l'onglet groupes de ports.
++
+image:express-c-series-aff220-deploy_image30.png["Erreur : image graphique manquante"]
+
+. Cliquez avec le bouton droit de la souris sur réseau VM et sélectionnez Modifier. Définissez l'ID du VLAN sur `\<<var_vm_traffic_vlan>>`.
+. Cliquez sur Ajouter un groupe de ports.
++
+** Nommer le groupe de ports `MGMT-Network`.
+** Entrez `\<<mgmt_vlan>>` Pour l'ID VLAN.
+** Vérifiez que vSwitch0 est sélectionné.
+** Cliquez sur Ajouter.
+
+
+. Cliquez sur l'onglet VMkernel NIC.
++
+image:express-c-series-aff220-deploy_image31.png["Erreur : image graphique manquante"]
+
+. Sélectionnez Ajouter une carte réseau VMkernel.
++
+** Sélectionnez Nouveau groupe de ports.
+** Nommer le groupe de ports `NFS-Network`.
+** Entrez `\<<nfs_vlan_id>>` Pour l'ID VLAN.
+** Remplacez la MTU par 9000.
+** Développez Paramètres IPv4.
+** Sélectionnez Configuration statique.
+** Entrez `\<<var_hosta_nfs_ip>>` Pour adresse.
+** Entrez `\<<var_hosta_nfs_mask>>` Pour masque de sous-réseau.
+** Cliquez sur Créer .
++
+image:express-c-series-aff220-deploy_image32.png["Erreur : image graphique manquante"]
+
+
+
+. Répétez ce processus pour créer le port VMkernel vMotion.
+. Sélectionnez Ajouter une carte réseau VMkernel.
++
+.. Sélectionnez Nouveau groupe de ports.
+.. Nommez le port group vMotion.
+.. Entrez `\<<vmotion_vlan_id>>` Pour l'ID VLAN.
+.. Remplacez la MTU par 9000.
+.. Développez Paramètres IPv4.
+.. Sélectionnez Configuration statique.
+.. Entrez `\<<var_hosta_vmotion_ip>>` Pour adresse.
+.. Entrez `\<<var_hosta_vmotion_mask>>` Pour masque de sous-réseau.
+.. Assurez-vous que la case vMotion est cochée après les paramètres IPv4.
++
+image:express-c-series-aff220-deploy_image33.png["Erreur : image graphique manquante"]
+
++
+
+NOTE: Il existe de nombreuses façons de configurer la mise en réseau VMware ESXi, y compris en utilisant le commutateur distribué VMware vSphere si votre licence le permet. Les autres configurations réseau sont prises en charge par FlexPod Express si elles sont requises pour répondre aux exigences de l'entreprise.
+
+
+
+
+
+
+
+==== Montez les premiers datastores
+
+Les premiers datastores à monter sont le datastore infra_datastore_1 pour machines virtuelles et le datastore infra_swap pour fichiers swap de machines virtuelles.
+
+. Cliquez sur stockage dans le volet de navigation de gauche, puis sur Nouveau datastore.
++
+image:express-c-series-aff220-deploy_image34.png["Erreur : image graphique manquante"]
+
+. Sélectionnez Mount NFS datastore.
++
+image:express-c-series-aff220-deploy_image35.png["Erreur : image graphique manquante"]
+
+. Entrez ensuite les informations suivantes dans la page Détails du montage NFS :
++
+** Nom : `infra_datastore_1`
+** Serveur NFS : `\<<var_nodea_nfs_lif>>`
+** Partager : /infra_datastore_1
+** Assurez-vous que NFS 3 est sélectionné.
+
+
+. Cliquez sur Terminer. La tâche terminée s'affiche dans le volet tâches récentes.
+. Répétez ce processus pour monter le datastore infra_swap :
++
+** Nom : `infra_swap`
+** Serveur NFS : `\<<var_nodea_nfs_lif>>`
+** Partager : `/infra_swap`
+** Assurez-vous que NFS 3 est sélectionné.
+
+
+
+
+
+
+=== Configurez NTP
+
+Pour configurer le protocole NTP pour un hôte ESXi, procédez comme suit :
+
+. Cliquez sur gérer dans le volet de navigation de gauche. Sélectionnez système dans le volet de droite, puis cliquez sur heure et date.
++
+image:express-c-series-aff220-deploy_image36.png["Erreur : image graphique manquante"]
+
+. Sélectionnez utiliser le protocole d'heure du réseau (Activer le client NTP).
+. Sélectionnez Démarrer et Arrêter avec l'hôte comme stratégie de démarrage du service NTP.
+. Entrez `\<<var_ntp>>` En tant que serveur NTP. Vous pouvez définir plusieurs serveurs NTP.
+. Cliquez sur Enregistrer.
++
+image:express-c-series-aff220-deploy_image37.png["Erreur : image graphique manquante"]
+
+
+
+
+
+=== Déplacer l'emplacement du fichier d'échange de la machine virtuelle
+
+Ces étapes fournissent des détails sur le déplacement de l'emplacement du fichier d'échange de la machine virtuelle.
+
+. Cliquez sur gérer dans le volet de navigation de gauche. Sélectionnez système dans le volet de droite, puis cliquez sur Permuter.
++
+image:express-c-series-aff220-deploy_image38.png["Erreur : image graphique manquante"]
+
+. Cliquez sur Modifier les paramètres. Sélectionnez infra_swap dans les options datastore.
++
+image:express-c-series-aff220-deploy_image39.png["Erreur : image graphique manquante"]
+
+. Cliquez sur Enregistrer.
+
+
+
+
+=== Installer le plug-in NetApp NFS 1.0.20 pour VMware VAAI
+
+Pour installer le plug-in NetApp NFS 1.0.20 pour VMware VAAI, procédez comme suit.
+
+. Entrez les commandes suivantes pour vérifier que VAAI est activé :
++
+....
+esxcfg-advcfg -g /DataMover/HardwareAcceleratedMove
+esxcfg-advcfg -g /DataMover/HardwareAcceleratedInit
+....
++
+Si VAAI est activé, ces commandes produisent la sortie suivante :
+
++
+....
+~ #  esxcfg-advcfg -g /DataMover/HardwareAcceleratedMove
+Value of HardwareAcceleratedMove is 1
+~ # esxcfg-advcfg -g /DataMover/HardwareAcceleratedInit
+Value of HardwareAcceleratedInit is 1
+....
+. Si VAAI n'est pas activé, entrez les commandes suivantes pour activer VAAI :
++
+....
+esxcfg-advcfg -s 1 /DataMover/HardwareAcceleratedInit
+esxcfg-advcfg -s 1 /DataMover/HardwareAcceleratedMove
+....
++
+Ces commandes produisent les valeurs de sortie suivantes :
+
++
+....
+~ # esxcfg-advcfg -s 1 /Data Mover/HardwareAcceleratedInit
+Value of HardwareAcceleratedInit is 1
+~ #  esxcfg-advcfg -s 1 /DataMover/HardwareAcceleratedMove
+Value of HardwareAcceleratedMove is 1
+....
+. Téléchargez le plug-in NetApp NFS pour VMware VAAI :
++
+.. Accédez au https://mysupport.netapp.com/NOW/download/software/nfs_plugin_vaai_esxi6/1.1.2/["page de téléchargement de logiciels"^].
+.. Faites défiler l'écran et cliquez sur Plug-in NetApp NFS pour VMware VAAI.
+.. Sélectionnez la plate-forme ESXi.
+.. Téléchargez le bundle hors ligne (.zip) ou en ligne (.vib) du plug-in le plus récent.
+
+
+. Installez le plug-in sur l'hôte ESXi à l'aide de la CLI ESX.
+. Redémarrez l'hôte ESXI.
++
+image:express-c-series-aff220-deploy_image40.png["Erreur : image graphique manquante"]
+
+
+
+link:express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html["Installez VMware vCenter Server 6.7"]

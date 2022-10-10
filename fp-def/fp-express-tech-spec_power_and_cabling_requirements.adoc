@@ -1,0 +1,180 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, flexpod, express, cisco, ucs, minimum, cabling 
+summary: Cette section décrit les exigences minimales en matière de consommation électrique et de câblage pour une conception FlexPod Express. 
+---
+= Exigences en matière de puissance électrique et de câblage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section décrit les exigences minimales en matière de consommation électrique et de câblage pour une conception FlexPod Express.
+
+
+
+== Les besoins en alimentation électrique
+
+Les exigences d'alimentation électrique sont basées sur les exigences des États-Unis Spécifications et suppose l'utilisation de l'alimentation CA. D'autres pays peuvent avoir des exigences d'alimentation différentes. Des options d'alimentation à courant continu sont également disponibles pour la plupart des composants. Pour plus de données sur la puissance maximale requise et d'autres informations détaillées sur l'alimentation, consultez les spécifications techniques détaillées de chaque composant matériel.
+
+Pour en savoir plus sur les données de puissance Cisco UCS, consultez le http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Calculateur de puissance Cisco UCS"^].
+
+Le tableau suivant répertorie les ports d'alimentation requis par périphérique.
+
+|===
+| Commutateurs Cisco Nexus | Câbles d'alimentation requis 
+
+
+| Commutateurs Cisco Nexus 3048 | 2 câbles d'alimentation C13/C14 pour chaque commutateur Cisco Nexus série 3000 
+
+
+| Commutateurs Cisco Nexus 3524 | 2 câbles d'alimentation C13/C14 pour chaque commutateur Cisco Nexus série 3000 
+
+
+| Commutateurs Cisco Nexus 9396 | 2 câbles d'alimentation C13/C14 pour chaque commutateur Cisco Nexus série 9000 
+|===
+|===
+| Châssis Cisco UCS | Câbles d'alimentation requis 
+
+
+| Cisco UCS 5108 | 2 CAB-US515P-C19-US/CAB-US520-C19-US pour chaque châssis Cisco UCS 
+|===
+|===
+| Serveurs Cisco UCS B-Series | Câbles d'alimentation requis 
+
+
+| CISCO UCS B200 M4 | N/A ; le serveur lame est alimenté par le châssis 
+
+
+| CISCO UCS B420 M4 | N/A ; le serveur lame est alimenté par le châssis 
+
+
+| CISCO UCS B200 M5 | N/A ; le serveur lame est alimenté par le châssis 
+
+
+| CISCO UCS B480 M5 | N/A ; le serveur lame est alimenté par le châssis 
+|===
+|===
+| Serveurs Cisco UCS C-Series | Ports d'alimentation requis 
+
+
+| CISCO UCS C220 M4 .3+| 2 câbles d'alimentation C13/C14 pour chaque serveur Cisco UCS 
+
+
+| CISCO UCS C240 M4 
+
+
+| CISCO UCS C460 M4 CISCO UCS C220 M5 CISCO UCS C240 M5 CISCO UCS C480 M5 
+|===
+|===
+| Contrôleurs NetApp FAS | Ports d'alimentation requis (par paire haute disponibilité) 
+
+
+| FAS2554 | 2 C13/C14 
+
+
+| FAS2552 | 2 C13/C14 
+
+
+| FAS2520 | 2 C13/C14 
+
+
+| FAS8020 | 2 C13/C14 
+|===
+|===
+| Contrôleurs E-Series | Ports d'alimentation requis (par paire haute disponibilité) 
+
+
+| E2824 | 2 x C14/C20 
+|===
+|===
+| Tiroirs disques NetApp FAS | Ports d'alimentation requis 
+
+
+| DS212C | 2 C13/C14 
+
+
+| DS224C | 2 C13/C14 
+
+
+| DS460C | 2 C13/C14 
+
+
+| DS2246 | 2 C13/C14 
+
+
+| DS4246 | 4 C13/C14 
+|===
+|===
+| Tiroirs disques E-Series | Ports d'alimentation requis 
+
+
+| DE460C | 2 x C14/C20 
+
+
+| DE224C | 2 x C14/C20 
+
+
+| DE212C | 2 x C14/C20 
+|===
+
+
+== Exigences minimales en matière de câblage
+
+Cette section décrit la configuration minimale requise pour les câbles d'une conception FlexPod Express. La plupart des implémentations FlexPod requièrent des câbles supplémentaires, mais leur nombre varie en fonction de la taille et de l'étendue du déploiement.
+
+Le tableau suivant répertorie le nombre minimal de câbles requis pour chaque périphérique.
+
+|===
+| Commutateurs Cisco Nexus série 3000 | Câbles requis 
+
+
+| Commutateurs Cisco Nexus 31108 .5+| Au moins deux câbles Twinax ou fibre 10GbE par commutateur 
+
+
+| Cisco Nexus 3172PQ 
+
+
+| Commutateurs Cisco Nexus 3048 
+
+
+| Commutateurs Cisco Nexus 3524 
+
+
+| Commutateurs Cisco Nexus 9396 
+
+
+| DS212C |  
+
+
+| DS2246 .4+| Le nombre de câbles SAS dépend de la configuration spécifique des tiroirs disques 
+
+
+| DS460C 
+
+
+| DS224C 
+
+
+| DS4246 
+
+
+| E2800  a| 
+* Au moins un câble Gigabit Ethernet (1GbE) pour la gestion par contrôleur
+* Au moins deux câbles 10GbE par contrôleur (pour iSCSI) ou deux câbles FC correspondant aux exigences de vitesse
+
+
+
+
+| DE460C | 2 câbles HD Mini-SAS par tiroir disque 
+
+
+| DE224C | 2 câbles HD Mini-SAS par tiroir disque 
+
+
+| DE212C | 2 câbles HD Mini-SAS par tiroir disque 
+|===

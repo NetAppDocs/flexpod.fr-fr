@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html 
+keywords: volume, tiering, minimum, cooling, days, set, auto, ontap, cli, snapshot 
+summary: 'Le paramètre de Tiering sur les jours minimum de refroidissement détermine le nombre de jours devant être passés avant les données inactives d"un volume à l"aide de la règle Auto ou Snapshot uniquement est considéré comme froid et peut être Tiering.' 
+---
+= Définissez le Tiering des volumes sur les jours de refroidissement minimum
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Le `tiering-minimum-cooling-days` Le paramètre détermine le nombre de jours devant être écoulés avant que les données inactives d'un volume à l'aide des règles Auto ou Snapshot uniquement sont considérées comme inactives et éligibles pour le Tiering.
+
+
+
+== Auto
+
+La valeur par défaut `tiering-minimum-cooling-days` La définition de la règle de hiérarchisation automatique est définie sur 31 jours.
+
+Étant donné que les lectures maintiennent une température élevée des blocs, l'augmentation de cette valeur peut réduire la quantité de données éligibles à un Tier et augmenter la quantité de données conservées sur le Tier de performances.
+
+Si vous souhaitez réduire cette valeur par défaut de 31 jours, notez que les données ne doivent plus être actives avant d'être marquées comme étant inactives. Par exemple, si une charge de travail sur plusieurs jours doit effectuer un nombre important d'écritures au jour 7, celle du volume `tiering-minimum-cooling-days` le réglage ne doit pas être inférieur à 8 jours.
+
+
+NOTE: Le stockage objet n'est pas transactionnel de base comme le stockage de fichiers ou de blocs. Les modifications apportées aux fichiers stockés sous forme d'objets dans des volumes dont les jours de refroidissement sont trop serrés peuvent entraîner la création de nouveaux objets, la fragmentation des objets existants et l'ajout d'inefficacités du stockage.
+
+
+
+== Snapshot uniquement
+
+La valeur par défaut `tiering-minimum-cooling-days` La définition de la règle de Tiering uniquement Snapshot est de 2 jours. Un délai minimum de 2 jours permet des processus en arrière-plan pour un stockage optimal et empêche les processus quotidiens de protection des données d'avoir à lire les données depuis le Tier cloud.
+
+
+
+== INTERFACE DE LIGNE DE COMMANDES DE ONTAP
+
+Pour modifier un volume `tiering-minimum-cooling-days` Pour le paramètre via l'interface de ligne de commandes de ONTAP, exécutez la commande suivante :
+
+....
+volume modify -vserver <svm_name> -volume <volume_name> -tiering-minimum-cooling-days <2-63>
+....
+Le niveau de privilège avancé est requis.
+
+
+NOTE: La modification de la règle de Tiering entre Auto et Snapshot uniquement (ou vice-versa) entraîne une réinitialisation de la période d'inactivité des blocs sur le Tier de performance. Par exemple, un volume utilisant la règle de Tiering automatique des volumes avec des données inactives pendant 20 jours dispose que l'inactivité des données de Tier de performance est réinitialisée à 0 jours si la règle de Tiering est définie sur Snapshot uniquement.

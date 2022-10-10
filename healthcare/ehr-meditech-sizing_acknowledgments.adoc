@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_acknowledgments.html 
+keywords: acknowledgements, contributions, writers 
+summary: Les personnes suivantes ont contribué à la rédaction et à la création de ce guide. 
+---
+= Remerciements
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Les personnes suivantes ont contribué à la rédaction et à la création de ce guide.
+
+* Brandon Agee, Ingénieur marketing et technique, NetApp
+* John Duignan, architecte de solutions – Santé, NetApp
+* Ketan Mota, responsable produits, NetApp
+* Jon Ebmeier, architecte de solutions techniques, Cisco Systems, Inc
+* Mike Brennan, responsable produits, Cisco Systems, Inc
+

@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_minimum_hardware_requirements.html 
+keywords: minimum, hardware, requirements, switches, fabric, interconnects, servers, storage, controllers 
+summary: 'Une configuration FlexPod Datacenter présente des exigences matérielles minimales, y compris, mais sans s"y limiter, les commutateurs, les interconnexions de fabric, les serveurs et les contrôleurs de stockage NetApp.' 
+---
+= Configuration matérielle minimale requise
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Une configuration FlexPod Datacenter présente des exigences matérielles minimales, y compris, mais sans s'y limiter, les commutateurs, les interconnexions de fabric, les serveurs et les contrôleurs de stockage NetApp.
+
+Vous devez utiliser des serveurs Cisco UCS. Les serveurs C-Series et B-Series ont été utilisés dans les designs validés. Les Cisco Nexus Fabric Extender (FEXs) sont disponibles en option avec des serveurs C-Series.
+
+Une configuration FlexPod présente la configuration matérielle minimale suivante :
+
+* Deux commutateurs Cisco Nexus dans une configuration redondante. Cette configuration peut consister en deux commutateurs redondants des gammes Cisco Nexus 5000, 7000 ou 9000. Les deux commutateurs doivent être du même modèle et être configurés dans le même mode de fonctionnement.
++
+Si vous déployez une architecture ACI, vous devez respecter les exigences supplémentaires suivantes :
+
++
+** Déployez les commutateurs Cisco Nexus 9000 Series en topologie Leaf-Spine.
+** Utilisez trois contrôleurs d'infrastructure des politiques d'applications Cisco (contrôleurs APIC).
+
+
+* Deux Cisco UCS 6200, 6300 ou 6400 Series Fabric Interconnect dans une configuration redondante.
+* Serveurs Cisco UCS :
++
+** Si la solution utilise des serveurs B-Series, un châssis de serveur lame Cisco UCS 5108 B-Series et deux serveurs lames Cisco UCS B-Series et deux modules d'E/S (IOM) de 2104, 2204/8, 2408 ou 2304.
+** Si la solution utilise des serveurs C-Series, deux serveurs en rack Cisco UCS C-Series.
++
+Pour des déploiements de serveurs en rack Cisco UCS C-Series plus importants, vous pouvez choisir une paire de modules FEX 22 32PP. Toutefois, le 2232PP n'est pas obligatoire en termes de matériel.
+
+
+
+* Deux contrôleurs de stockage NetApp dans une configuration de paires haute disponibilité :
++
+Cette configuration peut se composer de n'importe quel contrôleur de stockage NetApp FAS, AFF ou ASA pris en charge. Voir la https://hwu.netapp.com/["NetApp Hardware Universe"^] Application pour une liste actuelle des modèles de contrôleurs FAS, AFF et ASA pris en charge.
+
++
+** La configuration haute disponibilité requiert deux interfaces redondantes par contrôleur pour l'accès aux données ; les interfaces peuvent être FCoE, FC ou Ethernet 10/25 Gb (GbE).
+** Si la solution utilise NetApp ONTAP, une topologie d'interconnexion de cluster approuvée par NetApp est requise. Pour plus d'informations, reportez-vous à la section https://hwu.netapp.com/Switch/Index["Commutateurs"^] De l'onglet NetApp Hardware Universe.
+** Si la solution utilise le protocole ONTAP, deux ports 10/25 GbE supplémentaires par contrôleur sont requis pour l'accès aux données.
+** Dans le cas de clusters ONTAP avec deux nœuds, vous pouvez configurer un cluster à deux nœuds sans commutateur.
+** Pour les clusters ONTAP de plus de deux nœuds, une paire de commutateurs d'interconnexion de cluster est requise.
+
+
+* Un tiroir disque NetApp avec tous les types de disques pris en charge. Voir l'onglet étagères du link:https://hwu.netapp.com/Shelves/Index?osTypeId=2032["NetApp Hardware Universe"^] vous trouverez la liste actuelle des modèles de tiroirs disques pris en charge.
+

@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_conclusion.html 
+keywords: medical, imaging, flexpod, healthcare, organization, productivity, conclusion 
+summary: 'En exécutant un environnement d"imagerie médicale sur FlexPod, votre organisme de santé s"attend à améliorer la productivité de ses équipes ainsi qu"à diminuer les dépenses d"investissement et d"exploitation.' 
+---
+= Conclusion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En exécutant un environnement d'imagerie médicale sur FlexPod, votre organisme de santé s'attend à améliorer la productivité de ses équipes ainsi qu'à diminuer les dépenses d'investissement et d'exploitation. Grâce à son partenariat stratégique, FlexPod fournit une infrastructure convergée prévalidée et rigoureusement testée. Il est conçu spécialement pour fournir des performances prévisibles avec une faible latence du système et une haute disponibilité. Cette approche permet d'améliorer l'expérience utilisateur et de bénéficier d'un temps de réponse optimal pour les utilisateurs du système d'imagerie médicale.
+
+Les différents composants d'un système d'imagerie médicale nécessitent le stockage des données dans les systèmes de fichiers SMB/CIFS, NFS, Ext4 et NTFS. Par conséquent, votre infrastructure doit fournir un accès aux données via les protocoles NFS, SMB/CIFS et SAN. Les systèmes de stockage NetApp prennent en charge ces protocoles à partir d'une baie de stockage unique.
+
+La haute disponibilité, l'efficacité du stockage, les sauvegardes rapides planifiées basées sur des copies Snapshot, les opérations de restauration rapide, la réplication des données pour la reprise après incident et les fonctionnalités de l'infrastructure de stockage FlexPod proposent un système de gestion et de stockage des données leader du marché.

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_initiator_group_configuration.html 
+keywords: initiator, group, configuration, fc, data, network, protocol, igroups 
+summary: 'Lorsque vous utilisez FC en tant que protocole de réseau de données, vous créez deux groupes initiateurs sur chaque contrôleur de stockage. Le premier groupe initiateur contient les WWPN des cartes d"interface hôte FC sur les serveurs VMware ESXi qui hébergent les VM hôte MEDITECH (igroup pour MEDITECH).' 
+---
+= Configuration du groupe initiateur
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Lorsque vous utilisez FC en tant que protocole de réseau de données, vous créez deux groupes initiateurs sur chaque contrôleur de stockage. Le premier groupe initiateur contient les WWPN des cartes d'interface hôte FC sur les serveurs VMware ESXi qui hébergent les VM hôte MEDITECH (igroup pour MEDITECH).
+
+Vous devez définir le type de système d'exploitation MEDITECH igroup en fonction de la configuration de l'environnement. Par exemple :
+
+* Utilisez le type de système d'exploitation igroup `Windows` Pour les applications installées sur du matériel serveur bare-Metal dans un environnement Windows Server.
+* Utilisez le type de système d'exploitation igroup `VMware` Destinée aux applications virtualisées à l'aide de l'hyperviseur VMware vSphere.
+
+
+
+NOTE: Il se peut que le type de système d'exploitation d'un groupe initiateur soit différent du type de système d'exploitation d'une LUN. Par exemple, pour les hôtes MEDITECH virtualisés, vous devez définir le type de système d'exploitation du groupe initiateur sur `VMware`. Pour les LUN utilisées par les hôtes MEDITECH virtualisés, il est recommandé de définir le type de système d'exploitation sur `Windows 2008 or later`. Utilisez ce paramètre car le système d'exploitation hôte MEDITECH est Windows Server 2008 R2 64 bits Enterprise Edition.
+
+Pour déterminer la valeur correcte pour le type de système d'exploitation, reportez-vous aux sections “LUN igroup Create” et “LUN Create” dans le https://library.netapp.com/ecm/ecm_download_file/ECMP1366832["Commandes clustered Data ONTAP 8.2 : référence manuelle des pages"^].
+
+link:ehr-meditech-deploy_lun_mappings.html["Suivant : mappages de LUN."]

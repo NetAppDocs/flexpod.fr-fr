@@ -1,0 +1,192 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_protect_and_recover_data_on_flexpod.html 
+keywords: testbed, ransomeware, attack, vm, snapshot, copy, wannacry, detection, remediation, cifs 
+summary: 'Cette section décrit comment les données d"un utilisateur final peuvent être récupérées en cas d"attaque et comment empêcher les attaques à l"aide d"un système FlexPod.' 
+---
+= Protégez et restaurez les données sur FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cette section décrit comment les données d'un utilisateur final peuvent être récupérées en cas d'attaque et comment empêcher les attaques à l'aide d'un système FlexPod.
+
+
+
+== Présentation du banc d'essai
+
+Pour mettre en avant la détection, la résolution et la prévention des problèmes liés à FlexPod, un banc d'essai a été créé à partir des directives spécifiées dans les guides CVD de la dernière plateforme disponibles au moment de l'élaboration de ce document : https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["CVD FlexPod Datacenter avec VMware vSphere 6.7 U1, Cisco UCS de 4e génération et NetApp AFF A-Series"^].
+
+Une machine virtuelle Windows 2016, qui fournissait un partage CIFS à partir du logiciel NetApp ONTAP, a été déployée dans l'infrastructure VMware vSphere. Ensuite, NetApp FPolicy a été configuré sur le partage CIFS pour éviter l'exécution de fichiers avec certains types d'extensions. Le logiciel NetApp SnapCenter a également été déployé pour gérer les copies Snapshot des serveurs virtuels au sein de l'infrastructure afin d'offrir des copies Snapshot cohérentes au niveau des applications.
+
+
+
+== État du serveur virtuel et de ses fichiers avant une attaque
+
+Cette section décrit l'état des fichiers avant une attaque sur la machine virtuelle et le partage CIFS qui lui a été mappé.
+
+Le dossier documents de la machine virtuelle contient un ensemble de fichiers PDF qui n'ont pas encore été cryptés par le programme malveillant WannaCry.
+
+image:security-ransomware_image3.png["Erreur : image graphique manquante"]
+
+La capture d'écran suivante montre le partage CIFS qui a été mappé sur la machine virtuelle.
+
+image:security-ransomware_image4.png["Erreur : image graphique manquante"]
+
+La capture d'écran suivante présente les fichiers du partage CIFS `fpolicy_share` Cela n'a pas encore été chiffré par le programme malveillant de WannaCry.
+
+image:security-ransomware_image5.png["Erreur : image graphique manquante"]
+
+
+
+== Informations relatives à la déduplication et aux snapshots avant la crise
+
+Les détails sur l'efficacité du stockage et la taille de la copie Snapshot avant une attaque sont indiqués et utilisés comme référence lors de la phase de détection.
+
+Des économies de stockage de 19 % ont été réalisées grâce à la déduplication sur le volume hébergeant la machine virtuelle.
+
+image:security-ransomware_image6.png["Erreur : image graphique manquante"]
+
+Des économies de stockage de 45 % ont été réalisées grâce à la déduplication sur le partage CIFS `fpolicy_share`.
+
+image:security-ransomware_image7.png["Erreur : image graphique manquante"]
+
+Une taille de copie Snapshot de 456 Ko a été observée pour le volume hébergeant la machine virtuelle.
+
+image:security-ransomware_image8.png["Erreur : image graphique manquante"]
+
+Une taille de copie Snapshot de 160 Ko a été observée pour le partage CIFS `fpolicy_share`.
+
+image:security-ransomware_image9.png["Erreur : image graphique manquante"]
+
+
+
+== Infection de WannaCry sur VM et partage CIFS
+
+Dans cette section, nous montrons comment le programme malveillant WannaCry a été introduit dans l'environnement FlexPod et les changements ultérieurs au système observés.
+
+Les étapes suivantes montrent comment le binaire du programme malveillant WannaCry a été introduit dans la VM :
+
+. Le programme malveillant sécurisé a été extrait.
++
+image:security-ransomware_image10.png["Erreur : image graphique manquante"]
+
+. Le binaire a été exécuté.
++
+image:security-ransomware_image11.png["Erreur : image graphique manquante"]
+
+
+
+
+
+=== Cas 1 : WannaCry crypte le système de fichiers au sein de la machine virtuelle et le partage CIFS mappé
+
+Le système de fichiers local et le partage CIFS mappé ont été cryptés par le programme malveillant WannaCry.
+
+Le programme malveillant commence à crypter des fichiers avec des extensions WNCRY.
+
+image:security-ransomware_image12.png["Erreur : image graphique manquante"]
+
+Le programme malveillant crypte tous les fichiers de la machine virtuelle locale et le partage mappé.
+
+image:security-ransomware_image13.png["Erreur : image graphique manquante"]
+
+
+
+==== Détection
+
+Au moment où le programme malveillant a commencé à chiffrer les fichiers, il a déclenché une augmentation exponentielle de la taille des copies Snapshot et une diminution exponentielle du pourcentage d'efficacité du stockage.
+
+Nous avons détecté une augmentation spectaculaire de la taille de l'instantané à 820.98MB pour le volume hébergeant le partage CIFS pendant l'attaque.
+
+image:security-ransomware_image14.png["Erreur : image graphique manquante"]
+
+Nous avons détecté une augmentation de la taille de la copie Snapshot à 404,3 Mo pour le volume hébergeant la machine virtuelle.
+
+image:security-ransomware_image15.png["Erreur : image graphique manquante"]
+
+L'efficacité du stockage pour le volume hébergeant le partage CIFS a été réduite à 34 %.
+
+image:security-ransomware_image16.png["Erreur : image graphique manquante"]
+
+
+
+==== Résolution
+
+Restaurez la machine virtuelle et le partage CIFS mappé à l'aide d'une copie Snapshot complète avant l'attaque.
+
+*Restaurer VM*
+
+Pour restaurer la machine virtuelle, procédez comme suit :
+
+. Utiliser la copie Snapshot que vous avez créée avec SnapCenter pour restaurer la machine virtuelle.
++
+image:security-ransomware_image17.png["Erreur : image graphique manquante"]
+
+. Sélectionnez la copie Snapshot cohérente avec VMware souhaitée pour la restauration.
++
+image:security-ransomware_image18.png["Erreur : image graphique manquante"]
+
+. L'intégralité du serveur virtuel est restaurée et redémarrée.
++
+image:security-ransomware_image19.png["Erreur : image graphique manquante"]
+
+. Cliquez sur Terminer pour lancer le processus de restauration.
++
+image:security-ransomware_image20.png["Erreur : image graphique manquante"]
+
+. La machine virtuelle et ses fichiers sont restaurés.
++
+image:security-ransomware_image21.png["Erreur : image graphique manquante"]
+
+
+
+*Restaurer le partage CIFS*
+
+Pour restaurer le partage CIFS, procédez comme suit :
+
+. Utilisez la copie Snapshot du volume prise avant l'attaque pour restaurer le partage.
++
+image:security-ransomware_image22.png["Erreur : image graphique manquante"]
+
+. Cliquez sur OK pour lancer l'opération de restauration.
++
+image:security-ransomware_image23.png["Erreur : image graphique manquante"]
+
+. Afficher le partage CIFS après la restauration.
++
+image:security-ransomware_image24.png["Erreur : image graphique manquante"]
+
+
+
+
+
+=== Cas 2 : WannaCry chiffre le système de fichiers au sein de la machine virtuelle et tente de chiffrer le partage CIFS mappé protégé par FPolicy
+
+
+
+==== Prévention
+
+*Configurer FPolicy*
+
+Pour configurer FPolicy sur le partage CIFS, exécutez les commandes suivantes sur le cluster ONTAP :
+
+....
+vserver fpolicy policy event create -vserver infra_svm -event-name Ransomware_event -protocol cifs -file-operations create,rename,write,open
+vserver fpolicy policy create -vserver infra_svm -policy-name Ransomware_policy -events Ransomware_event -engine native
+vserver fpolicy policy scope create -vserver infra_svm -policy-name Ransomware_policy -shares-to-include fpolicy_share -file-extensions-to-include WNCRY,Locky,ad4c
+vserver fpolicy enable -vserver infra_svm -policy-name Ransomware_policy -sequence-number 1
+....
+Avec cette stratégie, les fichiers avec les extensions WNCRY, Locky et ad4c ne sont pas autorisés à effectuer les opérations de création, de renommage, d'écriture ou d'ouverture de fichiers.
+
+Afficher l'état des fichiers avant d'attaquer, ils sont non cryptés et dans un système propre.
+
+image:security-ransomware_image25.png["Erreur : image graphique manquante"]
+
+Les fichiers de la machine virtuelle sont chiffrés. Le programme malveillant WannaCry tente de crypter les fichiers du partage CIFS, mais FPolicy l'empêche de modifier les fichiers.
+
+image:security-ransomware_image26.png["Erreur : image graphique manquante"]

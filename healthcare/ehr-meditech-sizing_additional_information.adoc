@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_additional_information.html 
+keywords: additional, information, guides, meditech, sizing 
+summary: Pour en savoir plus sur les informations données dans ce livre blanc, consultez ces documents ou sites web. 
+---
+= Informations supplémentaires
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Pour en savoir plus sur les informations données dans ce document, consultez ces documents ou sites web :
+
+* Conception validée FlexPod Datacenter avec FC Cisco.
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* Directives de déploiement NetApp pour les environnements MEDITECH.
++
+https://fieldportal.netapp.com/content/248456["https://fieldportal.netapp.com/content/248456"^] (Identifiant NetApp requis)
+
+* Directives de dimensionnement pour les environnements MEDITECH.
++
+http://www.netapp.com/us/media/tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
+
+* Déploiement de FlexPod Datacenter pour Epic EHR
++
+http://www.netapp.com/us/media/tr-4693.pdf["www.netapp.com/us/media/tr-4693.pdf"^]
+
+* Zone de conception FlexPod
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* FlexPod DC avec stockage FC (commutateurs MDS) et NetApp AFF, vSphere 6.5U1 et Cisco UCS Manager
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* Cisco Healthcare
++
+https://www.cisco.com/c/en/us/solutions/industries/healthcare.html?dtid=osscdc000283["https://www.cisco.com/c/en/us/solutions/industries/healthcare.html?dtid=osscdc000283"^]
+
+

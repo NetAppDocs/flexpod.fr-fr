@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_design.html 
+keywords: architecture, storage, layout, aggregates, database, disk, type, control, failover, hardware, aff 
+summary: 'L"architecture de FlexPod pour MEDITECH est basée sur les conseils d"MEDITECH, de Cisco et de NetApp et de l"expérience du partenaire qui équipe avec les clients MEDITECH de toutes les tailles. L"architecture est adaptable et applique les bonnes pratiques pour MEDITECH, selon la stratégie de votre data Center, la taille de votre entreprise et si votre système est centralisé, distribué ou mutualisé.' 
+---
+= Design
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+L'architecture de FlexPod pour MEDITECH est basée sur les conseils d'MEDITECH, de Cisco et de NetApp et de l'expérience du partenaire qui équipe avec les clients MEDITECH de toutes les tailles. L'architecture est adaptable et applique les bonnes pratiques pour MEDITECH, selon la stratégie de votre data Center, la taille de votre entreprise et si votre système est centralisé, distribué ou mutualisé.
+
+L'architecture de stockage appropriée peut être déterminée par la taille globale avec le nombre total d'IOPS. La performance seule n'est pas le seul facteur et vous pouvez décider d'utiliser un plus grand nombre de nœuds en fonction des exigences supplémentaires des clients. Le stockage NetApp présente l'avantage de faciliter et d'assurer une évolutivité verticale du cluster sans interruption, en fonction de l'évolution de vos besoins. Vous pouvez également supprimer des nœuds du cluster sans interruption pour reconvertir les équipements ou procéder à des mises à jour d'équipements.
+
+Voici quelques-uns des avantages de l'architecture de stockage NetApp ONTAP :
+
+* *Évolutivité horizontale et verticale simple et sans interruption.* vous pouvez mettre à niveau, ajouter ou supprimer des disques et des nœuds à l'aide de la continuité de l'activité ONTAP. Vous pouvez commencer avec quatre nœuds et passer à six nœuds, ou effectuer une mise à niveau vers des contrôleurs plus volumineux sans interruption.
+* *Fonctionnalités d'efficacité du stockage* réduisez vos besoins en capacité totale grâce à la déduplication, NetApp FlexClone, la compression à la volée, la compaction à la volée, la réplication fine, le provisionnement fin et la déduplication d'agrégat. La fonctionnalité FlexClone vous permet de créer presque instantanément des clones pour prendre en charge les mises à jour de l'environnement de sauvegarde et de test. Ces clones consomment davantage d'espace de stockage uniquement lorsque des modifications sont apportées.
+* *Serveur de base de données shadow de reprise après sinistre.* le serveur de base de données shadow de reprise après sinistre fait partie de votre stratégie de continuité de l'activité (utilisé pour prendre en charge la fonctionnalité de stockage en lecture seule et potentiellement configuré pour être une instance de lecture/écriture de stockage). Par conséquent, le placement et le dimensionnement du troisième système de stockage sont généralement identiques à ceux de votre système de stockage de base de données de production.
+* *Cohérence de la base de données (nécessite un certain degré d'considération).* si vous utilisez des copies de sauvegarde NetApp SnapMirror en relation avec la continuité de l'activité, voir http://media.netapp.com/documents/tr-3446.pdf["Tr-3446 : Guide des meilleures pratiques et présentation du mode asynchrone de SnapMirror"^].
+
+
+
+
+== Disposition du stockage
+
+
+
+=== Agrégats dédiés pour les hôtes MEDITECH
+
+Pour répondre aux besoins haute performance et haute disponibilité du MEDITECH, il est important de concevoir correctement l'infrastructure de stockage et d'isoler la charge de travail de production de l'hôte MEDITECH dans le système de stockage dédié et haute performance.
+
+Un agrégat dédié doit être provisionné sur chaque contrôleur de stockage pour stocker le programme, le dictionnaire et les fichiers de données des hôtes MEDITECH. Afin d'éliminer tout risque que d'autres charges de travail utilisent les mêmes disques et d'affecter les performances, aucun autre stockage n'est provisionné à partir de ces agrégats.
+
+
+NOTE: Le stockage que vous provisionnez pour les autres serveurs MEDITECH ne doit pas être placé sur l'agrégat dédié des LUN qui sont utilisées par les hôtes MEDITECH. Le stockage des autres serveurs MEDITECH doit être placé sur un agrégat distinct. Les besoins en stockage des autres serveurs MEDITECH sont disponibles dans les documents « proposition de configuration matérielle » (pour les nouveaux déploiements) et « tâche d'évaluation du matériel » (pour les déploiements existants). Ces documents peuvent être obtenu auprès de MEDITECH par l'intégrateur système MEDITECH ou auprès de votre responsable de compte technique MEDITECH. Les ingénieurs solutions NetApp peuvent contacter l'équipe MEDITECH Independent Software Vendor (éditeur de logiciels indépendant) de NetApp pour faciliter la configuration du dimensionnement du stockage et de son application.
+
+
+
+=== Répartir les charges de travail hôte MEDITECH de façon homogène entre tous les contrôleurs de stockage
+
+Les systèmes NetApp FAS et AFF sont déployés sous forme d'une ou de plusieurs paires haute disponibilité. NetApp vous recommande d'étendre l'étendue MEDITECH et les charges de travail 6.x de manière homogène entre chaque contrôleur de stockage afin d'appliquer les ressources de calcul, de réseau et de mise en cache à chaque contrôleur de stockage.
+
+Utilisez les recommandations suivantes pour répartir uniformément les charges de travail MEDITECH sur chaque contrôleur de stockage :
+
+* Si vous connaissez les IOPS de chaque hôte MEDITECH, vous pouvez étendre l'étendue MEDITECH et les charges de travail 6.x de manière homogène entre tous les contrôleurs de stockage. Ils confirment que chaque contrôleur gère un nombre similaire d'IOPS depuis les hôtes MEDITECH.
+* Si vous ne connaissez pas les IOPS de chaque hôte MEDITECH, vous pouvez encore étendre l'étendue MEDITECH et les charges de travail 6.x de façon homogène entre tous les contrôleurs de stockage. Cette tâche doit être effectuée en confirmant que la capacité des agrégats pour les hôtes MEDITECH est répartie de façon homogène entre tous les contrôleurs de stockage. Le nombre de disques est donc le même pour tous les agrégats de données dédiés aux hôtes MEDITECH.
+* Utilisez des types de disques similaires et des groupes RAID identiques pour créer les agrégats de stockage des deux contrôleurs en vue de répartir les charges de travail de manière homogène. Avant de créer l'agrégat de stockage, contactez un intégrateur NetApp Certified.
+
+
+
+NOTE: Selon MEDITECH, deux hôtes du système MEDITECH génèrent plus d'IOPS que le reste des hôtes. Les LUN de ces deux hôtes doivent être placées sur des contrôleurs de stockage distincts. Vous devez identifier ces deux hôtes avec l'aide de l'équipe MEDITECH avant de déployer votre système.
+
+
+
+== Placement du stockage
+
+
+
+=== Stockage de base de données pour les hôtes MEDITECH
+
+Le stockage de base de données d'un hôte MEDITECH est présenté sous forme d'un bloc (c'est-à-dire une LUN) avec le système NetApp FAS et AFF. Le LUN est généralement monté sur le système d'exploitation Windows en tant que lecteur E.
+
+
+
+=== Autres stockages
+
+Le système d'exploitation hôte MEDITECH et l'application de base de données génèrent généralement une quantité considérable d'IOPS pour le stockage. Le provisionnement du stockage pour les machines virtuelles hôtes MEDITECH et leurs fichiers VMDK, si nécessaire, est considéré comme indépendant du stockage requis pour répondre aux seuils de performances MEDITECH.
+
+Le stockage provisionné pour les autres serveurs MEDITECH ne doit pas être placé sur l'agrégat dédié des LUN que les hôtes MEDITECH utilisent. Placer le stockage des autres serveurs MEDITECH sur un agrégat distinct.
+
+
+
+== Configuration du contrôleur de stockage
+
+
+
+=== Haute disponibilité
+
+Pour limiter les conséquences de la défaillance du contrôleur et pour permettre des mises à niveau sans interruption du système de stockage, il est conseillé de configurer votre système de stockage avec des contrôleurs en mode haute disponibilité.
+
+Dans le cas de la configuration de paires de contrôleurs haute disponibilité, les tiroirs disques doivent être connectés aux contrôleurs par plusieurs chemins. Cette connexion améliore la résilience du stockage en offrant une protection contre la défaillance d'un chemin unique, et améliore la cohérence des performances en cas de basculement du contrôleur.
+
+
+
+=== Performances de stockage lors du basculement du contrôleur de stockage
+
+Pour les systèmes de stockage configurés avec des contrôleurs dans une paire haute disponibilité, dans le éventualité peu probable d'une panne de contrôleur, le contrôleur partenaire prend le relais des charges de travail et des ressources de stockage du contrôleur défaillant. Il est important de contacter le client pour déterminer les exigences de performance à respecter en cas de défaillance du contrôleur et pour dimensionner le système en conséquence.
+
+
+
+=== Basculement assisté par matériel
+
+NetApp vous recommande d'activer la fonctionnalité de basculement assisté par matériel sur les deux contrôleurs de stockage.
+
+Le basculement assisté par matériel est conçu pour réduire au maximum le temps de basculement du contrôleur de stockage. Il permet au module LAN distant ou au module processeur de service d'un contrôleur d'avertir son partenaire d'une défaillance de contrôleur plus rapidement qu'un déclencheur de délai d'impulsion peut, ce qui réduit le temps nécessaire au basculement. La fonctionnalité hardware-Assisted Takeover est activée par défaut pour les contrôleurs de stockage dans une configuration haute disponibilité.
+
+Pour plus d'informations sur le basculement assisté par matériel, consultez le http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^].
+
+
+
+=== Type de disque
+
+Pour prendre en charge les exigences de faible latence de lecture des charges de travail MEDITECH, NetApp recommande d'utiliser un disque SSD haute performance pour les agrégats des systèmes AFF dédiés aux hôtes MEDITECH.
+
+
+
+=== NetApp AFF
+
+NetApp offre des baies AFF hautes performances pour gérer les charges de travail MEDITECH qui exigent un débit élevé et des modèles d'accès aux données et une latence faible. Pour les charges de travail MEDITECH, les baies AFF offrent des avantages en termes de performance par rapport aux systèmes qui sont basés sur les HDD. L'association de la technologie Flash et de la gestion des données d'entreprise présente certains avantages dans trois domaines principaux : les performances, la disponibilité et l'efficacité du stockage.
+
+
+
+=== Outils et services de support NetApp
+
+NetApp propose un ensemble complet d'outils et de services de support. L'outil NetApp AutoSupport doit être activé et configuré sur les systèmes NetApp AFF/FAS pour signaler la défaillance matérielle ou les erreurs de configuration du système. Appeler le service d'alerte de support de NetApp pour résoudre rapidement tout problème. NetApp Active IQ est une application web qui utilise des informations de vos systèmes NetApp qu'AutoSupport lui envoie. Son objectif est de vous aider à améliorer votre disponibilité, efficacité et vis performances grâce à une vision proactive et prédictive.

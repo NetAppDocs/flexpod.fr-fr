@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html 
+keywords: ontap, cisco, blade, ucs, rack, mount, server, cabling, diagram 
+summary: Cette section présente des conseils de stockage pour le déploiement de FlexPod dans les environnements qui utilisent des serveurs lames et en rack ONTAP ou Cisco UCS. 
+---
+= Présentation
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Vous trouverez dans ce document des conseils sur le stockage NetApp pour le déploiement de FlexPod les éléments suivants :
+
+* Les environnements qui utilisent ONTAP
+* Environnements utilisant des serveurs lames et en rack Cisco UCS
+
+
+Ce document ne couvre pas :
+
+* Déploiement détaillé de l'environnement de data Center FlexPod
++
+Pour plus d'informations, voir https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["Conception validée FlexPod Datacenter avec FC Cisco"^] (CVD).
+
+* Présentation des environnements logiciels MEDITECH, des architectures de référence et des conseils sur les meilleures pratiques d'intégration.
++
+Pour plus d'informations, voir https://fieldportal.netapp.com/content/310932["Tr-4300i : Guide des meilleures pratiques des systèmes de stockage 100 % Flash et FAS pour les environnements MEDITECH"^] (Identifiant NetApp requis).
+
+* Exigences quantitatives en termes de performances et conseils de dimensionnement.
++
+Pour plus d'informations, voir https://fieldportal.netapp.com/content/198446["Tr-4190 : directives de dimensionnement NetApp pour les environnements MEDITECH"^].
+
+* Utilisation des technologies NetApp SnapMirror pour répondre aux exigences de sauvegarde et de reprise d'activité.
+* Conseils génériques sur le déploiement de stockage NetApp.
+
+
+Cette section fournit un exemple de configuration avec les meilleures pratiques de déploiement d'infrastructure et répertorie les différents composants matériels et logiciels de l'infrastructure et les versions que vous pouvez utiliser.
+
+
+
+== Schéma de câblage
+
+La figure suivante illustre le diagramme de topologie FC 32 Gb/40 GbE pour un déploiement MEDITECH.
+
+image:ehr-meditech-deploy_image5.png["Erreur : image graphique manquante"]
+
+Utilisez toujours le http://mysupport.netapp.com/matrix/["Matrice d'interopérabilité (IMT)"^] pour vérifier que toutes les versions des logiciels et des firmwares sont prises en charge. Le tableau de la section link:ehr-meditech-deploy_meditech_modules_and_components.html["Modules ET composants MEDITECH"] les composants matériels et logiciels de l'infrastructure utilisés pour les tests des solutions sont répertoriés dans le.
+
+link:ehr-meditech-deploy_base_infrastructure_configuration.html["Next : configuration de l'infrastructure de base."]

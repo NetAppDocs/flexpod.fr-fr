@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_performance_considerations.html 
+keywords: performance, considerations, size, tier, cloud, fabricpool 
+summary: 'Lors de l"étude du dimensionnement, il est important d"évaluer les éléments suivants :' 
+---
+= Performances
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Dimensionnez le Tier de performance
+
+Lorsque vous envisagez de dimensionner, gardez à l'esprit que le Tier de performance doit être capable des tâches suivantes :
+
+* Prise en charge des données fortement sollicitées
+* La prise en charge des données inactives jusqu'à l'analyse du Tiering déplace les données vers le Tier cloud
+* Prendre en charge les données de Tier cloud actives et écrites à nouveau sur le Tier de performance
+* Prise en charge des métadonnées WAFL associées au niveau de cloud associé
+
+
+Pour la plupart des environnements, un rapport performances/capacité de 1 à 10 sur les agrégats FabricPool est extrêmement prudent, tout en permettant des économies de stockage importantes. Par exemple, si l'objectif est de transférer des 200 To vers le Tier cloud, l'agrégat de Tier de performance doit atteindre 20 To au minimum.
+
+
+NOTE: Les écritures depuis le Tier cloud vers le Tier de performance sont désactivées si la capacité du Tier de performance est supérieure à 70 %. Dans ce cas, les blocs sont lus directement depuis le Tier cloud.
+
+
+
+== Dimensionnez le Tier cloud
+
+Lors de l'évaluation du dimensionnement, le magasin d'objets agissant comme Tier cloud doit être capable de réaliser les tâches suivantes :
+
+* Prise en charge des lectures de données inactives existantes
+* Prise en charge des écritures de nouvelles données inactives
+* Prise en charge de la suppression et de la défragmentation des objets
+
