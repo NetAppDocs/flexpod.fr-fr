@@ -20,7 +20,7 @@ Cette section répertorie les nouvelles fonctionnalités disponibles pour Cisco 
 == Août 2022
 
 
-NOTE: Une mise à niveau vers NetApp Active IQ Unified Manager 9.11 GA est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités de la dernière version. Pour obtenir la liste des problèmes connus liés à cette version, reportez-vous à la section  Issues.
+NOTE: Une mise à niveau vers NetApp Active IQ Unified Manager 9.11 GA est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités de la dernière version. Pour obtenir la liste des problèmes connus liés à cette version, reportez-vous à la section <<Problèmes connus>>.
 
 * Calcul de la capacité disponible du cluster mis à jour pour correspondre à System Manager
 * Page général du cluster mise à jour pour masquer le récapitulatif des mesures de performances jusqu'à ce que les données de performances soient renseignées
