@@ -8334,7 +8334,6 @@
   <block id="69d7ba5974ce4e202ff6a3283926751f" category="paragraph">Pour plus d'informations, voir<block ref="7233dd15fab01808b5955c7429b5aebc" category="inline-link-rx"></block>.</block>
   <block id="b77014effa68d8bd1b8a5868123a2a63" category="summary">Les configurations de serveur proxy d'AIQ UM doivent être configurées via l'interface de ligne de commande pour utiliser le service IMT.</block>
   <block id="e814e5396b09bd235085ad390f6ea986" category="doc">Configurez le serveur proxy AIQ UM pour le service IMT</block>
-  <block id="5a66f19b0ec8be9c2e0a7c58787ea9b1" category="paragraph">Si vous utilisez un serveur proxy avec AIQ UM pour Cisco Intersight avec le stockage ONTAP NetApp, vous devez configurer la configuration via l'interface de ligne de commande pour utiliser le service IMT (matrice d'interopérabilité). Vous devez utiliser le shell Diag de la machine virtuelle Active IQ Unified Manager (OVA) pour configurer les paramètres du serveur proxy AIQ UM.</block>
   <block id="80b32c2ac8f5fd5845a3ccaf583c8c8b" category="inline-link">Comment accéder à la coque DIAG Active IQ Unified Manager Virtual machine (OVA)</block>
   <block id="baf8ab71191c15b45a74e4bc93f0b0cf" category="admonition">Pour plus d'informations sur l'accès au shell Diag MU UM, reportez-vous à la section<block ref="6b434b6393786ea1d3dba8a708c6486d" category="inline-link-rx"></block></block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">*Étapes*</block>
@@ -8436,7 +8435,6 @@
   <block id="b475ee88bad1c3a8e0c02734aa611a21" category="list-text">Colonnes latence, IOPS et débit ajoutées sous Statistiques de volume moyennes, Statistiques de LUN moyennes, Statistiques moyennes sur l'agrégat, Statistiques moyennes sur les machines virtuelles de stockage et statistiques moyennes sur les nœuds</block>
   <block id="5c90847404629f1a208160217f5678bb" category="admonition">Les metrics de performance ci-dessus ne sont disponibles que pour les baies de stockage contrôlées par le biais de NetApp Active IQ Unified Manager 9.9 ou version ultérieure.</block>
   <block id="558ab0bef1894a7a726109d36632d09d" category="section-title">Problèmes connus</block>
-  <block id="fe9b57b6a58a76519ec48d5a08f3c9b0" category="list-text">Pour garantir que les données d'inventaire du stockage Intersight ne sont pas affectées pendant le processus de collecte des données, tout cluster ONTAP non pris en charge (c'est-à-dire ONTAP 9.7P1) doit être supprimé de l'application Active IQ Unified Manager (AIQUM).</block>
   <block id="e8c4ec43528d3a582dd7b32616a88eb9" category="list-text">Pour que toutes les cibles revendiquées puissent être correctement exécutées, il faut au moins une version AIQUM de 9.11 pour que les requêtes d'interopérabilité du système intégré FlexPod soient exécutées.</block>
   <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">La page vérifications de l'inventaire du stockage ne s'affichera pas si le cluster ONTAP est ajouté à AIQ-UM à l'aide d'un FQDN. Les utilisateurs doivent ajouter des clusters ONTAP à AIQ-UM à l'aide d'une adresse IP.</block>
   <block id="e7114cd6ec011855ffed323eb8d029e1" category="summary">Vérifier que vous répondez aux exigences en matière de matériel, de logiciels et de licences pour l'intégration du stockage NetApp ONTAP avec Cisco InterSight.</block>
@@ -8444,7 +8442,6 @@
   <block id="ddaa10f367f08c048c3fc03da8eaf89e" category="paragraph">Il s'agit des composants matériels et logiciels minimum requis pour implémenter la solution. Ils peuvent varier selon la mise en œuvre de la solution et les besoins du client.</block>
   <block id="8f7052d0c9b4ba227843ecc0873ab47c" category="cell">Détails de l'exigence</block>
   <block id="29d1db03b55072fc401d11d7d0750f61" category="cell">ONTAP 9.7P1 et versions ultérieures</block>
-  <block id="ad180dc1b01f328b8c0230d111d11d5d" category="cell">La dernière version de NetApp Active IQ Unified Manager est requise (actuellement disponible dans la version 9.11 GA)</block>
   <block id="5dc8e3707996259deb52abdfee00eac9" category="cell">Baie de stockage NetApp</block>
   <block id="00b515e766e1cba805399ff9eb813a8f" category="cell">Toutes les baies de stockage ONTAP ASA, AFF et FAS sont prises en charge pour ONTAP 9.7P1 et versions ultérieures</block>
   <block id="1f8e8bd6bc1c4895f936485882fbdf9d" category="cell">Hyperviseur de virtualisation</block>
@@ -8538,7 +8535,6 @@
   <block id="881413045c8af6a58c42bcc219b2ba2d" category="paragraph">Pour contrôler et orchestrer le stockage NetApp depuis Cisco InterSight, vous avez besoin d'une appliance virtuelle NetApp Active IQ Unified Manager et Cisco Intersight installée dans l'environnement vCenter.</block>
   <block id="535c7b50cee98be8fc0e8e0894346790" category="section-title">Installez ou mettez à niveau NetApp Active IQ Unified Manager</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">Documentation NetApp Active IQ Unified Manager</block>
-  <block id="8c8498202f001fd26ea4173271ec8a24" category="paragraph">Installez ou mettez à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.11 GA) si vous ne l'avez pas encore fait. Pour obtenir des instructions, reportez-vous au <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
   <block id="916e11edd7302abcc99270b63af50410" category="section-title">Installation de l'appliance virtuelle Cisco InterSight Assist</block>
   <block id="6d6948b0a48e475952bf18dc3895f7a3" category="inline-link">Exigences relatives aux licences, aux systèmes et au réseau pour les appliances virtuelles Cisco Intersight</block>
   <block id="dd2e3bcd8cbadfd776b8fdcd3811c9e8" category="paragraph">Assurez-vous que vous rencontrez le<block ref="7800eff9d9526a65a7a22ce932db0f9b" category="inline-link-rx"></block>.</block>
@@ -8549,14 +8545,10 @@
   <block id="2b70343738f7a785cf3d0064f0a39b32" category="list-text">Déployer l'OVA. DNS et NTP sont nécessaires pour déployer le fichier OVA.</block>
   <block id="b46368b8756e258c478ad0209aafb836" category="list-text">Configurez DNS avec Des enregistrements a/PTR et CNAME alias avant de déployer l'OVA. Voir l'exemple ci-dessous.</block>
   <block id="9d6318b0d30a534802e63b46fbc2f7c1" category="inline-image-macro">Exemple de nom d'hôte utilisé pour les enregistrements A/PTR</block>
-  <block id="045ce1f853ba95eeb06d41946cbbe014" category="paragraph"><block ref="045ce1f853ba95eeb06d41946cbbe014" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1d2c46420fb0fb59479d35168ae1900" category="list-text">Choisissez la taille de configuration appropriée (petite, petite ou moyenne) en fonction de vos besoins de déploiement OVA pour Intersight Virtual Appliance.</block>
   <block id="4d612f1b1c407dc59d8ad3e83f7b76ea" category="paragraph">*CONSEIL :* pour un cluster ONTAP à deux nœuds avec un grand nombre d'objets de stockage, NetApp vous recommande d'utiliser l'option petite (16 vCPU, 32 Gi RAM).</block>
   <block id="6a63e53ddbe218be4bb2034c0305e630" category="inline-image-macro">Capture d'écran de la configuration du modèle de déploiement OVF STEP 5</block>
-  <block id="163d67d440d02b8ef7547f4bfe8166de" category="paragraph"><block ref="163d67d440d02b8ef7547f4bfe8166de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3ee38327895dc648b6f1f999e57babca" category="list-text">Sur la page *Personnaliser le modèle*, personnalisez les propriétés de déploiement du modèle OVF. Le mot de passe administrateur est utilisé pour les utilisateurs locaux : admin<block ref="6ba4e6b0617e48ea6684baf161a47a80" prefix="(" category="inline-code"></block>).</block>
-  <block id="318871c35022cd02bcd1bd5839f0d3a8" category="paragraph"><block ref="318871c35022cd02bcd1bd5839f0d3a8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f52c8224a9f4defa0e18839412fe673b" category="paragraph"><block ref="f52c8224a9f4defa0e18839412fe673b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">Cliquez sur *Suivant*.</block>
   <block id="88ade68952e1a8d9f1c49b5ed85b5af5" category="list-text">Post-déploiement de l'appareil InterSight Assist.</block>
   <block id="dba06e35ee25a3095d873c4534514037" category="list-text">Accédez à<block ref="f9e0ea639036dbfc655ff5cf553db753" category="inline-link-rx"></block> pour terminer la configuration post-installation de votre appareil.</block>
@@ -8565,7 +8557,6 @@
   <block id="3920eddb38a93c54b93b962bbdea7c26" category="list-text">*Intersight Assist.* ce déploiement permet au modèle SaaS de se connecter à Cisco Intersight.</block>
   <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">Lorsque vous sélectionnez Intersight Assist, notez l'ID et le code de demande de l'appareil avant de continuer.</block>
   <block id="32f55ec9f00aee8539ca16e146d53713" category="inline-image-macro">Capture d'écran des options de déploiement Intersight</block>
-  <block id="df2ced2f2ca7e12619f0e054224c6230" category="paragraph"><block ref="df2ced2f2ca7e12619f0e054224c6230" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f88e5cbd35ab951b0bce5a96b06bb36" category="list-text">Cliquez sur *Continuer*.</block>
   <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">Sélectionnez *Intersight* et procédez comme suit :</block>
   <block id="6f6002ff113b47d720b948fdbd799d5c" category="inline-link"><block ref="6f6002ff113b47d720b948fdbd799d5c" category="inline-link-rx"></block></block>
@@ -8573,7 +8564,6 @@
   <block id="66b6809a917e6f7acac28f8accbdedc3" category="list-text">Cliquez sur *Targets*, *Cisco Intersight*, puis sur *Start*.</block>
   <block id="53e0ae9e421ccd8017c4eeb818859f12" category="list-text">Demandez l'appareil *Cisco Intersight* en copiant et en collant l'ID de l'appareil et le code de demande depuis votre nouvelle appliance virtuelle Intersight déployée.</block>
   <block id="aa934cad8ef62fbb6a89fb41491c988e" category="inline-image-macro">Capture d'écran de sélection du type de cible mettant en surbrillance Cisco Intersight</block>
-  <block id="e7934022378c77a43b6c1f0ba4528fa0" category="paragraph"><block ref="e7934022378c77a43b6c1f0ba4528fa0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b4fc4b024772b963c5f5f7aac44f2918" category="list-text">Retournez à l'appareil *Cisco Intersight* et cliquez sur *Continuer.* il se peut que vous deviez actualiser le navigateur.</block>
   <block id="ebd1193b80c5bb1e5a3c2f4ca7d1ad9f" category="paragraph">Le téléchargement et l'installation commencent. Les binaires sont transférés d'Intersight Cloud vers votre appliance sur site. Le temps de fin varie en fonction de la bande passante que vous utilisez pour Intersight Cloud.</block>
   <block id="72ebab8e55af1921046b579c24e2b91b" category="summary">Les auteurs recommandent de ne pas payer une rançon en cas d'attaque, car cela renforce la foi de l'attaquant dans leur modèle d'entreprise. Les opérations de sauvegarde et de restauration de données jouent un rôle important dans la restauration par ransomware. Par conséquent, ils doivent être inclus dans la planification des activités.</block>
@@ -9198,4 +9188,14 @@
   <block id="309d921b4e477874006fde9b0223cc7c" category="sidebar">Continuez vos activités sans payer de rançon</block>
   <block id="a64ea5c83794c25dba68d85f36d78edd" category="sidebar">Solution FlexPod conforme à la norme FIPS 140-2 pour le secteur de la sécurité dans le secteur de la santé</block>
   <block id="a33897f6d38339813891960e4bb3db40" category="sidebar">Acknowlegments, historique des versions et où trouver des informations supplémentaires</block>
+  <block id="4174da9caea2fe6cfb47e03b760a26b4" category="cell">La dernière version de NetApp Active IQ Unified Manager est requise (actuellement disponible dans la version 9.12 GA)</block>
+  <block id="1ad9d53c3fc2062cfb8cd9f962f46df0" category="paragraph">Installez ou mettez à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.12 GA) si vous ne l'avez pas encore fait. Pour obtenir des instructions, reportez-vous au <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
+  <block id="30afe0cd8c37f4391553d8fb227f8dd4" category="paragraph">Si vous utilisez un serveur proxy avec AIQ UM pour Cisco Intersight avec le stockage ONTAP NetApp, vous devez configurer la configuration via l'interface de ligne de commande pour utiliser le service IMT (matrice d'interopérabilité). Le service IMT est disponible sous l'onglet *interopérabilité* de la page *systèmes intégrés*. Vous devez utiliser le shell Diag de la machine virtuelle Active IQ Unified Manager (OVA) pour configurer les paramètres du serveur proxy AIQ UM.</block>
+  <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">Janvier 2023</block>
+  <block id="f58686065d77527c1d5e19130ba1ee62" category="admonition">Une mise à niveau vers NetApp Active IQ Unified Manager 9.12 GA est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités de la dernière version. Pour obtenir la liste des problèmes connus liés à cette version, reportez-vous à la section <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>.</block>
+  <block id="bcd1997c23df8e33e5754b435a84db65" category="list-text">Les contrôles d'interopérabilité Intersight permettent désormais de distinguer les modes de microprogramme de l'UCSM et de l'IMM lors de l'exécution des contrôles de compatibilité.</block>
+  <block id="6479629d372a87dcf6f7058a3b415313" category="list-text">Les relations de protection ne s'afficheront pas dans Intersight pour ONTAP 9.7. Ce problème a été résolu dans la version ONTAP 9.8RC1.</block>
+  <block id="481eaf6f556ec962ffcf3a6e3c11049d" category="list-text">Si vous utilisez une version d'AIQUM 9.11 ou antérieure, un écart se produit entre les valeurs affichées sur la page liste de stockage et le graphique à barres de capacité de la page général de stockage. Pour résoudre ce problème, passez à AIQUM 9.12 ou supérieur pour garantir la précision des valeurs de capacité affichées.</block>
+  <block id="dd6bef8a9fbb7862bfad4c41ccf7f03d" category="list-text">Si vous utilisez AIQUM 9.11 ou une version antérieure, toute vérification effectuée par l'onglet « interopérabilité » de la page « systèmes intégrés » ne permettra pas de distinguer précisément les composants IMM et UCSM Cisco. Pour résoudre ce problème, passez à AIQUM 9.12 pour vous assurer que tous les composants sont correctement identifiés.</block>
+  <block id="215f19e5d79256f2e6c09a431d1ee7d7" category="list-text">Pour garantir que les données d'inventaire du stockage Intersight ne sont pas affectées pendant le processus de collecte des données, tous les clusters ONTAP non pris en charge (c'est-à-dire les versions inférieures à ONTAP 9.7P1) doivent être supprimés de l'application Active IQ Unified Manager (AIQUM).</block>
 </blocks>

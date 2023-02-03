@@ -29,7 +29,7 @@ Il s'agit des composants matériels et logiciels minimum requis pour implémente
 | NetApp ONTAP | ONTAP 9.7P1 et versions ultérieures 
 
 
-| NetApp Active IQ Unified Manager | La dernière version de NetApp Active IQ Unified Manager est requise (actuellement disponible dans la version 9.11 GA) 
+| NetApp Active IQ Unified Manager | La dernière version de NetApp Active IQ Unified Manager est requise (actuellement disponible dans la version 9.12 GA) 
 
 
 | Baie de stockage NetApp | Toutes les baies de stockage ONTAP ASA, AFF et FAS sont prises en charge pour ONTAP 9.7P1 et versions ultérieures 

@@ -20,7 +20,7 @@ Pour contrôler et orchestrer le stockage NetApp depuis Cisco InterSight, vous a
 
 == Installez ou mettez à niveau NetApp Active IQ Unified Manager
 
-Installez ou mettez à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.11 GA) si vous ne l'avez pas encore fait. Pour obtenir des instructions, reportez-vous au link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentation NetApp Active IQ Unified Manager"].
+Installez ou mettez à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.12 GA) si vous ne l'avez pas encore fait. Pour obtenir des instructions, reportez-vous au link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentation NetApp Active IQ Unified Manager"].
 
 
 
@@ -36,21 +36,21 @@ Assurez-vous que vous rencontrez le https://www.cisco.com/c/en/us/td/docs/unifie
 +
 .. Configurez DNS avec Des enregistrements a/PTR et CNAME alias avant de déployer l'OVA. Voir l'exemple ci-dessous.
 +
-image:ci-qsg_image1.png["Exemple de nom d'hôte utilisé pour les enregistrements A/PTR"]
+image::ci-qsg_image1.png[Exemple de nom d'hôte utilisé pour les enregistrements A/PTR]
 
 .. Choisissez la taille de configuration appropriée (petite, petite ou moyenne) en fonction de vos besoins de déploiement OVA pour Intersight Virtual Appliance.
 +
 *CONSEIL :* pour un cluster ONTAP à deux nœuds avec un grand nombre d'objets de stockage, NetApp vous recommande d'utiliser l'option petite (16 vCPU, 32 Gi RAM).
 
 +
-image:ci-qsg_image2.png["Capture d'écran de la configuration du modèle de déploiement OVF STEP 5"]
+image::ci-qsg_image2.png[Capture d'écran de la configuration du modèle de déploiement OVF STEP 5]
 
 .. Sur la page *Personnaliser le modèle*, personnalisez les propriétés de déploiement du modèle OVF. Le mot de passe administrateur est utilisé pour les utilisateurs locaux : admin(`webUI/cli/ssh`).
 +
-image:ci-qsg_image3.png["Erreur : image graphique manquante"]
+image::ci-qsg_image3.png[Erreur : image graphique manquante]
 
 +
-image:ci-qsg_image4.png["Erreur : image graphique manquante"]
+image::ci-qsg_image4.png[Erreur : image graphique manquante]
 
 .. Cliquez sur *Suivant*.
 
@@ -69,7 +69,7 @@ Le processus d'installation démarre automatiquement. L'installation peut prendr
 NOTE: Lorsque vous sélectionnez Intersight Assist, notez l'ID et le code de demande de l'appareil avant de continuer.
 
 +
-image:ci-qsg_image5.png["Capture d'écran des options de déploiement Intersight"]
+image::ci-qsg_image5.png[Capture d'écran des options de déploiement Intersight]
 
 
 
@@ -80,7 +80,7 @@ image:ci-qsg_image5.png["Capture d'écran des options de déploiement Intersight
 ... Cliquez sur *Targets*, *Cisco Intersight*, puis sur *Start*.
 ... Demandez l'appareil *Cisco Intersight* en copiant et en collant l'ID de l'appareil et le code de demande depuis votre nouvelle appliance virtuelle Intersight déployée.
 +
-image:ci-qsg_image6.png["Capture d'écran de sélection du type de cible mettant en surbrillance Cisco Intersight"]
+image::ci-qsg_image6.png[Capture d'écran de sélection du type de cible mettant en surbrillance Cisco Intersight]
 
 ... Retournez à l'appareil *Cisco Intersight* et cliquez sur *Continuer.* il se peut que vous deviez actualiser le navigateur.
 +
