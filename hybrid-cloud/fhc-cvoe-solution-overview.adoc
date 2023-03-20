@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-solution-overview.html 
+keywords: tr4960, 4960, introduction, cvo, healthcare, public cloud 
+summary: 'NetApp propose une solution unique de gestion des données pour les applications d"entreprise, y compris le secteur de la santé, et nous pouvons guider les hôpitaux tout au long de leur transition vers la transformation digitale. NetApp Cloud Volumes ONTAP propose une solution de gestion des données de santé dans laquelle les données peuvent être efficacement répliquées à partir d"un data Center FlexPod vers Cloud Volumes ONTAP déployé sur un cloud public tel qu"AWS.' 
+---
+= Tr-4960 : cloud hybride FlexPod avec Cloud Volumes ONTAP pour Epic
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+En partenariat avec :image:cisco logo.png["logo cisco"]
+
+Kamini Singh, NetApp
+
+[role="lead"]
+Pour réussir sa transformation digitale, il suffit d'en faire plus avec la donnée. Les hôpitaux génèrent et requièrent d'importants volumes de données pour gérer leur entreprise et servir leurs patients de manière efficace. Les informations sont collectées et traitées lors du traitement des patients et de la gestion des horaires du personnel et des ressources médicales.
+
+Face à la taille croissante des données de santé et aux informations exploitables qu'elles peuvent fournir, les services de données de santé et la protection des données sont deux aspects à la fois essentiels et complexes. Premièrement, les données de santé doivent être à la fois disponibles et protégées pour répondre aux exigences de restauration des données, de continuité de l'activité médicale et de conformité.
+
+Deuxièmement, les données sur les soins de santé doivent être facilement accessibles pour analyse. Cette analyse utilise souvent des approches basées sur l'intelligence artificielle (IA) et le machine learning (ML) pour aider les entreprises du secteur médical à améliorer leurs solutions et à créer de la valeur commerciale.
+
+Troisièmement, les infrastructures de services de données et les méthodologies de protection des données doivent prendre en charge la croissance des données de santé à mesure que le business médical se développe. De plus, la mobilité des données devient stratégique, car il est nécessaire de déplacer les données de la périphérie au cœur et jusqu'au cloud pour utiliser les ressources disponibles à des fins d'analyse ou d'archivage.
+
+NetApp propose une solution unique de gestion des données pour les applications d'entreprise, y compris le secteur de la santé, et nous pouvons guider les hôpitaux tout au long de leur transition vers la transformation digitale. NetApp Cloud Volumes ONTAP propose une solution de gestion des données de santé dans laquelle les données peuvent être efficacement répliquées à partir d'un data Center FlexPod vers Cloud Volumes ONTAP déployé sur un cloud public tel qu'AWS.
+
+En exploitant des ressources de cloud public sécurisées et économiques, Cloud Volumes ONTAP améliore la reprise après incident dans le cloud grâce à une réplication des données ultra-efficace, des fonctionnalités d'efficacité du stockage intégrées et des tests de reprise d'activité simples. La gestion de ces systèmes se fait par un contrôle unifié et la simplicité de la glisser-déposer. Vous bénéficiez ainsi d'une protection à toute épreuve, peu importe le type d'erreur, de défaillance ou d'incident. Cloud Volumes ONTAP propose la technologie NetApp SnapMirror comme solution de réplication des données de niveau bloc qui assure l'actualisation du volume de destination grâce à des mises à jour incrémentielles.
+
+image:fhc-cvoe-image1.jpeg["Cloud Volumes ONTAP propose la technologie NetApp SnapMirror comme solution de réplication des données de niveau bloc qui assure l'actualisation du volume de destination grâce à des mises à jour incrémentielles."]
+
+
+
+== Public
+
+Ce document est destiné aux ingénieurs solutions partenaires et NetApp, ainsi qu'aux équipes des services professionnels. NetApp suppose que le lecteur possède les connaissances de base suivantes :
+
+* Une solide compréhension des concepts SAN et NAS
+* Connaissance technique des systèmes de stockage ONTAP de NetApp
+* Connaissance technique de la configuration et de l'administration du logiciel ONTAP
+
+
+
+
+== Avantages de la solution
+
+Le data Center FlexPod intégré à NetApp Cloud Volumes ONTAP offre les avantages suivants pour les charges de travail du secteur de la santé :
+
+* *Protection personnalisée.* Cloud Volumes ONTAP assure la réplication des données au niveau des blocs de ONTAP vers le cloud afin de maintenir la destination à jour grâce à des mises à jour incrémentielles. Les utilisateurs peuvent spécifier une planification de synchronisation pour déterminer quand les modifications à la source sont transférées. Cela procure une protection personnalisée pour tous les types de données de santé.
+* *Basculement et retour arrière.* en cas d'incident, les administrateurs du stockage peuvent rapidement définir le basculement vers les volumes cloud. Une fois le site primaire restauré, les nouvelles données créées dans l'environnement de reprise sont synchronisées avec les volumes source, ce qui permet de rétablir la réplication des données secondaires. Ainsi, les données de santé peuvent être facilement restaurées sans interrompre l'activité.
+* *Efficacité.* l'espace de stockage et les coûts de la copie cloud secondaire sont optimisés grâce à la compression des données, au provisionnement fin et à la déduplication. Les données de santé sont transférées au niveau des blocs sous forme compressée et dédupliquée, ce qui accélère les transferts. Ainsi, les données sont automatiquement transférées vers un stockage objet à faible coût et sont transférées vers un stockage haute performance uniquement lors des accès, comme dans un scénario de reprise après incident. Ceci réduit considérablement les coûts réguliers de stockage.
+* *Protection contre les ransomware* la protection NetApp BlueXP analyse les sources de données dans les environnements sur site et cloud, détecte les vulnérabilités de sécurité, et fournit leur état de sécurité actuel et l'évaluation des risques. Il fournit ensuite des recommandations exploitables que vous pouvez approfondir l'investigation et le suivi pour remédier à ces problèmes. Ainsi, vous pouvez protéger vos données de santé stratégiques contre les attaques par ransomware.
+
+
+
+
+== Topologie de la solution
+
+Cette section décrit la topologie logique de la solution. La figure suivante représente la topologie de la solution composée de l'environnement sur site FlexPod, de NetApp Cloud Volumes ONTAP (CVO) exécuté sur Amazon Web Services (AWS) et de la plateforme SaaS NetApp BlueXP.
+
+image:fhc-cvoe-image2.jpeg["Cette image illustre la réplication SnapMirror entre une instance FlexPod exécutant ONTAP et NetApp Cloud Volumes ONTAP s'exécutant dans un cloud public hte."]
+
+Les plans de contrôle et les plans de données sont clairement indiqués entre les points d'extrémité. Le plan de données s'exécute entre l'instance ONTAP s'exécutant sur un système FAS 100 % Flash dans FlexPod et l'instance NetApp CVO dans AWS grâce à une connexion VPN sécurisée de site à site. La réplication des données de charge de travail liée au secteur de la santé depuis le data Center FlexPod sur site vers NetApp Cloud Volumes ONTAP est gérée par NetApp SnapMirror. Cette solution prend également en charge une sauvegarde et un Tiering facultatifs des données inactives résidant dans l'instance NetApp CVO vers AWS S3.
+
+link:fhc-cvoe-solution-components.html["Ensuite, les composants de la solution."]

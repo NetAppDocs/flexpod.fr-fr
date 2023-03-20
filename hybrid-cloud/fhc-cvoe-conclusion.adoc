@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-conclusion.html 
+keywords: conclusion 
+summary: 'La création d"un cloud hybride est un objectif pour la plupart des établissements de santé : garantir la disponibilité des données à tout moment. Dans cette solution, nous avons mis en œuvre une solution de cloud hybride FlexPod avec Cloud Volumes ONTAP, en utilisant la technologie de réplication NetApp SnapMirror pour valider certains cas d"utilisation afin de sauvegarder et de restaurer les applications et les charges de travail de santé.' 
+---
+= Conclusion
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-solution-validation.html["Précédent : validation de la solution."]
+
+[role="lead"]
+La création d'un cloud hybride est un objectif pour la plupart des établissements de santé : garantir la disponibilité des données à tout moment. Dans cette solution, nous avons mis en œuvre une solution de cloud hybride FlexPod avec Cloud Volumes ONTAP, en utilisant la technologie de réplication NetApp SnapMirror pour valider certains cas d'utilisation afin de sauvegarder et de restaurer les applications et les charges de travail de santé.
+
+FlexPod, une infrastructure convergée rigoureusement testée et prévalidée issue d'un partenariat stratégique entre Cisco et NetApp, est conçue pour fournir des performances système prévisibles à faible latence et une haute disponibilité. Cette approche se traduit par des niveaux de confort élevés pour les DME et, à terme, par le meilleur temps de réponse pour les utilisateurs du système EHR.
+
+Avec NetApp, vous pouvez exécuter des opérations de production EHR, de reprise d'activité, de sauvegarde ou de Tiering dans le cloud, comme si vous exécutiez des fonctionnalités de stockage NetApp dans un data Center sur site. Avec NetApp Cloud Volumes ONTAP, NetApp fournit les fonctionnalités de grande qualité et les performances requises pour exécuter efficacement les dossiers EHR dans le cloud. Options cloud de NetApp pour l'utilisation de blocs sur iSCSI et de fichiers sur NFS ou SMB.
+
+Cette solution répond aux besoins des établissements de santé et leur permet de franchir le pas vers leur transformation digitale. Il peut également les aider à gérer efficacement leurs applications et leurs charges de travail.
+
+link:fhc-cvoe-where-to-find-additional-information.html["Suivant : où trouver des informations supplémentaires ?"]
