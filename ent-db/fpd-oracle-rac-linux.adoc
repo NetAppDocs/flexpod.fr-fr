@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-oracle-rac-linux.html 
+keywords: flexpod, cisco, datacenter, oracle, rac, linux, ucs 
+summary: 'Cisco Unified Computing System (Cisco UCS) est une plateforme de data Center de nouvelle génération qui réunit le calcul, le réseau, l"accès au stockage et la virtualisation au sein d"un système cohésif unique.' 
+---
+= FlexPod Datacenter avec Oracle RAC sur Oracle Linux
+:allow-uri-read: 
+
+
+Tushar Patel, Cisco Niranjan Mohapatra, Cisco John Elliott, NetApp
+
+Cisco Unified Computing System (Cisco UCS) est une plateforme de data Center de nouvelle génération qui réunit le calcul, le réseau, l'accès au stockage et la virtualisation au sein d'un système cohésif unique. Cisco UCS est la plateforme idéale pour gérer l'architecture des charges de travail stratégiques des bases de données. L'association de la plateforme Cisco UCS, du stockage NetApp et de l'architecture Oracle Real application Cluster (RAC) peut accélérer la transformation DE votre INFRASTRUCTURE INFORMATIQUE en accélérant les déploiements, en offrant une plus grande flexibilité de choix, une plus grande efficacité et des risques réduits. Ce CVD met en avant une architecture de référence FlexPod flexible, mutualisée, haute performance et résiliente incluant une base de données RAC Oracle 12c.
+
+Développée par NetApp et Cisco, la plateforme FlexPod constitue une solution d'infrastructure intégrée flexible qui offre des technologies prévalidées de stockage, de réseau et de serveur. Son objectif est d'améliorer la réactivité DE L'IT face aux exigences du business tout en réduisant le coût total de l'informatique. Disponibilité maximale, risque minimal. Les composants FlexPod sont intégrés et standardisés afin d'assurer des déploiements rapides, reproductibles et cohérents. Vous pouvez ainsi prévoir avec précision l'alimentation requise, l'espace au sol, la capacité exploitable, les performances et le coût de chaque déploiement FlexPod.
+
+FlexPod s'appuie sur la toute dernière technologie et simplifie efficacement les workloads du data Center qui redéfinissent la façon dont ILS apportent de la valeur :
+
+* Les baies hybrides NetApp FAS avec Flash Pool permettent de déployer la proportion précise de mémoire Flash sur des supports rotatifs pour votre application ou votre environnement spécifique.
+* Tirez parti d'une plateforme prévalidée pour limiter les interruptions de l'activité, améliorer l'agilité DE VOTRE INFRASTRUCTURE IT et réduire le délai de déploiement à quelques semaines, contre plusieurs mois auparavant.
+* Réduire le temps d'administration et le coût total de possession de 50 %.
+* Répondre aux exigences de performances matérielles en constante augmentation des charges de travail du data Center, voire les dépasser
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html["FlexPod Datacenter avec Oracle RAC sur Oracle Linux"^]

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vsphere-design.html 
+keywords: flexpod, cisco, data, center, vmware, vsphere, 
+summary: 'Ce document présente la solution FlexPod de Cisco et NetApp, une approche validée pour le déploiement des technologies Cisco et NetApp en tant qu"infrastructure cloud partagée.' 
+---
+= Centre de données FlexPod avec VMware vSphere 6.7 U1, structure de quatrième génération Cisco UCS et système AFF a-Series NetApp - Design
+:allow-uri-read: 
+
+
+John George, Cisco Sree Lakshmi Lanka, NetApp
+
+Ce document présente la solution FlexPod de Cisco et NetApp, une approche validée pour le déploiement des technologies Cisco et NetApp en tant qu'infrastructure cloud partagée. Cette conception validée fournit une structure pour le déploiement de VMware vSphere, la plateforme de virtualisation la plus populaire dans les data centers d'entreprise, sur FlexPod.
+
+L'infrastructure intégrée de pointe FlexPod prend en charge un large éventail de charges de travail et d'utilisations. Cette solution permet aux clients de déployer rapidement et de manière fiable un cloud privé basé sur VMware vSphere sur une infrastructure intégrée.
+
+L'architecture de solution recommandée repose sur Cisco Unified Computing System (Cisco UCS) avec la version logicielle unifiée pour prendre en charge les plateformes matérielles Cisco UCS, notamment les serveurs lames Cisco UCS B-Series et les serveurs rack C-Series, les interconnexions de fabric Cisco UCS 6454, les commutateurs Cisco Nexus 9000 Series, les commutateurs Fibre Channel Cisco MDS, Et les baies de stockage NetApp 100 % Flash. De plus, il inclut VMware vSphere 6.7 Update 1, qui offre un certain nombre de nouvelles fonctionnalités permettant d'optimiser l'utilisation du stockage et de faciliter le déploiement d'un cloud privé.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html["Centre de données FlexPod avec VMware vSphere 6.7 U1, structure de quatrième génération Cisco UCS et système AFF a-Series NetApp - Design"^]

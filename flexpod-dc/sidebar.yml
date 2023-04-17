@@ -27,34 +27,32 @@ entries:
     url: "/flexpod-dc/sm-bcs-conclusion.html"
   - title: Où trouver des informations supplémentaires et l'historique des versions
     url: "/flexpod-dc/sm-bcs-where-to-find-additional-information-and-version-history.html"
-- title: 'FlexPod Datacenter avec VMware vSphere 7.0, Cisco VXLAN structure sur site
-    unique et NetApp ONTAP 9.7 : Guide de conception'
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html
-- title: FlexPod Datacenter avec VMware vSphere 7.0 et NetApp ONTAP 9.7
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html
+- title: Conception du data Center FlexPod avec VMware vSphere 7.0, Cisco VXLAN Single-site
+    Fabric et NetApp ONTAP 9.7
+  url: "/flexpod-dc/fpd-vxlan-design.html"
+- title: Déploiement de FlexPod Datacenter avec VMware vSphere 7.0 et NetApp ONTAP
+    9.7
+  url: "/flexpod-dc/fpd-vsphere-deploy.html"
 - title: 'FlexPod Datacenter avec NetApp ONTAP 9.7, Cisco Intersight et VMware vSphere
     6.7 U3 : conception'
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+  url: "/flexpod-dc/fpd-cisco-vm-vs-design.html"
 - title: 'FlexPod Datacenter avec NetApp ONTAP 9.7, Cisco Intersight et VMware vSphere
     6.7 U3 : déploiement'
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html
-- title: Guide de design de FlexPod Datacenter avec Cisco Intersight et NetApp ONTAP
-    9.7
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+  url: "/flexpod-dc/fpd-cisco-vm-vs-deploy.html"
+- title: FlexPod Datacenter avec Cisco Intersight et NetApp ONTAP 9.7 - conception
+  url: "/flexpod-dc/fpd-inter-design.html"
 - title: FlexPod Datacenter avec NetApp ONTAP 9.6, Cisco UCS 4e génération, VMware
     vSphere 6.7U2 (CVD)
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html
-- title: FlexPod Datacenter avec VMware vSphere 6.7 U1, Cisco UCS de 4e génération
-    et systèmes NetApp AFF A-Series - Design
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html
-- title: FlexPod Datacenter avec VMware vSphere 6.7 U1, Cisco UCS de 4e génération
-    et systèmes NetApp AFF A-Series - déploiement
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html
-- title: Introduction à la technologie NVMe de bout en bout pour FlexPod
-  url: https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html
-- title: Guide de design de FlexPod Datacenter avec Cisco ACI Multi-Pod, NetApp MetroCluster
+  url: "/flexpod-dc/fpd-cisco-vsphere.html"
+- title: Centre de données FlexPod avec VMware vSphere 6.7 U1, Cisco UCS de quatrième
+    génération et NetApp AFF a-Series - Design
+  url: "/flexpod-dc/fpd-cisco-vsphere-design.html"
+- title: Centre de données FlexPod avec VMware vSphere 6.7 U1, Cisco UCS de quatrième
+    génération et NetApp AFF a-Series - déployer
+  url: "/flexpod-dc/fpd-cisco-vsphere-deploy.html"
+- title: Design de FlexPod Datacenter avec Cisco ACI Multi-Pod, NetApp MetroCluster
     IP et VMware vSphere 6.7
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html
-- title: Guide de déploiement de FlexPod Datacenter avec Cisco ACI Multi-Pod, NetApp
-    MetroCluster IP et VMware vSphere 6.7
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html
+  url: "/flexpod-dc/fpd-mcc-vsphere-design.html"
+- title: Centre de données FlexPod avec Cisco ACI Multi-Pod, NetApp MetroCluster IP
+    et VMware vSphere 6.7 – déployer
+  url: "/flexpod-dc/fpd-mcc-vsphere-deploy.html"

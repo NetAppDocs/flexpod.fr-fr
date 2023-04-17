@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vm-vs-deploy.html 
+keywords: flexpod, data, center, cisco, intersight, ontap, deployment 
+summary: La tendance actuelle du secteur dans le domaine de la conception de data centers concerne les infrastructures partagées. 
+---
+= FlexPod Datacenter avec Cisco Intersight et NetApp ONTAP 9.7 : déploiement
+:allow-uri-read: 
+
+
+John George, Cisco Scott Kovacs, NetApp
+
+La tendance actuelle du secteur dans le domaine de la conception de data centers concerne les infrastructures partagées. Grâce à la virtualisation et aux plateformes INFORMATIQUES prévalidées, les entreprises se sont lancées dans la transition vers le cloud en s'éloignant des silos d'applications et en se muant vers une infrastructure partagée qui peut être déployée rapidement, améliorant ainsi l'agilité et réduisant les coûts. Cisco et NetApp se sont associés pour proposer FlexPod, qui utilise les meilleurs composants de stockage, de serveur et de réseau pour servir de base à un large éventail de charges de travail. Les designs d'architecture efficaces peuvent être déployés rapidement et en toute confiance.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html["FlexPod Datacenter avec Cisco Intersight et NetApp ONTAP 9.7 : déploiement"^]

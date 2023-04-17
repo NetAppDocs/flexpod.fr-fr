@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: vdi/fpd-vmw-horiz.html 
+keywords: flexpod, cisco, ucs, aff, a300, ontap, data, vmware, vsphere, horizon 
+summary: 'Ce document fournit un guide de design et une architecture de référence pour les charges de travail de 5000 à 6000 postes de travail ainsi que l"environnement d"end-user computing sur FlexPod Datacenter avec Cisco UCS et NetApp AFF A300 et le logiciel de gestion des données NetApp ONTAP.' 
+---
+= FlexPod Datacenter avec VMware Horizon View 7.10, VMware vSphere 6.7 U2, Cisco UCS Manager 4.0 et NetApp ONTAP 9.6 pour un maximum de 6 6700 postes
+:allow-uri-read: 
+
+
+Vadim Lebedev, Cisco Suresh Thoppay, NetApp
+
+Ce document fournit un guide de design et une architecture de référence pour les charges de travail de 5000 à 6000 postes de travail ainsi que l'environnement d'end-user computing sur FlexPod Datacenter avec Cisco UCS et NetApp AFF A300 et le logiciel de gestion des données NetApp ONTAP. La solution comprend les sessions RDS sur serveur VMware Horizon Windows Server 2019, les postes de travail virtuels de clone permanent VMware Horizon Microsoft Windows 10 et les postes de travail virtuels Microsoft Windows 10 de clone instantané et non persistants VMware Horizon sur VMware vSphere 6.7U2
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html["FlexPod Datacenter avec VMware Horizon View 7.10, VMware vSphere 6.7 U2, Cisco UCS Manager 4.0 et NetApp ONTAP 9.6 pour un maximum de 6 6700 postes"^]

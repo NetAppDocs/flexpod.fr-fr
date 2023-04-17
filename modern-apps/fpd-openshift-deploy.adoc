@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: modern-apps/fpd-openshift-deploy.html 
+keywords:  
+summary: Red Hat OpenShift est une plateforme de conteneurs Kubernetes pour entreprise qui gère les déploiements de cloud hybride et multicloud. 
+---
+= FlexPod Datacenter pour OpenShift Container Platform 4 : déploiement
+:allow-uri-read: 
+
+
+Haseeb Niazi, Cisco Alan Cowles, NetApp
+
+Red Hat OpenShift est une plateforme de conteneurs Kubernetes pour entreprise qui gère les déploiements de cloud hybride et multicloud. Red Hat OpenShift Container Platform comprend tous les éléments nécessaires pour le cloud hybride, les conteneurs d'entreprise, ainsi que le développement et les déploiements Kubernetes. Il comprend un système d'exploitation Linux haute performance, un service d'exécution de conteneurs, une mise en réseau, une surveillance, un registre de conteneurs, des solutions d'authentification et d'autorisation.
+
+L'association de Red Hat OpenShift à la solution FlexPod Datacenter simplifie le déploiement et la gestion de l'infrastructure de conteneurs. Les clients peuvent bénéficier d'une efficacité accrue, d'une meilleure protection des données, d'une réduction des risques et de la flexibilité nécessaire pour faire évoluer cette pile d'infrastructure haute disponibilité afin de répondre aux nouveaux besoins de l'entreprise. L'approche de solution convergée prévalidée permet aux entreprises d'atteindre la vitesse, la flexibilité et l'évolutivité requises pour toutes leurs initiatives de modernisation des applications et de transformation digitale.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html["FlexPod Datacenter pour OpenShift Container Platform 4 : déploiement"^]

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: vdi/fpd-citrix-vir.html 
+keywords: flexpod, cisco, data, center, citrix, virtual, apps, vmware, vsphere 
+summary: 'Ce document fournit l"architecture et la conception d"une infrastructure de postes de travail virtuels pour un maximum de 6000 utilisateurs finaux.' 
+---
+= FlexPod Datacenter avec Citrix Virtual Apps & Desktops 1912 LTSR et VMware vSphere 7 jusqu'à 6 6000 postes
+:allow-uri-read: 
+
+
+Jeff Nichols, Cisco Suresh Thoppay, NetApp Dre Jackson, NetApp
+
+Ce document fournit l'architecture et la conception d'une infrastructure de postes de travail virtuels pour un maximum de 6000 utilisateurs finaux. La solution est virtualisée sur des serveurs lames Cisco UCS B200 M5 de cinquième génération en démarrant VMware vSphere 7.01 Update 1 via un SAN FC à partir de la baie de stockage AFF A400. Les postes de travail virtuels sont optimisés avec Citrix Provisioning Server 1912 LTSR et Citrix RDS/Citrix Virtual Apps & Desktops 1912 LTSR, avec un mélange de postes de travail partagés hébergés par RDS (6000), de postes de travail virtuels regroupés et/ou non persistants sous Windows 10 (5000), Et des postes de travail Windows 10 virtuels hébergés en permanence, provisionnés avec Citrix machine Creation Services (5000) pour prendre en charge le nombre d'utilisateurs. Le cas échéant, ce document fournit des recommandations sur les meilleures pratiques et des instructions de dimensionnement pour le déploiement de cette solution par les clients.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_ctx1912esxi7u1_flexpodV2.html["FlexPod Datacenter avec Citrix Virtual Apps  ; Desktops 1912 LTSR et VMware vSphere 7 jusqu'à 6 6000 postes"^]

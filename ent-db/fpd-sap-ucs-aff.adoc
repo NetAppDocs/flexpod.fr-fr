@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-ucs-aff.html 
+keywords: flexpod, cisco, data, center, sap, ucs, aff, a-series, tdi, tailored, design 
+summary: 'Ce document présente la solution FlexPod de Cisco et NetApp, une approche validée pour le déploiement des environnements SAP HANA TDI (Tailored Data Center Integration).' 
+---
+= Centre de données FlexPod pour la solution SAP avec Cisco UCS Manager 4.0 et NetApp AFF A-Series - Design
+:allow-uri-read: 
+
+
+Pramod Ramamurthy, Cisco Marco Schoen, NetApp
+
+Ce document présente la solution FlexPod de Cisco et NetApp, une approche validée pour le déploiement des environnements SAP HANA TDI (Tailored Data Center Integration). Cette conception validée fournit des instructions et un cadre pour l'implémentation de SAP HANA avec les bonnes pratiques de Cisco et NetApp.
+
+L'infrastructure intégrée de pointe FlexPod prend en charge un large éventail de charges de travail et d'utilisations. Cette solution vous permet de déployer SAP HANA rapidement et de manière fiable avec un modèle de mode d'intégration de data Center sur mesure.
+
+L'architecture de solution recommandée repose sur Cisco Unified Computing System (Cisco UCS) à l'aide d'une version logicielle unifiée qui prend en charge les plateformes matérielles Cisco UCS incluant les composants suivants :
+
+* Les serveurs lames Cisco UCS B-Series et les serveurs rack Cisco UCS C-Series peuvent être configurés avec l'option du module de mémoire persistante Intel Optane Data Center (DCPMM)
+* Cisco UCS 6300 Series Fabric Interconnect
+* Commutateurs Cisco Nexus série 9000
+* Baies de stockage de la gamme 100 % Flash de NetApp
+
+
+En outre, ce document fournit des validations pour Red Hat Enterprise Linux et SUSE Linux Enterprise Server pour SAP HANA.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html["Centre de données FlexPod pour la solution SAP avec Cisco UCS Manager 4.0 et NetApp AFF A-Series - Design"^]
