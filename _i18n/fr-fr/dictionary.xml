@@ -8436,7 +8436,6 @@
   <block id="5c90847404629f1a208160217f5678bb" category="admonition">Les metrics de performance ci-dessus ne sont disponibles que pour les baies de stockage contrôlées par le biais de NetApp Active IQ Unified Manager 9.9 ou version ultérieure.</block>
   <block id="558ab0bef1894a7a726109d36632d09d" category="section-title">Problèmes connus</block>
   <block id="e8c4ec43528d3a582dd7b32616a88eb9" category="list-text">Pour que toutes les cibles revendiquées puissent être correctement exécutées, il faut au moins une version AIQUM de 9.11 pour que les requêtes d'interopérabilité du système intégré FlexPod soient exécutées.</block>
-  <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">La page vérifications de l'inventaire du stockage ne s'affichera pas si le cluster ONTAP est ajouté à AIQ-UM à l'aide d'un FQDN. Les utilisateurs doivent ajouter des clusters ONTAP à AIQ-UM à l'aide d'une adresse IP.</block>
   <block id="e7114cd6ec011855ffed323eb8d029e1" category="summary">Vérifier que vous répondez aux exigences en matière de matériel, de logiciels et de licences pour l'intégration du stockage NetApp ONTAP avec Cisco InterSight.</block>
   <block id="630e5660de352108f57840f67c4ce73b" category="section-title">Configuration matérielle et logicielle requise</block>
   <block id="ddaa10f367f08c048c3fc03da8eaf89e" category="paragraph">Il s'agit des composants matériels et logiciels minimum requis pour implémenter la solution. Ils peuvent varier selon la mise en œuvre de la solution et les besoins du client.</block>
@@ -9772,4 +9771,12 @@
   <block id="b3e0099b048c24efc807f9dd8dad5387" category="sidebar">FlexPod Datacenter avec IBM Cloud Private, Cisco UCS Manager, NetApp ONTAP 9.3 AFF et VMware vSphere 6.5U1 : conception</block>
   <block id="2834c2489e66234d739bc68190c533f8" category="sidebar">FlexPod Datacenter pour le cloud hybride avec Cisco CloudCenter et NetApp Private Storage : conception</block>
   <block id="0a60298d1cecc2b46fc00c3b49fad269" category="sidebar">FlexPod Datacenter pour le cloud hybride avec Cisco CloudCenter et NetApp Private Storage - déployer</block>
+  <block id="904837c9cf9bc52a96ce17d051fddec9" category="section-title">Avril 2023</block>
+  <block id="4616e97717152ad6ebe9ea5b5148926e" category="list-text">Ajout des onglets protection Policies (SnapMirror) et Snapshot Policies dans la page Policies de la section Inventory de l'interface utilisateur.</block>
+  <block id="70d106565a3a540dfd0f8bab83e76a38" category="list-text">Ajout de la page clients NFS sous la section Inventaire de l'interface utilisateur.</block>
+  <block id="8e0535294f5f33af426f147791172241" category="list-text">Ajout de la colonne protégé dans la page machines virtuelles de stockage sous la section Inventaire de l'interface utilisateur.</block>
+  <block id="bde3fb96ef210104acac308d66ce1c9a" category="list-text">Modification du mode de rapport et d'affichage des informations de réduction des données.</block>
+  <block id="33f06c93ff0e249c6d028973d21932bc" category="list-text">Ajout des onglets local Tier et Cloud Tier sous la page tiers dans la section Inventaire de l'interface utilisateur.</block>
+  <block id="cebb5bee9f2c3fd7a29eb3a7ad7f1530" category="list-text">La colonne nœud s'affiche désormais après la colonne Nom sous la page ports de la section Inventaire de l'interface utilisateur.</block>
+  <block id="59829409d4681e66c64ba39915db7b13" category="list-text">La page vérifications de l'inventaire de stockage ne s'affiche pas si le cluster ONTAP est ajouté à AIQUM à l'aide d'un nom de domaine complet. Les utilisateurs doivent ajouter des clusters ONTAP à AIQUM à l'aide d'une adresse IP.</block>
 </blocks>

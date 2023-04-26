@@ -17,6 +17,18 @@ Cette section répertorie les nouvelles fonctionnalités disponibles pour Cisco 
 
 
 
+== Avril 2023
+
+* Ajout des onglets protection Policies (SnapMirror) et Snapshot Policies dans la page Policies de la section Inventory de l'interface utilisateur.
+* Ajout de la page clients NFS sous la section Inventaire de l'interface utilisateur.
+* Ajout de la colonne protégé dans la page machines virtuelles de stockage sous la section Inventaire de l'interface utilisateur.
+* Modification du mode de rapport et d'affichage des informations de réduction des données.
+* Ajout des onglets local Tier et Cloud Tier sous la page tiers dans la section Inventaire de l'interface utilisateur.
+* La colonne nœud s'affiche désormais après la colonne Nom sous la page ports de la section Inventaire de l'interface utilisateur.
+
+
+
+
 == Janvier 2023
 
 
@@ -126,5 +138,5 @@ NOTE: Les metrics de performance ci-dessus ne sont disponibles que pour les baie
 * Si vous utilisez AIQUM 9.11 ou une version antérieure, toute vérification effectuée par l'onglet « interopérabilité » de la page « systèmes intégrés » ne permettra pas de distinguer précisément les composants IMM et UCSM Cisco. Pour résoudre ce problème, passez à AIQUM 9.12 pour vous assurer que tous les composants sont correctement identifiés.
 * Pour garantir que les données d'inventaire du stockage Intersight ne sont pas affectées pendant le processus de collecte des données, tous les clusters ONTAP non pris en charge (c'est-à-dire les versions inférieures à ONTAP 9.7P1) doivent être supprimés de l'application Active IQ Unified Manager (AIQUM).
 * Pour que toutes les cibles revendiquées puissent être correctement exécutées, il faut au moins une version AIQUM de 9.11 pour que les requêtes d'interopérabilité du système intégré FlexPod soient exécutées.
-* La page vérifications de l'inventaire du stockage ne s'affichera pas si le cluster ONTAP est ajouté à AIQ-UM à l'aide d'un FQDN. Les utilisateurs doivent ajouter des clusters ONTAP à AIQ-UM à l'aide d'une adresse IP.
+* La page vérifications de l'inventaire de stockage ne s'affiche pas si le cluster ONTAP est ajouté à AIQUM à l'aide d'un nom de domaine complet. Les utilisateurs doivent ajouter des clusters ONTAP à AIQUM à l'aide d'une adresse IP.
 
