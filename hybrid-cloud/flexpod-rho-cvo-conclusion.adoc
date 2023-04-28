@@ -15,6 +15,7 @@ summary: 'Avec cette solution, nous avons mis en œuvre un plan de protection po
 
 link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["Précédente : restauration d'applications avec sauvegardes distantes."]
 
+[role="lead"]
 Avec cette solution, nous avons mis en œuvre un plan de protection pour les applications conteneurisées qui sont exécutées sur FlexPod et AWS à l'aide du portefeuille NetApp Astra. NetApp Astra Control Center et Astra Trident, ainsi que Cloud Volumes ONTAP, Red Hat OpenShift et l'infrastructure FlexPod, ont constitué les principaux composants de cette solution.
 
 Nous avons démontré la protection des applications en capturant des snapshots et en exécutant des sauvegardes complètes afin de restaurer les applications sur différents clusters K8s exécutés sur les environnements cloud et sur site.

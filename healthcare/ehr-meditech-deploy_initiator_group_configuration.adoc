@@ -13,6 +13,7 @@ summary: 'Lorsque vous utilisez FC en tant que protocole de réseau de données,
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Lorsque vous utilisez FC en tant que protocole de réseau de données, vous créez deux groupes initiateurs sur chaque contrôleur de stockage. Le premier groupe initiateur contient les WWPN des cartes d'interface hôte FC sur les serveurs VMware ESXi qui hébergent les VM hôte MEDITECH (igroup pour MEDITECH).
 
 Vous devez définir le type de système d'exploitation MEDITECH igroup en fonction de la configuration de l'environnement. Par exemple :

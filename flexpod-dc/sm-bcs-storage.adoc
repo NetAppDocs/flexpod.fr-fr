@@ -15,6 +15,7 @@ summary: La configuration du stockage pour la solution FlexPod SM-BC suit les me
 
 link:sm-bcs-network.html["Précédent : validation de la solution - réseau."]
 
+[role="lead"]
 La configuration du stockage pour la solution FlexPod SM-BC suit les meilleures pratiques typiques des solutions FlexPod sur chaque site. Pour le peering de clusters et la réplication des données de SM-BC, ils utilisent les liaisons intersites établies entre les commutateurs FlexPod sur les deux sites. Les sections suivantes mettent en évidence certaines des connexions et configurations utilisées pour la validation.
 
 

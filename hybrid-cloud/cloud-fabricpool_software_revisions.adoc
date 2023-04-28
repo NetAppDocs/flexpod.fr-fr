@@ -13,6 +13,7 @@ summary: Le tableau suivant illustre les versions validées du matériel et du l
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Le tableau suivant illustre les versions matérielles et logicielles validées.
 
 |===

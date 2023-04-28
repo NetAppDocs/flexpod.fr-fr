@@ -13,6 +13,7 @@ summary: Cette section présente les principales fonctionnalités du logiciel de
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section présente les principales fonctionnalités du logiciel de gestion des données NetApp ONTAP, ainsi que les outils pour Cisco UCS et Cisco Nexus que vous pouvez utiliser pour protéger et récupérer efficacement contre les attaques par ransomware.
 
 

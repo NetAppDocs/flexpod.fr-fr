@@ -13,6 +13,7 @@ summary: 'Cette section décrit les procédures détaillées d"installation de V
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit les procédures détaillées d'installation de VMware vCenter Server 6.7 dans une configuration FlexPod Express.
 
 

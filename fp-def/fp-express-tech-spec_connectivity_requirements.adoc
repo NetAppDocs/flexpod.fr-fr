@@ -13,6 +13,7 @@ summary: Cette section décrit les conditions de connectivité requises pour les
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit les conditions de connectivité requises pour les différentes versions de FlexPod Express.
 
 

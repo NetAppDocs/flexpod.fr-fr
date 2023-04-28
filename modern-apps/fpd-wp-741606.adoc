@@ -8,6 +8,7 @@ summary:
 :allow-uri-read: 
 
 
+[role="lead"]
 Ce document décrit les performances de l'hyperviseur VMware ESXi et de VMware Horizon avec la solution NVIDIA Tesla P4, P6 et P40 sur serveurs rack Cisco UCS C240 M5 et serveurs lames B200 M5.
 
 link:https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/desktop-virtualization-solutions-vmware-horizon-view/whitepaper-c11-741606.pdf["Visualisation graphique 3D avec VMware et NVIDIA sur Cisco UCS - Livre blanc"^]

@@ -8,6 +8,7 @@ summary: FlexPod Express propose une solution simple et efficace qui repose sur 
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express propose une solution simple et efficace qui repose sur des composants de pointe. FlexPod Express peut être adapté à des besoins spécifiques en faisant évoluer et en proposant des options de plateforme d'hyperviseur. FlexPod Express a été conçu pour répondre aux besoins des moyennes entreprises, des bureaux distants, des succursales et d'autres entreprises qui ont besoin de solutions dédiées.
 
 link:express-c-series-aff220-design_where_to_find_additional_information.html["Suivant : où trouver des informations supplémentaires ?"]

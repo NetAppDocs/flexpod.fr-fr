@@ -13,6 +13,7 @@ summary: 'Les solutions de stockage NetApp déployées pour les environnements l
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les solutions de stockage NetApp déployées pour les environnements logiciels MEDITECH utilisent des contrôleurs de stockage et une configuration de paires haute disponibilité. Le stockage doit être présenté des deux contrôleurs aux serveurs de base de données MEDITECH via le protocole FC. La configuration présente le stockage des deux contrôleurs afin d'équilibrer uniformément la charge applicative pendant le fonctionnement normal.
 
 

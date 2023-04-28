@@ -15,6 +15,7 @@ summary: 'Cette section décrit l"exécution de la sortie ./gatk.'
 
 link:flexpod-genomics-appendix-a.html["Précédent : sortie pour l'exécution de GATK à l'aide du fichier jar."]
 
+[role="lead"]
 L'exécution de GATK à l'aide de l' `./gatk` le script a produit l'exemple de sortie suivant.
 
 ....

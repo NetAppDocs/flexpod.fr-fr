@@ -13,6 +13,7 @@ summary: Le câblage de la validation de référence est décrit dans les tablea
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Le câblage de la validation de référence est décrit dans les tableaux suivants.
 
 Le tableau suivant répertorie les informations de câblage du commutateur Cisco Nexus 31108PCV A.

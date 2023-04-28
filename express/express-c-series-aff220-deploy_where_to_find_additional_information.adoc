@@ -13,6 +13,7 @@ summary: 'Pour plus d"informations, consultez le site Web de NetApp et le Guide 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Pour en savoir plus sur les informations fournies dans ce document, consultez ces documents et/ou sites web :
 
 * Documentation des produits NetApp

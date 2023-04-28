@@ -10,6 +10,7 @@ summary: 'Ce document contient des instructions détaillées de configuration et
 
 Haseeb Niazi, Cisco David Arnette, NetApp
 
+[role="lead"]
 Ce document contient des instructions détaillées de configuration et d'implémentation pour la configuration de FlexPod Datacenter pour le cloud hybride. Les éléments de conception suivants distinguent cette version de FlexPod des modèles précédents :
 
 * Intégration de Cisco CloudCenter avec FlexPod Datacenter avec l'ACI comme Cloud privé

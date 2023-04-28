@@ -15,6 +15,7 @@ summary: 'Cette page répertorie les 11 procédures nécessaires à la mise en �
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Précédent : déploiement automatisé du stockage NetApp dans le cloud hybride."]
 
+[role="lead"]
 Les étapes sont les suivantes :
 
 . Définir le flux de travail.

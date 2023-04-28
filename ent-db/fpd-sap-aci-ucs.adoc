@@ -10,6 +10,7 @@ summary: 'Ce document présente les procédures d"architecture et de déploiemen
 
 Pramod Ramamurthy, Cisco Marco Schoen, NetApp
 
+[role="lead"]
 Ce document présente les procédures d'architecture et de déploiement de l'option SAP HANA Tailored datacenter Integration sur une infrastructure FlexPod, qui se compose des éléments suivants :
 
 * Cisco UCS Computing System (Cisco UCS) pris en charge par la deuxième génération de processeurs Intel Xeon Scalable.

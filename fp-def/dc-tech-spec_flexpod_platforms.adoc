@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Il existe deux plateformes FlexPod :
 
 * *FlexPod Datacenter* cette plateforme est une infrastructure de data Center virtuel extrêmement évolutive et adaptée aux charges de travail des applications d'entreprise, de la virtualisation, de l'infrastructure de postes de travail virtuels (VDI) et des clouds publics, privés et hybrides.

@@ -13,6 +13,7 @@ summary: 'Cette section décrit comment les données d"un utilisateur final peuv
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit comment les données d'un utilisateur final peuvent être récupérées en cas d'attaque et comment empêcher les attaques à l'aide d'un système FlexPod.
 
 

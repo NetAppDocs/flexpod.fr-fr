@@ -8,6 +8,7 @@ summary: 'Les technologies répertoriées dans cette section ont été choisies 
 :allow-uri-read: 
 
 
+[role="lead"]
 Les technologies répertoriées dans cette section ont été choisies au cours de la phase de conception architecturale. Chaque technologie répond à un usage spécifique de la solution d'infrastructure FlexPod Express.
 
 

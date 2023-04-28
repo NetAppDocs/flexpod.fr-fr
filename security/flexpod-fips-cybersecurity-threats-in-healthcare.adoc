@@ -15,6 +15,7 @@ summary: 'Les menaces pour les soins de santé sont multidimensionnelles dans la
 
 link:flexpod-fips-introduction.html["Précédent : introduction."]
 
+[role="lead"]
 Chaque problème représente une nouvelle opportunité : la pandémie de COVID donne un exemple. Selon un https://www.hhs.gov/sites/default/files/2020-hph-cybersecurty-retrospective-tlpwhite.pdf["rapport"^] Par le programme de cybersécurité du ministère de la Santé et des Services sociaux (HHS), la réponse de la COVID a entraîné l'augmentation du nombre d'attaques par ransomware. Il y avait 6,000 nouveaux domaines Internet enregistrés juste au cours de la troisième semaine de mars 2020. Plus de 50 % des domaines ont hébergé des programmes malveillants. Les attaques par ransomware étaient responsables de près de 50 % de l'ensemble des violations de données de santé en 2020 et touchent plus de 630 organismes de santé et environ 29 millions de dossiers médicaux. Dix-neuf béchers/sites ont doublé l'extorsion. Avec un taux de 24.5 %, le secteur de la santé a été considéré comme la plus forte violation de données en 2020.
 
 Les agents malveillants ont tenté de violer la sécurité et la confidentialité des informations médicales protégées (PHI) en vendant ces informations ou en menaçant de les détruire ou de les exposer. Des tentatives ciblées et de diffusion en masse sont fréquemment effectuées pour obtenir un accès non autorisé à l'ePHI. Environ 75 % des dossiers patient exposés au cours de la seconde moitié de 2020 étaient dus à des relations professionnelles compromises.

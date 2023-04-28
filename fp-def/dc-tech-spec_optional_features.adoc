@@ -13,6 +13,7 @@ summary: NetApp prend en charge plusieurs composants facultatifs pour améliorer
 :imagesdir: ./../media/
 
 
+[role="lead"]
 NetApp prend en charge plusieurs composants facultatifs pour améliorer encore les architectures FlexPod Datacenter. Les composants facultatifs sont décrits dans les sous-sections suivantes.
 
 

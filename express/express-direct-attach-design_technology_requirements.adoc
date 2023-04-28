@@ -8,6 +8,7 @@ summary: 'Un système FlexPod Express nécessite une combinaison de composants m
 :allow-uri-read: 
 
 
+[role="lead"]
 Un système FlexPod Express nécessite une combinaison de composants matériels et logiciels. FlexPod Express décrit également les composants matériels requis pour ajouter des nœuds d'hyperviseur au système par unités de deux.
 
 

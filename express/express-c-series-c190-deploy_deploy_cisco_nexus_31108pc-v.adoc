@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit en détail la configuration du commutateur Cisco Nexus 331108PC-V utilisée dans un environnement FlexPod Express.
 
 

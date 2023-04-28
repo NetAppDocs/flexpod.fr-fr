@@ -13,6 +13,7 @@ summary: 'Avant de pouvoir joindre un magasin d"objets à un agrégat, il doit �
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Avant de pouvoir joindre un magasin d'objets à un agrégat, il doit être ajouté à et identifié par ONTAP. Cette tâche peut être effectuée avec OnCommand System Manager ou l'interface de ligne de commandes de ONTAP.
 
 FabricPool prend en charge Amazon S3, IBM Object Cloud Storage et les magasins d'objets Microsoft Azure Blob Storage en tant que tiers cloud.

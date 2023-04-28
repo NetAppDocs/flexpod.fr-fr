@@ -10,6 +10,7 @@ summary: 'Ce document présente la solution FlexPod de Cisco et NetApp, une appr
 
 Pramod Ramamurthy, Cisco Marco Schoen, NetApp
 
+[role="lead"]
 Ce document présente la solution FlexPod de Cisco et NetApp, une approche validée pour le déploiement des environnements SAP HANA TDI (Tailored Data Center Integration). Cette conception validée fournit des instructions et un cadre pour l'implémentation de SAP HANA avec les bonnes pratiques de Cisco et NetApp.
 
 L'infrastructure intégrée de pointe FlexPod prend en charge un large éventail de charges de travail et d'utilisations. Cette solution vous permet de déployer SAP HANA rapidement et de manière fiable avec un modèle de mode d'intégration de data Center sur mesure.

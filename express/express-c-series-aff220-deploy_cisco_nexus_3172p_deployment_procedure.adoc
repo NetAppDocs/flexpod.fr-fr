@@ -13,6 +13,7 @@ summary: La section suivante décrit la configuration du commutateur Cisco Nexus
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La section suivante décrit la configuration du commutateur Cisco Nexus 3172P utilisée dans un environnement FlexPod Express.
 
 

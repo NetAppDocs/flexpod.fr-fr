@@ -10,6 +10,7 @@ summary: 'Ce document présente l"architecture de référence pour la conception
 
 Vadim Lebedev, Cisco Chris Rodriguez, NetApp
 
+[role="lead"]
 Ce document présente l'architecture de référence pour la conception d'applications et de postes de travail virtuels à l'aide de Citrix XenApp/XenDesktop 7.15 basé sur Cisco UCS avec FAS un système de stockage NetApp AFF A300 et la plateforme d'hyperviseur VMware vSphere ESXi 6.5.
 
 L'environnement de la virtualisation des postes de travail et des applications évolue en permanence. Associés à l'infrastructure éprouvée FlexPod, les nouveaux serveurs lames Cisco UCS haute performance M5 et Cisco UCS Unified Fabric offrent AFF une plateforme plus compacte, plus puissante, plus fiable et plus efficace.

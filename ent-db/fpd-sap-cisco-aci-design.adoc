@@ -10,6 +10,7 @@ summary: 'Ce document présente la solution FlexPod intégrée de l"ACI Cisco co
 
 Pramod Ramamurthy, Cisco Marco Schoen, NetApp
 
+[role="lead"]
 Ce document présente la solution FlexPod intégrée de l'ACI Cisco comme une approche validée pour le déploiement des environnements SAP HANA TDI (Tailored Data Center Integration). Cette conception validée fournit des instructions et un cadre pour l'implémentation de SAP HANA avec les bonnes pratiques de Cisco et NetApp.
 
 L'architecture de solution recommandée repose sur Cisco Unified Computing System (Cisco UCS) à l'aide d'une version logicielle unifiée qui prend en charge les plateformes matérielles Cisco UCS incluant les composants suivants :

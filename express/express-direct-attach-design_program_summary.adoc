@@ -8,6 +8,7 @@ summary: 'Les architectures de référence FlexPod sont fournies sous la forme d
 :allow-uri-read: 
 
 
+[role="lead"]
 Cette solution FlexPod Express fait partie du programme d'infrastructure convergée FlexPod.
 
 

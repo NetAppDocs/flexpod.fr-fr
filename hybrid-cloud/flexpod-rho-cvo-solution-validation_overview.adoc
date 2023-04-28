@@ -15,6 +15,7 @@ summary: 'Dans cette section, nous revisiterons la solution en incluant plusieur
 
 link:flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html["Précédent : installation d'Astra Control Center sur OpenShift Container Platform."]
 
+[role="lead"]
 Dans cette section, nous revisiterons la solution en incluant quelques cas d'utilisation :
 
 * Restauration d'une application avec état d'une sauvegarde à distance vers un autre cluster OpenShift exécuté dans le cloud.

@@ -13,6 +13,7 @@ summary: La liste ci-dessous répertorie les conditions de connectivité requise
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Une configuration FlexPod présente les exigences de connectivité suivantes :
 
 * Tous les composants doivent utiliser un réseau de gestion hors bande Ethernet 100 Mbit/s distinct.

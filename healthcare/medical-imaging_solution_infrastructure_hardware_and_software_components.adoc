@@ -13,6 +13,7 @@ summary: 'Les tableaux ci-après répertorient les composants matériels et logi
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les tableaux ci-après répertorient les composants matériels et logiciels, respectivement, de l'infrastructure FlexPod pour le système d'imagerie médicale.
 
 |===

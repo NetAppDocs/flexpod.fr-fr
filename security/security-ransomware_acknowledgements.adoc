@@ -13,6 +13,7 @@ summary: 'L"auteur tient à remercier les personnes suivantes pour leur contribu
 :imagesdir: ./../media/
 
 
+[role="lead"]
 L'auteur tient à remercier les personnes suivantes pour leur soutien à la création de ce document :
 
 * Jorge Gomez Navarret, NetApp

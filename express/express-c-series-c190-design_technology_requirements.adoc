@@ -8,6 +8,7 @@ summary: 'FlexPod Express requiert une combinaison de composants matériels et l
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express requiert une combinaison de composants matériels et logiciels qui dépend de l'hyperviseur et de la vitesse réseau sélectionnés. En outre, FlexPod Express dispose des composants matériels requis pour ajouter des nœuds d'hyperviseur au système par unités deux.
 
 

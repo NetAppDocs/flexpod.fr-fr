@@ -15,6 +15,7 @@ summary: Une architecture FlexPod peut être conçue avec un serveur Cisco UCS c
 
 link:flexpod-fips-control-plane-versus-data-plane.html["Précédent : plan de contrôle par rapport au plan de données."]
 
+[role="lead"]
 Une architecture FlexPod peut être conçue avec un serveur Cisco UCS conforme à la norme FIPS 140-2-2. Conformément à la norme U. S. Le serveur Cisco UCS, NIST, peut fonctionner en mode de conformité FIPS 140-2 de niveau 1. Pour obtenir la liste complète des composants Cisco compatibles FIPS, reportez-vous à la section https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=UCSM["La page FIPS 140 de Cisco"^]. Cisco UCS Manager est certifié FIPS 140-2-2.
 
 

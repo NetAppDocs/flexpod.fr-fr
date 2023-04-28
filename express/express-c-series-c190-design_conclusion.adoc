@@ -8,6 +8,7 @@ summary: 'La conception validée de FlexPod Express est une solution simple et e
 :allow-uri-read: 
 
 
+[role="lead"]
 La conception validée de FlexPod Express est une solution simple et efficace qui utilise des composants de pointe. FlexPod Express peut être adapté à des besoins métier spécifiques en faisant évoluer la plateforme d'hyperviseur et en proposant des options. Les PME, les bureaux distants, les succursales et d'autres entreprises qui ont besoin de solutions dédiées ont été conçues pour l'FlexPod Express.
 
 link:express-c-series-c190-design_where_to_find_additional_information.html["Suivant : où trouver des informations supplémentaires ?"]

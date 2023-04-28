@@ -13,4 +13,5 @@ summary: 'La transition vers le cloud varie d"une entreprise à l"autre, et mêm
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La transition vers le cloud varie d'une entreprise à l'autre, et même d'une unité commerciale à l'autre. Si certains choisissent une adoption rapide, d'autres sont plus conservatrices. FabricPool s'intègre à la stratégie cloud des entreprises, quelle que soit leur taille, et quelle que soit la vitesse d'adoption du cloud. Une démonstration encore plus poussée de l'efficacité et de l'évolutivité d'une infrastructure FlexPod.

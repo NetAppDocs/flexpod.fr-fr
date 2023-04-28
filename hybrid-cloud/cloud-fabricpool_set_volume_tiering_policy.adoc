@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Par défaut, les volumes utilisent la règle de Tiering aucun volume. Une fois la création de volume effectuée, la règle de Tiering des volumes peut être modifiée à l'aide de OnCommand System Manager ou de l'interface de ligne de commande de ONTAP.
 
 Lorsqu'il est utilisé avec FlexPod, FabricPool propose trois règles de Tiering des volumes : automatique, Snapshot uniquement et aucune.

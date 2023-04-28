@@ -15,6 +15,7 @@ summary: 'Cette section présente un résumé général du test de validation du
 
 link:nvme-vsphere-introduction.html["Précédent : introduction."]
 
+[role="lead"]
 Cette section présente un résumé général du test de validation du FC-NVMe sur FlexPod. Elle inclut à la fois l'environnement/la configuration de test et le plan de test adopté pour réaliser les tests de workloads par rapport à FC-NVMe pour FlexPod avec VMware vSphere 7.
 
 

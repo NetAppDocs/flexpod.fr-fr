@@ -13,6 +13,7 @@ summary: 'Une configuration FlexPod Datacenter présente des exigences matériel
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Une configuration FlexPod Datacenter présente des exigences matérielles minimales, y compris, mais sans s'y limiter, les commutateurs, les interconnexions de fabric, les serveurs et les contrôleurs de stockage NetApp.
 
 Vous devez utiliser des serveurs Cisco UCS. Les serveurs C-Series et B-Series ont été utilisés dans les designs validés. Les Cisco Nexus Fabric Extender (FEXs) sont disponibles en option avec des serveurs C-Series.

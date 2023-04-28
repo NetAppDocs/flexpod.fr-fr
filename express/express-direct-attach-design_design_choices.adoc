@@ -8,6 +8,7 @@ summary: 'Les technologies répertoriées sur cette page ont été choisies dura
 :allow-uri-read: 
 
 
+[role="lead"]
 Les technologies suivantes ont été choisies lors du processus de conception de l'architecture. Chaque technologie répond à un usage spécifique de la solution d'infrastructure FlexPod Express.
 
 

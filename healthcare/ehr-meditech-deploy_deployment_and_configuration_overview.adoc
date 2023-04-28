@@ -13,6 +13,7 @@ summary: Cette section présente des conseils de stockage pour le déploiement d
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Vous trouverez dans ce document des conseils sur le stockage NetApp pour le déploiement de FlexPod les éléments suivants :
 
 * Les environnements qui utilisent ONTAP

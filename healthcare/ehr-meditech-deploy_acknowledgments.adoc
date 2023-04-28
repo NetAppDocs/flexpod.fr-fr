@@ -13,6 +13,7 @@ summary: Les personnes suivantes ont contribué à la création de ce guide.
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les personnes suivantes ont contribué à la création de ce guide.
 
 * Brandon Agee, Ingénieur marketing et technique, NetApp

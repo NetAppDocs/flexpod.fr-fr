@@ -13,6 +13,7 @@ summary: 'Ce document décrit en détail la configuration d"un système FlexPod 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Ce document décrit en détail la configuration d'un système FlexPod Express entièrement redondant et hautement disponible. Pour refléter cette redondance, les composants configurés à chaque étape sont appelés composant A ou composant B. Par exemple, les contrôleurs A et B identifient les deux contrôleurs de stockage NetApp provisionnés dans ce document. Les commutateurs A et B identifient une paire de commutateurs Cisco Nexus.
 
 Ce document décrit également les étapes de provisionnement de plusieurs hôtes Cisco UCS, identifiés de manière séquentielle en tant que serveur A, serveur B, etc.

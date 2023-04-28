@@ -13,6 +13,7 @@ summary: Cette section décrit les types de charges de travail de calcul et de s
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit les types de charges de travail de calcul et de stockage que les environnements MEDITECH peuvent trouver.
 
 

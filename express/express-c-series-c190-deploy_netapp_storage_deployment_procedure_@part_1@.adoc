@@ -13,6 +13,7 @@ summary: Cette section décrit la procédure de déploiement du stockage NetApp 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit la procédure de déploiement du stockage NetApp AFF.
 
 

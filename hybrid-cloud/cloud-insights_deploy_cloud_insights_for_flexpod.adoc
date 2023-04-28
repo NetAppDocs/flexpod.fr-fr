@@ -13,6 +13,7 @@ summary: Les tâches suivantes doivent être effectuées pour déployer Cloud In
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Pour déployer la solution, vous devez effectuer les tâches suivantes :
 
 . Abonnez-vous au service Cloud Insights

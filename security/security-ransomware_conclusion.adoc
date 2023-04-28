@@ -13,6 +13,7 @@ summary: 'Les auteurs recommandent de ne pas payer une rançon en cas d"attaque,
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les ransomwares sont un produit de la criminalité organisée et ils n'ont pas d'ordre éthique. Ils peuvent s'abstenir de fournir la clé pour le décryptage même après avoir reçu la rançon. La victime perd non seulement ses données mais aussi une quantité importante d'argent et devra faire face à des conséquences liées à la perte de données de production.
 
 Selon un https://www.forbes.com/sites/leemathews/2018/03/09/why-you-should-never-pay-a-ransomware-ransom/["Article Forbes"^], seuls 19 % des victimes d'attaques par ransomware récupèrent leurs données pour autant. Par conséquent, les auteurs recommandent de ne pas payer une rançon en cas d'attaque, car cela renforce la foi de l'attaquant dans leur modèle d'entreprise.

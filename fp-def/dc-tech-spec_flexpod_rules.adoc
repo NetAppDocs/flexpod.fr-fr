@@ -13,6 +13,7 @@ summary: La conception de FlexPod permet de créer une infrastructure flexible q
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La conception de FlexPod permet de créer une infrastructure flexible qui englobe de nombreux composants et versions logicielles différents.
 
 Utilisez les jeux de règles comme guide pour construire ou assembler une configuration FlexPod valide. Les nombres et les règles indiqués dans ce document représentent le minimum requis pour une configuration de FlexPod. Elles peuvent être étendues aux familles de produits incluses, selon les besoins de divers environnements et cas d'utilisation.

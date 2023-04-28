@@ -13,6 +13,7 @@ summary: Cette section se rapporte au déploiement sur ONTAP 8.3 et versions ult
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section se rapporte au déploiement sur ONTAP 8.3 et versions ultérieures.
 
 

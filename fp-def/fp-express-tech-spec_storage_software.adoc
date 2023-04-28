@@ -13,6 +13,7 @@ summary: 'Les systèmes d"exploitation de stockage répertoriés dans cette sect
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express prend en charge les systèmes de stockage exécutant des systèmes d'exploitation NetApp ONTAP ou SANtricity.
 
 

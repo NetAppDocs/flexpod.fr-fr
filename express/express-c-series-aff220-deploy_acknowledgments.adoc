@@ -13,6 +13,7 @@ summary: Les auteurs souhaitent reconnaître certaines personnes pour leur souti
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les auteurs souhaitent reconnaître les personnes suivantes pour leur soutien et leur contribution à cette conception :
 
 * Paul Onofrietti Onotracy

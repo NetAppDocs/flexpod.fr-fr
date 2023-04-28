@@ -13,6 +13,7 @@ summary: 'FabricPool nécessite ONTAP 9.2 ou une version ultérieure et des agr�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FabricPool nécessite ONTAP 9.2 ou une version ultérieure et des agrégats SSD sur l'une des plateformes répertoriées dans cette section. D'autres exigences d'FabricPool dépendent du niveau de cloud associé. Si vous disposez de plateformes AFF d'entrée de gamme dont la capacité est fixe et relativement faible, comme le système NetApp AFF C190, FabricPool peut bénéficier d'une grande efficacité pour déplacer les données inactives vers le Tier cloud.
 
 

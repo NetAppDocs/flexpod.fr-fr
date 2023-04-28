@@ -13,6 +13,7 @@ summary: 'Pour la configuration côté hôte VMware ESXi, configurez les hôtes 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Pour la configuration côté hôte ESXi, configurez les hôtes VMware comme vous exécuteraient toute charge de travail de base de données d'entreprise :
 
 * VSC for VMware vSphere vérifie et définit les paramètres de chemins d'accès multiples de l'hôte ESXi ainsi que les paramètres de délai d'expiration de l'adaptateur HBA qui fonctionnent mieux avec les systèmes de stockage NetApp. Les valeurs des jeux de VSC sont basées sur des tests internes rigoureux menés par NetApp.

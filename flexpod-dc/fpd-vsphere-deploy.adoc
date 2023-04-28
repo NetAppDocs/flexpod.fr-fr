@@ -10,6 +10,7 @@ summary: 'Ce document présente le data Center FlexPod de Cisco et NetApp avec N
 
 John George, Cisco Sree Lakshmi Lanka, NetApp
 
+[role="lead"]
 Ce document présente le data Center FlexPod de Cisco et NetApp avec NetApp ONTAP 9.7 sur le système de stockage 100 % Flash NetApp AFF A400, le logiciel unifié Cisco UCS Manager version 4.1(2) avec processeurs évolutifs Intel Xeon de deuxième génération et VMware vSphere 7.0. Cisco UCS Manager (UCSM) 4.1(2) assure la prise en charge consolidée des éléments suivants :
 
 * Tous les modèles Cisco UCS Fabric Interconnect : 6200, 6300, 6324 (Cisco UCS Mini)

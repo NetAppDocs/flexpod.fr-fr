@@ -15,6 +15,7 @@ summary: 'Les détails de la conception et de l"implémentation de la solution F
 
 link:sm-bcs-flexpod-sm-bc-solution.html["Précédent : solution FlexPod SM-BC."]
 
+[role="lead"]
 Les détails de la conception et de l'implémentation de la solution FlexPod SM-BC dépendent des objectifs spécifiques de la configuration et de la solution FlexPod. Une fois les exigences générales de continuité de l'activité définies, la solution FlexPod SM-BC peut être créée en implémentant une toute nouvelle solution avec deux nouveaux systèmes FlexPod, en ajoutant un nouveau système FlexPod sur un autre site pour une paire avec un FlexPod existant, ou en associant deux systèmes FlexPod existants.
 
 Les solutions FlexPod étant par nature flexibles dans ses configurations, tous les composants et configurations FlexPod pris en charge peuvent être utilisés. Le reste de cette section fournit des informations sur les validations d'implémentation effectuées pour une solution d'infrastructure virtuelle basée sur VMware. À l'exception des aspects liés à SM-BC, l'implémentation suit les processus standard de déploiement FlexPod. Pour en savoir plus sur l'implémentation FlexPod, consultez les CVD et les NVA FlexPod disponibles, en fonction de vos configurations spécifiques.

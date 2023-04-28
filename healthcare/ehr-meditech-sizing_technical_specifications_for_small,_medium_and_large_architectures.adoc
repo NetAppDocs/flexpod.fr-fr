@@ -13,6 +13,7 @@ summary: Cette section présente un exemple de nomenclature pour des architectur
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section présente un exemple de nomenclature pour des architectures de stockage de différentes tailles.
 
 

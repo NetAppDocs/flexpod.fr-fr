@@ -13,6 +13,7 @@ summary: 'Les contrôleurs de stockage NetApp constituent la base du stockage de
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les contrôleurs de stockage NetApp constituent la base du stockage de l'architecture Express de FlexPod pour le stockage des données de démarrage et d'applications. Cette section répertorie les différentes options NetApp disponibles dans l'architecture FlexPod Express.
 
 

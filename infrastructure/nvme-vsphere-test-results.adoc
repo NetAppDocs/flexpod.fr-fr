@@ -15,6 +15,7 @@ summary:
 
 link:nvme-vsphere-testing-approach.html["Précédent : approche de test."]
 
+[role="lead"]
 Le test a consisté à exécuter les workloads FIO pour mesurer la performance du FC-NVMe en termes d'IOPS et de latence.
 
 Le graphique suivant illustre nos résultats lors de l'exécution d'une charge de travail de lecture aléatoire de 100 % avec des tailles de bloc de 8 Ko.

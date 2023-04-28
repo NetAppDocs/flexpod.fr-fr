@@ -10,6 +10,7 @@ summary: Docker est la plateforme de conteneurs logiciels leader du marché pour
 
 Muhammad Afzal, Cisco John George, Cisco Amit Borulkar, NetApp Uday Shetty, Docker
 
+[role="lead"]
 Docker est la plateforme de conteneurs logiciels leader du secteur pour les développeurs et les équipes IT qui peuvent créer, expédier et exécuter des applications distribuées partout. L'architecture de microservices étant en train de façonner la nouvelle génération D'IT, les entreprises qui investissent massivement dans des applications monolithiques voient en Docker une stratégie qui leur permet de moderniser leurs architectures applicatives et d'assurer la compétitivité et la rentabilité de leur entreprise. La conteneurisation offre l'agilité, le contrôle et la portabilité dont les développeurs et LES équipes IT ont besoin pour créer et déployer des applications dans n'importe quelle infrastructure. La plateforme Docker permet de créer facilement des applications distribuées dans un conteneur d'applications léger qui peut évoluer de manière dynamique, mais sans interruption. Ainsi, les applications sont portables dans les environnements de développement, de test et de production s'exécutant sur des machines physiques ou virtuelles localement, dans des data centers et sur les réseaux de différents fournisseurs de services cloud.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html["FlexPod Datacenter avec Docker Enterprise Edition pour la gestion de conteneurs"^]

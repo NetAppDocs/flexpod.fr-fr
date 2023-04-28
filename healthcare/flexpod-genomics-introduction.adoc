@@ -15,6 +15,7 @@ summary: 'La plateforme d"infrastructure convergée FlexPod permet à un établi
 
 JayaKishore Esanakula, NetApp
 
+[role="lead"]
 La génomique joue un rôle clé dans la recherche médicale et infirmière. Elle compte peu de domaines de médecine plus importants que la génomique au service de la santé et des sciences de la vie. La génomique, associée à l'imagerie médicale et à la pathologie digitale, nous permet de comprendre comment les gènes d'un patient peuvent être affectés par les protocoles de traitement. La réussite de la génomique dans le domaine de la santé dépend de plus en plus de l'interopérabilité des données à grande échelle. L'objectif final est de donner du sens aux énormes volumes de données génétiques et d'identifier des corrélations et variantes pertinentes sur le plan clinique qui améliorent le diagnostic et rendent la médecine de précision possible. La génomique nous aide à comprendre l'origine des épidémies, la façon dont les maladies évoluent et les traitements et stratégies susceptibles d'être efficaces. De toute évidence, la génomique offre de nombreux avantages qui couvrent la prévention, le diagnostic et le traitement. Les établissements de santé sont aux prises avec plusieurs défis, notamment :
 
 * Amélioration de la qualité des soins

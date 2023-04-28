@@ -13,6 +13,7 @@ summary: 'Les spécifications techniques fournissent des détails sur les compos
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les spécifications techniques fournissent des détails sur les composants matériels d'une solution FlexPod, tels que les châssis, les FEXs, les serveurs, les commutateurs, et de stockage netapp.
 
 

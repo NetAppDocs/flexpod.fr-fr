@@ -15,6 +15,7 @@ summary: 'En exécutant votre application médicale sur une plateforme FlexPod, 
 
 link:flexpod-fips-additional-flexpod-security-consideration.html["Précédent : autres considérations de sécurité FlexPod."]
 
+[role="lead"]
 En exécutant votre application médicale sur une plateforme FlexPod, votre organisme de santé est mieux protégé par une plateforme compatible FIPS 140-2. FlexPod propose une protection à plusieurs couches pour chaque composant : calcul, réseau et stockage. Les fonctionnalités de protection des données de FlexPod protègent les données au repos ou à la volée. Les sauvegardes restent sécurisées et prêtes à l'emploi, selon les besoins.
 
 Évitez les erreurs humaines en tirant parti des designs prévalidés de FlexPod soumis à des tests rigoureux d'infrastructures convergées issues du partenariat stratégique de Cisco et de NetApp. Un système FlexPod conçu et conçu pour fournir des performances prévisibles avec une faible latence des systèmes et une haute disponibilité avec un impact minimal, même lorsque la norme FIPS 140-2 est activée dans les couches de calcul, de réseau et de stockage. Cette approche permet d'améliorer l'expérience utilisateur et de bénéficier d'un temps de réponse optimal pour les utilisateurs de votre système HIT.

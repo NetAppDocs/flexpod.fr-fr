@@ -13,6 +13,7 @@ summary: 'Une architecture FlexPod doit également répondre à plusieurs exigen
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Une architecture FlexPod nécessite une interopérabilité et des exigences de support supplémentaires :
 
 * Tous les composants matériels et logiciels doivent être répertoriés et pris en charge par le système NetApp http://mysupport.netapp.com/matrix["IMT"^], le https://ucshcltool.cloudapps.cisco.com/public/["Liste de compatibilité matérielle et logicielle Cisco UCS"^], Et la matrice d'interopérabilité logicielle et matérielle Cisco UCS.

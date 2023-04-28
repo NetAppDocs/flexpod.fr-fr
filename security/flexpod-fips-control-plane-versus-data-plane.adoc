@@ -15,6 +15,7 @@ summary: 'Lors de la mise en œuvre d"une stratégie FIPS 140-2-2, il est import
 
 link:flexpod-fips-overview-of-fips-140-2.html["Précédent : présentation de la norme FIPS 140-2."]
 
+[role="lead"]
 Lors de la mise en œuvre d'une stratégie FIPS 140-2-2, il est important de comprendre ce qui est protégé. Elle peut facilement être divisée en deux zones : le plan de contrôle et le plan de données. Un plan de contrôle se réfère aux aspects ayant un impact sur le contrôle et le fonctionnement des composants au sein du système FlexPod : par exemple, accès administratif aux contrôleurs de stockage NetApp, commutateurs Cisco Nexus et serveurs Cisco UCS. La protection à cette couche est assurée par la limitation des protocoles et des gestionnaires cryptographiques que les administrateurs peuvent utiliser pour se connecter aux périphériques et apporter des modifications. Un plan de données fait référence aux informations réelles, telles que les informations médicales personnelles, dans le système FlexPod. Ces données sont protégées par chiffrement des données au repos, puis à nouveau pour la norme FIPS, garantissant ainsi que les modules de chiffrement utilisés respectent les normes.
 
 link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["Nœuds de calcul FlexPod Cisco UCS et FIPS 140-2"]

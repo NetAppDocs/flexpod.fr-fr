@@ -10,6 +10,7 @@ summary: Cisco et NetApp se sont associés pour proposer une gamme de solutions 
 
 Haseeb Niazi, Cisco Ramesh Issac, Cisco Arvind Ramakrishnan, NetApp
 
+[role="lead"]
 Cisco et NetApp se sont associés pour proposer une gamme de solutions FlexPod compatibles avec des plateformes de data Center stratégiques. La solution FlexPod propose une architecture intégrée qui intègre les meilleures pratiques de conception en matière de calcul, de stockage et de réseau. Cela permet de réduire les risques INFORMATIQUES en validant l'architecture intégrée afin d'assurer la compatibilité entre les différents composants. La solution répond également aux problématiques IT en fournissant des conseils de conception, des conseils de déploiement et un support documentés qui peuvent être utilisés à différentes étapes (planification, conception et implémentation) d'un déploiement.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html["Déploiement de FlexPod Datacenter avec Cisco ACI Multi-Pod avec NetApp MetroCluster IP et VMware vSphere 6.7"^]

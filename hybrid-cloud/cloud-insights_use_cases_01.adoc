@@ -13,6 +13,7 @@ summary: 'Grâce à l"installation et à la configuration de Cloud Insights, nou
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Grâce à l'installation et à la configuration de Cloud Insights, nous FlexPod examinons certaines des tâches que vous pouvez effectuer sur le tableau de bord afin d'évaluer et de contrôler votre environnement. Dans cette section, nous nous concentrons sur cinq cas d'utilisation principaux de Cloud Insights :
 
 * Intégration avec Active IQ

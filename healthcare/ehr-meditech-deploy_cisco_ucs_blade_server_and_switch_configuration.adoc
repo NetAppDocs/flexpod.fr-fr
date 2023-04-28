@@ -13,6 +13,7 @@ summary: 'Ce document présente des recommandations générales sur la configura
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Le logiciel FlexPod pour MEDITECH est conçu avec une tolérance aux pannes à tous les niveaux. Le système ne présente aucun point de défaillance unique. Pour des performances optimales, Cisco recommande l'utilisation de serveurs lames de rechange à chaud.
 
 Ce document présente des recommandations générales sur la configuration de base d'un environnement FlexPod pour le logiciel MEDITECH. Dans cette section, nous présentons des étapes générales incluant quelques exemples pour préparer l'élément de plateforme de calcul Cisco UCS de la configuration FlexPod. Vous devez préalablement bénéficier de ces conseils : la configuration FlexPod est mise en rack, alimentée et câblée conformément aux instructions du https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["FlexPod Datacenter avec stockage Fibre Channel via VMware vSphere 6.5 Update 1, baies NetApp AFF A-Series, et Cisco UCS Manager 3.2"^]CVD.

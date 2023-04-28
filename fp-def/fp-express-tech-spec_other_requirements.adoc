@@ -13,6 +13,7 @@ summary: Les autres conditions applicables à FlexPod Express sont répertoriée
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les autres conditions requises pour FlexPod Express sont les suivantes :
 
 * Des contrats de support valides sont requis pour tous les équipements, notamment :

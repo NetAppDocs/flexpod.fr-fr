@@ -13,6 +13,7 @@ summary: 'Cette section décrit les procédures d"installation de VMware ESXi 6.
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit les procédures d'installation de VMware ESXi 6.7 dans une configuration FlexPod Express. Les procédures de déploiement suivantes sont personnalisées pour inclure les variables d'environnement décrites dans les sections précédentes.
 
 Il existe plusieurs méthodes pour installer VMware ESXi dans un tel environnement. Cette procédure utilise la console KVM virtuelle et les fonctions de média virtuel de l'interface CIMC pour les serveurs Cisco UCS C-Series pour mapper les supports d'installation à distance à chaque serveur.

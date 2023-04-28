@@ -10,6 +10,7 @@ summary: 'Ce document présente les procédures d"architecture et de déploiemen
 
 Pramod Ramamurthy, Cisco Marco Schoen, NetApp
 
+[role="lead"]
 Ce document décrit les procédures d'architecture et de déploiement de l'option SAP HANA Tailored datacenter Integration sur une infrastructure FlexPod composée de produits de calcul et de commutation Cisco qui utilisent Cisco application Centric Infrastructure (ACI), la solution logicielle SDN (Software-Defined Networking) leader du secteur, et de baies AFF NetApp A-Series. L'objectif de ce document est de présenter les principes de conception ainsi que les étapes de configuration détaillées pour le déploiement de SAP HANA.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html["Solution FlexPod Datacenter pour SAP avec Cisco ACI sur serveurs Cisco UCS M5 avec SLES 12 SP3 et RHEL 7.4"^]

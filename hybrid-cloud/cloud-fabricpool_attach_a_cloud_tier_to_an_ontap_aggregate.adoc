@@ -13,6 +13,7 @@ summary: 'Lorsqu"un magasin d"objets est ajouté à et identifié par ONTAP, il 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Lorsqu'un magasin d'objets est ajouté à et identifié par ONTAP, il doit être associé à un agrégat pour créer une FabricPool. Pour ce faire, utilisez OnCommand System Manager ou l'interface de ligne de commandes de ONTAP.
 
 Plusieurs types de magasin d'objets peuvent être connectés à un cluster, mais un seul type de magasin d'objets peut être associé à chaque agrégat. Par exemple, un agrégat peut utiliser Google Cloud et un autre agrégat peut utiliser Amazon S3, mais un autre ne peut pas être associé aux deux.

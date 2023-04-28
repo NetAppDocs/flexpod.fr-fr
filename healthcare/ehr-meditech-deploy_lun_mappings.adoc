@@ -13,4 +13,5 @@ summary: Les mappages de LUN pour les hôtes MEDITECH sont établis lors de la c
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les mappages de LUN pour les hôtes MEDITECH sont établis lors de la création des LUN.

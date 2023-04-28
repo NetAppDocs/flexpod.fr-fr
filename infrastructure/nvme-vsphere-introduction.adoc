@@ -17,6 +17,7 @@ Chris Schmitt et Kamini Singh, NetApp
 
 En partenariat avec :image:cisco logo.png["Erreur : image graphique manquante"]
 
+[role="lead"]
 La norme de stockage de données NVMe, technologie de cœur émergente, transforme l'accès au stockage et le transport des données en fournissant une bande passante très élevée et un accès au stockage à faible latence pour les technologies de mémoire actuelles et futures. NVMe remplace le jeu de commandes SCSI par le jeu de commandes NVMe.
 
 La technologie NVMe a été conçue pour fonctionner avec les disques Flash non volatiles, les processeurs multicœurs et des gigaoctets de mémoire. Il tire également parti des avancées significatives de l'informatique depuis les années 1970, permettant ainsi à des jeux de commandes rationalisés d'analyser et de manipuler plus efficacement les données. Une architecture NVMe complète permet également aux administrateurs de data Center de repenser la mesure dans laquelle ils peuvent pousser leurs environnements virtualisés et conteneurisés, ainsi que l'évolutivité que peuvent prendre en charge leurs bases de données orientées transactions.

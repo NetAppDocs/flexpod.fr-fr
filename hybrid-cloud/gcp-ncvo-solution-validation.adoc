@@ -15,6 +15,7 @@ summary: 'Sur cette page, nous revisiterons la solution avec un exemple de workf
 
 link:gcp-ncvo-terraform-execution-from-controller.html["Précédent : exécution Terraform à partir du contrôleur."]
 
+[role="lead"]
 Dans cette section, nous revisitons la solution avec un exemple de workflow de réplication des données et prenons quelques mesures pour vérifier l'intégrité de la réplication des données depuis l'instance NetApp ONTAP exécutée dans FlexPod vers NetApp Cloud Volumes ONTAP s'exécutant sur Google Cloud.
 
 Nous avons utilisé Cisco Intersight workflow orchestrator dans cette solution et nous continuerons à l'utiliser pour notre cas d'utilisation.

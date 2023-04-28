@@ -13,6 +13,7 @@ summary: Cette section répertorie les anciennes architectures FlexPod Express e
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod est une solution flexible qui permet aux clients d'utiliser à la fois les équipements existants et nouveaux actuellement en vente par Cisco et NetApp. Parfois, certains modèles d'équipements Cisco et NetApp sont désignés en fin de vie.
 
 Bien que ces modèles d'équipement ne soient plus disponibles, les clients qui ont acheté un de ces modèles avant la date de fin de vente peuvent utiliser cet équipement dans une configuration FlexPod.

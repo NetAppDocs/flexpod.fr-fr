@@ -15,6 +15,7 @@ summary: 'Avec FlexPod, vous disposez d"une plateforme unique qui prend en charg
 
 Jaya Kishore Esanakula et Atul Bhalodia, NetApp
 
+[role="lead"]
 L'imagerie médicale représente 70 % de toutes les données générées par les organismes de santé. Les modalités numériques continuent à évoluer et de nouvelles modalités émergent. Il est donc de plus en plus important de données. Par exemple, la transition d'une pathologie analogique à une pathologie numérique augmentera considérablement la taille des images à un rythme qui mettra en place toutes les stratégies de gestion des données actuellement en place.
 
 Le COVID-19 a clairement redéfini la transformation digitale, selon une récente https://www.cfo.com/the-cloud/2020/06/three-ways-covid-19-is-accelerating-digital-transformation-in-professional-services/["rapport"^], Le COVID-19 a accéléré le commerce digital de 5 ans. L'innovation technologique tirée par les dépanneurs change radicalement la façon dont nous nous occupons de notre quotidien. Ce changement de technologie va réviser de nombreux aspects essentiels de notre vie, y compris les soins de santé.

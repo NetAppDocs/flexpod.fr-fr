@@ -15,6 +15,7 @@ summary: 'Un cluster OpenShift Container Platform 4 autogéré est déployé sur
 
 link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["Précédent : installation de FlexPod pour OpenShift Container Platform 4 sans système d'exploitation."]
 
+[role="lead"]
 Un cluster OpenShift Container Platform 4 autogéré est déployé sur AWS en tant que site de reprise après incident. Les nœuds maîtres et workers s'étendent sur trois zones de disponibilité pour une haute disponibilité.
 
 image:flexpod-rho-cvo-image10.png["Erreur : image graphique manquante"]

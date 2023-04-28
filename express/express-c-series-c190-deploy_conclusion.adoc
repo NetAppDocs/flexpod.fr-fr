@@ -13,4 +13,5 @@ summary: FlexPod Express propose une solution simple et efficace qui repose sur 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express propose une solution simple et efficace qui repose sur des composants leaders. Les systèmes FlexPod Express peuvent être personnalisés pour répondre à des besoins spécifiques. Le FlexPod Express est destiné aux moyennes entreprises, aux bureaux distants et aux autres entreprises qui ont besoin de solutions dédiées.

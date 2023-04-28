@@ -13,6 +13,7 @@ summary: 'Le paramètre de Tiering sur les jours minimum de refroidissement dét
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Le `tiering-minimum-cooling-days` Le paramètre détermine le nombre de jours devant être écoulés avant que les données inactives d'un volume à l'aide des règles Auto ou Snapshot uniquement sont considérées comme inactives et éligibles pour le Tiering.
 
 

@@ -15,6 +15,7 @@ summary: 'Avec Astra, vous pouvez effectuer une sauvegarde complète et cohéren
 
 link:flexpod-rho-cvo-solution-validation_overview.html["Précédent : présentation de la validation de la solution."]
 
+[role="lead"]
 Avec Astra, vous pouvez effectuer une sauvegarde complète et cohérente avec les applications qui permet de restaurer les données de votre application vers un autre cluster Kubernetes qui s'exécute dans un data Center sur site ou dans un cloud public.
 
 Pour valider la restauration d'application, simulez une défaillance sur site d'une application exécutée sur le système FlexPod et restaurez l'application sur un cluster K8s dans le cloud à l'aide d'une sauvegarde à distance.

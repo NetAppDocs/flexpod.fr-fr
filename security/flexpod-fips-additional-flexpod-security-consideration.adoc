@@ -15,6 +15,7 @@ summary: 'L"infrastructure FlexPod est une plateforme modulaire, convergée, év
 
 link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["Précédent : avantages de la solution pour l'infrastructure convergée FlexPod."]
 
+[role="lead"]
 L'infrastructure FlexPod est une plateforme modulaire, convergée, évolutive (scale-out et scale-up) et économique. Avec la plateforme FlexPod, vous pouvez faire évoluer indépendamment les ressources de calcul, de réseau et de stockage pour accélérer le déploiement de vos applications. En outre, l'architecture modulaire garantit la continuité de l'activité, même lors des activités de mise à niveau et d'évolutivité horizontale de votre système.
 
 Les différents composants d'un système HIT nécessitent que les données soient stockées dans des systèmes de fichiers SMB/CIFS, NFS, Ext4 et NTFS. Par conséquent, l'infrastructure doit fournir un accès aux données via les protocoles NFS, CIFS et SAN. Un système de stockage NetApp unique peut prendre en charge tous ces protocoles, ce qui évite la pratique existante de systèmes de stockage spécifiques au protocole. Un système de stockage NetApp unique peut également prendre en charge plusieurs charges DE travail HIT (DME, PACS ou VNA), génomique, VDI, etc. avec des niveaux de performance garantis et configurables.

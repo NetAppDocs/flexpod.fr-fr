@@ -15,6 +15,7 @@ summary: 'Grâce à FlexPod, Cisco et NetApp ont créé une plateforme à la foi
 
 link:nvme-vsphere-test-results.html["Précédent : résultats du test."]
 
+[role="lead"]
 Le débit observé pour cette solution était de 14 Gbit/s et de 220 000 IOPS pour une charge de travail de lecture séquentielle inférieure à 1 ms. Pour les workloads de lecture aléatoire, nous avons atteint un débit de 9,5 Gbit/s et de 1,25 millions d'IOPS. La capacité de FlexPod à fournir cette performance avec FC-NVMe répond aux besoins de toutes les applications stratégiques.
 
 FlexPod Datacenter avec VMware vSphere 7.0 U2 est une base d'infrastructure partagée optimale pour déployer du FC-NVMe pour diverses charges DE travail IT. Il fournit ainsi un accès au stockage haute performance pour les applications qui en ont besoin. Au fur et à mesure que le FC-NVMe évolue pour inclure la haute disponibilité, les chemins d'accès multiples et une prise en charge supplémentaire du système d'exploitation, FlexPod convient aussi bien à la plateforme de choix, offrant l'évolutivité et la fiabilité nécessaires pour prendre en charge ces fonctionnalités.

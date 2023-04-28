@@ -10,6 +10,7 @@ summary: Les conceptions validées Cisco comprennent des systèmes et des soluti
 
 Tushar Patel, Cisco Hardikkumar Vyas, Cisco
 
+[role="lead"]
 Les conceptions validées Cisco comprennent des systèmes et des solutions conçus, testés et documentés pour faciliter et améliorer les déploiements client. Ces conceptions intègrent une large gamme de technologies et de produits dans une gamme de solutions qui ont été développées pour répondre aux besoins commerciaux des clients. Cisco et NetApp se sont associés pour proposer FlexPod, qui sert de base à une grande variété de workloads, et permet des designs architecturaux efficaces basés sur les exigences des clients. Une solution FlexPod est une approche validée pour le déploiement des technologies Cisco et NetApp en tant qu'infrastructure cloud partagée.
 
 Le data Center FlexPod associé au système AFF 100 % Flash de NetApp est une plateforme d'infrastructure convergée qui combine les meilleures technologies de Cisco et NetApp dans une puissante plateforme convergée pour les applications d'entreprise. Cisco et NetApp travaillent en étroite collaboration avec Oracle pour prendre en charge les bases de données transactionnelles et sensibles au temps de réponse les plus exigeantes dont les entreprises modernes ont besoin.

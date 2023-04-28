@@ -13,6 +13,7 @@ summary: Pour configurer la mise en cluster de VMware vCenter Server 6.7 et vSph
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Pour configurer VMware vCenter Server 6.7 et la mise en cluster vSphere, procédez comme suit :
 
 . Accédez à `\https://\<<FQDN or IP of vCenter>>/vsphere-client/`.

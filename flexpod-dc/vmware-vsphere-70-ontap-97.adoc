@@ -10,6 +10,7 @@ summary: 'Les conceptions validées par Cisco (CVD) incluent des systèmes et de
 
 John George, Cisco Sree Lakshmi Lanka, NetApp
 
+[role="lead"]
 Les conceptions validées par Cisco (CVD) incluent des systèmes et des solutions qui sont conçus, testés et documentés pour faciliter et améliorer les déploiements client. Ces conceptions intègrent une large gamme de technologies et de produits dans une gamme de solutions qui ont été développées pour répondre aux besoins commerciaux des clients. Cisco et NetApp se sont associés pour fournir FlexPod®, qui sert de base à une variété de workloads et permet des conceptions d'architecture efficaces basées sur les besoins des clients. Une solution FlexPod est une approche validée pour le déploiement des technologies Cisco et NetApp en tant qu'infrastructure cloud partagée.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html"^]

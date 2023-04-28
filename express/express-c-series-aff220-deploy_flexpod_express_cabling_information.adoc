@@ -13,6 +13,7 @@ summary: Cette section fournit des informations de référence pour le câblage 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La figure suivante montre le câblage de validation de référence.
 
 image:express-c-series-aff220-deploy_image5.png["Erreur : image graphique manquante"]

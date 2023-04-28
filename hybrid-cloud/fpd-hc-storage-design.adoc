@@ -10,6 +10,7 @@ summary: 'Les conceptions validées par Cisco (CVD) proposent des systèmes et d
 
 Haseeb Niazi, Cisco David Arnette, NetApp
 
+[role="lead"]
 Les conceptions validées par Cisco (CVD) proposent des systèmes et des solutions conçus, testés et documentés pour faciliter et améliorer les déploiements client. Ces conceptions intègrent une large gamme de technologies et de produits dans une gamme de solutions qui ont été développées pour répondre aux besoins commerciaux des clients et pour les guider de la conception au déploiement.
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html["FlexPod Datacenter pour le cloud hybride avec Cisco CloudCenter et NetApp Private Storage : conception"^]

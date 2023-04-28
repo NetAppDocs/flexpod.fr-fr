@@ -13,6 +13,7 @@ summary: 'L"architecture de FlexPod pour MEDITECH est basée sur les conseils d"
 :imagesdir: ./../media/
 
 
+[role="lead"]
 L'architecture de FlexPod pour MEDITECH est basée sur les conseils d'MEDITECH, de Cisco et de NetApp et de l'expérience du partenaire qui équipe avec les clients MEDITECH de toutes les tailles. L'architecture est adaptable et applique les bonnes pratiques pour MEDITECH, selon la stratégie de votre data Center, la taille de votre entreprise et si votre système est centralisé, distribué ou mutualisé.
 
 L'architecture de stockage appropriée peut être déterminée par la taille globale avec le nombre total d'IOPS. La performance seule n'est pas le seul facteur et vous pouvez décider d'utiliser un plus grand nombre de nœuds en fonction des exigences supplémentaires des clients. Le stockage NetApp présente l'avantage de faciliter et d'assurer une évolutivité verticale du cluster sans interruption, en fonction de l'évolution de vos besoins. Vous pouvez également supprimer des nœuds du cluster sans interruption pour reconvertir les équipements ou procéder à des mises à jour d'équipements.

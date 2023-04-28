@@ -13,6 +13,7 @@ summary: 'La conception d"une FlexPod présente des exigences minimales en mati�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 La conception d'une FlexPod présente des exigences minimales en matière d'alimentation et de câblage.
 
 

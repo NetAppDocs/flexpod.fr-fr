@@ -15,6 +15,7 @@ summary: 'Dans cette section, vous trouverez un bref aperçu des avantages dont 
 
 link:flexpod-genomics-introduction.html["Précédent : introduction."]
 
+[role="lead"]
 Dans cette section, vous trouverez un bref aperçu des avantages dont vous pouvez bénéficier pour exécuter un workload génomique sur une plateforme d'infrastructure convergée FlexPod. Décrire rapidement les capacités d'un hôpital. L'architecture métier suivante montre les capacités d'un hôpital déployées sur une plateforme d'infrastructure convergée FlexPod prête pour le cloud hybride.
 
 * *Éviter les silos dans les soins de santé.* les silos dans les soins de santé sont une préoccupation très réelle. Elles sont souvent cloisonnées dans leur propre ensemble de matériel et de logiciels, et non pas selon leur choix, mais de façon organique par leur évolution. Par exemple, radiologie, cardiologie, EHR, génomique, les analyses, les cycles de revenus et les autres départements se terminent par leur jeu individuel de logiciels et de matériel dédiés. Les organismes de santé disposent d'un ensemble limité de professionnels IT pour gérer leurs ressources matérielles et logicielles. Le point d'inflexion s'est produit lorsque ce groupe de particuliers doit gérer un ensemble très diversifié de matériel et de logiciels. L'hétérogénéité est aggravée par un ensemble peu homogène de processus mis en place par les fournisseurs dans l'organisation de soins de santé.

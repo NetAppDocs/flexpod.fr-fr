@@ -15,6 +15,7 @@ summary: 'Cette page décrit la topologie logique et l"installation de FlexPod p
 
 link:flexpod-rho-cvo-solution-components.html["Précédent : composants de la solution."]
 
+[role="lead"]
 Pour comprendre la conception sans système d'exploitation FlexPod pour OpenShift Container Platform 4, les détails du déploiement et l'installation et la configuration de NetApp Astra Trident, consultez https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["Guide de déploiement et de conception validée par Cisco pour FlexPod avec OpenShift Cisco (CVD)"^]. Ce CVD couvre le déploiement d'FlexPod et de OpenShift Container Platform avec Ansible. Le CVD fournit également des informations détaillées sur la préparation des nœuds de travail, de l'installation d'Astra Trident, du système de stockage back-end et des configurations de classes de stockage, qui sont les quelques prérequis au déploiement et à la configuration d'Astra Control Center.
 
 La figure suivante illustre la plateforme de conteneurs OpenShift 4 sans système d'exploitation sur FlexPod.

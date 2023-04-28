@@ -13,6 +13,7 @@ summary: Cette section décrit les spécifications techniques importantes de cha
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette section décrit les spécifications techniques importantes de chaque composant de FlexPod Express.
 
 

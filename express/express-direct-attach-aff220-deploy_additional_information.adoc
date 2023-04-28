@@ -13,6 +13,7 @@ summary: Pour en savoir plus sur les informations données dans ce livre blanc, 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Pour en savoir plus sur les informations données dans ce livre blanc, consultez ces documents et/ou sites web :
 
 * NVA- 1130-DESIGN : FlexPod Express avec VMware vSphere 6.7U1 et NetApp AFF A220 avec stockage DAS basé sur IP NVA Design

@@ -13,6 +13,7 @@ summary: 'Le nombre d"hôtes MEDITECH dans votre environnement détermine le nom
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Le nombre d'hôtes MEDITECH dans votre environnement détermine le nombre de LUN qui sont créées avec le système NetApp FAS et AFF. La proposition de configuration matérielle spécifie la taille de chaque LUN.
 
 

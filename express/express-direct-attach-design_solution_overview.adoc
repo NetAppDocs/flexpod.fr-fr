@@ -8,6 +8,7 @@ summary: FlexPod Express est conçu pour exécuter des charges de travail de vir
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express est conçu pour exécuter des charges de travail de virtualisation mixtes. Elle est destinée aux bureaux distants, aux succursales et aux moyennes entreprises. Il convient également aux grandes entreprises qui souhaitent mettre en œuvre une solution dédiée. Le principal pilote de la nouvelle solution FlexPod Express consiste à ajouter de nouvelles technologies telles que ONTAP 9.5, 8xx/AFF220, VMware vSphere 6.7U1 vers FlexPod Express.
 
 La figure suivante présente les composants matériels inclus dans la solution FlexPod Express.

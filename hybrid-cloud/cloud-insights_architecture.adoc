@@ -13,6 +13,7 @@ summary: 'Dans cette section, nous analysons l"architecture d"une infrastructure
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Dans cette section, nous analysons l'architecture d'une infrastructure convergée FlexPod Datacenter, dont un système NetApp AFF A800 surveillé par Cloud Insights.
 
 

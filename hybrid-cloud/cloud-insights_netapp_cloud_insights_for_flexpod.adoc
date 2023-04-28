@@ -17,6 +17,7 @@ Alan Cowles, NetApp
 
 En partenariat avec :image:cisco logo.png["Erreur : image graphique manquante"]
 
+[role="lead"]
 Dans ce rapport technique, la solution détaillée est la configuration du service NetApp Cloud Insights pour surveiller le système de stockage NetApp AFF A800 exécutant NetApp ONTAP, qui est déployé dans le cadre d'une solution FlexPod Datacenter.
 
 

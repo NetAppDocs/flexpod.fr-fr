@@ -13,6 +13,7 @@ summary: 'Le public et les cas cibles pour lesquels cette solution s"applique so
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette solution s'applique aux cas d'utilisation suivants :
 
 * Organisations qui souhaitent surveiller différentes ressources et l'utilisation de leur système de stockage ONTAP déployé dans le cadre d'une solution FlexPod.

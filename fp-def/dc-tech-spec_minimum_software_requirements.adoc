@@ -13,6 +13,7 @@ summary: Les informations suivantes décrivent la configuration logicielle minim
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Une configuration FlexPod présente la configuration logicielle minimale suivante :
 
 * NetApp ONTAP :

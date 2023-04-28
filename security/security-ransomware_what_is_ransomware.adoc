@@ -17,6 +17,7 @@ Arvind Ramakrishnan, NetApp
 
 En partenariat avec :image:cisco logo.png["Erreur : image graphique manquante"]
 
+[role="lead"]
 Pour comprendre un ransomware, il est nécessaire de comprendre d'abord quelques points de clé sur la cryptographie. Les méthodes Cryptographiques permettent le cryptage de données avec une clé secrète partagée (cryptage de clé symétrique) ou une paire de clés (cryptage de clé asymétrique). L'une de ces clés est une clé publique largement disponible et l'autre est une clé privée non divulguée.
 
 Les ransomwares sont un type de malware basé sur la cryptovirologie, c'est-à-dire l'utilisation de la cryptographie pour créer des logiciels malveillants. Ce programme malveillant peut utiliser à la fois le cryptage symétrique et asymétrique des clés pour verrouiller les données d'une victime et exiger une rançon afin de fournir la clé pour décrypter les données de la victime.

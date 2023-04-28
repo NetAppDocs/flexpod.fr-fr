@@ -13,6 +13,7 @@ summary: 'Cisco a considérablement contribué au design et à l"architecture de
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cisco a considérablement contribué au design et à l'architecture de FlexPod, couvrant les couches de calcul et de réseau de la solution. Cette section décrit les options Cisco UCS et Cisco Nexus disponibles pour FlexPod. FlexPod prend en charge les serveurs Cisco UCS B-Series et C-Series.
 
 

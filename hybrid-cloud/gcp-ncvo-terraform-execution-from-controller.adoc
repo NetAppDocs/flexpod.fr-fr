@@ -15,6 +15,7 @@ summary: 'Nous pouvons exécuter le plan Terraform à l"aide d"un contrôleur. V
 
 link:gcp-ncvo-dr-workflow.html["Précédent : flux de travail de reprise après incident."]
 
+[role="lead"]
 Nous pouvons exécuter le plan Terraform à l'aide d'un contrôleur. Vous pouvez ignorer cette section si vous avez déjà exécuté votre plan Terraform à l'aide d'un flux de travail ICO.
 
 

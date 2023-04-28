@@ -13,6 +13,7 @@ summary: 'Cisco apporte une contribution substantielle à la conception et à l"
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cisco apporte une contribution substantielle à la conception et à l'architecture d'FlexPod Express. Il apporte les couches de calcul et de mise en réseau de la solution. Cette section décrit les composants Cisco UCS et Cisco Nexus disponibles pour FlexPod Express.
 
 

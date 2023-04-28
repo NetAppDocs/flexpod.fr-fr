@@ -15,6 +15,7 @@ summary: De nombreuses organisations du secteur de la santé à travers le monde
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["Précédent : configuration du GPU."]
 
+[role="lead"]
 De nombreuses organisations du secteur de la santé à travers le monde ont choisi FlexPod comme plateforme commune. FlexPod vous permet de déployer des capacités médicales en toute confiance. FlexPod avec NetApp ONTAP est fourni de série avec la capacité d'implémenter un ensemble de protocoles de pointe, clé en main. Quelle que soit l'origine de la demande d'exécution de la génomique d'un patient donné, une plateforme FlexPod assure l'interopérabilité, l'accessibilité, la disponibilité et l'évolutivité. Lorsqu'elle est standardisée sur une plate-forme FlexPod, la culture de l'innovation devient contagieuse.
 
 

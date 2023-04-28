@@ -13,6 +13,7 @@ summary: Cette validation de référence est câblée comme indiqué dans les fi
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Cette validation de référence est câblée comme indiqué dans les figures et tableaux suivants.
 
 Cette figure illustre le câblage de validation de référence.

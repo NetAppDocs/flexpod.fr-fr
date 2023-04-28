@@ -15,6 +15,7 @@ summary: 'Cette page répertorie les ressources nécessaires au déploiement d"u
 
 link:gcp-ncvo-solution-components.html["Précédent : composants de la solution."]
 
+[role="lead"]
 Pour comprendre les détails de la conception et du déploiement de FlexPod, notamment la configuration de différents éléments de la conception et des meilleures pratiques associées, consultez la section https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["Conceptions validées par Cisco pour FlexPod"^].
 
 FlexPod peut être déployé à la fois en mode géré UCS et en mode géré Cisco InterSight. Si vous déployez FlexPod en mode géré UCS, vous trouverez la dernière conception validée Cisco https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2_design.html["ici"^].

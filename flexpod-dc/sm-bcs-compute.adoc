@@ -15,6 +15,7 @@ summary: La configuration de calcul de la solution FlexPod SM-BC suit les bonnes
 
 link:sm-bcs-solution-validation_overview.html["Preivous : validation de la solution - Présentation."]
 
+[role="lead"]
 La configuration de calcul de la solution FlexPod SM-BC suit les bonnes pratiques des solutions FlexPod classiques. Les sections suivantes mettent en évidence certaines des connexions et configurations utilisées pour la validation. Certaines des considérations liées au SM-BC sont également mises en évidence pour fournir des références et des conseils sur la mise en œuvre.
 
 

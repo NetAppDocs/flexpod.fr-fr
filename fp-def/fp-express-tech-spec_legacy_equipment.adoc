@@ -13,6 +13,7 @@ summary: Cette section répertorie les anciens tiroirs disques NetApp, les contr
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Le tableau suivant répertorie les options de contrôleurs de stockage NetApp classiques.
 
 |===

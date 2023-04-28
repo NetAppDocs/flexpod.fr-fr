@@ -13,6 +13,7 @@ summary: 'Les compartiments sont des conteneurs de stockage objet qui hébergent
 :imagesdir: ./../media/
 
 
+[role="lead"]
 Les compartiments sont des conteneurs de stockage objet qui hébergent les données. Vous devez fournir le nom et l'emplacement du compartiment dans lequel les données sont stockées avant de pouvoir être ajoutées à un agrégat en tant que Tier cloud.
 
 

@@ -8,6 +8,7 @@ summary: 'Ce document présente des procédures détaillées de déploiement du 
 :allow-uri-read: 
 
 
+[role="lead"]
 Ce document présente des procédures détaillées de déploiement du plug-in NetApp Trident Container Storage interface (CSI) sur un cluster locataire Kubernetes de la plateforme de conteneurs Cisco dans une solution FlexPod.
 
 link:https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf["Déployez le plug-in NetApp Trident CSI sur la plateforme de conteneurs Cisco avec FlexPod"^]
