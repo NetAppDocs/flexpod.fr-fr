@@ -110,4 +110,4 @@ Un message s'affiche pour indiquer que la configuration a réussi.
 . Vous pouvez cliquer sur les liens que le programme d'installation fournit pour accéder à vCenter Server.
 
 
-link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html["Suivant : configuration de mise en cluster de VMware vCenter Server 6.7U2 et vSphere"]
+link:express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html["Suivant : configuration de la mise en cluster VMware vCenter Server 6.7U2 et vSphere."]

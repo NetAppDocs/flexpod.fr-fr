@@ -66,10 +66,6 @@ https://www.cisco.com/c/en/us/solutions/industries/government/global-government-
 +
 https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp2648.pdf[]
 
-* Pratiques de cybersécurité du secteur de la santé : gestion des menaces et protection des patients
-+
-https://www.phe.gov/Preparedness/planning/405d/Pages/hic-practices.aspx[]
-
 * Cybersécurité pour les moyennes et grandes organisations dans le domaine de la santé
 +
 https://www.phe.gov/Preparedness/planning/405d/Documents/tech-vol2-508.pdf[]

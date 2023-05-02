@@ -134,4 +134,4 @@ Une licence FabricPool gratuite de 10 To basée sur une durée de validité est 
 Une licence FabricPool ne peut être supprimée que d'un cluster ne contenant aucun agrégat FabricPool.
 
 
-NOTE: Les licences FabricPool s'appliquent à l'ensemble du cluster. Vous devez avoir l'UUID disponible lors de l'achat d'une licence (`cluster identify show`). Pour plus d'informations sur la licence, reportez-vous au https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["Base de connaissances NetApp"^].
+NOTE: Les licences FabricPool portent sur l'ensemble du cluster. Vous devez avoir l'UUID disponible lors de l'achat d'une licence (`cluster identify show`). Pour plus d'informations sur la licence, reportez-vous au https://kb.netapp.com/onprem/ontap/dm/FabricPool/ONTAP_FabricPool_(FP)_Licensing_Overview["Base de connaissances NetApp"^].

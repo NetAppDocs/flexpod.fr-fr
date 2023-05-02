@@ -399,4 +399,4 @@ NOTE: Cette procédure doit être répétée pour chaque nœud de serveur Cisco 
 
 
 
-link:express-c-series-c190-design_netapp_aff_storage_deployment_procedure_@part_2@.html["Suivant : procédure de déploiement du stockage NetApp AFF (2e partie)"]
+link:express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html["Suivant : procédure de déploiement du stockage NetApp AFF (2e partie)."]

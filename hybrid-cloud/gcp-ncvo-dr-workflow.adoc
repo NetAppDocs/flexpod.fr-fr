@@ -443,8 +443,8 @@ image:gcp-ncvo-image56.png["Capture d'écran"]
 
 . Fournissez les informations suivantes sur le référentiel GitHub :
 +
-.. Dans *Nom du référentiel*, entrez le nom du référentiel détaillé dans la section link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »"].
-.. Indiquez l'ID de token OAuth comme détaillé dans la section link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »"].
+.. Dans *Nom du référentiel*, entrez le nom du référentiel détaillé dans la section link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »"].
+.. Indiquez l'ID de token OAuth comme détaillé dans la section link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »"].
 .. Sélectionnez l'option *déclenchement automatique*.
 +
 image:gcp-ncvo-image57.png["Capture d'écran"]
@@ -624,7 +624,7 @@ image:gcp-ncvo-image66.png["Capture d'écran"]
 ** *Description.* Actualiser jeton.
 +
 
-NOTE: Pour en savoir plus sur l'obtention d'un jeton de mise à jour pour les opérations de l'API NetApp Cloud Manager, consultez la section link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »."]
+NOTE: Pour en savoir plus sur l'obtention d'un jeton de mise à jour pour les opérations de l'API NetApp Cloud Manager, consultez la section link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["« Configurer les conditions préalables à l'environnement »."]
 
 +
 image:gcp-ncvo-image67.png["Capture d'écran"]
