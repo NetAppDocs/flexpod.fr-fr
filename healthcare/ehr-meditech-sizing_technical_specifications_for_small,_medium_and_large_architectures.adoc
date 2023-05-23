@@ -104,7 +104,7 @@ Le tableau suivant présente un petit exemple de configuration (catégorie 3) : 
 | Les serveurs lames Cisco UCS | 4 x B200 M5 | Chacun avec 2 x 14 cœurs, une vitesse d'horloge de 2,6 GHz ou plus et BIOS 3.2 384 Go (3#) 
 
 
-| Cartes d'interface virtuelle Cisco UCS | 4 x UCS 1440 | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (voir matrice d'interopérabilité : https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Cartes d'interface virtuelle Cisco UCS | 4 x UCS 1440 | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (voir matrice d'interopérabilité : 
 
 
 | 2 interconnexions de fabric Cisco UCS (FI) | 2 X UCS 6454 FI | Fabric Interconnect de 4e génération prenant en charge les protocoles Ethernet 10/25 Gb et FC 32 Gb 
@@ -180,7 +180,7 @@ Le tableau suivant présente un grand exemple de configuration (catégorie 6) �
 | Les serveurs lames Cisco UCS | 8 x B200 M5 | Chacun avec 2 x 24 cœurs, 2,7 GHz et 768 Go de BIOS 3.2 (3#) 
 
 
-| Carte d'interface virtuelle Cisco UCS (VIC) | 8 x UCS 1440 VICS | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (consultez la matrice d'interopérabilité : https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Carte d'interface virtuelle Cisco UCS (VIC) | 8 x UCS 1440 VICS | Pilote FC FNIC de VMware ESXi : 1.6.0.47 pilote Ethernet ENIC VMware ESXi : 1.0.27.0 (consultez la matrice d'interopérabilité : 
 
 
 | 2 interconnexions de fabric Cisco UCS (FI) | 2 X UCS 6454 FI | Fabric Interconnect de 4e génération prenant en charge les protocoles Ethernet 10 Gb/25 Gb et FC 32 Gb 
