@@ -79,52 +79,51 @@ Lorsque les environnements NetApp Storage et vCenter sont disponibles dans Cisco
 Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :
 
 +
-** Ajouter la stratégie d'exportation de stockage au volume
-** Connectez les initiateurs à l'hôte de stockage
-** Déconnectez la stratégie d'exportation du stockage du volume
-** Modifiez les agrégats pour Storage Virtual machine
-** Modifier la règle de stratégie d'exportation de stockage
-** Modifier la règle Snapshot de stockage
-** Modifier la planification de la règle Snapshot de stockage
-** Développez LUN de stockage
-** Étendez le volume de stockage
-** Recherchez le mappage de LUN d'un groupe initiateur NetApp
-** Rechercher LUN de stockage par ID
-** Recherchez le volume de stockage par ID
-** Nouvelle politique d'exportation du stockage
-** Nouvelle règle de politique d'exportation du stockage
-** Nouvelle interface de stockage Fibre Channel de NetApp
-** Nouvel hôte de stockage
-** Nouvelle interface IP de stockage
-** Nouveau LUN de stockage
-** Nouvel ID de LUN de stockage
-** Nouveau volume intelligent NAS de NetApp Storage
-** Nouvelle LUN intelligente de stockage NetApp
-** Nouvelle règle Snapshot de stockage
-** Planification de la nouvelle règle Snapshot de stockage
-** Nouvel ordinateur virtuel de stockage
-** Nouveau volume de stockage
-** Nouveau snapshot du volume de stockage
-** Supprimer l'export policy de stockage
-** Supprimer la règle de stratégie d'exportation de stockage
-** Suppression de l'interface Storage FC
-** Supprimer l'hôte de stockage
-** Supprimer l'interface IP de stockage
-** Supprimer la LUN de stockage
-** Supprimer l'ID de LUN de stockage
-** Supprimez NetApp Storage Smart LUN
-** Supprimer la règle Snapshot de stockage
-** Supprimer la planification de la règle Snapshot de stockage
-** Supprimer Storage Virtual machine (SVM
-** Retirez le volume de stockage
-** Supprimer l'instantané du volume de stockage
-** Renommer le snapshot du volume de stockage
+** Ajouter une règle d'export au volume NetApp
+** Ajouter des initiateurs au groupe initiateur NetApp
+** Ajouter une règle à la stratégie d'exportation NetApp
+** Ajouter une planification à la règle NetApp Snapshot
+** Modifiez les agrégats NetApp pour Storage Virtual machine
+** Modifier la règle de stratégie d'exportation NetApp
+** Modifier la règle de snapshot NetApp
+** Modifier la planification de la règle de snapshot NetApp
+** Développez NetApp LUN
+** Recherchez NetApp Initiator Group LUN Map
+** Recherchez LUN NetApp par ID
+** Recherchez NetApp Volume par ID
+** Nouvelle politique d'exportation NetApp
+** Nouvelle interface de données FC NetApp
+** Nouveau groupe initiateur NetApp
+** Nouvelle interface de données iSCSI NetApp
+** Nouveau LUN NetApp
+** Nouveau mappage de LUN NetApp
+** Nouvelle interface de données NAS NetApp
+** Nouveau volume intelligent NAS NetApp
+** Nouveau LUN intelligent NetApp
+** Nouvelle règle NetApp Snapshot
+** Nouvelle machine virtuelle de stockage NetApp
+** Nouveau volume NetApp
+** Nouveau snapshot de volume NetApp
+** Supprimez la règle d'export du volume NetApp
+** Supprimer la règle d'export NetApp
+** Retirez l'interface de données FC NetApp
+** Supprimer le groupe initiateur NetApp
+** Retirez l'interface IP NetApp
+** Supprimer la LUN NetApp
+** Supprimer le mappage de LUN NetApp
+** Supprimez le volume intelligent NAS NetApp
+** Supprimez la LUN intelligente NetApp
+** Supprimer la règle de snapshot NetApp
+** Retirez la machine virtuelle de stockage NetApp
+** Supprimez le volume NetApp
+** Supprimer l'instantané de volume NetApp
+** Supprimer la règle de la règle d'export NetApp
+** Supprimer la planification de la règle NetApp Snapshot
+** Renommer le snapshot de volume NetApp
+** Mettre à jour la capacité du volume NetApp
 +
-
-NOTE: Les nouvelles tâches Smart Volume et Nouveau stockage NAS Smart LUN ne fonctionnent qu'avec ONTAP 9.8 et versions ultérieures. ONTAP 9.7P1 est actuellement la version minimale prise en charge.
-
-
-
-
-
 Pour en savoir plus sur la personnalisation des flux de travail avec les tâches de stockage et de virtualisation NetApp, regardez la vidéo https://tv.netapp.com/detail/video/6228095945001["Orchestration du stockage NetApp ONTAP dans Cisco Intersight"^].
+
+
+
+

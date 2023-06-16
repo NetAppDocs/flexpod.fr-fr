@@ -18,6 +18,16 @@ Cette section répertorie les nouvelles fonctionnalités disponibles pour Cisco 
 
 
 
+== Juin 2023
+
+
+NOTE: Une mise à niveau vers NetApp Active IQ Unified Manager 9.13RC1 est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités avec la dernière version.
+
+* Noms mis à jour pour les tâches de stockage NetApp. Voir link:ci-qsg_use_cases.html["Cas d'utilisation 3 workflows personnalisés à l'aide d'un formulaire sans concepteur"^] pour la liste complète des tâches renommées.
+
+
+
+
 == Avril 2023
 
 * Ajout des onglets protection Policies (SnapMirror) et Snapshot Policies dans la page Policies de la section Inventory de l'interface utilisateur.
@@ -90,7 +100,7 @@ NOTE: Pour assurer la compatibilité et une fonctionnalité complète avec les p
 * Ajout de AutoSupport à l'inventaire du cluster
 * Ajouté `cdpd.enable` option vers le nœud
 * Ajout d'un objet pour le voisin CDP
-* Ajout des tâches de stockage des flux de travail NetApp dans Cisco InterSight. Voir link:ci-qsg_use_cases.html["Cas d'utilisation 3 workflows personnalisés à l'aide d'un formulaire sans concepteur"] Vous trouverez une liste complète des tâches de stockage NetApp.
+* Ajout des tâches de stockage des flux de travail NetApp dans Cisco InterSight. Voir link:ci-qsg_use_cases.html["Cas d'utilisation 3 workflows personnalisés à l'aide d'un formulaire sans concepteur"^] Vous trouverez une liste complète des tâches de stockage NetApp.
 
 
 
@@ -117,7 +127,7 @@ NOTE: Pour assurer la compatibilité et une fonctionnalité complète dans les p
 
 == Octobre 2021
 
-* Liste mise à jour des tâches de stockage NetApp disponibles dans Cisco Intersight. Voir link:ci-qsg_use_cases.html["Cas d'utilisation 3 workflows personnalisés à l'aide d'un formulaire sans concepteur"] Vous trouverez une liste complète des tâches de stockage NetApp.
+* Liste mise à jour des tâches de stockage NetApp disponibles dans Cisco Intersight. Voir link:ci-qsg_use_cases.html["Cas d'utilisation 3 workflows personnalisés à l'aide d'un formulaire sans concepteur"^] Vous trouverez une liste complète des tâches de stockage NetApp.
 * Ajout de la colonne Santé sous la page liste des clusters.
 * Des détails étendus sont désormais disponibles sous la page général pour un groupe sélectionné.
 * Le tableau du serveur NTP est désormais accessible via le volet de navigation.
