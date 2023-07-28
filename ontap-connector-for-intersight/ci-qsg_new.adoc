@@ -18,6 +18,32 @@ Cette section répertorie les nouvelles fonctionnalités disponibles pour Cisco 
 
 
 
+== Juillet 2023
+
+
+NOTE: Une mise à niveau vers NetApp Active IQ Unified Manager 9.13GA est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités avec la dernière version.
+
+* Noms mis à jour pour les tâches de stockage NetApp. Voir cas d'utilisation 3 flux de travail personnalisés à l'aide d'un formulaire sans concepteur pour la liste complète des tâches renommées.
+* L'adresse IP de l'interface NFS a été ajoutée en tant que sortie de la tâche Nouveau volume intelligent NAS NetApp.
+* Vérifiez que le transport ASUP est HTTPS a été ajouté à l'onglet vérifications.
+* Le type de niveau correct pour tous les niveaux s'affiche désormais correctement sous l'interface utilisateur tiers.
+* Toutes les licences compatibles s'affichent désormais correctement dans la page licences.
+* La valeur exacte des partages CIFS sans ou sans répertoire personnel s'affiche désormais sur la page partages.
+* Le tri et le filtrage sont désormais activés pour la colonne mappée sur la page LUN.
+* Le tri et le filtrage ont maintenant activé la colonne authentification activée sur la page serveurs NTP.
+* Ajout de nouvelles vérifications et des catégories correspondantes suivantes à l'onglet vérifications.
++
+** Sécurité
+** Anti-ransomware
+** Disponibilité
+** Autre
+
+
+* Dans la vue détaillée Inventaire, le rapport est maintenant utilisé au lieu de la capacité physique utilisée.
+
+
+
+
 == Juin 2023
 
 

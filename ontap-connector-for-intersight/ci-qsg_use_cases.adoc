@@ -79,15 +79,27 @@ Lorsque les environnements NetApp Storage et vCenter sont disponibles dans Cisco
 Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :
 
 +
+** Ajouter une liste de contrôle d'accès au partage CIFS NetApp
+** Ajouter la correspondance client à la règle de stratégie d'exportation NetApp
 ** Ajouter une règle d'export au volume NetApp
 ** Ajouter des initiateurs au groupe initiateur NetApp
 ** Ajouter une règle à la stratégie d'exportation NetApp
 ** Ajouter une planification à la règle NetApp Snapshot
+** Confirmez l'état de la licence NetApp
+** Confirmez l'état du protocole FCP de la machine virtuelle de stockage NetApp
 ** Modifiez les agrégats NetApp pour Storage Virtual machine
+** Modifier la règle de SnapMirror asynchrone NetApp
+** Modifier l'autorisation ACL du partage CIFS NetApp
 ** Modifier la règle de stratégie d'exportation NetApp
 ** Modifier la règle de snapshot NetApp
 ** Modifier la planification de la règle de snapshot NetApp
+** Modifier le style de sécurité du volume NetApp
+** Modifier la règle de snapshot du volume NetApp
+** Activez les services NetApp CIFS
 ** Développez NetApp LUN
+** Nouvelle règle NetApp relative aux SnapMirror asynchrones
+** Nouveau serveur CIFS NetApp
+** Nouveau partage CIFS NetApp
 ** Recherchez NetApp Initiator Group LUN Map
 ** Recherchez LUN NetApp par ID
 ** Recherchez NetApp Volume par ID
@@ -95,24 +107,35 @@ Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :
 ** Nouvelle interface de données FC NetApp
 ** Nouveau groupe initiateur NetApp
 ** Nouvelle interface de données iSCSI NetApp
+** Nouveaux miroirs de partage de charge NetApp pour le volume racine du SVM
 ** Nouveau LUN NetApp
 ** Nouveau mappage de LUN NetApp
 ** Nouvelle interface de données NAS NetApp
 ** Nouveau volume intelligent NAS NetApp
 ** Nouveau LUN intelligent NetApp
+** Nouvelle relation NetApp SnapMirror pour Volume
 ** Nouvelle règle NetApp Snapshot
 ** Nouvelle machine virtuelle de stockage NetApp
 ** Nouveau volume NetApp
 ** Nouveau snapshot de volume NetApp
+** Enregistrez le serveur DNS pour la machine virtuelle de stockage NetApp
+** Supprimez la liste de contrôle d'accès du partage CIFS NetApp
+** Supprimer la correspondance client de la règle de stratégie d'exportation NetApp
 ** Supprimez la règle d'export du volume NetApp
+** Supprimer l'initiateur du groupe initiateur NetApp
+** Supprimez le serveur CIFS NetApp
+** Supprimer le partage CIFS NetApp
 ** Supprimer la règle d'export NetApp
 ** Retirez l'interface de données FC NetApp
 ** Supprimer le groupe initiateur NetApp
 ** Retirez l'interface IP NetApp
+** Supprimez les miroirs de partage de charge NetApp pour le volume racine du SVM
 ** Supprimer la LUN NetApp
 ** Supprimer le mappage de LUN NetApp
 ** Supprimez le volume intelligent NAS NetApp
 ** Supprimez la LUN intelligente NetApp
+** Supprimez la relation NetApp SnapMirror pour Volume
+** Supprimer la règle SnapMirror NetApp
 ** Supprimer la règle de snapshot NetApp
 ** Retirez la machine virtuelle de stockage NetApp
 ** Supprimez le volume NetApp
@@ -120,6 +143,7 @@ Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :
 ** Supprimer la règle de la règle d'export NetApp
 ** Supprimer la planification de la règle NetApp Snapshot
 ** Renommer le snapshot de volume NetApp
+** Mettre à jour les miroirs de partage de charge NetApp pour le volume racine du SVM
 ** Mettre à jour la capacité du volume NetApp
 +
 Pour en savoir plus sur la personnalisation des flux de travail avec les tâches de stockage et de virtualisation NetApp, regardez la vidéo https://tv.netapp.com/detail/video/6228095945001["Orchestration du stockage NetApp ONTAP dans Cisco Intersight"^].
