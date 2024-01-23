@@ -20,7 +20,7 @@ Pour contrôler et orchestrer le stockage NetApp depuis Cisco InterSight, vous a
 
 == Installez ou mettez à niveau NetApp Active IQ Unified Manager
 
-Installez ou mettez à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.13GA) si vous ne l'avez pas fait. Pour obtenir des instructions, reportez-vous au link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentation NetApp Active IQ Unified Manager"].
+Installer ou mettre à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.14RC1) si vous ne l'avez pas fait. Pour obtenir des instructions, reportez-vous au link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentation NetApp Active IQ Unified Manager"].
 
 
 
@@ -47,10 +47,10 @@ image::ci-qsg_image2.png[Capture d'écran de la configuration du modèle de dép
 
 .. Sur la page *Personnaliser le modèle*, personnalisez les propriétés de déploiement du modèle OVF. Le mot de passe administrateur est utilisé pour les utilisateurs locaux : admin(`webUI/cli/ssh`).
 +
-image::ci-qsg_image3.png[Erreur : image graphique manquante]
+image::ci-qsg_image3.png[Capture d'écran de l'écran déployer un modèle OVF]
 
 +
-image::ci-qsg_image4.png[Erreur : image graphique manquante]
+image::ci-qsg_image4.png[Capture d'écran de l'écran déployer un modèle OVF]
 
 .. Cliquez sur *Suivant*.
 
