@@ -8346,24 +8346,7 @@
   <block id="e409ef30600b1f6d6feda5ec5cf2b09a" category="list-text">Ajoutez *Widgets* pour le stockage NetApp à votre *Monitor Dashboard*.</block>
   <block id="c93483174eb31dc7fbbe326f1c100f35" category="paragraph">Voici un<block ref="e0428282d0e7de772227d65a22541ae5" category="inline-link-rx"></block> Vers la vidéo montrant les fonctionnalités ONTAP de surveillance du stockage de Cisco Intersight.</block>
   <block id="4eddc275f6028504b4d1bbed1e6ae1cb" category="section-title">Cas d'utilisation 2 : orchestration du stockage NetApp à l'aide des workflows de référence</block>
-  <block id="71db33e46e7cd195a5435b5bbd459f00" category="paragraph">Lorsque vous disposez d'un système de stockage NetApp et d'environnements vCenter dans Cisco Intersight, vous pouvez exécuter des flux de travail de référence de bout en bout disponibles clé en main incluant des tâches de stockage et de virtualisation.</block>
   <block id="ad394a42593fccfc9f89e6e10730a3c0" category="list-text">Ajoutez la cible vCenter à InterSight via InterSight Assist.</block>
-  <block id="e5b3d0fd155bb870e4420af06394bbd3" category="list-text">Exécuter les flux de travail de référence clé en main.</block>
-  <block id="084d65e339ce13f9808de5cb168533ee" category="paragraph">Voici une liste des workflows de référence :</block>
-  <block id="221275b515f2f2d061278fa891fba037" category="list-text">Nouveau datastore NAS</block>
-  <block id="e6e0c10af4047ddf4cc255b55df46dac" category="list-text">Nouvelle politique d'exportation du stockage</block>
-  <block id="cf585ac30084d99acfaf33e5e4dd62d1" category="list-text">Nouvel hôte de stockage</block>
-  <block id="6bdb241b38971486dbf0ae65713629b5" category="list-text">Nouvelle interface de stockage</block>
-  <block id="7c482940e2cbbc8b34c0ea99ea5d46d4" category="list-text">Nouvel ordinateur virtuel de stockage</block>
-  <block id="09a4d46ab76931825b888683878c6c76" category="list-text">Nouvel ordinateur virtuel</block>
-  <block id="41015c59f24c8d0a295bb008dcab894b" category="list-text">Nouveau datastore VMFS</block>
-  <block id="2be427f143fe2c7535d3255ff3acb81b" category="list-text">Supprimer le datastore NAS</block>
-  <block id="eda4446acba9d8508e0d513c13d3d9da" category="list-text">Supprimer la stratégie d'exportation de stockage</block>
-  <block id="c9c602ce9bba0253c26a1e2982260f1c" category="list-text">Supprimer l'hôte de stockage</block>
-  <block id="c8294275582a7d8cf8eb396e416bd5bc" category="list-text">Supprimer le datastore VMFS</block>
-  <block id="b4ce0f100a8ef985df3d96c1de352e59" category="list-text">Mettre à jour le datastore NAS</block>
-  <block id="b3899145c67672c8bd99a3b4d43bf690" category="list-text">Mettre à jour l'hôte de stockage</block>
-  <block id="90b8d6dbd471d96a6eb81c26e4950f66" category="list-text">Mettre à jour le datastore VMFS</block>
   <block id="97e1e380ad6fec970bc1c31e70c64a7a" category="section-title">Cas d'utilisation 3 : flux de travail personnalisés utilisant un format sans design</block>
   <block id="ebdd07b29e304318f596e225db587279" category="paragraph">Lorsque les environnements NetApp Storage et vCenter sont disponibles dans Cisco InterSight, vous pouvez créer des flux de travail personnalisés en utilisant les tâches de stockage et de virtualisation NetApp.</block>
   <block id="28138f5b00c14f915db4af5bc22c6e89" category="list-text">Déployer InterSight Assist OVA (tâche Onsite dans l'environnement vCenter)</block>
@@ -9726,6 +9709,26 @@
   <block id="b225002f4ba131c321e0dc8d89d5a8ad" category="paragraph">Installer ou mettre à niveau vers Active IQ Unified Manager (la dernière version est requise, actuellement 9.14RC1) si vous ne l'avez pas fait. Pour obtenir des instructions, reportez-vous au <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
   <block id="e245b121672965eb5c120373beb6ebe2" category="image-alt">Capture d'écran de l'écran déployer un modèle OVF</block>
   <block id="fb784db76f57bc935639ba5340089d77" category="section-title">Novembre 2023</block>
-  <block id="0860efb25683aa716ffcd95186cf7353" category="admonition">Une mise à niveau vers NetApp Active IQ Unified Manager 9.14RC1 est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités avec la dernière version.</block>
   <block id="5c49c1696b71ecb277e29a00e385c986" category="list-text">Ajout de la page Namespaces NVMe dans la section Inventory de l'interface utilisateur.</block>
+  <block id="3edb98d021e3054db284901ca7c19c71" category="section-title">Cas d'usage n°2 : orchestration du stockage NetApp à l'aide de workflows de référence</block>
+  <block id="4deb0bcf6ee79bb6231b1d9a8236ee7f" category="inline-link">Référentiel de flux de travail FlexPod Intersight</block>
+  <block id="801e3380644b27475e0559db15c18ffe" category="paragraph">Lorsque le stockage NetApp et les environnements vCenter sont disponibles dans Cisco Intersight, vous pouvez utiliser des workflows de référence de bout en bout disponibles dans GitHub via le<block ref="dbef3ce40b045312da2d2a3590390d56" category="inline-link-rx"></block>.</block>
+  <block id="a7b8d77df644cec5edd41602f8bde9fe" category="paragraph">Les workflows de référence incluent les tâches de stockage et de virtualisation. Le fichier README du référentiel fournit les prérequis nécessaires à l'exécution des flux de travail, des liens vers des ressources utiles (y compris de la documentation sur l'importation d'un flux de travail) et des liens de documentation pour chaque flux de travail de référence.</block>
+  <block id="42ee80278c64c0335ab90c3ca11e5fc2" category="paragraph">Chaque flux de travail comporte un dossier dans le référentiel contenant deux fichiers :</block>
+  <block id="f74336cac868327b942a18cba977b140" category="list-text">Le fichier JSON à télécharger et à importer dans Intersight,</block>
+  <block id="4efec42a58f3f78364a340527d6a91c5" category="list-text">Fichier de documentation qui fournit une vue des tâches du flux de travail, des entrées de flux de travail et un exemple d'exécution du flux de travail.</block>
+  <block id="75a064044a86e35e2e078856b448e6ce" category="paragraph">Pour importer et utiliser un flux de travail de référence, procédez comme suit :</block>
+  <block id="1ff531cef47fff4cf5489daaf767913b" category="list-text">Téléchargez le fichier JSON pour un workflow de référence depuis le référentiel FlexPod-Intersight-Workflow.</block>
+  <block id="e6b633ef88a5f19ab750e7561b73ba79" category="list-text">Importez le flux de travail dans Intersight, puis exécutez-le.</block>
+  <block id="e23b10811291830d7473d61a83fea7b7" category="paragraph">Voici la liste des workflows disponibles dans le référentiel GitHub FlexPod-Intersight-Workflow :</block>
+  <block id="ad1cc7a77d25ebba82b62c73eb10b612" category="list-text">Nouvelle règle d'export pour volume NetApp</block>
+  <block id="71305ad3f6f06f57de106696ca53fcc9" category="list-text">Nouveau datastore NAS à l'aide du volume intelligent NetApp</block>
+  <block id="6fcc1f9b74af784c1c904dd8f98d13bc" category="list-text">Nouveau datastore VMFS avec LUN intelligente NetApp</block>
+  <block id="26d33b228398e0c75f8ce7e3c24ece85" category="list-text">Supprimer les initiateurs du groupe initiateur NetApp</block>
+  <block id="2c727aeb2c8679c2588db34d4518e88b" category="list-text">Supprimez le datastore NAS à l'aide du volume intelligent NetApp</block>
+  <block id="cb623d65e44d9911c481d53db6546cfd" category="list-text">Supprimez un datastore VMFS à l'aide de la LUN intelligente NetApp</block>
+  <block id="84c6562e9555586ee56eb4096f52f8d2" category="list-text">Mettez à jour le datastore NAS à l'aide du volume intelligent NetApp</block>
+  <block id="eade77a2815c8954887e241cc8a7cdbd" category="list-text">Mettre à jour un datastore VMFS à l'aide de la LUN intelligente NetApp</block>
+  <block id="efe846805e5476fec607bbf54e45dc44" category="section-title">Janvier 2024</block>
+  <block id="1dbf0a61b61f004514eb71c762bdda23" category="list-text">Orchestration du stockage NetApp à l'aide de workflows de référence désormais disponibles au téléchargement dans GitHub via<block ref="dbef3ce40b045312da2d2a3590390d56" category="inline-link-rx"></block>. Pour plus d'informations sur les nouveaux flux de travail de référence dans GitHub, voir <block ref="603c2ccdc54cec25fe66c69c148f7dcb" category="inline-link-macro-rx"></block>.</block>
 </blocks>

@@ -33,34 +33,45 @@ Voici un https://tv.netapp.com/detail/video/6228096841001["lien"^] Vers la vidé
 
 
 
-== Cas d'utilisation 2 : orchestration du stockage NetApp à l'aide des workflows de référence
+== Cas d'usage n°2 : orchestration du stockage NetApp à l'aide de workflows de référence
 
-Lorsque vous disposez d'un système de stockage NetApp et d'environnements vCenter dans Cisco Intersight, vous pouvez exécuter des flux de travail de référence de bout en bout disponibles clé en main incluant des tâches de stockage et de virtualisation.
+Lorsque le stockage NetApp et les environnements vCenter sont disponibles dans Cisco Intersight, vous pouvez utiliser des workflows de référence de bout en bout disponibles dans GitHub via le https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Référentiel de flux de travail FlexPod Intersight"^].
+
+Les workflows de référence incluent les tâches de stockage et de virtualisation. Le fichier README du référentiel fournit les prérequis nécessaires à l'exécution des flux de travail, des liens vers des ressources utiles (y compris de la documentation sur l'importation d'un flux de travail) et des liens de documentation pour chaque flux de travail de référence.
+
+Chaque flux de travail comporte un dossier dans le référentiel contenant deux fichiers :
+
+* Le fichier JSON à télécharger et à importer dans Intersight,
+* Fichier de documentation qui fournit une vue des tâches du flux de travail, des entrées de flux de travail et un exemple d'exécution du flux de travail.
+
+
+Pour importer et utiliser un flux de travail de référence, procédez comme suit :
 
 . Déployer InterSight Assist OVA (tâche Onsite dans l'environnement vCenter).
 . Ajouter des systèmes NetApp AIQ MU dans InterSight Assist.
 . Ajoutez la cible vCenter à InterSight via InterSight Assist.
-. Exécuter les flux de travail de référence clé en main.
-+
-Voici une liste des workflows de référence :
-
-+
-** Nouveau datastore NAS
-** Nouvelle politique d'exportation du stockage
-** Nouvel hôte de stockage
-** Nouvelle interface de stockage
-** Nouvel ordinateur virtuel de stockage
-** Nouvel ordinateur virtuel
-** Nouveau datastore VMFS
-** Supprimer le datastore NAS
-** Supprimer la stratégie d'exportation de stockage
-** Supprimer l'hôte de stockage
-** Supprimer le datastore VMFS
-** Mettre à jour le datastore NAS
-** Mettre à jour l'hôte de stockage
-** Mettre à jour le datastore VMFS
+. Téléchargez le fichier JSON pour un workflow de référence depuis le référentiel FlexPod-Intersight-Workflow.
+. Importez le flux de travail dans Intersight, puis exécutez-le.
 
 
+Voici la liste des workflows disponibles dans le référentiel GitHub FlexPod-Intersight-Workflow :
+
+* Ajouter des initiateurs au groupe initiateur NetApp
+* Nouvelle règle d'export pour volume NetApp
+* Nouveau datastore NAS à l'aide du volume intelligent NetApp
+* Nouvelle interface de données FC NetApp
+* Nouveau groupe initiateur NetApp
+* Nouvelle interface de données iSCSI NetApp
+* Nouvelle interface de données NAS NetApp
+* Nouvelle machine virtuelle de stockage NetApp
+* Nouveau datastore VMFS avec LUN intelligente NetApp
+* Supprimer les initiateurs du groupe initiateur NetApp
+* Supprimez le datastore NAS à l'aide du volume intelligent NetApp
+* Supprimer la règle d'export NetApp
+* Supprimer le groupe initiateur NetApp
+* Supprimez un datastore VMFS à l'aide de la LUN intelligente NetApp
+* Mettez à jour le datastore NAS à l'aide du volume intelligent NetApp
+* Mettre à jour un datastore VMFS à l'aide de la LUN intelligente NetApp
 
 
 

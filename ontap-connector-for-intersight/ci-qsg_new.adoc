@@ -18,10 +18,14 @@ Cette section répertorie les nouvelles fonctionnalités disponibles pour Cisco 
 
 
 
+== Janvier 2024
+
+* Orchestration du stockage NetApp à l'aide de workflows de référence désormais disponibles au téléchargement dans GitHub via https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Référentiel de flux de travail FlexPod Intersight"^]. Pour plus d'informations sur les nouveaux flux de travail de référence dans GitHub, voir link:ci-qsg_use_cases.html["Cas d'utilisation 2 : orchestration du stockage NetApp à l'aide des workflows de référence"^].
+
+
+
+
 == Novembre 2023
-
-
-NOTE: Une mise à niveau vers NetApp Active IQ Unified Manager 9.14RC1 est nécessaire pour garantir la compatibilité et l'intégralité des fonctionnalités avec la dernière version.
 
 * Ajout de la page Namespaces NVMe dans la section Inventory de l'interface utilisateur.
 
