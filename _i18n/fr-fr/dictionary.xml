@@ -8202,13 +8202,10 @@
   <block id="9c2514843c0b4f1c1909f153eafcb883" category="paragraph">Pour modifier la règle de hiérarchisation d'un volume à l'aide de l'interface de ligne de commandes ONTAP, exécutez la commande suivante :</block>
   <block id="c901a03753b4e05288bd4325b907fa34" category="inline-link-macro">Ensuite, définissez le Tiering des volumes sur les jours de refroidissement minimum.</block>
   <block id="2334ddd2544286434ec621908ded23b5" category="paragraph"><block ref="2334ddd2544286434ec621908ded23b5" category="inline-link-macro-rx"></block></block>
-  <block id="fa776a6d8035e935e3ca744e1a9a7d09" category="summary">Pour en savoir plus, consultez les documents de référence et les sites web.</block>
   <block id="d95867deadfe690e40f42068d6b59df8" category="doc">Références</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">Pour en savoir plus, consultez ces documents et sites web :</block>
   <block id="3a45f44b03660232082dc152068990fd" category="inline-link">Tr 4883 : FlexPod Datacenter avec ONTAP 9.8, ONTAP Storage Connector for Cisco Intersight et Cisco Intersight Managed mode</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
-  <block id="7b3308b95aec192d46bc92dd7fb02cb2" category="inline-link">Mode géré Cisco Intersight pour FlexPod</block>
-  <block id="2155a8941fd728202c18dade730100d6" category="paragraph"><block ref="2155a8941fd728202c18dade730100d6" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Présentation de Cisco Intersight Getting Started</block>
   <block id="40ad3b682c80f313282c440b74ef7360" category="paragraph"><block ref="40ad3b682c80f313282c440b74ef7360" category="inline-link-rx"></block></block>
   <block id="4d49c14c4afe96eb88aaef6d6588599b" category="inline-link">Guide d'installation et de mise à niveau d'Intersight Appliance</block>
@@ -8325,18 +8322,8 @@
   <block id="8f7052d0c9b4ba227843ecc0873ab47c" category="cell">Détails de l'exigence</block>
   <block id="29d1db03b55072fc401d11d7d0750f61" category="cell">ONTAP 9.7P1 et versions ultérieures</block>
   <block id="5dc8e3707996259deb52abdfee00eac9" category="cell">Baie de stockage NetApp</block>
-  <block id="00b515e766e1cba805399ff9eb813a8f" category="cell">Toutes les baies de stockage ONTAP ASA, AFF et FAS sont prises en charge pour ONTAP 9.7P1 et versions ultérieures</block>
   <block id="1f8e8bd6bc1c4895f936485882fbdf9d" category="cell">Hyperviseur de virtualisation</block>
-  <block id="4ca6768d140e70826f7716d07807dc17" category="cell">VSphere 6.7 et versions ultérieures</block>
-  <block id="72070c9ef3f94bc3718c44ba73d4ccc3" category="admonition">Reportez-vous à la section<block ref="2c43cbcc5ede8fefeab295a68acd4cdb" category="inline-link-rx"></block> Pour les exigences minimales des composants de calcul Cisco UCS et de la version UCSM.</block>
   <block id="4aa6cd6038c4fecb0c308ca4d3dcdea0" category="section-title">Conditions requises pour les licences Cisco Intersight</block>
-  <block id="679eff4aa4d3a357123f3400b7f819f4" category="paragraph">Cisco Intersight dispose d'une licence sur la base d'un abonnement avec plusieurs éditions de licence à choisir. Les capacités évoluent avec les différents types de licence. Vous pouvez acheter une durée d'abonnement de un, trois ou cinq ans et choisir le niveau de volume Cisco UCS Server requis pour la durée d'abonnement sélectionnée. Chaque terminal Cisco inclut automatiquement une base Cisco Intersight sans frais supplémentaires lorsque vous accédez au portail Cisco Intersight et demandez un périphérique.</block>
-  <block id="c4c01460eb0fd0e7d30ef65622dc7cb2" category="paragraph">Vous pouvez acheter l'une des licences Intersight de niveau supérieur suivantes à l'aide de l'outil de commande Cisco :</block>
-  <block id="fbd64fb1c56050f38cf0c2d9441004af" category="list-text">*Cisco Intersight Essentials.* Essentials inclut toutes les fonctionnalités du niveau de base avec les fonctions supplémentaires, notamment les droits Cisco UCS Central et Cisco IMC Supervisor, la configuration basée sur des règles avec profils de service, la gestion du micrologiciel et l'évaluation de la compatibilité avec la liste de compatibilité matérielle (HCL).</block>
-  <block id="8a30fe4ae6d8d0310e0d329493bc21c3" category="list-text">*Cisco Intersight Advantage.* Advantage offre toutes les fonctionnalités des niveaux base et Essentials. Il comprend les widgets de stockage, l'inventaire du stockage, la capacité de stockage et l'utilisation du stockage, ainsi que la corrélation d'inventaire interdomaine sur le calcul physique, le stockage physique et les environnements virtuels (VMware ESXi).</block>
-  <block id="97f9beafe8a267c8b35e2fb7235394ab" category="list-text">*Cisco Intersight Premier.* en plus des fonctionnalités du niveau Advantage, Cisco Intersight Premier offre une orchestration IaaS (Private Cloud Infrastructure-as-a-Service) sur Cisco UCS et des systèmes tiers, notamment des machines virtuelles (VM) (VMware vCenter) et du stockage physique (stockage NetApp).</block>
-  <block id="d4780504a816544f6e2645b57ea78a79" category="inline-link">Licences Cisco</block>
-  <block id="926dfe010cd806b1815f2e2e910d07ee" category="paragraph">Pour plus d'informations sur les fonctionnalités couvertes par les différents niveaux de licence, accédez à<block ref="8697cd039441f6238fc2562e0fa792ae" category="inline-link-rx"></block>.</block>
   <block id="10e151868abb588914d621ebe3019558" category="summary">Il s'agit de quelques exemples de cas d'utilisation pour le contrôle et l'orchestration du stockage NetApp auprès de Cisco Intersight.</block>
   <block id="5ff30c7527c7407eb3c515338ef1560f" category="section-title">Cas d'utilisation 1 : surveillance de l'inventaire du stockage NetApp et des widgets</block>
   <block id="0508c857cd2f8cba0c9d45eaf4737843" category="paragraph">Lorsque l'environnement de stockage NetApp est disponible dans Cisco Intersight, vous pouvez surveiller les objets de stockage NetApp en détail à partir de l'inventaire du stockage et obtenir une vue d'ensemble à partir des widgets de stockage.</block>
@@ -9731,4 +9718,19 @@
   <block id="eade77a2815c8954887e241cc8a7cdbd" category="list-text">Mettre à jour un datastore VMFS à l'aide de la LUN intelligente NetApp</block>
   <block id="efe846805e5476fec607bbf54e45dc44" category="section-title">Janvier 2024</block>
   <block id="1dbf0a61b61f004514eb71c762bdda23" category="list-text">Orchestration du stockage NetApp à l'aide de workflows de référence désormais disponibles au téléchargement dans GitHub via<block ref="dbef3ce40b045312da2d2a3590390d56" category="inline-link-rx"></block>. Pour plus d'informations sur les nouveaux flux de travail de référence dans GitHub, voir <block ref="603c2ccdc54cec25fe66c69c148f7dcb" category="inline-link-macro-rx"></block>.</block>
+  <block id="21fdbbe30d03ba60217ad219e4a43475" category="paragraph">Vérifiez que vous respectez les exigences en matière de matériel, de logiciels et de licences pour l'intégration du stockage NetApp ONTAP dans Cisco Intersight.</block>
+  <block id="cf37c5cba207938e4c97f3bcf9ffabc9" category="cell">Toutes les baies de stockage ONTAP ASA, AFF et FAS sont prises en charge pour ONTAP 9.7P1 et versions ultérieures</block>
+  <block id="de19bc9421b3493cb471fb68d644f614" category="cell">VSphere 7.0 et versions ultérieures</block>
+  <block id="2bab0c7a59bda4a6cf8bb732310f19d1" category="inline-link">Systèmes pris en charge par Cisco Intersight</block>
+  <block id="4583b551e49cf84018c42a34fc90472b" category="admonition">Reportez-vous à la section<block ref="c301da257433e3b44d89736f9cb32482" category="inline-link-rx"></block> Pour les exigences minimales des composants de calcul Cisco UCS et de la version UCSM.</block>
+  <block id="c6992d015712de0f9935c930f87d1e24" category="paragraph">Cisco Intersight propose des services tels que le service d'infrastructure et le service d'orchestration cloud pour gérer, automatiser et optimiser le stockage physique (stockage NetApp). Vous pouvez utiliser ces services pour gérer le serveur Cisco UCS et le système Cisco HyperFlex. Le service d'infrastructure et le service Cloud Orchestrator utilisent un modèle de licence par abonnement avec plusieurs tiers. Vous pouvez choisir le niveau de volume de serveur Cisco UCS requis pour la période d'abonnement sélectionnée.</block>
+  <block id="73940e6c81db7305c6108d57163a6bd9" category="paragraph-title">Modèle de licence</block>
+  <block id="0eeef496e6954ad0d16a059fafdc5e38" category="paragraph">Le modèle de licence des services d'infrastructure Cisco Intersight a été simplifié et offre désormais les deux tiers suivants :</block>
+  <block id="cebf91fe773dd5685c20ef3bff0017f3" category="list-text">*Cisco Intersight Infrastructure Services Essentials* - le niveau de licence Essentials offre la gestion du serveur, y compris la fonctionnalité de surveillance de l'état global, l'inventaire, la prise en charge proactive via l'intégration Cisco TAC, l'authentification multifacteur, ainsi que l'accès au SDK et à l'API.</block>
+  <block id="0ef1beaa09215da1b27e26da9c01b73b" category="list-text">*Cisco Intersight Infrastructure Services Advantage* - le niveau de licence Advantage offre une gestion avancée des serveurs avec une visibilité étendue, l'intégration de l'écosystème, l'automatisation du matériel et des logiciels Cisco et tiers, ainsi que des solutions multi-domaines.</block>
+  <block id="f5e1db835ff4b10b4a6531770f9643e9" category="inline-link">Licence Infrastructure Services</block>
+  <block id="2c355e53fd6c41fd8e75d57ff3e446e3" category="paragraph">Pour plus d'informations sur les fonctionnalités couvertes par les différents niveaux de licence, accédez à<block ref="b733a46c0b54e4d9837584b6621e33e9" category="inline-link-rx"></block>.</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">Informations associées</block>
+  <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Centre d'aide de Cisco Intersight</block>
+  <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
 </blocks>
