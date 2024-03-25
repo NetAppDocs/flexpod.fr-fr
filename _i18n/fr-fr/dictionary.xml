@@ -8202,7 +8202,6 @@
   <block id="9c2514843c0b4f1c1909f153eafcb883" category="paragraph">Pour modifier la règle de hiérarchisation d'un volume à l'aide de l'interface de ligne de commandes ONTAP, exécutez la commande suivante :</block>
   <block id="c901a03753b4e05288bd4325b907fa34" category="inline-link-macro">Ensuite, définissez le Tiering des volumes sur les jours de refroidissement minimum.</block>
   <block id="2334ddd2544286434ec621908ded23b5" category="paragraph"><block ref="2334ddd2544286434ec621908ded23b5" category="inline-link-macro-rx"></block></block>
-  <block id="d95867deadfe690e40f42068d6b59df8" category="doc">Références</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">Pour en savoir plus, consultez ces documents et sites web :</block>
   <block id="3a45f44b03660232082dc152068990fd" category="inline-link">Tr 4883 : FlexPod Datacenter avec ONTAP 9.8, ONTAP Storage Connector for Cisco Intersight et Cisco Intersight Managed mode</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
@@ -9733,4 +9732,26 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">Informations associées</block>
   <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Centre d'aide de Cisco Intersight</block>
   <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Les mentions légales donnent accès aux déclarations de copyright, aux marques, aux brevets, etc.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Mentions légales</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Droits d'auteur</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marques déposées</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp, le logo NETAPP et les marques mentionnées sur la page des marques commerciales NetApp sont des marques commerciales de NetApp, Inc. Les autres noms de sociétés et de produits peuvent être des marques commerciales de leurs propriétaires respectifs.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevets</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Vous trouverez une liste actuelle des brevets appartenant à NetApp à l'adresse suivante :</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Politique de confidentialité</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="6c5a2d8729b8ce5ae6b035791d668adb" category="sidebar">Reposant sur une technologie révolutionnaire de NetApp et Cisco et fiable par des milliers de clients dans le monde entier, la plateforme FlexPod répond aux défis de simplification des déploiements pour une architecture de data Center de qualité supérieure. La solution FlexPod est dotée de technologies prévalidées de stockage, de réseau et de serveur pour une plus grande réactivité IT aux besoins de l'entreprise, une disponibilité maximale et une réduction des coûts de calcul et des risques. En simplifiant la fourniture des données et des applications, votre entreprise a l'avantage d'exécuter de nouveaux services et charges de travail en périphérie, au cœur ou dans le cloud.</block>
+  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod - commencez ici</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Nouveautés</block>
+  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">Vidéos et démonstrations</block>
+  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">Blogs</block>
+  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">Exploitez l'IA et l'analytique moderne avec FlexPod</block>
+  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">Les applications métier et les bases de données d'entreprise FlexPod</block>
+  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud hybride avec FlexPod</block>
+  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod pour VDI</block>
+  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Santé avec FlexPod</block>
 </blocks>
