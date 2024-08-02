@@ -26,9 +26,6 @@ Lorsque l'environnement de stockage NetApp est disponible dans Cisco Intersight,
 . Ajouter des systèmes NetApp AIQ MU dans InterSight Assist.
 . Accédez à *stockage* et naviguez dans l'inventaire du stockage NetApp.
 . Ajoutez *Widgets* pour le stockage NetApp à votre *Monitor Dashboard*.
-+
-Voici un https://tv.netapp.com/detail/video/6228096841001["lien"^] Vers la vidéo montrant les fonctionnalités ONTAP de surveillance du stockage de Cisco Intersight.
-
 
 
 
@@ -156,9 +153,6 @@ Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :
 ** Renommer le snapshot de volume NetApp
 ** Mettre à jour les miroirs de partage de charge NetApp pour le volume racine du SVM
 ** Mettre à jour la capacité du volume NetApp
-+
-Pour en savoir plus sur la personnalisation des flux de travail avec les tâches de stockage et de virtualisation NetApp, regardez la vidéo https://tv.netapp.com/detail/video/6228095945001["Orchestration du stockage NetApp ONTAP dans Cisco Intersight"^].
-
 
 
 

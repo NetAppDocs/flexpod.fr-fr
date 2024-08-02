@@ -8226,8 +8226,6 @@
   <block id="3b9d69f0a29fb6e182f8d000f6c02f3e" category="list-text">Affichez les détails du proxy IMT pour vérifier<block ref="22ab761f56350fc0c0aa256e089eb551" prefix=" " category="inline-code"></block> et<block ref="e226e439483112d5afa99d9dd0e1873a" prefix=" " category="inline-code"></block> paramètres via la commande suivante.</block>
   <block id="f9d402f73c06490b49744c7260f10c18" category="summary">Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp.</block>
   <block id="7351a1047aea1d8e523aae1df309c347" category="doc">Objectifs de demande de remboursement</block>
-  <block id="ff2e4aa830d38c99b2010a91bd562775" category="inline-link">Demander une cible via Cisco Intersight.</block>
-  <block id="6bc0022874ff4b98cf45584e525e1f00" category="paragraph">Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp. Revenez à la page *Intersights Targets* et ajoutez vos cibles Active IQ Unified Manager vCenter et NetApp. Pour en savoir plus sur le processus de réclamation, regardez la vidéo<block ref="30d5424c5fce71a06fbbaa3ffc76fb0e" category="inline-link-rx"></block></block>
   <block id="c27675fd33dbae852257d83ae0b40ee3" category="admonition">Assurez-vous que la passerelle d'API NetApp Active IQ Unified Manager (AIQ MU) est activée.</block>
   <block id="914be32cb08524e05323b3adb9bc0c3f" category="paragraph">Depuis NetApp IQ Unified Manager, accédez à *Paramètres &gt; général &gt; Paramètres des fonctionnalités*.</block>
   <block id="94a25ce3cfde50ac05004124838a8585" category="inline-image-macro">Capture d'écran de la passerelle d'API NetApp AIQ MU UM activée</block>
@@ -8330,7 +8328,6 @@
   <block id="15f4a670b8dabd99725a6e57e0671ee4" category="list-text">Ajouter des systèmes NetApp AIQ MU dans InterSight Assist.</block>
   <block id="3565f69c284244db8d5ca84b622ee9f7" category="list-text">Accédez à *stockage* et naviguez dans l'inventaire du stockage NetApp.</block>
   <block id="e409ef30600b1f6d6feda5ec5cf2b09a" category="list-text">Ajoutez *Widgets* pour le stockage NetApp à votre *Monitor Dashboard*.</block>
-  <block id="c93483174eb31dc7fbbe326f1c100f35" category="paragraph">Voici un<block ref="e0428282d0e7de772227d65a22541ae5" category="inline-link-rx"></block> Vers la vidéo montrant les fonctionnalités ONTAP de surveillance du stockage de Cisco Intersight.</block>
   <block id="4eddc275f6028504b4d1bbed1e6ae1cb" category="section-title">Cas d'utilisation 2 : orchestration du stockage NetApp à l'aide des workflows de référence</block>
   <block id="ad394a42593fccfc9f89e6e10730a3c0" category="list-text">Ajoutez la cible vCenter à InterSight via InterSight Assist.</block>
   <block id="97e1e380ad6fec970bc1c31e70c64a7a" category="section-title">Cas d'utilisation 3 : flux de travail personnalisés utilisant un format sans design</block>
@@ -8341,8 +8338,6 @@
   <block id="054075501dbbc3039c5d0b5dab12a766" category="list-text">Sélectionnez *Créer un flux de travail*.</block>
   <block id="17fd08459c8a5f34d6f93f908fc4fc70" category="list-text">Ajoutez des tâches de stockage et de virtualisation à vos flux de production.</block>
   <block id="16823263a74001ecb22c9fecdb2d8af2" category="paragraph">Les tâches de stockage NetApp sont disponibles auprès de Cisco Intersight :</block>
-  <block id="aed9e8ce86d6b67ac26c7d1937461e90" category="inline-link">Orchestration du stockage NetApp ONTAP dans Cisco Intersight</block>
-  <block id="efd91dc6276bbe52b654d531a05b3658" category="paragraph">Pour en savoir plus sur la personnalisation des flux de travail avec les tâches de stockage et de virtualisation NetApp, regardez la vidéo<block ref="9c51a52bc77cfd7dca26d970b0100330" category="inline-link-rx"></block>.</block>
   <block id="125b1abfe1e20b5d3d6794b8dcc47618" category="summary">Avant de commencer, installez ou mettez à niveau AIQ UM, créez un compte Cisco InterSight et installez Intersight.</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="doc">Avant de commencer</block>
   <block id="881413045c8af6a58c42bcc219b2ba2d" category="paragraph">Pour contrôler et orchestrer le stockage NetApp depuis Cisco InterSight, vous avez besoin d'une appliance virtuelle NetApp Active IQ Unified Manager et Cisco Intersight installée dans l'environnement vCenter.</block>
@@ -9754,4 +9749,5 @@
   <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud hybride avec FlexPod</block>
   <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod pour VDI</block>
   <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Santé avec FlexPod</block>
+  <block id="da1ad8cf23727f17cd3ee56b1280c387" category="paragraph">Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp. Revenez à la page *Intersights Targets* et ajoutez vos cibles Active IQ Unified Manager vCenter et NetApp.</block>
 </blocks>

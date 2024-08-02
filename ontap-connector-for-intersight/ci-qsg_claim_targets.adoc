@@ -14,7 +14,7 @@ summary: Une fois Cisco InterSight Assist installé, vous pouvez demander vos sy
 
 
 [role="lead"]
-Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp. Revenez à la page *Intersights Targets* et ajoutez vos cibles Active IQ Unified Manager vCenter et NetApp. Pour en savoir plus sur le processus de réclamation, regardez la vidéo https://tv.netapp.com/detail/video/6228080442001["Demander une cible via Cisco Intersight."^]
+Une fois Cisco InterSight Assist installé, vous pouvez demander vos systèmes de stockage et de virtualisation NetApp. Revenez à la page *Intersights Targets* et ajoutez vos cibles Active IQ Unified Manager vCenter et NetApp.
 
 
 NOTE: Assurez-vous que la passerelle d'API NetApp Active IQ Unified Manager (AIQ MU) est activée.
