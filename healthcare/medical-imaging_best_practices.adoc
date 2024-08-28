@@ -206,6 +206,6 @@ Consultez les bonnes pratiques suivantes et certaines exigences d'un système d'
 * S'assurer que les VMDK du système d'exploitation des machines virtuelles sont hébergés dans un stockage de niveau 1 rapide.
 * En collaboration avec le fournisseur de systèmes d'imagerie médicale, déterminez la meilleure approche pour préparer les modèles de VM afin d'accélérer le déploiement et la maintenance.
 * Les réseaux de gestion, de stockage et de production nécessitent une ségrégation LAN pour la base de données, avec des VLAN isolés pour VMware vMotion.
-* Utilisez la technologie de réplication basée sur les baies de stockage de NetApp appelée https://www.netapp.com/us/media/tr-4015.pdf["SnapMirror"^] Au lieu de la réplication vSphere.
+* Utilisez la technologie de réplication NetApp basée sur la baie de stockage https://www.netapp.com/pdf.html?item=/media/17229-tr4015pdf.pdf["SnapMirror"^], appelée plutôt que la réplication basée sur vSphere.
 * Utilisez les technologies de sauvegarde qui tirent parti des API VMware ; les fenêtres de sauvegarde doivent être en dehors des heures de production normales.
 

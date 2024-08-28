@@ -37,7 +37,7 @@ De plus, le partitionnement données-racines peut être utilisé sur le système
 
 image:express-c-series-aff220-design_image6.png["Erreur : image graphique manquante"]
 
-Il s'agit de quelques fonctionnalités clés qui complètent la solution FlexPod Express. Pour plus d'informations sur les fonctions et fonctionnalités supplémentaires de ONTAP 9.4, consultez le https://www.netapp.com/us/media/ds-3231.pdf["Fiche technique sur le logiciel de gestion des données ONTAP 9"^]. Et voyez également NetApp http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^], Qui a été mis à jour pour inclure ONTAP 9.4.
+Il s'agit de quelques fonctionnalités clés qui complètent la solution FlexPod Express. Pour plus de détails sur les fonctions et fonctionnalités supplémentaires de ONTAP 9.4, consultez le https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["Fiche technique sur le logiciel de gestion des données ONTAP 9"^]. Voir aussi NetApp http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^] , qui a été mis à jour pour inclure ONTAP 9.4.
 
 
 

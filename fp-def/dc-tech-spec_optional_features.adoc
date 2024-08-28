@@ -60,7 +60,7 @@ La figure suivante illustre le data Center FlexPod pour FC avec Cisco MDS.
 
 Pour plus d'informations sur la configuration de FlexPod et ses avantages en termes de performances, consultez https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["Livre blanc NVMe de bout en bout pour FlexPod :"^]
 
-Pour plus d'informations sur l'implémentation de ONTAP, reportez-vous à https://www.netapp.com/us/media/tr-4684.pdf["Tr-4684 : implémentation et configuration des SAN modernes avec NVMe"^].
+Pour plus d'informations sur la mise en œuvre de ONTAP, reportez-vous à https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["Tr-4684 : implémentation et configuration des SAN modernes avec NVMe"^]la section.
 
 image:dc-tech-spec_image3.png["Erreur : image graphique manquante"]
 

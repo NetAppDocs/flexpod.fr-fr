@@ -51,4 +51,4 @@ La figure suivante illustre le modèle FlexPod Express avec la configuration gé
 
 image:fp-express-tech-spec_image3.png["Erreur : image graphique manquante"]
 
-Pour plus d'informations sur cette configuration, reportez-vous à la section https://www.netapp.com/us/media/nva-1131-deploy.pdf["FlexPod Express avec VMware vSphere 6.7U1 et NetApp AFF A220 avec stockage DAS basé sur IP"^].
+Pour plus d'informations sur cette configuration, reportez-vous à https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["FlexPod Express avec VMware vSphere 6.7U1 et NetApp AFF A220 avec stockage DAS basé sur IP"^]la section.

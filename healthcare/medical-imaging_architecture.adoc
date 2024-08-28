@@ -49,7 +49,7 @@ Avec ses fonctionnalités de réplication des données, NetApp SnapMirror protè
 * Bénéficiez de fonctionnalités d'efficacité à la volée supplémentaires avec la compression réseau.
 
 
-Vous trouverez plus d'informations https://www.netapp.com/us/media/ds-3820.pdf["ici"^].
+Plus d'informations sont disponibles https://www.netapp.com/pdf.html?item=/media/8327-ds-3820.pdf["ici"^].
 
 Le tableau ci-dessous répertorie chaque niveau qu'un système d'imagerie médicale classique nécessite pour une latence spécifique et les caractéristiques de performances de débit.
 
@@ -224,7 +224,7 @@ Un système d'imagerie médicale classique utilise une architecture à plusieurs
 
 Un système d'imagerie médicale standard permet d'accéder aux images de deux groupes d'utilisateurs distincts : le diagnostique utilisateur/radiologue, le médecin ou le médecin traitant de l'imagerie.
 
-En général, les radiologues utilisent des visionneuses de diagnostic haut de gamme compatibles avec des graphiques exécutées sur des postes de travail graphiques et de calcul haut de gamme qui sont physiques ou font partie d'une infrastructure de postes de travail virtuels. Si vous êtes sur le point de lancer votre transition à l'infrastructure de postes de travail virtuels, plus d'informations sont disponibles https://www.netapp.com/us/media/na-flexpod-vdi.pdf["ici"^].
+En général, les radiologues utilisent des visionneuses de diagnostic haut de gamme compatibles avec des graphiques exécutées sur des postes de travail graphiques et de calcul haut de gamme qui sont physiques ou font partie d'une infrastructure de postes de travail virtuels. Si vous êtes sur le point de démarrer votre transition vers l'infrastructure de postes de travail virtuels, vous trouverez plus d'informations https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["ici"^] .
 
 Lorsque l’ouragan Katrina a détruit deux des principaux hôpitaux d’enseignement de la Louisiane, les dirigeants se sont réunis et ont construit un système de dossiers médicaux électroniques résilient qui comprenait plus de 3000 000 bureaux virtuels en un temps record. Vous trouverez des informations supplémentaires sur les cas d'utilisation de l'architecture de référence et les bundles de référence FlexPod https://blog.netapp.com/virtual-desktop-infrastructure-bundles["ici"^].
 
@@ -238,7 +238,7 @@ Le système d'imagerie médicale peut offrir un accès à l'image à une communa
 
 Les systèmes d'imagerie médicale peuvent également prendre en charge les centres médicaux universitaires qui requièrent des systèmes PACS ou d'imagerie pour les utiliser en classe. Pour soutenir les activités universitaires, un système d'imagerie médicale classique peut disposer des capacités d'un système PACS dans un format plus compact ou dans un environnement d'imagerie uniquement pédagogique. Les systèmes d'archivage neutre typiques des fournisseurs et certains systèmes d'imagerie médicale de classe entreprise offrent des fonctionnalités de morphing d'étiquette d'image DICOM pour anonymiser les images utilisées à des fins d'enseignement. La morphing de tags permet à l'organisation de santé d'échanger des images DICOM entre des systèmes d'imagerie médicale de différents fournisseurs de manière neutre. De plus, la morphing de tags permet aux systèmes d'imagerie médicale de mettre en œuvre une fonctionnalité d'archivage neutre, à l'échelle de l'entreprise, pour les images médicales.
 
-Les systèmes d'imagerie médicale commencent à utiliser https://www.netapp.com/us/media/sb-flexpod-datacenter-ai.pdf["Capacités de calcul basées sur les GPU"^] afin d'améliorer les workflows humains en pré-traiter les images et donc en améliorant l'efficacité. Les systèmes d'imagerie médicale courants exploitent les meilleures fonctionnalités d'efficacité du stockage NetApp du secteur. Les systèmes d'imagerie médicale d'entreprise utilisent généralement RMAN pour les activités de sauvegarde, de restauration et de restauration. Pour améliorer les performances et réduire le temps nécessaire à la création des sauvegardes, la technologie Snapshot est disponible pour les opérations de sauvegarde et la technologie SnapMirror pour la réplication.
+Les systèmes d'imagerie médicale commencent à https://www.netapp.com/pdf.html?item=/media/7398-sb-flexpod-datacenter-aipdf.pdf["Capacités de calcul basées sur les GPU"^] améliorer les workflows humains en pré-traitant les images pour une efficacité accrue. Les systèmes d'imagerie médicale courants exploitent les meilleures fonctionnalités d'efficacité du stockage NetApp du secteur. Les systèmes d'imagerie médicale d'entreprise utilisent généralement RMAN pour les activités de sauvegarde, de restauration et de restauration. Pour améliorer les performances et réduire le temps nécessaire à la création des sauvegardes, la technologie Snapshot est disponible pour les opérations de sauvegarde et la technologie SnapMirror pour la réplication.
 
 La figure ci-dessous présente les composants d'application logique dans une vue architecturale superposée.
 

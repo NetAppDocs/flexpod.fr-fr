@@ -86,7 +86,7 @@ http://www.vmware.com/products/vcenter-server/overview.html["http://www.vmware.c
 
 * Meilleures pratiques pour le SAN moderne
 +
-https://www.netapp.com/us/media/tr-4080.pdf["https://www.netapp.com/us/media/tr-4080.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/10680-tr4080pdf.pdf["https://www.netapp.com/us/media/tr-4080.pdf"^]
 
 * Introduction à la technologie NVMe de bout en bout pour FlexPod
 +

@@ -108,5 +108,5 @@ Des licences NetApp SupportEdge Premium sont requises pour l'architecture FlexPo
 | Licences de support NetApp | Numéro de référence | Caractéristiques techniques 
 
 
-| SupportEdge Premium 4 heures sur site (mois : 36) | CS-O2-4HR | https://www.netapp.com/us/media/supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"] 
+| SupportEdge Premium 4 heures sur site (mois : 36) | CS-O2-4HR | https://www.netapp.com/pdf.html?item=/media/8745-supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"^] 
 |===

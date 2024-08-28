@@ -49,7 +49,7 @@ image:flexpod-fips-image3.png["Erreur : image graphique manquante"]
 
 NOTE: NVE utilise un module cryptographique logiciel conforme à la norme FIPS 140-2 de niveau 1.
 
-Pour plus d'informations sur NVE, consultez le https://www.netapp.com/us/media/ds-3899.pdf["Fiche technique NVE"^].
+Pour plus d'informations sur NVE, consultez le https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["Fiche technique NVE"^].
 
 NVE protège les données dans le cloud. Cloud Volumes ONTAP et Azure NetApp Files peuvent assurer le chiffrement des données au repos conforme à la norme FIPS 140-2-2.
 
@@ -110,7 +110,7 @@ image:flexpod-fips-image4.png["Erreur : image graphique manquante"]
 
 NOTE: NSE utilise un chiffrement matériel sur chaque disque certifié conforme à la norme FIPS 140-2 de niveau 2.
 
-Pour plus d'informations sur NSE, consultez le https://www.netapp.com/us/media/ds-3213-en.pdf["Fiche technique NSE"^].
+Pour plus d'informations sur NSE, reportez-vous au https://www.netapp.com/pdf.html?item=/media/7563-ds-3213-en.pdf["Fiche technique NSE"^].
 
 
 
