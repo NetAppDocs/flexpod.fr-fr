@@ -44,10 +44,6 @@ Astra Control offre des fonctionnalités stratégiques pour la gestion du cycle 
 
 Astra Control offre une visualisation centralisée pour vos applications conteneurisées qui fournit un aperçu des ressources associées créées dans le cluster Kubernetes. Vous pouvez afficher tous vos clusters, toutes vos applications, dans tous les clouds ou dans tous les data centers à partir d'un portail unique. Vous pouvez utiliser les API de contrôle Astra dans tous les environnements (sur site ou dans des clouds publics) pour implémenter vos workflows de gestion des données.
 
-L'image suivante montre les fonctions de contrôle Astra.
-
-image:flexpod-rho-cvo-image4.png["Erreur : image graphique manquante"]
-
 
 
 === Modèles de consommation Astra Control
@@ -70,7 +66,7 @@ image:flexpod-rho-cvo-image5.png["Erreur : image graphique manquante"]
 
 Astra Trident est un orchestrateur de stockage open source entièrement pris en charge pour les conteneurs et les distributions Kubernetes. Il a été conçu dès le départ pour vous aider à répondre aux exigences de persistance de vos applications conteneurisées à l'aide d'interfaces standard, telles que le https://kubernetes-csi.github.io/docs/introduction.html["Interface de stockage de conteneurs (CSI)"^]. Avec Astra Trident, les microservices et les applications conteneurisées peuvent bénéficier des services de stockage haute performance fournis par le portefeuille NetApp de systèmes de stockage.
 
-Astra Trident est déployé sur des clusters Kubernetes en tant que pods et fournit des services d'orchestration du stockage dynamique pour vos workloads Kubernetes. Il permet à vos applications conteneurisées de consommer le stockage persistant rapidement et facilement depuis le vaste portefeuille de NetApp, qui inclut NetApp ONTAP (NetApp AFF, NetApp FAS, NetApp ONTAP Select, cloud, Et Amazon FSX pour NetApp ONTAP), NetApp Element (NetApp SolidFire), ainsi que le service Azure NetApp Files, Cloud Volume Service sur Google Cloud et Cloud volumes Service sur AWS. Dans un environnement FlexPod, Astra Trident permet de provisionner et de gérer de manière dynamique les volumes persistants pour les conteneurs qui sont sauvegardés par des volumes NetApp FlexVol et des LUN hébergés sur une plateforme de stockage ONTAP, comme les systèmes NetApp AFF, FAS et Cloud Volumes ONTAP. Trident joue également un rôle clé dans la mise en œuvre de systèmes de protection des applications proposés par Astra Control. Pour en savoir plus sur Astra Trident, rendez-vous sur le https://docs.netapp.com/us-en/trident/index.html["Documentation Astra Trident."^]
+Astra Trident est déployé sur les clusters Kubernetes sous forme de pods et fournit des services d'orchestration de stockage dynamique pour vos charges de travail Kubernetes. Il permet à vos applications conteneurisées de consommer rapidement et facilement le stockage persistant du vaste portefeuille de NetApp, qui comprend NetApp ONTAP (NetApp AFF, NetApp FAS, NetApp ONTAP Select, Cloud et Amazon FSx for NetApp ONTAP), le logiciel NetApp Element (NetApp SolidFire), ainsi que le service Azure NetApp Files . Dans un environnement FlexPod , Astra Trident est utilisé pour provisionner et gérer dynamiquement des volumes persistants pour les conteneurs qui sont pris en charge par des volumes NetApp FlexVol et des LUN hébergés sur une plateforme de stockage ONTAP telle que les systèmes NetApp AFF et FAS et Cloud Volumes ONTAP. Trident joue également un rôle clé dans la mise en œuvre des schémas de protection des applications fournis par Astra Control. Pour plus d'informations sur Astra Trident, consultez le https://docs.netapp.com/us-en/trident/index.html["Documentation Astra Trident."^]
 
 
 
