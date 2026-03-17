@@ -13,9 +13,9 @@ summary: 'NetApp propose une solution unique de gestion des données pour les ap
 :imagesdir: ./../media/
 
 
-En partenariat avec :image:cisco logo.png["logo cisco"]
-
 Kamini Singh, NetApp
+
+En partenariat avec :image:cisco logo.png["logo cisco"]
 
 [role="lead"]
 Pour réussir sa transformation digitale, il suffit d'en faire plus avec la donnée. Les hôpitaux génèrent et requièrent d'importants volumes de données pour gérer leur entreprise et servir leurs patients de manière efficace. Les informations sont collectées et traitées lors du traitement des patients et de la gestion des horaires du personnel et des ressources médicales.
