@@ -14,9 +14,9 @@ summary: Ce document présente les spécifications techniques de la plateforme F
 
 
 [role="lead"]
-Il existe trois plateformes FlexPod :
+Il existe deux plateformes FlexPod :
 
-* *FlexPod Datacenter* cette plateforme est une infrastructure de data Center virtuel extrêmement évolutive et adaptée aux applications d'entreprise, à la virtualisation, aux infrastructures de postes de travail virtuels et aux clouds publics et privés. Les caractéristiques de FlexPod Datacenter sont propres, et documentées dans https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["Tr-4036 : spécifications techniques du data Center FlexPod"^].
+* *FlexPod Datacenter.* Cette plateforme est une infrastructure de centre de données virtuel massivement évolutive adaptée aux applications d'entreprise de charge de travail, à la virtualisation, au VDI et au cloud public et privé. FlexPod Datacenter a ses propres spécifications, qui sont documentées dans https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["Caractéristiques techniques des data centers FlexPod"^].
 * *FlexPod Express.* cette plate-forme est une infrastructure convergente compacte conçue pour les bureaux distants et les bureaux distants.
 
 
