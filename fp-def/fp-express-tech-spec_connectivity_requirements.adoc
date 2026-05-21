@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_connectivity_requirements.html 
-keywords: connectivity, requirements, flexpod, express, aff, fas, asa 
+keywords: connectivity, requirements, flexpod, express, aff, fas, e, series 
 summary: Cette section décrit les conditions de connectivité requises pour les différentes versions de FlexPod Express. 
 ---
 = Les besoins en connectivité
@@ -18,13 +18,35 @@ Cette section décrit les conditions de connectivité requises pour les différe
 
 
 
-== Exigences de connectivité pour FlexPod Express avec NetApp AFF/ ASA/ FAS
+== Exigences de connectivité pour FlexPod Express avec NetApp FAS
 
-Les exigences de connectivité pour FlexPod Express avec NetApp AFF/ ASA/ FAS comprennent :
+Les exigences de connectivité pour FlexPod Express avec NetApp FAS comprennent :
 
-* NetApp Les contrôleurs de stockage doivent être directement connectés aux commutateurs Cisco Nexus.
-* Pour les déploiements UCS X-series Direct, les contrôleurs de stockage NetApp peuvent être connectés directement aux Fabric Interconnects intégrés.
+* NetApp FAS Les contrôleurs de stockage FAS doivent être connectés directement aux commutateurs Cisco Nexus, sauf dans la configuration gérée par Cisco UCS, où les contrôleurs de stockage sont connectés aux interconnexions de la structure.
 * Aucun équipement supplémentaire ne peut être placé en ligne entre les composants principaux de FlexPod.
-* Des canaux de ports virtuels (vPC) sont nécessaires pour connecter les commutateurs Cisco Nexus série 9000 aux contrôleurs de stockage NetApp.
+* Des canaux de ports virtuels (vPC) sont nécessaires pour connecter les commutateurs Cisco Nexus série 3000/9000 aux contrôleurs de stockage NetApp.
+* Bien qu'elle ne soit pas requise, l'activation de la prise en charge des trames Jumbo est recommandée dans l'ensemble de l'environnement.
+
+
+
+
+== Exigences de connectivité pour FlexPod Express avec NetApp E-Series
+
+Les exigences de connectivité pour FlexPod Express avec le système de stockage E-Series comprennent :
+
+* Les contrôleurs du système de stockage E-Series doivent être directement connectés aux interconnexions de la structure.
+* Aucun équipement supplémentaire ne doit être placé en série entre les composants principaux FlexPod.
+* Des vPC sont nécessaires entre les interconnexions de la structure et les commutateurs Ethernet.
+
+
+
+
+== Exigences de connectivité pour FlexPod Express avec NetApp AFF
+
+Les exigences de connectivité pour FlexPod Express avec NetApp AFF incluent :
+
+* NetApp Les contrôleurs de stockage AFF doivent être connectés directement aux commutateurs Cisco Nexus, sauf dans la configuration gérée par Cisco UCS, où les contrôleurs de stockage sont connectés aux interconnexions de la structure.
+* Aucun équipement supplémentaire ne peut être placé en ligne entre les composants principaux de FlexPod.
+* Des canaux de ports virtuels (vPC) sont nécessaires pour connecter les commutateurs Cisco Nexus série 3000/9000 aux contrôleurs de stockage NetApp.
 * Bien qu'elle ne soit pas requise, l'activation de la prise en charge des trames Jumbo est recommandée dans l'ensemble de l'environnement.
 
