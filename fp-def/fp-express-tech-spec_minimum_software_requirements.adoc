@@ -27,16 +27,4 @@ La configuration logicielle requise pour le FlexPod Express avec NetApp FAS comp
 * Dans la configuration gérée par Cisco UCS, Cisco UCS Manager UCS 4.0(1b)
 
 
-Tous les logiciels doivent être répertoriés et pris en charge dans le http://support.netapp.com/matrix/["NetApp IMT"^]. Certaines fonctionnalités logicielles peuvent nécessiter des versions de code plus récentes que les valeurs minimales répertoriées dans les architectures précédentes.
-
-
-
-== Configuration logicielle requise pour FlexPod Express avec E-Series
-
-Les exigences logicielles pour le FlexPod Express avec le système de stockage E-Series incluent :
-
-* Logiciel SANtricity E-Series 11.30 ou supérieur
-* Cisco UCS Manager 4.0(1b).
-
-
-Tous les logiciels doivent être répertoriés et pris en charge dans le http://support.netapp.com/matrix/["NetApp IMT"^].
+Tous les logiciels doivent être répertoriés et pris en charge dans le http://mysupport.netapp.com/matrix["NetApp IMT"^]. Certaines fonctionnalités logicielles peuvent nécessiter des versions de code plus récentes que les versions minimales indiquées dans les architectures précédentes.

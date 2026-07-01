@@ -22,7 +22,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["Précédent : configuration C
 . Faites une demande de remboursement ou créez une cible cloud Terraform en fournissant les informations pertinentes sur le compte Terraform Cloud.
 . Créez une cible Terraform Cloud Agent pour les clouds privés afin que les clients puissent installer l'agent dans le data Center et activer la communication avec Terraform Cloud.
 +
-Pour plus d'informations, veuillez consulter la section https://intersight.com/help/saas/features/terraform_cloud/admin["ce lien"^].
+Pour plus d'informations, suivez https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093["ce lien"^].
 
 
 

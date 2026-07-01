@@ -14,8 +14,8 @@ summary: 'Vous pouvez voir une vidéo de démonstration de l"utilisation de NetA
 
 
 [role="lead"]
-Vous pouvez voir une démonstration vidéo de l'utilisation de NetApp Cloud Insights pour évaluer les ressources d'un environnement sur site https://netapp.hubs.vidyard.com/watch/1ycNWx4hzFsaV1dQHFyxY2?["ici"^].
+Vous pouvez visionner une démonstration vidéo de l'utilisation de NetApp Cloud Insights pour évaluer les ressources dans un environnement sur site https://www.netapp.com/video/fxujqwwhoqg/complete-observability-with-cloud-insights/["ici"^].
 
-Vous pouvez voir une démonstration vidéo de l'utilisation de NetApp Cloud Insights pour surveiller l'infrastructure et définir des seuils d'alerte pour l'infrastructure https://netapp.hubs.vidyard.com/watch/DgUxcxES3Ujdqe1JhhkfAW["ici"^].
+Vous pouvez visionner une démonstration vidéo de l’utilisation de NetApp Cloud Insights pour surveiller l’infrastructure et définir des seuils d’alerte pour l’infrastructure https://www.youtube.com/watch?v=TdMpXR_-U0M["ici"^].
 
-Vous pouvez voir une démonstration vidéo de l'utilisation de NetApp Cloud Insights pour évaluer les applications individuelles dans l'environnement https://netapp.hubs.vidyard.com/watch/vcC4RGoD54DPp8Th9hyhu3["ici"^].
+Vous pouvez visionner une démonstration vidéo de l’utilisation de NetApp Cloud Insights pour évaluer les applications individuelles de l’environnement https://www.youtube.com/watch?v=AVQ-a-du664["ici"^].

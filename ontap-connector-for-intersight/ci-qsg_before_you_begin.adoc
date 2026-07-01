@@ -31,7 +31,7 @@ Assurez-vous que vous rencontrez le https://www.cisco.com/c/en/us/td/docs/unifie
 *Étapes*
 
 . Créez un compte Cisco InterSight. Visitez https://intersight.com/["https://intersight.com/"^] Pour créer votre compte InterSight. Vous devez disposer d'un ID Cisco valide pour créer un compte Cisco Intersight.
-. Téléchargez l'appliance virtuelle Intersight sur https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]. Pour plus d'informations, consultez le https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guide d'installation et de mise à niveau d'Intersight Appliance"^].
+. Téléchargez l’appliance virtuelle Cisco Intersight à  https://software.cisco.com/download/home/286319499/type/286323047/release/1.1.7-0.a["software.cisco.com"^]. Pour plus d’informations, rendez-vous sur le  https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guide d'installation et de mise à niveau d'Intersight Appliance"^].
 . Déployer l'OVA. DNS et NTP sont nécessaires pour déployer le fichier OVA.
 +
 .. Configurez DNS avec Des enregistrements a/PTR et CNAME alias avant de déployer l'OVA. Voir l'exemple ci-dessous.
@@ -57,7 +57,7 @@ image::ci-qsg_image4.png[Capture d'écran de l'écran déployer un modèle OVF]
 
 . Post-déploiement de l'appareil InterSight Assist.
 +
-.. Accédez à https://FQDN-of-your-appliance[] pour terminer la configuration post-installation de votre appareil.
+.. Accédez à  `https://<FQDN-of-your-appliance>` pour terminer la configuration post-installation de votre appliance.
 +
 Le processus d'installation démarre automatiquement. L'installation peut prendre jusqu'à une heure selon la bande passante jusqu'à Intersight.com. Le site sécurisé peut également être opérationnel en quelques secondes après la mise sous tension de la machine virtuelle.
 

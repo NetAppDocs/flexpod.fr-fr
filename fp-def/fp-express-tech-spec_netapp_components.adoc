@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
-permalink: fp-def/fp-express-tech-spec__netapp_components.html 
-keywords: storage, controller, options, fas, e, series, disk, shelves, licensing, software 
-summary: 'Les contrôleurs de stockage NetApp constituent la base du stockage de l"architecture Express de FlexPod pour le stockage des données de démarrage et d"applications. Cette section répertorie les différentes options NetApp disponibles dans l"architecture FlexPod Express.' 
+permalink: fp-def/fp-express-tech-spec_netapp_components.html 
+keywords: storage, controller, options, fas, aff, asa, disk, shelves, licensing, software 
+summary: Les contrôleurs de stockage NetApp constituent la base du stockage dans l’architecture FlexPod Express, tant pour le démarrage que pour le stockage des données d’application. Cette section répertorie les différentes options de stockage NetApp dans l’architecture FlexPod Express. 
 ---
 = Composants NetApp
 :hardbreaks:

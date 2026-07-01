@@ -22,7 +22,7 @@ Les autres conditions requises pour FlexPod Express sont les suivantes :
 ** Le support SupportEdge Advisor ou SupportEdge Premium pour les équipements NetApp
 
 
-* Tous les composants logiciels doivent être répertoriés et pris en charge dans le http://support.netapp.com/matrix/["NetApp IMT"^].
+* Tous les composants logiciels doivent être répertoriés et pris en charge dans le http://mysupport.netapp.com/matrix["NetApp IMT"^].
 * Tous les composants matériels NetApp doivent être répertoriés et pris en charge sur https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^].
 * Tous les composants matériels Cisco doivent être répertoriés et pris en charge sur https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
 

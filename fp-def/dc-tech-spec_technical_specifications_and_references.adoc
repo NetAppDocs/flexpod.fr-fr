@@ -390,19 +390,19 @@ Tous les modèles actuels de contrôleurs de stockage NetApp AFF A-Series sont p
 | Composant | Documentation sur la plateforme du contrôleur AFF A-Series 
 
 
-| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/index.html["Documentation de la plateforme AFF A800"] 
+| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["Documentation de la plateforme AFF A800"] 
 
 
-| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/fas9000/index.html["Documentation sur la plateforme AFF A700"] 
+| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/a700/install-setup.html["Documentation sur la plateforme AFF A700"] 
 
 
-| NetApp AFF A700s | https://docs.netapp.com/us-en/ontap-systems/a700s/index.html["Documentation de la plateforme AFF A700s"] 
+| NetApp AFF A700s | https://docs.netapp.com/us-en/ontap-systems/a700s/install-setup.html["Documentation de la plateforme AFF A700s"] 
 
 
-| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/index.html["Documentation sur la plateforme AFF A400"] 
+| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/install-setup.html["Documentation sur la plateforme AFF A400"] 
 
 
-| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/index.html["Documentation de la plateforme AFF A250"] 
+| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/install-setup.html["Documentation de la plateforme AFF A250"] 
 |===
 
 

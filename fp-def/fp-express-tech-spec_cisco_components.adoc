@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
-permalink: fp-def/fp-express-tech-spec__cisco_components.html 
-keywords: cisco, components, blade, server, options, rack, ucs, nexus, switches 
+permalink: fp-def/fp-express-tech-spec_cisco_components.html 
+keywords: cisco, components, server, options, rack, ucs, nexus, switches, x-series-direct, c-series 
 summary: 'Cisco apporte une contribution substantielle à la conception et à l"architecture d"FlexPod Express. Il apporte les couches de calcul et de mise en réseau de la solution.' 
 ---
 = Composants Cisco

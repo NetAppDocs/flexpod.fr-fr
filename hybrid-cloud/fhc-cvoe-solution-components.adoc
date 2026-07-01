@@ -135,7 +135,7 @@ Pour plus d'informations, voirlink:https://www.vmware.com/products/vcenter.html[
 
 == Révisions matérielles et logicielles
 
-Cette solution de cloud hybride peut être étendue à tout environnement FlexPod exécutant des versions prises en charge de logiciels, de microprogrammes et de matériels, comme défini dans lelink:http://support.netapp.com/matrix/["Matrice d'interopérabilité NetApp"^] ,link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle et logicielle UCS"^] , etlink:https://www.vmware.com/resources/compatibility/search.php["Guide de compatibilité VMware"^] .
+Cette solution de cloud hybride peut être étendue à tout environnement FlexPod exécutant des versions prises en charge de logiciels, de microprogrammes et de matériels, comme défini dans les link:http://mysupport.netapp.com/matrix["Matrice d'interopérabilité NetApp"^], link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle et logicielle UCS"^] et link:https://www.vmware.com/resources/compatibility/search.php["Guide de compatibilité VMware"^].
 
 Le tableau suivant présente les révisions matérielles et logicielles FlexPod sur site.
 

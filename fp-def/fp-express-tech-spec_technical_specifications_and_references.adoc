@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: fp-def/fp-express-tech-spec__technical_specifications_and_references.html 
+permalink: fp-def/fp-express-tech-spec_technical_specifications_and_references.html 
 keywords: technical, specifications, references, blade, servers, ucs, b, series, rack, disk, shelves, fas, adapters, controllers 
 summary: Cette section décrit les spécifications techniques importantes de chaque composant de FlexPod Express. 
 ---
@@ -273,7 +273,7 @@ Le tableau suivant répertorie les adaptateurs 10GbE de NetApp FAS.
 |===
 L'adaptateur X1117A-R6 SFP+ est pris en charge sur les contrôleurs de la gamme FAS8000.
 
-Les systèmes de stockage FAS2600 et FAS2500 sont dotés de ports 10GbE intégrés. Pour plus d'informations, reportez-vous à la section https://hwu.netapp.com/Resources/generatedPDFs/AdapterCards-9.1_ONTAP-FAS.pdf?tag=8020["Fiche technique sur l'adaptateur 10GbE NetApp"^].
+Les systèmes de stockage des séries FAS2600 et FAS2500 disposent de ports 10GbE intégrés.
 
 
 NOTE: Pour plus de détails sur la carte basée sur le modèle AFF ou FAS, reportez-vous au https://hwu.netapp.com/Adapter/Index["Section adaptateur"^] Dans le Hardware Universe.

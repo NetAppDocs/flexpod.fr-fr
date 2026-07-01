@@ -16,7 +16,7 @@ summary: Pour configurer la mise en cluster de VMware vCenter Server 6.7 et vSph
 [role="lead"]
 Pour configurer VMware vCenter Server 6.7 et la mise en cluster vSphere, procédez comme suit :
 
-. Accédez à `\https://\<<FQDN or IP of vCenter>>/vsphere-client/`.
+. Accédez à `https://<<FQDN or IP of vCenter>>/vsphere-client/`.
 . Cliquez sur lancer vSphere client.
 . Connectez-vous à l'aide du nom d'utilisateur mailto:administrator@vspehre.lockup[Administrator^]@vsphere.local et du mot de passe SSO que vous avez saisi lors du processus d'installation de VCSA.
 . Cliquez avec le bouton droit de la souris sur le nom du vCenter et sélectionnez Nouveau centre de données.
@@ -77,7 +77,7 @@ NOTE: Ce processus doit être effectué pour tout hôte supplémentaire ajouté 
 
 Pour configurer coredump sur les hôtes ESXi, procédez comme suit :
 
-. Connectez-vous à https:// https://172.21.181.105:5480/ui/services["VCenter"^] IP:5480/, entrez root pour le nom d'utilisateur et entrez le mot de passe root.
+. Connectez-vous à `https://<vCenter IP>:5480`, entrez root comme nom d'utilisateur et saisissez le mot de passe root.
 . Cliquez sur services et sélectionnez VMware vSphere ESXI Dump Collector.
 . Démarrez le service VMware vSphere ESXI Dump Collector.
 +

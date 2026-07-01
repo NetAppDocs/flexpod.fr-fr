@@ -29,7 +29,7 @@ Pour déployer la solution, vous devez effectuer les tâches suivantes :
 
 Pour vous inscrire au service NetApp Cloud Insights, procédez comme suit :
 
-. Accédez à https://cloud.netapp.com/cloud-insights["https://cloud.netapp.com/cloud-insights"^]
+. Allez à https://www.netapp.com/data-infrastructure-insights/["https://www.netapp.com/data-infrastructure-insights/"^]
 . Cliquez sur le bouton au centre de l'écran pour lancer l'essai gratuit de 14 jours ou sur le lien en haut à droite pour vous inscrire ou vous connecter à un compte NetApp Cloud Central.
 
 

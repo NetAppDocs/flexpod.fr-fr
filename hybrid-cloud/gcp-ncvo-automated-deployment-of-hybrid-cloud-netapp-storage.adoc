@@ -75,7 +75,7 @@ Pour ces tâches d'automatisation et d'orchestration, quelques exigences et donn
 
 Vous avez besoin d'un compte GitHub pour héberger votre code Terraform. Intersight Orchestrator crée un nouvel espace de travail dans le compte Terraform Cloud for Business. Cet espace de travail est configuré avec un workflow de contrôle de version. À cette fin, vous devez conserver la configuration Terraform dans un référentiel GitHub et la fournir comme entrée lors de la création de l'espace de travail.
 
-https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["Lien GitHub"^] Fournit la configuration Terraform avec diverses ressources. Vous pouvez forer ce référentiel et en faire une copie dans votre compte GitHub.
+https://github.com/ucs-compute-solutions/cvo_snapmirror["Lien GitHub"^] fournit la configuration Terraform avec diverses ressources. Vous pouvez forker ce dépôt et en faire une copie dans votre compte GitHub.
 
 Dans ce référentiel, `provider.tf` A la définition du fournisseur Terraform requis. Le fournisseur Terraform pour NetApp Cloud Manager est utilisé.
 
