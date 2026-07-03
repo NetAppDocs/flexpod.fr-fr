@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_equipment_support_status.html 
+keywords: equipment, support status, end of life, end of support, verification 
+summary: Cette section explique comment vérifier le statut de prise en charge des équipements Cisco et NetApp pour leurs composants. 
+---
+= État du support technique
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod est une solution flexible qui permet aux clients d'utiliser à la fois les équipements existants et nouveaux actuellement en vente par Cisco et NetApp. Parfois, certains modèles d'équipements Cisco et NetApp sont désignés en fin de vie.
+
+Bien que ces modèles d'équipement ne soient plus disponibles, les clients qui ont acheté un de ces modèles avant la date de fin de vente peuvent utiliser cet équipement dans une configuration FlexPod.
+
+De plus, les architectures FlexPod Express sont régulièrement mises à jour afin d'intégrer les derniers matériels et logiciels de Cisco et de NetApp à la solution FlexPod Express.
+
+Avant de déployer ou de maintenir des équipements FlexPod Express, vérifiez que tous les composants restent pris en charge par le fournisseur. Cette section explique comment vérifier les informations de fin de commercialisation (End-of-Sale) et de fin de support (End-of-Support) pour les composants Cisco et NetApp.
+
+
+
+== Vérification du support technique de NetApp
+
+NetApp fournit des informations de support via le Hardware Universe (HWU).
+
+Allez à la link:https://hwu.netapp.com["NetApp Hardware Universe"^].
+
+* Sélectionnez *Produits > Plateformes*, puis choisissez votre plateforme (exemple : *AFF A-Series*) et votre modèle (exemple : *AFF A220*).
+
+
+
+NOTE: Pour afficher toutes les plateformes, modifiez le filtre *Cycle de vie de la plateforme* sur *Tout afficher*. Par défaut, *Masquer EOA* est sélectionné.
+
+* Sélectionnez la version *ONTAP* et cliquez sur *Afficher les résultats*.
+* Consultez les résultats concernant les dates de fin de support de votre équipement dans la section *Disponibilité et support du système*.
+
+
+
+
+== Vérification de la prise en charge des équipements Cisco
+
+Cisco fournit les dates de fin de commercialisation et de fin de support sur les pages d'assistance produit Cisco.
+
+
+
+==== Informations sur la fin de commercialisation et la fin du support des serveurs Cisco UCS
+
+* Accédez à link:https://www.cisco.com/c/en/us/support/eol/index.html["Page d’assistance produit Cisco"].
+* Sous *Catégories de produits*, sélectionnez *Serveurs - UCS et HCI* et cliquez sur votre type de serveur (exemple : *UCS C-Series Rack Servers*). Repérez votre modèle spécifique (exemple : *UCS C220 M5*) et consultez les dates de fin de commercialisation et de fin de support.
+
+
+
+
+==== Informations relatives à la fin de commercialisation et à la fin du support des commutateurs Cisco Nexus
+
+* Accédez à link:https://www.cisco.com/c/en/us/support/eol/index.html["Page d’assistance produit Cisco"].
+* Sous *Catégories de produits*, sélectionnez *Switches* et cliquez sur votre type de switch (exemple : *Nexus 9000*). Repérez votre modèle spécifique (exemple : *9236C*) et consultez les dates de fin de commercialisation et de fin de support.
+

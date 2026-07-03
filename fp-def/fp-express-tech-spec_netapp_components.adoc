@@ -20,229 +20,103 @@ Les contrôleurs de stockage NetApp constituent la base du stockage de l'archite
 
 == Options de contrôleurs de stockage NetApp
 
+Des contrôleurs redondants des séries AFF, ASA ou FAS sont requis dans l’architecture FlexPod Express. Les contrôleurs exécutent le logiciel ONTAP. Lors de la commande des contrôleurs de stockage, la version logicielle souhaitée peut être préinstallée sur les contrôleurs. Pour ONTAP, le cluster peut être déployé soit avec une paire de commutateurs d’interconnexion de cluster, soit dans une configuration de cluster sans commutateur.
 
 
-== NetApp FAS
+NOTE: La configuration sans commutateur n'est prise en charge que pour une configuration à deux nœuds. Les commutateurs d'interconnexion de cluster sont nécessaires pour les configurations comportant plus de 4 nœuds et sont optionnels pour une configuration à deux nœuds.
 
-Des contrôleurs redondants des séries AFF C190, AFF A220 ou FAS2750 sont requis dans l’architecture FlexPod Express. Les contrôleurs exécutent le logiciel ONTAP. Lors de la commande des contrôleurs de stockage, la version logicielle souhaitée peut être préinstallée sur les contrôleurs. Pour ONTAP, le cluster peut être déployé soit avec une paire de commutateurs d’interconnexion de cluster, soit dans une configuration de cluster sans commutateur.
+Différentes options et configurations sont disponibles selon la plateforme de stockage choisie. Pour plus d'informations sur ces composants supplémentaires, veuillez contacter votre représentant commercial.
 
-Les références indiquées dans le tableau ci-dessous correspondent à un contrôleur vide. Différentes options et configurations sont disponibles selon la plateforme de stockage choisie. Pour plus d'informations sur ces composants supplémentaires, veuillez contacter votre représentant commercial.
-
-|===
-| Contrôleur de stockage | Référence FAS | Caractéristiques techniques 
-
-
-| FAS2750 | En fonction des options choisies | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
-
-
-| FAS2720 | En fonction des options choisies | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
-
-
-| AFF C190 | En fonction des options choisies | https://www.netapp.com/us/products/entry-level-aff.aspx[] 
-
-
-| AFF A220 | En fonction des options choisies | https://www.netapp.com/us/documentation/all-flash-fas.aspx[] 
-
-
-| FAS2620 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
-
-
-| FAS2650 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
-|===
-
-
-=== système de stockage E-Series
-
-Une paire haute disponibilité de contrôleurs NetApp série E2800 est requise dans l’architecture FlexPod Express. Les contrôleurs exécutent le système d’exploitation SANtricity.
-
-Les références indiquées dans le tableau ci-dessous correspondent à un contrôleur vide. Différentes options et configurations sont disponibles selon la plateforme de stockage choisie. Pour plus d'informations sur ces composants supplémentaires, veuillez contacter votre représentant commercial.
+Les familles de contrôleurs répertoriées dans le tableau ci-dessous conviennent à une solution FlexPod car leur connexion aux commutateurs Cisco Nexus est transparente. Consultez la  http://hwu.netapp.com/["NetApp Hardware Universe"^] pour obtenir des informations de compatibilité spécifiques à chaque modèle de contrôleur.
 
 |===
-| Contrôleur de stockage | Numéro de référence | Caractéristiques techniques 
+| NetApp entry-level storage Family pour FlexPod Express | Modèle | Caractéristiques techniques 
 
 
-| E2800 | En fonction des options choisies | http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx[] 
+.2+| Gamme AFF A-Series | A20 .3+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["Documentation AFF"] 
+
+
+| A30 
+
+
+| AFF série C | C30 
+
+
+.2+| ASA série A | A20 .3+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["Documentation ASA"] 
+
+
+| A30 
+
+
+| ASA série C | C30 
+
+
+.2+| FAS | FAS 2750 .2+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Documentation FAS"] 
+
+
+| FAS 2820 
 |===
-
-
-== NetApp modules d'extension Ethernet
-
-
-
-=== NetApp FAS
-
-Le tableau suivant répertorie les options de l'adaptateur NetApp FAS10GbE.
-
-|===
-| Composant | Numéro de référence | Caractéristiques techniques 
-
-
-| NetApp X1117A | X1117A-R6 | https://library.netapp.com/ecm/ecm_download_file/ECMM1280307[] 
-|===
-[NOTE]
-====
-Les systèmes de stockage des séries FAS2500 et 2600 sont équipés de ports 10GbE intégrés.
-
-L'adaptateur NetApp X1117A est destiné aux systèmes de stockage FAS8020.
-
-====
-
-
-=== système de stockage E-Series
-
-Le tableau suivant répertorie les options d'adaptateur 10GbE E-Series.
-
-|===
-| Composant | Numéro de référence 
-
-
-| 10GbE iSCSI/16Gb FC 4 ports | X-56025-00-0F-C. 
-
-
-| 10GbE iSCSI/16Gb FC 2 ports | X-56024-00-0F-C. 
-|===
-[NOTE]
-====
-Les systèmes de stockage de la série E2824 sont équipés de ports 10GbE intégrés.
-
-La carte d'interface d'hôte (HIC) 4 ports 10GbE iSCSI/16Gb FC peut être utilisée pour une densité de ports supplémentaire.
-
-====
-Les ports intégrés et le HIC peuvent fonctionner comme adaptateurs iSCSI ou adaptateurs FC selon la fonctionnalité activée dans SANtricity OS.
-
-Pour plus d'informations sur les options d'adaptateur prises en charge, consultez la section Adaptateur de https://hwu.netapp.com/Adapter/Index["NetApp Hardware Universe"^].
-
 
 
 == Tiroirs disques et disques NetApp
 
+Un minimum d’un NetApp tiroir disque est requis pour les contrôleurs de stockage.
+
+Le type de tiroir NetApp sélectionné détermine les types de disques disponibles dans ce tiroir.
 
 
-== NetApp FAS
+NOTE: Pour connaître les références de tous les tiroirs disques et des disques, adressez-vous à votre ingénieur commercial.
 
-Un minimum d’un tiroir disque NetApp est requis pour les contrôleurs de stockage. Le type de tiroir NetApp sélectionné détermine les types de disques disponibles dans ce tiroir.
+Le tableau suivant répertorie les options de tiroir disque NetApp pour FlexPod Express ainsi que des liens vers leurs spécifications techniques.
 
-Les contrôleurs des séries FAS2700 et FAS2600 sont proposés dans une configuration comprenant deux contrôleurs de stockage et des disques logés dans le même châssis. Cette configuration est disponible avec des disques SATA ou SAS ; par conséquent, des tiroirs disques externes supplémentaires ne sont pas nécessaires, sauf si les exigences de performance ou de capacité imposent davantage de disques.
-
-[NOTE]
-====
-Tous les numéros de pièce de tiroir disque correspondent à l’étagère vide avec deux alimentations secteur. Consultez votre représentant commercial pour obtenir des numéros de pièce supplémentaires.
-
-Les références des disques durs varient selon la taille et le format du disque que vous souhaitez acheter. Consultez votre représentant commercial pour obtenir d'autres références.
-
-====
-Le tableau suivant répertorie les options de tiroirs disques NetApp, ainsi que les disques pris en charge pour chaque type de tiroir, disponibles sur NetApp Hardware Universe. Suivez le lien Hardware Universe, sélectionnez la version du ONTAP que vous utilisez, puis sélectionnez le type de tiroir. Sous l'image de tiroir, cliquez sur disques pris en charge pour afficher les disques pris en charge pour des versions spécifiques de ONTAP et des tiroirs disques.
+Pour obtenir la liste des disques compatibles avec votre tiroir disque, accédez à link:https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe"^], sous *Products > Storage > Shelves*, sélectionnez *ONTAP (AFF, ASA, FAS)*, sélectionnez la version d'ONTAP que vous utilisez, puis sélectionnez le type de tiroir (exemple : *DS212C*) et cliquez sur *Show Results*. Cliquez sur *Supported Drives* pour voir les disques pris en charge pour des versions spécifiques d'ONTAP et les tiroirs disques.
 
 |===
-| Tiroir disque | Numéro de référence | Caractéristiques techniques 
+| Tiroir disque | Caractéristiques techniques 
 
 
-| DS212C | DS212C-0-12 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage : disques pris en charge sur NetApp Hardware Universe"] 
+| DS212C .5+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["Tiroirs disques et supports de stockage"] 
 
 
-| DS224C | DS224C-0-24 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage : disques pris en charge sur NetApp Hardware Universe"] 
+| DS224C 
 
 
-| DS460C | DS460C-0-60 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage : disques pris en charge sur NetApp Hardware Universe"] 
+| DS460C 
 
 
-| DS2246 | X559A-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage : disques pris en charge sur NetApp Hardware Universe"] 
+| NS224 
 
 
-| DS4246 | X24M-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage : disques pris en charge sur NetApp Hardware Universe"] 
-
-
-| DS4486 | DS4486-144TB-R5-C | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage : disques pris en charge sur NetApp Hardware Universe"] 
-|===
-
-
-=== système de stockage E-Series
-
-Un minimum d’un tiroir disque NetApp est requis pour les contrôleurs de stockage qui n’intègrent aucun disque dans leur châssis. Le type de tiroir NetApp sélectionné détermine les types de disques disponibles dans ce tiroir.
-
-La série de contrôleurs E2800 est proposée dans une configuration comprenant deux contrôleurs de stockage et des disques logés dans un tiroir disque pris en charge. Cette configuration est disponible avec des disques SSD ou SAS.
-
-
-NOTE: Les références des disques durs varient selon la taille et le format du disque que vous souhaitez acheter. Consultez votre représentant commercial pour obtenir d'autres références.
-
-Le tableau suivant répertorie les options de tiroir disque NetApp et les disques pris en charge pour chaque type de tiroir, qui peuvent être trouvés sur NetApp Hardware Universe. Suivez le lien Hardware Universe, sélectionnez la version d'ONTAP que vous utilisez, puis sélectionnez le type de tiroir. Sous l'image du tiroir, cliquez sur Supported Drives pour voir les disques pris en charge pour des versions spécifiques d'ONTAP et les tiroirs disques.
-
-|===
-| Tiroir disque | Numéro de référence | Caractéristiques techniques 
-
-
-| DE460C | E-X5730A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Tiroirs disques spécifications techniques disques pris en charge disques sur NetApp Hardware Universe"] 
-
-
-| DE224C | E-X5721A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Tiroirs disques spécifications techniques disques pris en charge disques sur NetApp Hardware Universe"] 
-
-
-| DE212C | E-X5723A-DM-0E-C | link:https://hwu.netapp.com/Shelves/Index?osTypeId=2357027["Tiroirs disques spécifications techniques disques pris en charge disques sur NetApp Hardware Universe"] 
+| NS224 avec NSM100B 
 |===
 
 
 == Options NetApp de licences logicielles
 
-
-
-=== NetApp FAS
-
-Le tableau suivant répertorie les options de licence logicielle NetApp FAS.
+Le tableau suivant répertorie les options de licence logicielle NetApp.
 
 |===
-| Licences logicielles NetApp | Référence | Caractéristiques techniques 
+| Licences logicielles NetApp | Caractéristiques techniques 
 
 
-| Licence de cluster de base 2+| Contactez votre équipe commerciale NetApp pour en savoir plus sur les licences. 
+| ONTAP One pour AFF et FAS .2+| Contactez votre équipe commerciale NetApp pour en savoir plus sur les licences. 
+
+
+| ONTAP One pour SAN pour ASA 
 |===
+Consultez ce lien pour plus d'informations sur les licences logicielles NetApp https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["Licences logicielles NetApp"^].
 
-
-=== système de stockage E-Series
-
-Le tableau suivant répertorie les options de licence logicielle E-Series.
-
-|===
-| Licences logicielles NetApp | Numéro de référence | Caractéristiques techniques 
-
-
-| Caractéristiques standard 2.2+| Contactez votre équipe commerciale NetApp pour en savoir plus sur les licences. 
-
-
-| Fonctionnalités premium 
-|===
 
 
 == Options de licence du support NetApp
 
 Les licences SupportEdge Premium sont requises et les références associées à ces licences varient en fonction des options sélectionnées dans la conception FlexPod Express.
 
-
-
-=== NetApp FAS
-
-Le tableau suivant répertorie les options de licence de support NetApp pour NetApp FAS.
+Le tableau suivant répertorie les options de licence de support NetApp pour les systèmes de stockage NetApp AFF, ASA et FAS.
 
 |===
-| Licences du support NetApp | Numéro de référence | Caractéristiques techniques 
+| Licences du support NetApp | Caractéristiques techniques 
 
 
-| SupportEdge Premium4 heures sur place ; mois : 36 | CS-O2-4HR | link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
-|===
-
-
-=== système de stockage E-Series
-
-Le tableau suivant répertorie les options de licence de support NetApp pour système de stockage E-Series.
-
-|===
-| Licences du support NetApp | Numéro de référence | Caractéristiques techniques 
-
-
-| Assistance matérielle Premium 4 heures sur site ; mois : 36 | SVC-O2-4HR-E .3+| link:https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf["https://www.netapp.com/pdf.html?item=/media/19784-ds-3873.pdf"] 
-
-
-| Assistance logicielle | SW-SSP-O2-4HR-E 
-
-
-| installation initiale | SVC-INST-O2-4HR-E 
+| NetApp SupportEdge | https://www.netapp.com/netapp-services/[] 
 |===

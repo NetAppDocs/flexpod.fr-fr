@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_automation.html 
+keywords: flexpod express, automation, IaC, GitHub repository, Ansible 
+summary: 'Le déploiement automatisé pour FlexPod Express est disponible via un dépôt GitHub qui inclut des playbooks Ansible et des ressources d"infrastructure sous forme de code associées.' 
+---
+= FlexPod Express Déploiement automatisé
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Le déploiement automatisé de FlexPod Express est disponible via les dépôts FlexPod Express GitHub. Ces dépôts contiennent des playbooks Ansible et des fichiers associés pour faciliter le déploiement de l'infrastructure FlexPod Express en tant que code (IaC).
+
+Les référentiels GitHub offrent une approche structurée pour le déploiement des configurations FlexPod Express, permettant aux utilisateurs d'automatiser la configuration et la gestion de leur infrastructure. Cela inclut des playbooks pour divers composants de la conception FlexPod Express, garantissant que les utilisateurs peuvent déployer et maintenir efficacement leurs environnements avec cohérence et fiabilité.
+
+Pour le déploiement automatisé de FlexPod Express avec les serveurs Cisco UCS série C, les commutateurs Cisco Nexus et ONTAP, reportez-vous à link:https://github.com/ucs-compute-solutions/FlexPod-Express-Intersight["ce dépôt GitHub"^] et à la link:https://www.netapp.com/media/91691-flex-pod-express-nva-ia-c.pdf["NVA"^] correspondante. Vous pouvez également utiliser les rôles VMware du dépôt pour déployer un environnement basé sur VMware.
+
+Pour le déploiement automatisé de FlexPod Express avec les serveurs Cisco UCS X-Series Direct, les commutateurs Cisco Nexus et NetApp ONTAP, veuillez consulter link:https://github.com/ucs-compute-solutions/FlexPod-IMM-OpenShift["ce dépôt GitHub"^]. Vous pouvez utiliser les playbooks de ce dépôt pour mettre en place l'infrastructure FlexPod Express, puis déployer OpenShift par-dessus en utilisant ce link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_rh_openshift_bm_iac_deploy.html.["CVD"^]
