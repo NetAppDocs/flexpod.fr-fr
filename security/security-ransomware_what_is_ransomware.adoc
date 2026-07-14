@@ -24,6 +24,7 @@ Les ransomwares sont un type de malware basé sur la cryptovirologie, c'est-à-d
 
 
 
+[[how-does-ransomware-work]]
 == Comment les attaques par ransomware fonctionnent-elles ?
 
 Les étapes suivantes décrivent la façon dont les ransomware utilisent la cryptographie pour chiffrer les données de la victime sans recourir au décryptage ou à la restauration par la victime :
@@ -39,6 +40,7 @@ Les étapes suivantes décrivent la façon dont les ransomware utilisent la cryp
 
 
 
+[[challenges]]
 == À relever
 
 Les individus et les organisations sont confrontés aux challenges suivants lorsqu'ils sont attaqués par des ransomware :
@@ -53,6 +55,7 @@ Les individus et les organisations sont confrontés aux challenges suivants lors
 
 
 
+[[who-is-at-risk]]
 == Qui est à risque ?
 
 N'importe qui peut être attaqué par certaines personnes, y compris par des personnes et des grandes entreprises. Les entreprises qui ne mettent pas en œuvre de mesures et de pratiques de sécurité bien définies sont encore plus vulnérables à de telles attaques. L'effet de l'attaque sur une grande organisation peut être plusieurs fois plus important que ce qu'un individu peut supporter.
@@ -71,6 +74,7 @@ Il ne s'agit pas d'une liste exhaustive des cibles. Vous ne pouvez pas vous prot
 
 
 
+[[how-does-ransomware-enter-a-system-or-spread]]
 == Comment les ransomwares entrent-ils dans un système ou se propagent-ils ?
 
 Il existe plusieurs façons dont les ransomwares peuvent entrer un système ou se propager à d'autres systèmes. Dans le monde d’aujourd’hui, presque tous les systèmes sont reliés les uns aux autres par l’intermédiaire d’Internet, de réseaux locaux, de réseaux WAN, etc. La quantité de données générées et échangées entre ces systèmes ne cesse d'augmenter.
@@ -88,6 +92,7 @@ Parmi les méthodes les plus courantes par lesquelles les ransomwares peuvent ê
 
 
 
+[[consequences-of-data-loss]]
 == Conséquences de la perte de données
 
 Les conséquences ou les effets d'une perte de données peuvent se faire plus largement que ce que pourrait prévoir les entreprises. Les effets peuvent varier en fonction de la durée des temps d'arrêt ou de la période pendant laquelle une entreprise n'a pas accès à ses données. Plus l’attaque perdure longtemps, plus l’effet sur le chiffre d’affaires, la marque et la réputation de l’organisation est important. Une organisation peut aussi faire face à des problèmes juridiques et à un déclin important de la productivité.
@@ -96,6 +101,7 @@ Alors que ces questions persistent au fil du temps, elles commencent à s'agrand
 
 
 
+[[financial-effects]]
 == Effets financiers
 
 Selon un récent https://www.mcafee.com/enterprise/en-us/assets/executive-summaries/es-economic-impact-cybercrime.pdf["Rapport McAfee"^], Les coûts globaux encourus en raison de la cybercriminalité représentent environ 600 milliards de dollars, soit environ 0.8% du PIB mondial. Lorsque ce montant est comparé à la croissance mondiale de l'économie Internet de 4.2 billions de dollars, il équivaut à une taxe de 14% sur la croissance.
@@ -104,6 +110,7 @@ Une attaque par ransomware prend une part importante de ce coût financier. En 2
 
 
 
+[[what-is-the-solution]]
 == Quelle est la solution ?
 
 La récupération suite à une attaque par ransomware avec un temps d'indisponibilité minimal est uniquement possible grâce à la mise en œuvre d'un plan de reprise après incident proactif. Avoir la capacité de récupérer après une attaque est bon, mais la prévention d'une attaque est tout à fait idéale.

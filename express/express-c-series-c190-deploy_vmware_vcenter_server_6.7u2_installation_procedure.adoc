@@ -21,6 +21,7 @@ NOTE: FlexPod Express utilise VMware vCenter Server Appliance (VCSA).
 
 
 
+[[download-the-vmware-vcenter-server-appliance]]
 == Téléchargez l'appliance VMware vCenter Server
 
 Pour télécharger VMware vCenter Server Appliance (VCSA), procédez comme suit :

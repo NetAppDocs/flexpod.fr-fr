@@ -18,6 +18,7 @@ Cisco apporte une contribution substantielle à la conception et à l'architectu
 
 
 
+[[cisco-ucs-x-series-direct]]
 == Cisco UCS X-Series Direct
 
 Cisco UCS X-Series Direct est une nouvelle architecture qui intègre une paire de Cisco UCS Fabric Interconnect 9108 100G avec le châssis Cisco UCS X9508 et les nœuds de calcul Cisco UCS X-Series pour fournir la solution UCS X-Series Direct.
@@ -43,19 +44,19 @@ NOTE: Veuillez consulter ce lien pour obtenir les spécifications techniques com
 Veuillez vous référer aux tableaux ci-dessous pour connaître les spécifications techniques des composants X-Series Direct.
 
 |===
-| Interconnexion de fabric Cisco UCS | Numéro de référence | Caractéristiques techniques 
+| Cisco UCS X-Series Interconnexion directe de la structure | Numéro de référence | Caractéristiques techniques 
 
 
 | Interconnexion de fabric UCS 9108 100G | UCSX-S9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-fabric-interconnect-9108-100g.pdf["Interconnexion de fabric Cisco UCS 9108"] 
 |===
 |===
-| Cisco UCS X-Series Châssis | Numéro de référence | Caractéristiques techniques 
+| Cisco UCS X-Series Direct Chassis | Numéro de référence | Caractéristiques techniques 
 
 
 | Cisco UCS X9508 Châssis | NGCX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html?ccid=cc002456&oid=dstcsm026317["Cisco UCS X9508 Châssis"] 
 |===
 |===
-| Nœuds de calcul Cisco UCS X-Series | Numéro de référence | Caractéristiques techniques 
+| Nœuds de calcul directs Cisco UCS X-Series | Numéro de référence | Caractéristiques techniques 
 
 
 | Cisco UCS X210c M7 | UCSX-210C-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m7-compute-node-ds.html["Cisco UCS X210c M7 Nœud de calcul"] 
@@ -73,7 +74,7 @@ Veuillez vous référer aux tableaux ci-dessous pour connaître les spécificati
 | Cisco UCS X410c M8 | UCSX-410C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m8-compute-node-ds.html["Cisco UCS X410c M8 Nœud de calcul"] 
 |===
 |===
-| Modules Cisco UCS série X | Numéro de référence | Caractéristiques techniques 
+| Modules directs Cisco UCS X-Series | Numéro de référence | Caractéristiques techniques 
 
 
 | Module de fabric intelligent Cisco UCS 9108 | UCSX-I-9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/cisco-ucs-9108-100g-intelligent-fabric-module-spec-sheet.pdf["Module de fabric intelligent Cisco UCS 9108"] 
@@ -86,6 +87,45 @@ Veuillez vous référer aux tableaux ci-dessous pour connaître les spécificati
 |===
 
 
+[[cisco-unified-edge]]
+== Cisco Unified Edge
+
+Cisco Unified Edge est un système compatible avec l'IA qui révolutionne l'informatique en périphérie en combinant calcul, réseau, stockage et sécurité. Sa conception modulaire est prête pour l'avenir, écoénergétique et facile à entretenir, et peut être personnalisée pour prendre en charge les charges de travail et les cas d'usage actuels, tout en restant adaptable à l'évolution rapide de l'IA.
+
+Pour un aperçu rapide des capacités et fonctionnalités de Cisco Unified Edge, consultez link:https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/unified-edge/unified-edge-at-a-glance.html["Cisco Unified Edge - Aperçu."^]
+
+Cisco Unified Edge se compose des éléments suivants :
+
+* Cisco UCS XE9305 Châssis
+* Deux contrôleurs Cisco Unified Edge Management avec commutateurs 25G intégrés
+* Nœuds de calcul - Choix de
++
+** Cisco UCS XE130c M8 Nœud de calcul
+** Cisco UCS XE150c M8 Nœud de calcul
+
+
+
+
+Les tableaux ci-dessous répertorient les options de châssis et de nœuds de calcul Cisco Unified Edge.
+
+|===
+| Châssis Cisco Unified Edge | Numéro de référence | Caractéristiques techniques 
+
+
+| Cisco UCS XE9305 Châssis | UCSXE-9305-U | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe9305-m8-chassis-spec-sheet.pdf["Cisco UCS XE9305 Châssis"] 
+|===
+|===
+| Nœuds de calcul Cisco Unified Edge | Numéro de référence | Caractéristiques techniques 
+
+
+| Cisco UCS XE130c M8 Nœud de calcul | UCSXE-130C-M8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe130c-m8-compute-node-spec-sheet.pdfl["Cisco UCS XE130c M8 Nœud de calcul"] 
+
+
+| Cisco UCS XE150c M8 Nœud de calcul | UCSXE-150C-M8 | https://www.cisco.com/site/us/en/products/collateral/computing/unified-edge/ucs-xe150c-m8-compute-node-ds.html["Cisco UCS XE150c M8 Nœud de calcul"] 
+|===
+
+
+[[cisco-ucs-c-series-rack-server-options]]
 == Options de serveurs en rack Cisco UCS C-Series
 
 Les serveurs rack Cisco UCS série C sont disponibles en versions 1U et 2U, avec différentes options de processeur, de mémoire et d'E/S. Les références indiquées dans le tableau ci-dessous correspondent aux serveurs de base. Elles n'incluent pas les processeurs, la mémoire, les disques, ni les cartes Peripheral Component Interconnect Express (PCIe). De multiples options de configuration sont disponibles et sont prises en charge dans l'architecture FlexPod.
@@ -121,6 +161,7 @@ Le tableau suivant répertorie les options des serveurs en rack Cisco UCS C-Seri
 |===
 
 
+[[cisco-nexus-switches]]
 == Commutateurs Cisco Nexus
 
 Des commutateurs Cisco Nexus redondants sont requis dans l’architecture FlexPod.
@@ -136,6 +177,7 @@ Des commutateurs Cisco Nexus redondants sont requis dans l’architecture FlexPo
 |===
 
 
+[[cisco-support-licensing-options]]
 == Options de licence du support Cisco
 
 Des contrats de support TSANet valides sont requis sur tous les équipements Cisco dans l’architecture FlexPod Express.

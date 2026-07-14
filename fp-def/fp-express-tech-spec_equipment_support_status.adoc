@@ -24,6 +24,7 @@ Avant de déployer ou de maintenir des équipements FlexPod Express, vérifiez q
 
 
 
+[[checking-netapp-equipment-support]]
 == Vérification du support technique de NetApp
 
 NetApp fournit des informations de support via le Hardware Universe (HWU).
@@ -42,6 +43,7 @@ NOTE: Pour afficher toutes les plateformes, modifiez le filtre *Cycle de vie de 
 
 
 
+[[checking-cisco-equipment-support]]
 == Vérification de la prise en charge des équipements Cisco
 
 Cisco fournit les dates de fin de commercialisation et de fin de support sur les pages d'assistance produit Cisco.

@@ -20,6 +20,7 @@ La configuration réseau de la solution FlexPod SM-BC suit les meilleures pratiq
 
 
 
+[[connectivity]]
 == Connectivité
 
 Les switchs FlexPod Nexus de chaque site procurent une connectivité locale entre le calcul UCS et le stockage ONTAP dans une configuration haute disponibilité. Les composants redondants et la connectivité redondante offrent la résilience aux scénarios de point de défaillance unique.
@@ -117,6 +118,7 @@ NOTE: Le tableau ci-dessus répertorie la connectivité du point de vue de chaqu
 
 
 
+[[port-channel-and-virtual-port-channel]]
 == Canal de port et canal de port virtuel
 
 Le canal de port active l'agrégation de liens à l'aide du protocole LACP (Link Aggregation Control Protocol) pour l'agrégation de la bande passante et la résilience des pannes de liaison. Le canal de port virtuel (VPC) permet que les connexions des canaux de port entre deux commutateurs Nexus apparaissent logiquement comme une seule. Ceci améliore davantage la résilience des pannes pour les situations telles qu'une panne de liaison unique ou une défaillance de commutateur unique.
@@ -153,6 +155,7 @@ Le tableau suivant répertorie l'ID et l'utilisation du canal de port sur chaque
 |===
 
 
+[[vlans]]
 == VLAN
 
 Le tableau suivant répertorie les réseaux VLAN configurés pour la configuration de l'environnement de validation de la solution FlexPod SM-BC et leur utilisation.

@@ -15,6 +15,7 @@ summary: 'Cette section décrit le nombre d"études et les exigences d"infrastru
 
 
 
+[[storage-sizing]]
 == Dimensionnement du stockage
 
 Cette section décrit le nombre d'études et les exigences d'infrastructure correspondantes.
@@ -62,6 +63,7 @@ Les besoins en stockage répertoriés dans le tableau suivant supposent que les 
 |===
 
 
+[[compute-sizing]]
 == Dimensionnement des ressources de calcul
 
 Le tableau ci-dessous répertorie les exigences de calcul des systèmes d'imagerie médicale de petite, moyenne et grande taille.
@@ -104,6 +106,7 @@ Le tableau ci-dessous répertorie les exigences de calcul des systèmes d'imager
 |===
 
 
+[[networking-and-cisco-ucs-infrastructure-sizing]]
 == Mise en réseau et dimensionnement de l'infrastructure Cisco UCS
 
 Le tableau ci-dessous répertorie les exigences de l'infrastructure réseau et Cisco UCS pour les systèmes d'imagerie médicale de petite, moyenne et grande taille.

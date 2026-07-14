@@ -20,6 +20,7 @@ La configuration du stockage pour la solution FlexPod SM-BC suit les meilleures 
 
 
 
+[[connectivity]]
 == Connectivité
 
 La connectivité de stockage aux IF et aux serveurs lames UCS locaux est fournie par les commutateurs Nexus sur le site local. La connectivité du switch Nexus entre les sites permet au stockage d'être accessible par les serveurs lames UCS distants. La figure et le tableau ci-dessous présentent le schéma de connectivité du stockage et une liste des connexions des contrôleurs de stockage de chaque site.
@@ -67,6 +68,7 @@ image:sm-bcs-image22.png["Erreur : image graphique manquante"]
 |===
 
 
+[[connections-and-interfaces]]
 == Connexions et interfaces
 
 Deux ports physiques de chaque contrôleur de stockage sont connectés à chaque commutateur Nexus afin d'assurer l'agrégation de la bande passante et la redondance pour cette validation. Ces quatre connexions participent à une configuration de groupe d'interface sur le système de stockage. Les ports correspondants des commutateurs Nexus font partie d'un VPC pour assurer l'agrégation de liens et la résilience.
@@ -77,6 +79,7 @@ image:sm-bcs-image23.png["Erreur : image graphique manquante"]
 
 
 
+[[san-boot]]
 == Démarrage SAN
 
 NetApp recommande l'implémentation d'un démarrage SAN pour les serveurs Cisco UCS dans la solution FlexPod. L'implémentation du démarrage SAN vous permet de sécuriser le système d'exploitation au sein du système de stockage NetApp, vous offrant ainsi de meilleures performances et une plus grande flexibilité. Pour cette solution, le démarrage SAN iSCSI a été validé.
@@ -89,6 +92,7 @@ image:sm-bcs-image24.png["Erreur : image graphique manquante"]
 
 
 
+[[cluster-peering]]
 == Peering de clusters
 
 Les pairs de cluster ONTAP communiquent via les LIFs intercluster. En utilisant ONTAP System Manager pour les deux clusters, vous pouvez créer les LIF intercluster nécessaires sous le volet protection > Présentation.
@@ -113,6 +117,7 @@ image:sm-bcs-image28.png["Erreur : image graphique manquante"]
 
 
 
+[[ontap-mediator-installation-and-configuration]]
 == Installation et configuration du médiateur ONTAP
 
 Le médiateur ONTAP établit un quorum pour les clusters ONTAP dans une relation SM-BC. Il coordonne le basculement automatique en cas de défaillance et aide à éviter les scénarios où chaque cluster tente simultanément d'établir le contrôle en tant que cluster principal.
@@ -129,6 +134,7 @@ image:sm-bcs-image30.png["Erreur : image graphique manquante"]
 
 
 
+[[sm-bc-consistency-group]]
 == Groupe de cohérence SM-BC
 
 Un groupe de cohérence assure la cohérence d'ordre d'écriture d'une charge de travail d'application couvrant un ensemble de volumes spécifiés. Pour ONTAP 9.10.1, voici quelques-unes des restrictions importantes.
@@ -177,6 +183,7 @@ image:sm-bcs-image34.png["Erreur : image graphique manquante"]
 
 
 
+[[volumes-luns-and-host-mappings]]
 == Volumes, LUN et mappages d'hôtes
 
 Une fois les groupes de cohérence créés, SnapMirror synchronise les volumes source et de destination pour que les données soient toujours synchronisées. Les volumes de destination du site distant portent les noms des volumes avec la fin _dest. Par exemple, pour le volume esxi_a du site Un cluster, il existe un volume ESXi_a_dest de protection des données (DP) correspondant sur le site B.

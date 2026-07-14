@@ -28,6 +28,7 @@ Toutefois, les rares cas d'utilisation validés dans cette solution ne représen
 
 
 
+[[application-development-and-testing-devtest]]
 == Développement et test d'applications (développement/test)
 
 Pour accélérer le développement d'applications, vous pouvez cloner rapidement les données répliquées au niveau du site de reprise après incident et les utiliser pour développer et tester des applications. La colocation des environnements de reprise après incident et de test et développement peut considérablement améliorer l'utilisation des installations de sauvegarde ou de reprise après incident. Les clones à la demande de test et développement fournissent autant de copies que nécessaire pour passer plus rapidement en production.
@@ -146,6 +147,7 @@ L'environnement de reprise d'activité est valide pour le développement et les 
 
 
 
+[[disaster-recovery]]
 == Reprise après incident
 
 La technologie SnapMirror est également utilisée dans le cadre des plans de reprise d'activité. Si les données stratégiques sont répliquées vers un autre emplacement physique, un incident grave n'est pas nécessairement à l'origine de périodes prolongées d'indisponibilité des données pour les applications stratégiques. Les clients peuvent accéder aux données répliquées sur le réseau jusqu'à ce que le site de production soit corrompu, supprimé accidentellement, endommagé, etc.
@@ -257,6 +259,7 @@ Cette section illustre la résolution d'un scénario de reprise après incident 
 
 
 
+[[verification-of-data-on-the-production-site]]
 == Vérification des données sur le site de production
 
 Une fois le site de production restauré, vous devez vous assurer que la configuration d'origine est restaurée et que les clients peuvent accéder aux données à partir du site source.

@@ -18,6 +18,7 @@ La conception d'une FlexPod présente des exigences minimales en matière d'alim
 
 
 
+[[power-requirements]]
 == Les besoins en alimentation électrique
 
 Les exigences en termes d'alimentation pour le data Center FlexPod diffèrent selon l'emplacement où la configuration FlexPod Datacenter est installée.
@@ -30,6 +31,7 @@ Pour connaître les données d'alimentation des contrôleurs de stockage NetApp,
 
 
 
+[[minimum-cable-requirements]]
 == Exigences minimales en matière de câblage
 
 Le nombre et le type de câbles et d'adaptateurs requis varient selon le déploiement de FlexPod Datacenter. Le type de câble, le type d'émetteur-récepteur et le numéro sont déterminés pendant le processus de conception en fonction de vos besoins. Le tableau ci-dessous répertorie le nombre minimal de câbles requis.

@@ -18,6 +18,7 @@ Cette section décrit les exemples de topologies pour FlexPod Express.
 
 
 
+[[ucs-x-series-direct-with-direct-attached-fc-and-ip-based-san]]
 == UCS X-Series Direct avec FC et SAN IP connectés directement
 
 La figure suivante illustre une topologie d'exemple UCS X-Series Direct et ASA à connexion directe pour SAN basé sur IP et FC.
@@ -50,6 +51,7 @@ https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf[]
 ====
 
 
+[[ucs-c-series-servers-switch-attached-ip-based-storage]]
 == Serveurs UCS série C avec stockage IP connecté au commutateur
 
 La figure suivante montre un Cisco UCS C-Series autonome et un NetApp AFF.

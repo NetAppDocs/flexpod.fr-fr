@@ -28,6 +28,7 @@ image:cloud-fabricpool_image8.png["Erreur : image graphique manquante"]
 
 
 
+[[license-capacity]]
 == Capacité de la licence
 
 Vous pouvez afficher la capacité de la licence à l'aide de l'interface de ligne de commandes ONTAP ou de OnCommand System Manager. Pour vérifier la capacité sous licence, exécutez la commande suivante dans l'interface de ligne de commandes de ONTAP :

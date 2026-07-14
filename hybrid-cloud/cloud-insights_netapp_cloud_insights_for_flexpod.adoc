@@ -22,6 +22,7 @@ Dans ce rapport technique, la solution détaillée est la configuration du servi
 
 
 
+[[customer-value]]
 == En valeur pour le client
 
 La description détaillée de cette solution apporte une valeur ajoutée aux clients qui souhaitent bénéficier d'une solution de surveillance complète pour leurs environnements de cloud hybride, dans lesquels ONTAP est déployé comme système de stockage principal. Cela inclut les environnements FlexPod qui utilisent les systèmes de stockage NetApp AFF et FAS.

@@ -18,6 +18,7 @@ Les spécifications techniques fournissent des détails sur les composants maté
 
 
 
+[[cisco-ucs-b-series-blade-server-chassis]]
 == Châssis de serveur lame Cisco UCS B-Series
 
 Les spécifications techniques du châssis de serveur lame Cisco UCS B-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
@@ -54,6 +55,7 @@ Pour plus d'informations, reportez-vous à la section http://www.cisco.com/c/en/
 
 
 
+[[cisco-ucs-b-series-blade-servers]]
 == Serveurs lames Cisco UCS B-Series
 
 Les spécifications techniques des serveurs lames Cisco UCS B-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
@@ -77,6 +79,7 @@ Les spécifications techniques des serveurs lames Cisco UCS B-Series, comme illu
 |===
 
 
+[[cisco-ucs-c-series-rack-servers]]
 == Serveurs en rack Cisco UCS C-Series
 
 Les spécifications techniques des serveurs en rack Cisco UCS C-Series incluent la prise en charge du processeur, la capacité de mémoire maximale, le nombre de connecteurs PCIe et la taille du format. Pour plus d'informations sur les modèles de serveur UCS compatibles, consultez le https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle Cisco"^] liste. Les tableaux suivants illustrent les fiches techniques du serveur rack C-Series et l'option de châssis Cisco UCS C-Series, respectivement.
@@ -98,6 +101,7 @@ Les spécifications techniques des serveurs en rack Cisco UCS C-Series incluent 
 |===
 
 
+[[cisco-ucs-x-series-chassis]]
 == Châssis Cisco UCS X-Series
 
 Les spécifications techniques du châssis Cisco UCS X-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
@@ -127,6 +131,7 @@ Pour plus d'informations, reportez-vous à la section link:https://www.cisco.com
 
 
 
+[[cisco-ucs-x-series-compute-node]]
 == Nœud de calcul Cisco UCS X-Series
 
 Les spécifications techniques du nœud de calcul Cisco UCS X-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
@@ -152,6 +157,7 @@ Les spécifications techniques du nœud de calcul Cisco UCS X-Series, comme illu
 |===
 
 
+[[gpu-recommendation-for-flexpod-ai-ml-and-dl]]
 == Recommandation de processeurs graphiques pour FlexPod ai, ML et DL
 
 Les serveurs en rack Cisco UCS C-Series répertoriés dans le tableau ci-dessous peuvent être utilisés dans une architecture FlexPod pour héberger des charges de travail d'IA, DE ML et de DL. Les serveurs Cisco UCS C480 ML M5 sont dédiés aux charges de travail d'IA, DE ML et de DL, ainsi qu'aux processeurs graphiques SXM2 de NVIDIA, tandis que les autres serveurs utilisent des processeurs graphiques PCIe.
@@ -175,6 +181,7 @@ Le tableau ci-dessous répertorie également les GPU recommandés qui peuvent ê
 |===
 
 
+[[cisco-ucs-vic-adapters-for-cisco-ucs-b-series-blade-servers]]
 == Les adaptateurs Cisco UCS VIC pour serveurs lames Cisco UCS B-Series
 
 Les spécifications techniques des adaptateurs Cisco UCS Virtual interface Card (VIC) pour serveurs lames Cisco UCS B-Series incluent les composants suivants :
@@ -197,6 +204,7 @@ Toutes les architectures FlexPod actuellement validées utilisent un système Ci
 |===
 
 
+[[cisco-ucs-fabric-interconnects]]
 == Interconnexions de fabric Cisco UCS
 
 Les spécifications techniques des interconnexions de fabric Cisco UCS incluent la taille du format, le nombre total de ports et de connecteurs d'extension, ainsi que la capacité de débit. Le tableau suivant illustre les fiches techniques d'interconnexion de structure Cisco UCS.
@@ -221,6 +229,7 @@ Les spécifications techniques des interconnexions de fabric Cisco UCS incluent 
 |===
 
 
+[[cisco-nexus-5000-series-switches]]
 == Commutateurs Cisco Nexus série 5000
 
 Les spécifications techniques des commutateurs Cisco Nexus 5000 Series, y compris la taille au format, le nombre total de ports et la prise en charge des modules et des cartes filles de couche 3, sont fournies dans la fiche technique de chaque famille de modèles. Ces fiches techniques sont disponibles dans le tableau suivant.
@@ -242,6 +251,7 @@ Les spécifications techniques des commutateurs Cisco Nexus 5000 Series, y compr
 |===
 
 
+[[cisco-nexus-7000-series-switches]]
 == Commutateurs Cisco Nexus série 7000
 
 Les spécifications techniques des commutateurs Cisco Nexus 7000 Series, y compris la taille au format et le nombre maximal de ports, sont indiquées dans la fiche technique de chaque gamme de modèles. Ces fiches techniques sont disponibles dans le tableau suivant.
@@ -275,6 +285,7 @@ Les spécifications techniques des commutateurs Cisco Nexus 7000 Series, y compr
 |===
 
 
+[[cisco-nexus-9000-series-switches]]
 == Commutateurs Cisco Nexus série 9000
 
 Les spécifications techniques des commutateurs Cisco Nexus 9000 Series figurent dans la fiche technique de chaque modèle. Les spécifications incluent la taille du format, le nombre de superviseurs, le module de structure et les logements de carte de ligne, ainsi que le nombre maximum de ports. Ces fiches techniques sont disponibles dans le tableau suivant.
@@ -299,6 +310,7 @@ Les spécifications techniques des commutateurs Cisco Nexus 9000 Series figurent
 |===
 
 
+[[cisco-application-policy-infrastructure-controller]]
 == Contrôleur d'infrastructure des politiques d'applications Cisco
 
 Lorsque vous déployez Cisco ACI, en plus des éléments de la section link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Commutateurs Cisco Nexus 9000 Series"], Vous devez configurer trois circuits intégrés Cisco. Le tableau suivant répertorie la fiche technique du contrôleur APIC Cisco.
@@ -311,6 +323,7 @@ Lorsque vous déployez Cisco ACI, en plus des éléments de la section link:dc-t
 |===
 
 
+[[cisco-nexus-fabric-extender-details]]
 == Détails du extenseur de fabric Cisco Nexus
 
 Les spécifications techniques de Cisco Nexus FEX incluent la vitesse, le nombre de ports et de liaisons fixes ainsi que la taille des formats.
@@ -325,6 +338,7 @@ Le tableau suivant répertorie la fiche technique FEX de Cisco Nexus 2000 Series
 |===
 
 
+[[sfp-modules]]
 == Modules SFP
 
 Pour plus d'informations sur les modules SFP, consultez les ressources suivantes :
@@ -339,6 +353,7 @@ Pour plus d'informations sur les modules SFP, consultez les ressources suivantes
 
 
 
+[[netapp-storage-controllers]]
 == Contrôleurs de stockage NetApp
 
 Les spécifications techniques des contrôleurs de stockage NetApp incluent les composants suivants :
@@ -358,6 +373,7 @@ Les spécifications techniques des contrôleurs de stockage NetApp incluent les 
 
 
 
+[[fas-series]]
 === Gamme FAS
 
 Tous les modèles de contrôleurs de stockage FAS disponibles sont pris en charge dans un data Center FlexPod. Les spécifications détaillées de tous les contrôleurs de stockage FAS sont disponibles dans le https://hwu.netapp.com/["NetApp Hardware Universe"^]. Pour plus d'informations sur un modèle FAS spécifique, reportez-vous à la documentation spécifique à la plate-forme répertoriée dans le tableau suivant.
@@ -382,6 +398,7 @@ Tous les modèles de contrôleurs de stockage FAS disponibles sont pris en charg
 |===
 
 
+[[aff-a-series]]
 === Gamme AFF A-Series
 
 Tous les modèles actuels de contrôleurs de stockage NetApp AFF A-Series sont pris en charge dans FlexPod. Vous trouverez des informations supplémentaires dans la https://www.netapp.com/media/7828-DS-3582-AFF-A-Series.pdf["Caractéristiques techniques des systèmes AFF"^] fiche technique et dans le https://hwu.netapp.com/["NetApp Hardware Universe"^]. Pour plus d'informations sur un modèle AFF spécifique, reportez-vous à la documentation spécifique à la plate-forme répertoriée dans le tableau suivant.
@@ -406,6 +423,7 @@ Tous les modèles actuels de contrôleurs de stockage NetApp AFF A-Series sont p
 |===
 
 
+[[aff-asa-a-series]]
 === GAMME AFF ASA A-SERIES
 
 Tous les modèles actuels de contrôleurs de stockage NetApp AFF ASA A-Series sont pris en charge dans FlexPod. Pour plus d'informations, consultez les documents relatifs à la baie SAN uniquement, le rapport technique sur les baies SAN 100 % Flash de ONTAP AFF et le rapport NetApp Hardware Universe. Pour plus d'informations sur un modèle AFF spécifique, reportez-vous à la documentation spécifique à la plate-forme répertoriée dans le tableau suivant.
@@ -430,6 +448,7 @@ Tous les modèles actuels de contrôleurs de stockage NetApp AFF ASA A-Series so
 |===
 
 
+[[netapp-disk-shelves]]
 === Tiroirs disques NetApp
 
 Les spécifications techniques des tiroirs disques NetApp incluent la taille, le nombre de disques par boîtier et les modules d'E/S de tiroir. Cette documentation est disponible dans le tableau suivant. Pour plus d'informations, reportez-vous à la section http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage NetApp"^] et le https://hwu.netapp.com/["NetApp Hardware Universe"^].
@@ -451,6 +470,7 @@ Les spécifications techniques des tiroirs disques NetApp incluent la taille, le
 |===
 
 
+[[netapp-drives]]
 === Disques NetApp
 
 Les spécifications techniques des disques NetApp incluent la taille, la capacité du disque, les tours/min des disques, les contrôleurs et les exigences de version ONTAP. Ces spécifications sont disponibles dans la section entraînements du http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^].

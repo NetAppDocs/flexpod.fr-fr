@@ -18,6 +18,7 @@ Cette section décrit la configuration matérielle minimale requise pour les dif
 
 
 
+[[flexpod-express-with-netapp-aff-asa-fas]]
 == FlexPod Express avec NetApp AFF/ ASA/ FAS
 
 Les exigences matérielles pour les solutions FlexPod Express qui utilisent des contrôleurs NetApp AFF, ASA ou FAS pour le stockage sous-jacent comprennent les configurations décrites dans cette section.
@@ -26,5 +27,5 @@ La configuration matérielle minimale requise pour FlexPod Express est indiquée
 
 * Deux commutateurs Ethernet standard 10 Gbit/s en configuration redondante (Cisco Nexus 9200 et 9300)
 * Serveurs rack autonomes Cisco UCS C-Series avec configuration de serveur rack autonome basée sur CIMC ou configuration autonome Intersight, ou Cisco UCS X-Series Direct avec configuration gérée par Cisco Intersight (IMM).
-* Deux contrôleurs d'entrée de gamme NetApp AFF (A20, A30 ou C30), NetApp ASA (A20, A30 ou C30), ou NetApp FAS (2750 ou 2820) dans une configuration de paire à haute disponibilité (HA) déployée en cluster à deux nœuds
+* Deux contrôleurs d'entrée de gamme NetApp AFF (A20, A30 ou C30), NetApp ASA (A20, A30 ou C30) ou NetApp FAS (2750, 2820 ou FAS 50) en configuration de paire à haute disponibilité (HA) déployés en cluster à deux nœuds
 

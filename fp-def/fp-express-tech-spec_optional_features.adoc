@@ -21,6 +21,7 @@ NOTE: Le démarrage SAN est optionnel mais fortement recommandé, car il permet 
 
 
 
+[[iscsi-boot-option]]
 == Option de démarrage iSCSI
 
 Les exigences minimales pour l'option de démarrage iSCSI sont les suivantes :
@@ -32,6 +33,7 @@ Les exigences minimales pour l'option de démarrage iSCSI sont les suivantes :
 
 
 
+[[cisco-ucs-x-series-direct-and-direct-attached-aff-asa-fas-option]]
 == Option AFF/ASA/FAS Direct et à connexion directe Cisco UCS X-Series
 
 NetApp storage controllers peuvent être connectés directement aux interconnexions de la structure Cisco UCS sans aucun commutateur SAN en amont. FlexPod Express prend en charge le démarrage FC et iSCSI avec le UCS X-Series Direct.

@@ -18,6 +18,7 @@ Une fois les cibles réclamées, les widgets de stockage NetApp, l'inventaire du
 
 
 
+[[storage-inventory-overview]]
 == Présentation de l'inventaire du stockage
 
 La capture d'écran suivante affiche l'écran * opération > stockage*.
@@ -33,6 +34,7 @@ image:ci-qsg_image10.png["la capture d'écran affiche la présentation du cluste
 
 
 
+[[storage-widgets]]
 == Widgets de stockage
 
 Pour afficher les widgets de stockage, accédez à *surveillance > tableaux de bord > Afficher les widgets de stockage NetApp*.

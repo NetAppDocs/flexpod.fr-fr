@@ -15,10 +15,12 @@ summary: Pour créer des igroups, exécutez les commandes suivantes depuis la co
 
 
 
+[[set-up-ontap-san-boot-storage]]
 == Configuration du stockage de démarrage SAN ONTAP
 
 
 
+[[create-iscsi-igroups]]
 === Création des igroups iSCSI
 
 
@@ -35,6 +37,7 @@ NOTE: Cette étape doit être effectuée lors de l'ajout de serveurs Cisco UCS C
 
 
 
+[[map-boot-luns-to-igroups]]
 == Mappez les LUN de démarrage sur les igroups
 
 ....

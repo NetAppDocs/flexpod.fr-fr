@@ -22,12 +22,14 @@ image:medical-imaging_image3.png["Erreur : image graphique manquante"]
 
 
 
+[[storage-architecture]]
 == Architecture du stockage
 
 Utilisez les instructions d'architecture de stockage de cette section pour configurer l'infrastructure de stockage d'un système d'imagerie médicale d'entreprise.
 
 
 
+[[storage-tiers]]
 === Niveaux de stockage
 
 En général, un environnement d'imagerie médicale d'entreprise se compose de plusieurs tiers de stockage. Chaque Tier présente des exigences spécifiques en matière de performances et de protocoles de stockage. Le stockage NetApp prend en charge diverses technologies RAID ; plus d'informations sont disponibles https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-psmg%2FGUID-488B0EC4-3B03-4566-8321-5B8E568F34E4.html["ici"^]. Découvrez comment les systèmes de stockage NetApp AFF répondent aux besoins des différents tiers de stockage du système d'imagerie :
@@ -67,6 +69,7 @@ Le tableau ci-dessous répertorie chaque niveau qu'un système d'imagerie médic
 |===
 
 
+[[storage-network-connectivity]]
 === Connectivité réseau du stockage
 
 
@@ -108,6 +111,7 @@ Le tableau ci-dessous répertorie chaque niveau qu'un système d'imagerie médic
 
 
 
+[[backup-and-recovery]]
 === Sauvegarde et restauration
 
 Le data Center FlexPod repose sur une baie de stockage gérée par le logiciel de gestion des données NetApp ONTAP. Le logiciel ONTAP a évolué au fil des 20 ans pour fournir de nombreuses fonctionnalités de gestion des données pour les VM, les bases de données Oracle, les partages de fichiers SMB/CIFS et NFS. Elle propose également une technologie de protection telle que la technologie NetApp Snapshot, SnapMirror et la technologie de réplication des données NetApp FlexClone. Le logiciel NetApp SnapCenter dispose d'un serveur et d'un client GUI afin d'utiliser les fonctionnalités ONTAP Snapshot, SnapRestore et FlexClone pour les machines virtuelles, les partages de fichiers SMB/CIFS, NFS et la sauvegarde et la restauration de bases de données Oracle.
@@ -139,6 +143,7 @@ NetApp MetroCluster est utilisé par des milliers d'entreprises dans le monde po
 
 
 
+[[networking]]
 == Mise en réseau
 
 Une paire de commutateurs Cisco Nexus fournit des chemins redondants pour le trafic IP du calcul au stockage, et pour les clients externes du visualiseur d'images du système d'imagerie médicale :
@@ -157,6 +162,7 @@ Une paire de commutateurs Cisco Nexus fournit des chemins redondants pour le tra
 
 
 
+[[computecisco-unified-computing-system]]
 == Calcul - Cisco Unified Computing System
 
 Deux structures Cisco UCS via des interconnexions de fabric différentes fournissent deux domaines à défaillance. Chaque structure est connectée aux commutateurs de réseau IP et à différents commutateurs de mise en réseau FC.
@@ -172,6 +178,7 @@ Nous avons créé des profils de service identiques pour chaque serveur lame Cis
 
 
 
+[[virtualization]]
 == Virtualisation
 
 Le cluster hôte VMware ESXi exécute les VM charges de travail. Le cluster comprend des instances ESXi exécutées sur des serveurs lames Cisco UCS.
@@ -194,6 +201,7 @@ Chaque hôte ESXi comprend les composants réseau suivants :
 
 
 
+[[medical-imaging-system-architecture]]
 == Architecture du système d'imagerie médicale
 
 Dans les organismes de santé, les systèmes d'imagerie médicale sont des applications stratégiques. Ils sont parfaitement intégrés aux flux de travail cliniques, qui commencent dès le début de l'inscription des patients et se terminent par les activités de facturation au cours du cycle de revenus.

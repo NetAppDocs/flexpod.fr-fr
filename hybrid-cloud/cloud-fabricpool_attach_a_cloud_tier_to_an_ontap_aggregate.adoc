@@ -23,6 +23,7 @@ NOTE: L'association d'un Tier cloud à un agrégat est une opération permanente
 
 
 
+[[oncommand-system-manager]]
 == OnCommand System Manager
 
 Pour rattacher un Tier cloud à un agrégat via OnCommand System Manager, effectuez les opérations suivantes :
@@ -45,6 +46,7 @@ image:cloud-fabricpool_image15.png["Erreur : image graphique manquante"]
 
 
 
+[[ontap-cli]]
 == INTERFACE DE LIGNE DE COMMANDES DE ONTAP
 
 Pour attacher un Tier cloud à un agrégat via l'interface de ligne de commandes ONTAP, exécutez les commandes suivantes :

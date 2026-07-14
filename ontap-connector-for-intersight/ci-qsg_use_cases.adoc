@@ -18,6 +18,7 @@ Il s'agit de quelques exemples de cas d'utilisation pour le contrôle et l'orche
 
 
 
+[[use-case-1-monitoring-netapp-storage-inventory-and-widgets]]
 == Cas d'utilisation 1 : surveillance de l'inventaire du stockage NetApp et des widgets
 
 Lorsque l'environnement de stockage NetApp est disponible dans Cisco Intersight, vous pouvez surveiller les objets de stockage NetApp en détail à partir de l'inventaire du stockage et obtenir une vue d'ensemble à partir des widgets de stockage.
@@ -30,6 +31,7 @@ Lorsque l'environnement de stockage NetApp est disponible dans Cisco Intersight,
 
 
 
+[[use-case-2-netapp-storage-orchestration-using-reference-workflows]]
 == Cas d'usage n°2 : orchestration du stockage NetApp à l'aide de workflows de référence
 
 Lorsque le stockage NetApp et les environnements vCenter sont disponibles dans Cisco Intersight, vous pouvez utiliser des workflows de référence de bout en bout disponibles dans GitHub via le https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Référentiel de flux de travail FlexPod Intersight"^].
@@ -73,6 +75,7 @@ Voici la liste des workflows disponibles dans le référentiel GitHub FlexPod-In
 
 
 
+[[use-case-3-custom-workflows-using-designer-free-form]]
 == Cas d'utilisation 3 : flux de travail personnalisés utilisant un format sans design
 
 Lorsque les environnements NetApp Storage et vCenter sont disponibles dans Cisco InterSight, vous pouvez créer des flux de travail personnalisés en utilisant les tâches de stockage et de virtualisation NetApp.

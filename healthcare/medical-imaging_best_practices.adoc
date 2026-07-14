@@ -15,10 +15,12 @@ summary: Cette section présente les meilleures pratiques en matière de concept
 
 
 
+[[storage-best-practices]]
 == Meilleures pratiques de stockage
 
 
 
+[[high-availability]]
 === Haute disponibilité
 
 La conception du cluster de stockage NetApp garantit une haute disponibilité à tous les niveaux :
@@ -33,12 +35,14 @@ La conception du cluster de stockage NetApp garantit une haute disponibilité à
 
 
 
+[[secure-multitenancy]]
 === Colocation sécurisée
 
 Les SVM NetApp fournissent une infrastructure de baies de stockage virtuelles pour séparer votre domaine de sécurité, vos règles et votre réseau virtuel. NetApp recommande de créer des SVM distincts pour chaque organisation de locataires qui héberge les données sur le cluster de stockage.
 
 
 
+[[netapp-storage-best-practices]]
 === Meilleures pratiques stockage NetApp
 
 Prenez en compte les meilleures pratiques de stockage NetApp suivantes :
@@ -51,6 +55,7 @@ Prenez en compte les meilleures pratiques de stockage NetApp suivantes :
 
 
 
+[[san-boot]]
 === Démarrage SAN
 
 NetApp recommande d'implémenter un démarrage SAN pour les serveurs Cisco UCS dans la solution de data Center FlexPod. Cette étape permet de sécuriser le système d'exploitation en toute sécurité grâce au système de stockage NetApp AFF, offrant ainsi de meilleures performances. La conception décrite dans cette solution utilise un démarrage SAN iSCSI.
@@ -63,6 +68,7 @@ Contrairement aux interfaces réseau NAS, les interfaces réseau SAN ne sont pas
 
 
 
+[[storage-efficiency-and-thin-provisioning]]
 === Efficacité du stockage et provisionnement fin
 
 NetApp s'est leader de l'innovation en matière d'efficacité du stockage, avec notamment la première déduplication pour les workloads primaires et la compaction des données à la volée qui améliore la compression et stocke les fichiers et E/S de petite taille. ONTAP prend en charge la déduplication à la volée et en arrière-plan, ainsi que la compression à la volée et en arrière-plan.
@@ -73,6 +79,7 @@ Pour des économies de déduplication maximales, envisagez de planifier la dédu
 
 
 
+[[quality-of-service]]
 === Qualité de service
 
 Les systèmes qui exécutent le logiciel ONTAP peuvent utiliser la fonctionnalité de qualité de services du stockage ONTAP pour limiter le débit en mégabits par seconde (Mbit/s) et limiter les IOPS pour différents objets de stockage tels que les fichiers, les LUN, les volumes, ou des SVM entiers. La QoS adaptative sert à définir un seuil et un plafond (QoS minimale) d'IOPS, qui s'ajustent dynamiquement en fonction de la capacité du datastore et de l'espace utilisé.
@@ -87,6 +94,7 @@ Vous pouvez définir la limite de débit maximal QoS sur un objet en Mbit/s et e
 
 
 
+[[storage-layout]]
 === Disposition du stockage
 
 Cette section décrit les meilleures pratiques pour l'organisation des LUN, des volumes et des agrégats sur le stockage.
@@ -143,6 +151,7 @@ Les conseils relatifs à la disposition des agrégats de stockage pour les syst�
 
 
 
+[[backup-best-practices]]
 == Meilleures pratiques de sauvegarde
 
 NetApp SnapCenter est utilisé pour les sauvegardes des machines virtuelles et des bases de données. NetApp recommande les meilleures pratiques de sauvegarde suivantes :
@@ -158,10 +167,12 @@ NetApp SnapCenter est utilisé pour les sauvegardes des machines virtuelles et d
 
 
 
+[[infrastructure-best-practices]]
 == Bonnes pratiques en matière d'infrastructure
 
 
 
+[[networking-best-practices]]
 === Meilleures pratiques en matière de mise en réseau
 
 NetApp recommande les meilleures pratiques suivantes en matière de mise en réseau :
@@ -175,6 +186,7 @@ Vous trouverez des pratiques d'excellence réseau supplémentaires dans les guid
 
 
 
+[[compute-best-practices]]
 == Calculer les bonnes pratiques
 
 Recommandation NetApp :
@@ -184,6 +196,7 @@ Recommandation NetApp :
 
 
 
+[[virtualization-best-practices]]
 == Meilleures pratiques de virtualisation
 
 NetApp recommande les meilleures pratiques de virtualisation suivantes :
@@ -195,6 +208,7 @@ NetApp recommande les meilleures pratiques de virtualisation suivantes :
 
 
 
+[[medical-imaging-system-best-practices]]
 == Bonnes pratiques pour les systèmes d'imagerie médicale
 
 Consultez les bonnes pratiques suivantes et certaines exigences d'un système d'imagerie médicale classique :

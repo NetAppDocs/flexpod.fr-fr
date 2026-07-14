@@ -21,6 +21,7 @@ Jyh-shing Chen, NetApp
 
 
 
+[[flexpod-solution]]
 == Solution FlexPod
 
 FlexPod est une architecture de data Center basée sur les bonnes pratiques. Elle inclut les composants suivants de Cisco et NetApp :
@@ -42,6 +43,7 @@ Chacune des familles de composants FlexPod présentées (Cisco UCS, commutateurs
 
 
 
+[[disaster-recovery-and-business-continuity]]
 == Assurer une reprise après incident rapide et la continuité de l'activité
 
 Plusieurs méthodes permettent aux entreprises de récupérer rapidement leurs applications et services de données en cas d'incident. La mise en place d'un plan de reprise après incident et de continuité de l'activité, l'implémentation d'une solution qui répond aux objectifs métier et l'exécution de tests réguliers des scénarios d'incident permettent aux entreprises de bénéficier d'une reprise après incident et de continuer les services stratégiques après une situation d'incident.
@@ -54,6 +56,7 @@ Pour les entreprises qui ont recours à des services de données pour générer 
 
 
 
+[[recovery-point-objective-and-recovery-time-objective]]
 == Objectifs de point de restauration et de délai de restauration
 
 L'objectif de point de restauration (RPO) mesure la quantité de données générée, en termes de temps, vous pouvez vous permettre de perdre ou bien le point auquel vous pouvez récupérer vos données. Avec un plan de sauvegarde quotidien, une entreprise risque de perdre une journée de données, car les modifications apportées aux données depuis la dernière sauvegarde pourraient être perdues en cas d'incident. Pour les services de données stratégiques et stratégiques, vous avez besoin d'un RPO nul et d'un plan et d'infrastructures associés pour protéger vos données sans aucune perte.
@@ -62,6 +65,7 @@ L'objectif de délai de restauration (RTO) mesure le temps que vous pouvez vous 
 
 
 
+[[sm-bc]]
 == SM-BC
 
 Depuis ONTAP 9.8, vous pouvez protéger les charges de travail SAN pour un basculement transparent des applications avec NetApp SM-BC. Vous pouvez créer des relations de groupes de cohérence entre deux clusters AFF ou deux clusters ASA pour la réplication des données afin d'atteindre un RPO nul et un RTO proche de zéro.

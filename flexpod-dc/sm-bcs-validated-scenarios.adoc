@@ -20,6 +20,7 @@ La solution FlexPod Datacenter SM-BC protège les services de données dans de n
 
 
 
+[[solution-functions-validation]]
 == Validation des fonctions de la solution
 
 Différents cas de test sont utilisés pour vérifier le fonctionnement de la solution et simuler des scénarios de défaillance partielle et complète du site. Pour réduire au minimum la duplication avec les tests déjà effectués dans les solutions de data Center FlexPod existantes dans le cadre du programme de conception validée par Cisco, ce rapport se concentre sur les aspects liés à SM-BC de la solution. Certaines validations FlexPod générales sont incluses pour que les praticiens puissent passer en revue leurs validations de mise en œuvre.
@@ -30,6 +31,7 @@ Pour la validation de la solution, une machine virtuelle Windows 10 par hôte ES
 
 
 
+[[esxi-host-iscsi-san-boot-test]]
 == Test de démarrage SAN iSCSI de l'hôte ESXi
 
 Les hôtes ESXi de la solution sont configurés pour démarrer à partir du SAN iSCSI. L'utilisation du démarrage SAN simplifie la gestion du serveur lors du remplacement d'un serveur car le profil de service du serveur peut être associé à un nouveau serveur pour qu'il démarre sans apporter de modifications de configuration supplémentaires.
@@ -54,6 +56,7 @@ Si un basculement de groupe de cohérence se produit sur le cluster de stockage 
 
 
 
+[[vmware-vmotion-and-vmhost-affinity-test]]
 == Test d'affinité avec les VM/hôtes VMware vMotion
 
 Bien qu'une solution générique FlexPod VMware Datacenter prenne en charge plusieurs protocoles, tels que FC, iSCSI, NVMe et NFS, la fonctionnalité de la solution FlexPod SM-BC prend en charge les protocoles SAN FC et iSCSI généralement utilisés pour les solutions stratégiques. Cette validation utilise uniquement les datastores basés sur protocole iSCSI et le démarrage SAN iSCSI.
@@ -74,6 +77,7 @@ Des tests de vMotion d'machines virtuelles sur un hôte différent au niveau du 
 
 
 
+[[planned-storage-failover]]
 == Basculement planifié du stockage
 
 Les opérations planifiées de basculement du stockage doivent être réalisées sur la solution après la configuration initiale afin de déterminer si la solution fonctionne correctement après le basculement du stockage. Ce test peut aider à identifier tout problème de connectivité ou de configuration susceptible d'entraîner des interruptions d'E/S. Les tests et la résolution réguliers de tout problème de connectivité ou de configuration permettent de fournir des services de données sans interruption en cas d'incident sur site réel. Le basculement planifié du stockage peut également être utilisé avant une maintenance planifiée du stockage afin que les services de données puissent être assurés depuis le site non affecté.
@@ -105,6 +109,7 @@ image:sm-bcs-image55.png["Erreur : image graphique manquante"]
 
 
 
+[[unplanned-storage-failover]]
 == Basculement de stockage non planifié
 
 Un basculement de stockage non planifié peut se produire en cas d'incident réel ou lors d'une simulation d'incident. Par exemple, consultez la figure suivante dans laquelle le système de stockage sur le site A subit une panne de courant, un basculement de stockage non planifié est déclenché et les services de données pour les LUN du site A, protégés par les relations SM-BC, continuent à partir du site B.
@@ -137,6 +142,7 @@ image:sm-bcs-image61.png["Erreur : image graphique manquante"]
 
 
 
+[[complete-site-maintenance-or-site-failure]]
 == Effectuez les opérations de maintenance du site ou les pannes du site
 
 Un site peut avoir besoin d'une maintenance de site, subir des pannes d'électricité ou être touché par une catastrophe naturelle comme un ouragan ou un tremblement de terre. Par conséquent, il est essentiel que vous pratiiez des scénarios d'échec de site planifiés et non planifiés pour vous assurer que votre solution FlexPod SM-BC est correctement configurée pour résister à de telles défaillances pour l'ensemble de vos applications et services de données stratégiques. Les scénarios suivants relatifs au site ont été validés.
@@ -167,6 +173,7 @@ image:sm-bcs-image65.png["Erreur : image graphique manquante"]
 
 
 
+[[microsoft-sql-server]]
 == Microsoft SQL Server
 
 Microsoft SQL Server est une plateforme de base de données adoptée et déployée pour LE DÉPARTEMENT INFORMATIQUE de l'entreprise. La version Microsoft SQL Server 2019 apporte beaucoup de nouvelles fonctionnalités et améliorations à ses moteurs relationnels et analytiques. Ce logiciel prend en charge les workloads avec des applications exécutées sur site, dans le cloud et dans un environnement hybride. En outre, il peut être déployé sur plusieurs plateformes, notamment Windows, Linux et les conteneurs.

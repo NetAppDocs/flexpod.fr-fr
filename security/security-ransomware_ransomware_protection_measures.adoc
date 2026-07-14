@@ -18,6 +18,7 @@ Cette section présente les principales fonctionnalités du logiciel de gestion 
 
 
 
+[[storage-netapp-ontap]]
 == Stockage : NetApp ONTAP
 
 Le logiciel ONTAP offre de nombreuses fonctionnalités utiles pour la protection des données, dont la plupart sont gratuites pour les clients qui disposent d'un système ONTAP. Vous pouvez à tout moment utiliser les fonctions suivantes pour protéger les données d'attaques :
@@ -31,6 +32,7 @@ Le logiciel ONTAP offre de nombreuses fonctionnalités utiles pour la protection
 
 
 
+[[network-cisco-nexus]]
 == Réseau : Cisco Nexus
 
 Le logiciel Cisco NX OS prend en charge la fonctionnalité NetFlow qui permet une détection améliorée des anomalies et de la sécurité du réseau. NetFlow capture les métadonnées de chaque conversation sur le réseau, les parties impliquées dans la communication, le protocole utilisé et la durée de la transaction. Une fois les informations agrégées et analysées, elles permettent de mieux comprendre le comportement normal.
@@ -41,6 +43,7 @@ NetFlow utilise des flux pour fournir des statistiques sur la surveillance du r�
 
 
 
+[[compute-cisco-ucs]]
 == Calcul : Cisco UCS
 
 Cisco UCS est le terminal de calcul d'une architecture FlexPod. Vous pouvez utiliser plusieurs produits Cisco qui contribuent à sécuriser cette couche de la pile au niveau du système d'exploitation.

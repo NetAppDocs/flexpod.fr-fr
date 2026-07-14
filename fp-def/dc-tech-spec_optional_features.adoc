@@ -18,6 +18,7 @@ NetApp prend en charge plusieurs composants facultatifs pour améliorer encore l
 
 
 
+[[metrocluster]]
 == MetroCluster
 
 FlexPod prend en charge les deux versions du logiciel NetApp MetroCluster pour une disponibilité sans interruption dans des configurations en cluster à deux ou quatre nœuds. MetroCluster permet une réplication synchrone des workloads stratégiques. Il requiert une configuration à deux sites connectée aux commutateurs Cisco. La distance maximale prise en charge entre les sites est d'environ 186 km pour les systèmes MetroCluster FC et est supérieure à 435 km pour l'IP MetroCluster. Les figures suivantes illustrent une architecture FlexPod Datacenter avec NetApp MetroCluster et FlexPod Datacenter avec architecture NetApp MetroCluster IP, respectivement.
@@ -50,6 +51,7 @@ image:dc-tech-spec_image12.png["Erreur : image graphique manquante"]
 
 
 
+[[end-to-end-fc-nvme]]
 == FC-NVMe de bout en bout
 
 Une connectivité FC-NVMe de bout en bout étend de manière transparente l'infrastructure SAN existante du client aux applications en temps réel, tout en offrant une amélioration des IOPS et du débit avec une latence réduite.
@@ -66,6 +68,7 @@ image:dc-tech-spec_image3.png["Erreur : image graphique manquante"]
 
 
 
+[[fc-san-boot-through-cisco-mds]]
 == Démarrage SAN FC via Cisco MDS
 
 Pour offrir une meilleure évolutivité grâce à un réseau SAN dédié, FlexPod prend en charge FC via des commutateurs Cisco MDS et Nexus avec prise en charge FC tels que Cisco Nexus 93108TC-FX. L'option de démarrage FC SAN via Cisco MDS présente les exigences matérielles et de licence suivantes :
@@ -85,6 +88,7 @@ image:dc-tech-spec_image5.png["Erreur : image graphique manquante"]
 
 
 
+[[fc-san-boot-with-cisco-nexus]]
 == Démarrage SAN FC avec Cisco Nexus
 
 L'option de démarrage FC SAN classique présente les exigences matérielles et de licence suivantes :
@@ -107,6 +111,7 @@ image:dc-tech-spec_image6.png["Erreur : image graphique manquante"]
 
 
 
+[[fcoe-san-boot-option]]
 == Option de démarrage SAN FCoE
 
 L'option de démarrage SAN FCoE nécessite les licences et la configuration matérielle suivantes :
@@ -128,6 +133,7 @@ image:dc-tech-spec_image7.png["Erreur : image graphique manquante"]
 
 
 
+[[iscsi-boot-option]]
 == Option de démarrage iSCSI
 
 L'option de démarrage iSCSI présente les licences et la configuration matérielle suivantes :
@@ -143,6 +149,7 @@ image:dc-tech-spec_image8.png["Erreur : image graphique manquante"]
 
 
 
+[[cisco-ucs-direct-connect-with-netapp-storage]]
 == Cisco UCS Direct Connect avec le stockage NetApp
 
 Les contrôleurs NetApp AFF et FAS peuvent être directement connectés aux interconnexions de fabric Cisco UCS sans commutateur SAN en amont.

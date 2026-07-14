@@ -18,6 +18,7 @@ Le `tiering-minimum-cooling-days` Le paramètre détermine le nombre de jours de
 
 
 
+[[auto]]
 == Auto
 
 La valeur par défaut `tiering-minimum-cooling-days` La définition de la règle de hiérarchisation automatique est définie sur 31 jours.
@@ -31,12 +32,14 @@ NOTE: Le stockage objet n'est pas transactionnel de base comme le stockage de fi
 
 
 
+[[snapshot-only]]
 == Snapshot uniquement
 
 La valeur par défaut `tiering-minimum-cooling-days` La définition de la règle de Tiering uniquement Snapshot est de 2 jours. Un délai minimum de 2 jours permet des processus en arrière-plan pour un stockage optimal et empêche les processus quotidiens de protection des données d'avoir à lire les données depuis le Tier cloud.
 
 
 
+[[ontap-cli]]
 == INTERFACE DE LIGNE DE COMMANDES DE ONTAP
 
 Pour modifier un volume `tiering-minimum-cooling-days` Pour le paramètre via l'interface de ligne de commandes de ONTAP, exécutez la commande suivante :

@@ -20,6 +20,7 @@ La configuration de calcul de la solution FlexPod SM-BC suit les bonnes pratique
 
 
 
+[[connectivity]]
 == Connectivité
 
 La connectivité entre les serveurs lames UCS B200 et les IOM est fournie par la carte VIC UCS 5108 via les connexions de fond de panier du châssis UCS. UCS 2204XP Fabric Extender utilisé pour la validation possède 16 ports 10G chacun pour la connexion aux huit serveurs lames demi-largeur, par exemple deux pour chaque serveur. Pour augmenter la bande passante de connectivité du serveur, vous pouvez ajouter un VIC supplémentaire basé sur mezzanine pour connecter le serveur au module UCS 2408 IOM alternatif qui fournit quatre connexions 10G à chaque serveur.
@@ -104,6 +105,7 @@ NOTE: Une bande passante supplémentaire peut être obtenue en utilisant des com
 
 
 
+[[service-profiles]]
 == Profils de services
 
 Un châssis de serveur lame avec des Fabric Interconnect gérés par UCS Manager (UCSM) ou Cisco Intersight peut extraire les serveurs à l'aide des profils de service disponibles dans UCSM et les profils de serveurs. Cette validation utilise UCSM et les profils de service pour simplifier la gestion des serveurs. Avec les profils de service, il est possible de remplacer ou mettre à niveau un serveur simplement en associant le profil de service d'origine au nouveau matériel.
@@ -123,6 +125,7 @@ Les profils de service créés prennent en charge les éléments suivants pour l
 
 
 
+[[san-boot]]
 == Démarrage SAN
 
 Dans le cas de la configuration de démarrage SAN iSCSI, les paramètres de démarrage iSCSI sont définis pour autoriser le démarrage iSCSI à partir des deux matrices iSCSI. Pour prendre en charge le scénario de basculement SM-BC dans lequel une LUN de démarrage SAN iSCSI est desservie à partir du cluster secondaire lorsque le cluster principal n'est pas disponible, la configuration cible statique iSCSI doit inclure des cibles à partir du site A et du site B. De plus, pour optimiser la disponibilité des LUN de démarrage, configurez les paramètres de démarrage iSCSI pour qu'ils démarrent à partir de tous les contrôleurs de stockage.

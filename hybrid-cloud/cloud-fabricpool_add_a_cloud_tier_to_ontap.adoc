@@ -28,6 +28,7 @@ Vous avez besoin des informations suivantes :
 
 
 
+[[oncommand-system-manager]]
 == OnCommand System Manager
 
 Pour ajouter un Tier cloud avec OnCommand System Manager, procédez comme suit :
@@ -48,6 +49,7 @@ image:cloud-fabricpool_image13.png["Erreur : image graphique manquante"]
 
 
 
+[[ontap-cli]]
 == INTERFACE DE LIGNE DE COMMANDES DE ONTAP
 
 Pour ajouter un Tier cloud à l'aide de l'interface de ligne de commandes ONTAP, entrez les commandes suivantes :

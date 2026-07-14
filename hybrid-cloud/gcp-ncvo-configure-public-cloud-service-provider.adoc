@@ -17,6 +17,7 @@ link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["Précéden
 
 
 
+[[procedure-1-access-netapp-console]]
 == Procédure 1 : Accéder à la console NetApp
 
 Pour accéder aux services cloud NetApp, inscrivez-vous et connectez-vous en utilisant le https://console.netapp.com["NetApp Console"^].
@@ -26,6 +27,7 @@ NOTE: Pour configurer les espaces de travail et les utilisateurs dans le compte 
 
 
 
+[[procedure-2-deploy-connector]]
 == Procédure 2 : déployer le connecteur
 
 Pour déployer Connector dans Google Cloud, rendez-vous ici https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html#creating-a-connector-in-google-cloud["lien"^].

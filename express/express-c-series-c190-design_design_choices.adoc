@@ -13,12 +13,14 @@ Les technologies répertoriées dans cette section ont été choisies au cours d
 
 
 
+[[netapp-aff-c190-series-with-ontap-9-6]]
 == NetApp AFF C190 Series avec ONTAP 9.6
 
 Cette solution tire parti de deux des derniers produits NetApp : le système NetApp AFF C190 et le logiciel ONTAP 9.6.
 
 
 
+[[aff-c190-system]]
 === Système AFF C190
 
 Ce groupe cible est les clients qui souhaitent moderniser leur infrastructure IT avec une technologie 100 % Flash à un prix abordable. Le système AFF C190 est fourni avec le nouveau ONTAP 9.6 et la licence pack Flash, ce qui signifie que les fonctions suivantes sont intégrées :
@@ -59,6 +61,7 @@ Pour obtenir des informations complètes sur le système matériel AFF C190, con
 
 
 
+[[ontap-9-6-software]]
 === Le logiciel ONTAP 9.6
 
 Les systèmes NetApp AFF C190 utilisent le nouveau logiciel de gestion des données ONTAP 9.6. ONTAP 9.6 est le logiciel de gestion des données d'entreprise leader du secteur. Il allie une simplicité et une flexibilité inédites à de puissantes fonctionnalités de gestion des données, d'efficacité du stockage et d'intégration cloud.
@@ -79,6 +82,7 @@ ONTAP 9.6 inclut d'autres améliorations :
 
 
 
+[[cisco-nexus-3000-series]]
 == Cisco Nexus 3000 Series
 
 Le Cisco Nexus 31108PC-V est un switch Tor (Top of rack) basé sur SFP+ 10 Gbit/s avec 48 ports SFP+ et 6 ports QSFP28. Chaque port SFP+ peut fonctionner en 100 Mbit/s, 10 Gbit/s et chaque port QSFP28 peut fonctionner en mode natif 100 Gbit/s ou 40 Gbit/s, ou 4 Gbit/s, offrant des options de migration flexibles. Ce commutateur est un véritable commutateur sans PHY optimisé pour une faible latence et une faible consommation d'énergie.
@@ -97,6 +101,7 @@ Pour plus d'informations sur les commutateurs Cisco Nexus 31108PC-V, reportez-vo
 
 
 
+[[cisco-ucs-c-series]]
 == Cisco UCS C-Series
 
 Le serveur en rack Cisco UCS C-Series a été choisi pour FlexPod Express, car ses nombreuses options de configuration le permettent d'être personnalisé pour des exigences spécifiques dans un déploiement FlexPod Express.
@@ -119,6 +124,7 @@ Pour plus d'informations sur les serveurs C220 M5, reportez-vous à la section h
 
 
 
+[[cisco-ucs-vic-1457-connectivity-for-c220-m5-rack-servers]]
 === Connectivité Cisco UCS VIC 1457 pour serveurs en rack C220 M5
 
 L'adaptateur Cisco UCS VIC 1457 illustré dans la figure suivante est une carte LAN modulaire à quatre ports Small Form-factor pluggable (SFP28) sur carte mère (mLOM) conçue pour la génération M5 de serveurs Cisco UCS C-Series. La carte supporte Ethernet 10/25 Gbit/s ou FCoE. La carte peut présenter à l'hôte des interfaces conformes aux normes PCIe, qui peuvent être configurées dynamiquement en tant que cartes réseau ou HBA.
@@ -129,6 +135,7 @@ Pour obtenir des informations complètes sur l'adaptateur Cisco UCS VIC 1457, co
 
 
 
+[[vmware-vsphere-6-7u2]]
 == VMware vSphere 6.7U2
 
 VMware vSphere 6.7U2 est l'une des options d'hyperviseur qui s'utilise avec FlexPod Express. VMware vSphere permet aux entreprises de réduire leur empreinte électrique et de climatisation tout en bénéficiant de la pleine capacité de calcul achetée. De plus, VMware vSphere permet une protection contre les défaillances matérielles (VMware High Availability ou VMware HA), ainsi qu'un équilibrage de la charge des ressources de calcul sur un cluster d'hôtes vSphere (VMware Distributed Resource Scheduler en mode maintenance ou VMware DRS-MM).
@@ -158,6 +165,7 @@ NOTE: Bien que cette solution ait été validée avec vSphere 6.7U2, elle prend 
 
 
 
+[[boot-architecture]]
 == Architecture de démarrage
 
 Les options prises en charge pour l'architecture de démarrage FlexPod Express sont les suivantes :
@@ -171,6 +179,7 @@ Le data Center FlexPod est démarré à partir des LUN iSCSI. La gestion de la s
 
 
 
+[[esxi-host-virtual-network-interface-card-layout]]
 === Disposition de la carte d'interface réseau virtuelle de l'hôte ESXi
 
 La carte VIC 1457 de Cisco UCS est dotée de quatre ports physiques. Cette validation de la solution inclut ces quatre ports physiques lors de l'utilisation de l'hôte ESXi. Si vous disposez d'un nombre plus petit ou plus important de cartes réseau, vous pouvez avoir différents numéros VMNIC.

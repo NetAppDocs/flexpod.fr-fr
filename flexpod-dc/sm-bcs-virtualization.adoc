@@ -30,6 +30,7 @@ image:sm-bcs-image39.png["Erreur : image graphique manquante"]
 
 
 
+[[end-to-end-network-connectivity]]
 == Connectivité réseau de bout en bout
 
 La solution FlexPod SM-BC comprend des infrastructures FlexPod sur chaque site, une connectivité réseau entre les sites et un médiateur ONTAP déployé sur un troisième site afin d'atteindre les objectifs RPO et RTO requis. La figure suivante montre une connectivité réseau de bout en bout entre les serveurs Cisco UCS B200M5 sur chaque site et le système de stockage NetApp disposant de fonctionnalités SM-BC sur un site et sur plusieurs sites.
@@ -42,6 +43,7 @@ Une architecture étendue couche 2 est utilisée pour une Data Fabric multisite 
 
 
 
+[[virtual-networking]]
 == La mise en réseau virtuelle
 
 Chaque hôte du cluster est déployé à l'aide d'une mise en réseau virtuelle identique, quel que soit son emplacement. La conception sépare les différents types de trafic à l'aide de commutateurs virtuels VMware (vSwitch) et de switchs virtuels VMware (VDS). Le vSwitch VMware est utilisé principalement pour les réseaux d'infrastructure FlexPod et VDS pour les réseaux d'applications, mais il n'est pas nécessaire.
@@ -58,6 +60,7 @@ Deux vswitches de démarrage iSCSI sont utilisés dans cette conception. Le dém
 
 
 
+[[vm-host-affinity-groups-and-rules]]
 == Règles et groupes d'affinité VM-Host
 
 Pour que les machines virtuelles s'exécutent sur n'importe quel hôte ESXi des deux sites SM-BC, tous les hôtes ESXi doivent monter les datastores iSCSI des deux sites. Si les datastores des deux sites sont correctement montés par tous les hôtes ESXi, vous pouvez migrer une machine virtuelle entre tous les hôtes avec vMotion et la machine virtuelle conserve toujours l'accès à tous ses disques virtuels créés à partir de ces datastores.
@@ -78,6 +81,7 @@ image:sm-bcs-image44.png["Erreur : image graphique manquante"]
 
 
 
+[[vsphere-ha-heartbeat]]
 == Pulsation vSphere HA
 
 VMware vSphere HA dispose d'un mécanisme de pulsation pour la validation de l'état hôte. Le mécanisme de pulsation principal passe par le réseau, tandis que le mécanisme de pulsation secondaire se fait par l'intermédiaire du datastore. Si les signaux ne sont pas reçus, il décide alors s'ils sont isolés du réseau en envoyant une commande ping à la passerelle par défaut ou aux adresses d'isolation configurées manuellement. Pour le signal de détection du datastore, VMware recommande d'augmenter les datastores de signal de détection de deux à quatre pour un cluster étendu.

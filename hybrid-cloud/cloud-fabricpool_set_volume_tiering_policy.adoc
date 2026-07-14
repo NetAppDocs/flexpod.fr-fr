@@ -42,6 +42,7 @@ Lorsqu'il est utilisé avec FlexPod, FabricPool propose trois règles de Tiering
 
 
 
+[[oncommand-system-manager]]
 == OnCommand System Manager
 
 Pour modifier la règle de hiérarchisation d'un volume à l'aide de OnCommand System Manager, procédez comme suit :
@@ -58,6 +59,7 @@ image:cloud-fabricpool_image16.png["Erreur : image graphique manquante"]
 
 
 
+[[ontap-cli]]
 == INTERFACE DE LIGNE DE COMMANDES DE ONTAP
 
 Pour modifier la règle de hiérarchisation d'un volume à l'aide de l'interface de ligne de commandes ONTAP, exécutez la commande suivante :

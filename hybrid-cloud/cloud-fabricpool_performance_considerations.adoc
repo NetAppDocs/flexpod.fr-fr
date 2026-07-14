@@ -15,6 +15,7 @@ summary: 'Lors de l"étude du dimensionnement, il est important d"évaluer les �
 
 
 
+[[size-the-performance-tier]]
 == Dimensionnez le Tier de performance
 
 Lorsque vous envisagez de dimensionner, gardez à l'esprit que le Tier de performance doit être capable des tâches suivantes :
@@ -32,6 +33,7 @@ NOTE: Les écritures depuis le Tier cloud vers le Tier de performance sont désa
 
 
 
+[[size-the-cloud-tier]]
 == Dimensionnez le Tier cloud
 
 Lors de l'évaluation du dimensionnement, le magasin d'objets agissant comme Tier cloud doit être capable de réaliser les tâches suivantes :

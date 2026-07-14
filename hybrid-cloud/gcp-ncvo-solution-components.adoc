@@ -17,12 +17,14 @@ link:gcp-ncvo-solution-overview.html["Précédent : présentation de la solution
 
 
 
+[[flexpod]]
 == FlexPod
 
 FlexPod est un ensemble défini de matériels et de logiciels qui constitue une base intégrée pour les solutions virtualisées et non virtualisées. FlexPod inclut le stockage NetApp ONTAP, les réseaux Cisco Nexus, les réseaux de stockage Cisco MDS et Cisco Unified Computing System (Cisco UCS). La conception est suffisamment flexible pour que le réseau, le calcul et le stockage puissent s'intégrer dans un seul rack de data Center ou être déployés selon la conception du centre de données du client. La densité des ports permet aux composants réseau de prendre en charge plusieurs configurations.
 
 
 
+[[cisco-intersight]]
 == Cisco Intersight
 
 Cisco Intersight est une plateforme SaaS qui assure une automatisation, une observabilité et une optimisation intelligentes pour les applications et l'infrastructure classiques et cloud. La plateforme permet de stimuler les évolutions avec les équipes IT et propose un modèle d'exploitation conçu pour le cloud hybride. Cisco Intersight offre les avantages suivants :
@@ -36,6 +38,7 @@ Il existe deux modes d'opérations de gestion possibles avec Cisco Intersight : 
 
 
 
+[[cisco-intersight-licensing]]
 === Licences Cisco Intersight
 
 Cisco Intersight utilise une licence basée sur un abonnement avec plusieurs niveaux.
@@ -72,12 +75,14 @@ NOTE: Dans cette solution, nous utilisons Intersight Cloud Orchestrator et Inter
 
 
 
+[[terraform-cloud-integration-with-ico]]
 === Intégration du cloud Terraform avec ICO
 
 Vous pouvez utiliser Cisco Intersight Cloud Orchestrator (ICO) pour créer et exécuter des workflows qui appellent les API Terraform Cloud (TFC). La tâche Invoke Web API Request prend en charge Terraform Cloud comme cible et peut être configurée avec les API Terraform Cloud via des méthodes HTTP. Le workflow peut donc avoir une combinaison de tâches qui appellent plusieurs API Terraform Cloud à l'aide de tâches API génériques et d'autres opérations. Vous devez disposer d'une licence Premier pour utiliser la fonction ICO.
 
 
 
+[[cisco-intersight-assist]]
 === Assistance Cisco Intersight
 
 Cisco Intersight aide à ajouter des périphériques de terminaison à Cisco Intersight. Un centre de données peut avoir plusieurs périphériques qui ne se connectent pas directement à Cisco Intersight. Tout périphérique pris en charge par Cisco Intersight mais qui ne se connecte pas directement à celui-ci nécessite un mécanisme de connexion. Cisco Intersight fournit ce mécanisme de connexion et vous aide à ajouter des périphériques à Cisco Intersight.
@@ -88,6 +93,7 @@ Après avoir intégré Intersight Assist à Intersight, vous pouvez revendiquer 
 
 
 
+[[netapp-cloud-volumes-ontap]]
 == NetApp Cloud Volumes ONTAP
 
 * Exploitation de la déduplication intégrée et de la compression des données, du provisionnement fin et du clonage pour réduire les coûts de stockage.
@@ -102,18 +108,21 @@ Après avoir intégré Intersight Assist à Intersight, vous pouvez revendiquer 
 
 
 
+[[cloud-central]]
 == Cloud Central
 
 Cloud Central est une plateforme centralisée qui permet d'accéder aux services de données cloud NetApp et de les gérer. Ces services vous permettent d'exécuter des applications stratégiques dans le cloud, de créer des sites de reprise après incident automatisés, de sauvegarder vos données SaaS et de migrer et contrôler efficacement les données sur plusieurs clouds. Pour plus d'informations, voir https://docs.netapp.com/us-en/occm35/concept_cloud_central.html["Cloud Central"^].
 
 
 
+[[cloud-manager]]
 == Le gestionnaire Cloud
 
 Cloud Manager est une plateforme de gestion SaaS de grande qualité qui permet aux experts IT et aux architectes cloud de gérer de manière centralisée leur infrastructure multicloud hybride à l'aide des solutions cloud NetApp. Elle offre un système centralisé pour afficher et gérer vos ressources de stockage sur site et cloud afin de prendre en charge plusieurs fournisseurs et comptes de cloud hybride. Pour plus d'informations, voir https://docs.netapp.com/us-en/occm/index.html["Le gestionnaire Cloud"^].
 
 
 
+[[connector]]
 == Connecteur
 
 Connector permet à Cloud Manager de gérer les ressources et les processus dans un environnement de cloud public. Une instance de connecteur est requise pour utiliser de nombreuses fonctionnalités fournies par Cloud Manager et peut être déployée dans le réseau dans le cloud ou sur site. Le connecteur est pris en charge aux emplacements suivants :
@@ -126,6 +135,7 @@ Connector permet à Cloud Manager de gérer les ressources et les processus dans
 
 
 
+[[netapp-active-iq-unified-manager]]
 == NetApp Active IQ Unified Manager
 
 Avec NetApp Active IQ Unified Manager, vous pouvez contrôler vos clusters de stockage ONTAP à partir d'une interface intuitive unique, reconçue pour l'intelligence artificielle et les connaissances de la communauté. Il offre des informations complètes sur les opérations, les performances et le mode proactif de l'environnement de stockage et des machines virtuelles qui s'exécutent sur celui-ci. Lorsqu'un problème se produit avec l'infrastructure de stockage, Unified Manager vous informe des détails du problème pour vous aider à identifier la cause première. Le tableau de bord des machines virtuelles vous offre un aperçu des statistiques de performances de la machine virtuelle. Vous pouvez ainsi examiner l'ensemble du chemin d'E/S depuis l'hôte vSphere vers le réseau, et enfin vers le stockage.
@@ -134,6 +144,7 @@ Certains événements fournissent également des mesures correctives que vous po
 
 
 
+[[vmware-vsphere]]
 == VMware vSphere
 
 VMware vSphere est une plateforme de virtualisation qui permet de gérer de manière holistique de vastes ensembles d'infrastructures (ressources notamment les processeurs, le stockage et le réseau), sous la forme d'un environnement d'exploitation transparent, polyvalent et dynamique. Contrairement aux systèmes d'exploitation traditionnels qui gèrent une machine individuelle, VMware vSphere agrège l'infrastructure d'un data Center dans son ensemble pour créer une seule puissance avec des ressources qui peuvent être allouées rapidement et dynamiquement à n'importe quelle application, selon les besoins.
@@ -142,12 +153,14 @@ Pour plus d'informations sur VMware vSphere, veuillez suivre https://www.vmware.
 
 
 
+[[vmware-vsphere-vcenter]]
 == VMware vSphere vCenter
 
 VMware vCenter Server assure une gestion unifiée de tous les hôtes et machines virtuelles depuis une console unique et rassemble le contrôle des performances des clusters, des hôtes et des machines virtuelles. VMware vCenter Server offre aux administrateurs des informations détaillées sur l'état et la configuration des clusters de calcul, des hôtes, des VM, du stockage, du système d'exploitation invité, et autres composants essentiels d'une infrastructure virtuelle. VMware vCenter gère la richesse des fonctionnalités disponibles dans un environnement VMware vSphere.
 
 
 
+[[hardware-and-software-versions]]
 == Versions matérielles et logicielles
 
 Cette solution de cloud hybride peut être étendue à tout environnement FlexPod qui exécute des versions logicielles, matérielles et de firmware prises en charge telles que définies dans la matrice d'interopérabilité NetApp et dans la liste de compatibilité matérielle Cisco UCS.

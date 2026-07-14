@@ -18,6 +18,7 @@ Cette solution FlexPod Express fait partie du programme d'infrastructure converg
 
 
 
+[[flexpod-converged-infrastructure-program]]
 == Programme d'infrastructure convergée FlexPod
 
 Les architectures de référence FlexPod sont fournies sous la forme de conceptions validées par Cisco (CVD) ou d'architectures vérifiées NetApp (NVA). Les écarts en fonction des exigences du client par rapport à un CVD ou à une NVA donné sont autorisés si ces variations ne créent pas de configuration non prise en charge.
@@ -32,6 +33,7 @@ image:express-c-series-c190-deploy_image1.png["Erreur : image graphique manquant
 
 
 
+[[netapp-verified-architecture-program]]
 == Programme d'architecture vérifiée NetApp
 
 Le programme d'architecture vérifiée NetApp propose une architecture validée pour les solutions NetApp Une architecture vérifiée NetApp fournit une architecture de solution NetApp qui apporte les qualités suivantes :
@@ -46,6 +48,7 @@ Ce guide détaille la conception de FlexPod Express avec VMware vSphere. Cette c
 
 
 
+[[solution-technology]]
 == Technologie de la solution
 
 Cette solution tire parti des dernières technologies de NetApp, Cisco et VMware. Cette solution comprend le nouveau système NetApp AFF C190 exécutant ONTAP 9.6, deux switchs Cisco Nexus 31108 et des serveurs rack Cisco UCS C220 M5 exécutant VMware vSphere 6.7U2. Cette solution validée utilise une technologie 10GbE. Des recommandations sont également fournies quant à la manière de faire évoluer les capacités de calcul en ajoutant deux nœuds d'hyperviseur à la fois afin que l'architecture FlexPod Express puisse s'adapter aux besoins métier en constante évolution de l'entreprise.
@@ -57,6 +60,7 @@ NOTE: Pour utiliser les quatre ports 10GbE physiques sur le VIC 1457 de manière
 
 
 
+[[use-case-summary]]
 == Récapitulatif du cas d'utilisation
 
 La solution FlexPod Express peut être appliquée à plusieurs cas d'utilisation, notamment :

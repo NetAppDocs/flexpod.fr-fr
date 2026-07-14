@@ -13,6 +13,7 @@ FlexPod Express requiert une combinaison de composants matériels et logiciels q
 
 
 
+[[hardware-requirements]]
 == Configuration matérielle requise
 
 Quel que soit l'hyperviseur choisi, toutes les configurations FlexPod Express utilisent le même matériel. Par conséquent, même si les exigences de l'entreprise changent, vous pouvez utiliser un hyperviseur différent sur le même matériel FlexPod Express.
@@ -37,6 +38,7 @@ Les composants matériels requis pour cette configuration FlexPod Express sont r
 |===
 
 
+[[software-requirements]]
 == Configuration logicielle requise
 
 Les composants logiciels requis pour l'implémentation des architectures de la solution FlexPod Express sont répertoriés dans le tableau suivant.

@@ -23,6 +23,7 @@ NOTE: Les étapes de configuration suivantes sont spécifiques à l'hôte CentOS
 
 
 
+[[netapp-host-utility-kit]]
 == Kit d'utilitaire hôte NetApp
 
 NetApp recommande d'installer NetApp Host Utility Kit (Host Utilities Kit) sur les systèmes d'exploitation d'hôtes connectés aux systèmes de stockage NetApp et accédant à ces derniers. Les E/S multichemins Microsoft natives (MPIO) sont prises en charge. Le système d'exploitation doit être compatible ALUA (Asymmetric Logical Unit Access) pour les chemins d'accès multiples. L'installation des utilitaires d'hôtes configure les paramètres de l'adaptateur de bus hôte (HBA) pour le stockage NetApp.
@@ -34,6 +35,7 @@ Les utilitaires d'hôte NetApp peuvent être téléchargés https://mysupport.ne
 ....
 
 
+[[discover-ontap-storage]]
 == Découvrez le stockage ONTAP
 
 Assurez-vous que le service iSCSI est en cours d'exécution lorsque les connexions sont supposées se produire. Pour définir le mode de connexion pour un portail spécifique sur une cible ou pour tous les portails sur une cible, utilisez le `iscsiadm` commande.
@@ -59,6 +61,7 @@ Healthcare_SVM                       /dev/sdc host34  iSCSI    200g    cDOT
 ....
 
 
+[[configure-multipathing]]
 == Configurer les chemins d'accès multiples
 
 Device Mapper Multipathing (DM-Multipath) est un utilitaire natif de multipathing sous Linux. Il peut être utilisé pour la redondance et pour améliorer les performances. Elle agrège ou combine les chemins d'E/S multiples entre les serveurs et le stockage, afin de créer un périphérique unique au niveau du système d'exploitation.
@@ -116,6 +119,7 @@ NOTE: Pour plus d'informations sur ces étapes, reportez-vous à la section http
 
 
 
+[[create-physical-volume]]
 == Créer un volume physique
 
 Utilisez le `pvcreate` commande permettant d'initialiser un périphérique de bloc à utiliser comme volume physique. L'initialisation est similaire au formatage d'un système de fichiers.
@@ -126,6 +130,7 @@ Physical volume "/dev/sdb" successfully created.
 ....
 
 
+[[create-volume-group]]
 == Créer un groupe de volumes
 
 Pour créer un groupe de volumes à partir d'un ou de plusieurs volumes physiques, utilisez `vgcreate` commande. Cette commande crée un nouveau groupe de volumes par son nom et y ajoute au moins un volume physique.
@@ -161,6 +166,7 @@ Le `vgdisplay` peut être utilisé pour afficher les propriétés des groupes de
 ....
 
 
+[[create-logical-volume]]
 == Créer un volume logique
 
 Lorsque vous créez un volume logique, le volume logique est découpé dans un groupe de volumes à l'aide des extensions libres sur les volumes physiques qui composent le groupe de volumes.
@@ -173,6 +179,7 @@ Cette commande crée un volume logique appelé `datalv` qui utilise tout l'espac
 
 
 
+[[create-file-system]]
 == Créer un système de fichiers
 
 ....
@@ -190,6 +197,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[make-folder-to-mount]]
 == Créer un dossier à monter
 
 ....
@@ -197,6 +205,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[mount-the-file-system]]
 == Montez le système de fichiers
 
 ....
@@ -219,6 +228,7 @@ Pour plus d'informations sur ces tâches, reportez-vous à la page link:https://
 
 
 
+[[data-generation]]
 == Génération de données
 
  `Dgen.pl`est un générateur de données de script perl pour le simulateur d'E/S d'EHR (GenerateIO).  Les données contenues dans les LUN sont générées par le dossier médical électronique (DME). `Dgen.pl` scénario.  Le script est conçu pour créer des données similaires à celles d'une base de données de dossier médical électronique.
@@ -240,6 +250,7 @@ En cours d'exécution, le `Dgen.pl` script utilise 85 % du système de fichiers 
 
 
 
+[[configure-snapmirror-replication-between-on-premises-ontap-and-cloud-volumes-ontap]]
 == Configurez la réplication SnapMirror entre ONTAP et Cloud Volumes ONTAP sur site
 
 NetApp SnapMirror réplique les données à des vitesses élevées sur un réseau LAN ou WAN, vous garantissant ainsi une haute disponibilité et une réplication rapide des données dans les environnements traditionnels et virtualisés. En répliquant vos données sur des systèmes de stockage NetApp, puis en les mettant régulièrement à jour, vous disposez de données actualisées et accessibles dès que vous en avez besoin. Aucun serveur de réplication externe n'est requis.

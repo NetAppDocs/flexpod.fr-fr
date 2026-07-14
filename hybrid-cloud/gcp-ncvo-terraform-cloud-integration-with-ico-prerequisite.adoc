@@ -17,6 +17,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["Précédent : configuration C
 
 
 
+[[procedure-1-connect-cisco-intersight-and-terraform-cloud]]
 == Procédure 1 : connecter Cisco Intersight et Terraform Cloud
 
 . Faites une demande de remboursement ou créez une cible cloud Terraform en fournissant les informations pertinentes sur le compte Terraform Cloud.
@@ -28,6 +29,7 @@ Pour plus d'informations, suivez https://community.cisco.com/t5/data-center-and-
 
 
 
+[[procedure-2-generate-user-token]]
 == Procédure 2 : générer un jeton utilisateur
 
 Dans le cadre de l'ajout d'une cible pour Terraform Cloud, vous devez fournir le nom d'utilisateur et le jeton d'API à partir de la page des paramètres Terraform Cloud.
@@ -39,6 +41,7 @@ Dans le cadre de l'ajout d'une cible pour Terraform Cloud, vous devez fournir le
 
 
 
+[[procedure-3-claim-terraform-cloud-target]]
 == Procédure 3 : cible de cloud de demande Terraform
 
 . Connectez-vous à Intersight avec les privilèges Administrateur de compte, Administrateur de périphérique ou technicien de périphérique.
@@ -64,6 +67,7 @@ Si tout est correctement saisi, votre cible Terraform Cloud s'affiche dans la se
 
 
 
+[[procedure-4-add-terraform-cloud-agents]]
 == Procédure 4 : ajouter des agents Terraform Cloud
 
 Prérequis :

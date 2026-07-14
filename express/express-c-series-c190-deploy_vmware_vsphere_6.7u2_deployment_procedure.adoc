@@ -26,12 +26,14 @@ NOTE: Cette procédure doit être effectuée pour tout nœud ajouté au cluster.
 
 
 
+[[log-in-to-cimc-interface-for-cisco-ucs-c-series-standalone-servers]]
 == Connectez-vous à l'interface CIMC pour les serveurs autonomes Cisco UCS C-Series
 
 La procédure suivante décrit en détail la méthode de connexion à l'interface CIMC pour les serveurs autonomes Cisco UCS C-Series. Vous devez vous connecter à l'interface CIMC pour exécuter le KVM virtuel, ce qui permet à l'administrateur de commencer l'installation du système d'exploitation par le biais du média distant.
 
 
 
+[[all-hosts]]
 === Tous les hôtes
 
 . Accédez à un navigateur Web et entrez l'adresse IP de l'interface CIMC pour Cisco UCS C-Series. Cette étape lance l'application IUG de CIMC.
@@ -53,12 +55,14 @@ NOTE: Vous devrez peut-être d'abord cliquer sur Activer les périphériques vir
 
 
 
+[[install-vmware-esxi]]
 == Installez VMware ESXi
 
 La procédure suivante décrit l'installation de VMware ESXi sur chaque hôte.
 
 
 
+[[download-esxi-6-7u2-cisco-custom-image]]
 === Téléchargez l'image personnalisée Cisco ESXi 6.7U2
 
 . Accédez à la  https://support.broadcom.com/group/ecx/downloads["site de téléchargement du portail d'assistance Broadcom"^] pour les ISO personnalisés.
@@ -79,12 +83,14 @@ image:express-c-series-c190-deploy_image18.png["Erreur : image graphique manquan
 
 
 
+[[set-up-vmware-esxi-host-management-networking]]
 == Configurer la mise en réseau de gestion d'hôte VMware ESXi
 
 La procédure suivante décrit comment ajouter le réseau de gestion pour chaque hôte VMware ESXi.
 
 
 
+[[all-hosts]]
 === Tous les hôtes
 
 . Une fois le redémarrage du serveur terminé, entrez l'option permettant de personnaliser le système en appuyant sur F2.
@@ -131,6 +137,7 @@ esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4
 
 
 
+[[configure-esxi-host]]
 == Configurer l'hôte ESXi
 
 Utilisez les informations du tableau suivant pour configurer chaque hôte ESXi.
@@ -188,6 +195,7 @@ Utilisez les informations du tableau suivant pour configurer chaque hôte ESXi.
 |===
 
 
+[[log-in-to-the-esxi-host]]
 === Connectez-vous à l'hôte ESXi
 
 Pour vous connecter à l'hôte ESXi, procédez comme suit :
@@ -199,6 +207,7 @@ Pour vous connecter à l'hôte ESXi, procédez comme suit :
 
 
 
+[[configure-iscsi-boot]]
 === Configurez le démarrage iSCSI
 
 Pour configurer le démarrage iSCSI, procédez comme suit :
@@ -247,6 +256,7 @@ image:express-c-series-c190-deploy_image21.png["Erreur : image graphique manquan
 
 
 
+[[configure-iscsi-multipathing]]
 === Configurez les chemins d'accès multiples iSCSI
 
 Pour configurer les chemins d'accès multiples iSCSI sur les hôtes ESXi, procédez comme suit :
@@ -277,6 +287,7 @@ NOTE: Vous pouvez trouver les adresses IP de LIF iSCSI en exécutant la commande
 
 
 
+[[configure-the-esxi-host]]
 === Configurez l'hôte ESXi
 
 Pour configurer le démarrage ESXi, procédez comme suit :
@@ -297,6 +308,7 @@ NOTE: La méthode de hachage IP d'équilibrage de charge nécessite la configura
 
 
 
+[[configure-the-port-groups-and-vmkernel-nics]]
 === Configurez les groupes de ports et les NIC VMkernel
 
 Pour configurer les groupes de ports et les NIC VMKernel, procédez comme suit :
@@ -357,6 +369,7 @@ NOTE: Il existe de nombreuses façons de configurer la mise en réseau VMware ES
 
 
 
+[[mount-the-first-datastores]]
 === Montez les premiers datastores
 
 Les premiers datastores à être montés sont les `infra_datastore` Datastore pour les VM et `infra_swap` Datastore pour les fichiers swap de VM.
@@ -390,6 +403,7 @@ image:express-c-series-c190-deploy_image30.png["Erreur : image graphique manquan
 
 
 
+[[configure-ntp]]
 === Configurez NTP
 
 Pour configurer le protocole NTP pour un hôte ESXi, procédez comme suit :
@@ -406,6 +420,7 @@ image:express-c-series-c190-deploy_image31.png["Erreur : image graphique manquan
 
 
 
+[[move-the-vm-swap-file-location]]
 === Déplacez l'emplacement du fichier d'échange VM
 
 Cette procédure fournit des détails sur le déplacement de l'emplacement du fichier d'échange VM.

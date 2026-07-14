@@ -26,6 +26,7 @@ image:flexpod-fips-image6.png["Erreur : image graphique manquante"]
 
 
 
+[[solution-infrastructure-hardware-and-software-components]]
 == Composants matériels et logiciels de l'infrastructure de la solution
 
 Les deux figures suivantes illustrent respectivement les composants matériels et logiciels utilisés lors du test FIPS lors de l'activation sur un FlexPod. Les recommandations présentées dans ces tableaux sont des exemples. Vous devez collaborer avec votre expert technique NetApp pour vous assurer que les composants sont adaptés à votre entreprise. Assurez-vous également que les composants et versions sont pris en charge dans le https://mysupport.netapp.com/matrix/["Matrice d'interopérabilité NetApp"^] (IMT) et https://ucshcltool.cloudapps.cisco.com/public/["Liste de compatibilité matérielle Cisco (HCL)"^].

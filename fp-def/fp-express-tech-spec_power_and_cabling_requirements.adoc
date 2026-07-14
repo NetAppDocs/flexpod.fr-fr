@@ -18,6 +18,7 @@ Cette section décrit les exigences en matière d'alimentation et les directives
 
 
 
+[[power-requirements]]
 == Les besoins en alimentation électrique
 
 Les besoins en alimentation pour FlexPod Express varient en fonction de l'emplacement où la configuration FlexPod Express est installée.
@@ -30,6 +31,7 @@ Pour les données d'alimentation du contrôleur de stockage NetApp, consultez la
 
 
 
+[[cabling-guidelines]]
 == Directives de câblage
 
 Cette section fournit des directives générales de câblage pour une conception FlexPod Express.

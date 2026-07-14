@@ -18,6 +18,7 @@ Cette section décrit les spécifications techniques importantes de chaque compo
 
 
 
+[[cisco-ucs-x-series-direct-chassis]]
 == Châssis Cisco UCS X-Series Direct
 
 Les spécifications techniques du châssis Cisco UCS X-Series Direct, telles qu'indiquées dans le tableau ci-dessous, comprennent les composants suivants :
@@ -47,6 +48,7 @@ Pour plus d'informations, reportez-vous à la section link:https://www.cisco.com
 
 
 
+[[cisco-ucs-x-series-direct-compute-node]]
 == Nœud de calcul direct Cisco UCS X-Series
 
 Les spécifications techniques du nœud de calcul Cisco UCS X-Series comprennent les composants suivants :
@@ -86,9 +88,10 @@ Consultez le tableau ci-dessous pour connaître les spécifications techniques d
 |===
 
 
-== Cisco UCS X-Series Interconnexions directes de la structure
+[[cisco-ucs-x-series-direct-fabric-interconnect]]
+== Cisco UCS X-Series Interconnexion directe de la structure
 
-Les spécifications techniques des interconnexions de fabric Cisco UCS X-Series comprennent le format, le nombre total de ports et d'emplacements d'extension, ainsi que la capacité de débit. Le tableau suivant illustre la fiche technique des interconnexions de fabric Cisco UCS X-Series.
+Les spécifications techniques de l'interconnexion directe Cisco UCS X-Series incluent le format, le nombre total de ports et d'emplacements d'extension, ainsi que la capacité de débit. Consultez le tableau ci-dessous pour la fiche technique de l'interconnexion directe Cisco UCS X-Series.
 
 |===
 | Composant | Fiche technique Cisco UCS 
@@ -98,9 +101,61 @@ Les spécifications techniques des interconnexions de fabric Cisco UCS X-Series 
 |===
 
 
+[[cisco-ucs-xe9305-chassis-cisco-unified-edge]]
+== Châssis Cisco UCS XE9305 (Cisco Unified Edge)
+
+Les spécifications techniques du châssis Cisco UCS XE9305, comme indiqué dans le tableau ci-dessous, incluent les composants suivants :
+
+|===
+| Composant | châssis Cisco UCS XE9305 
+
+
+| Unités en rack | 3 
+
+
+| Nombre maximal de nœuds | 5 nœuds de calcul Cisco UCS XE130c M8 ou 2 nœuds de calcul Cisco UCS XE150c M8 
+|===
+Pour plus d'informations, consultez le link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe9305-m8-chassis-spec-sheet.pdf["Fiche technique du châssis Cisco UCS XE9305"^].
+
+
+
+[[cisco-ucs-compute-nodes-for-cisco-unified-edge]]
+== Nœuds de calcul Cisco UCS pour Cisco Unified Edge
+
+Les spécifications techniques des nœuds de calcul Cisco UCS pour Cisco Unified Edge comprennent les composants suivants :
+
+* Nombre de sockets du processeur
+* Prise en charge du processeur
+* Prise en charge GPU
+* Capacité de la mémoire
+* Dimensionnement et vitesse
+* Débit d'E/S maximal
+* Format
+
+
+Les nœuds de calcul prennent également en charge les GPU, le XE130c M8 prend en charge le GPU NVIDIA L4 et le XE150c M8 prend en charge les GPU NVIDIA RTX PRO 4500 / 6000 Blackwell Server Edition. Consultez le tableau ci-dessous pour les spécifications techniques des nœuds de calcul Cisco UCS Unified Edge.
+
+|===
+
+
+| Composant | Fiche technique Cisco UCS 
+
+
+| Cisco UCS XE130c M8 Nœud de calcul | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe130c-m8-compute-node-spec-sheet.pdf["Cisco UCS XE130c M8 Nœud de calcul"] 
+
+
+| Cisco UCS XE150c M8 Nœud de calcul | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/unified-edge/cisco-ucs-xe150c-m8-compute-node.pdf["Cisco UCS XE150c M8 Nœud de calcul"] 
+|===
+Veuillez vous référer à link:https://www.cisco.com/c/en/us/products/servers-unified-computing/unified-edge/datasheet-listing.html["Liste des fiches techniques Cisco Unified Edge"^] pour plus de détails.
+
+
+
+[[cisco-ucs-c-series-rack-servers]]
 == Serveurs en rack Cisco UCS C-Series
 
-Les spécifications techniques des serveurs rack Cisco UCS série C comprennent la prise en charge des processeurs, la capacité mémoire maximale, le nombre d'emplacements PCIe et le format. Pour plus de détails sur les modèles de serveurs UCS compatibles, consultez la  https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle Cisco"^] liste. Le tableau suivant présente les fiches techniques des serveurs rack série C.
+Les spécifications techniques des serveurs rack Cisco UCS série C comprennent la prise en charge des processeurs, la capacité mémoire maximale, le nombre d'emplacements PCIe et le format. Pour plus de détails sur les modèles de serveurs UCS compatibles, consultez la  https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle Cisco"^] liste.
+
+Consultez le tableau ci-dessous pour connaître les spécifications techniques des serveurs rack Cisco UCS série C.
 
 |===
 | Composant | Fiche technique Cisco UCS 
@@ -128,6 +183,7 @@ Les spécifications techniques des serveurs rack Cisco UCS série C comprennent 
 |===
 
 
+[[cisco-nexus-switches]]
 == Commutateurs Cisco Nexus
 
 Les spécifications techniques des commutateurs Cisco Nexus sont détaillées dans la fiche technique de chaque modèle. Les spécifications comprennent la taille du format, le nombre de superviseurs, de modules de fabric et d'emplacements pour cartes d'interface, ainsi que le nombre maximal de ports. Ces fiches techniques se trouvent dans le tableau suivant.
@@ -143,12 +199,14 @@ Les spécifications techniques des commutateurs Cisco Nexus sont détaillées da
 |===
 
 
+[[netapp-storage-controllers]]
 == Contrôleurs de stockage NetApp
 
 Les spécifications techniques des contrôleurs de stockage NetApp comprennent la configuration de la plateforme, la capacité brute maximale, la mémoire, le facteur de forme, les exigences de version ONTAP, les tiroirs disques, etc.
 
 
 
+[[netapp-aff-a-series]]
 === NetApp AFF A-Series
 
 Les contrôleurs de stockage NetApp AFF série A d'entrée de gamme sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["Spécifications techniques de la série AFF A"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau ci-dessous pour obtenir des informations détaillées sur un modèle AFF particulier.
@@ -164,6 +222,7 @@ Les contrôleurs de stockage NetApp AFF série A d'entrée de gamme sont pris en
 |===
 
 
+[[netapp-aff-c-series]]
 === NetApp AFF C-Series
 
 Les contrôleurs de stockage NetApp AFF C-Series d'entrée de gamme sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["Spécifications techniques de la série AFF C"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau ci-dessous pour obtenir des informations détaillées sur un modèle AFF particulier.
@@ -176,6 +235,7 @@ Les contrôleurs de stockage NetApp AFF C-Series d'entrée de gamme sont pris en
 |===
 
 
+[[netapp-asa-a-series]]
 === NetApp ASA A-Series
 
 Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA série A sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA Spécifications techniques de la série A"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme répertoriée dans le tableau suivant pour obtenir des informations détaillées sur un modèle ASA particulier.
@@ -191,6 +251,7 @@ Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA série A
 |===
 
 
+[[netapp-asa-c-series]]
 === NetApp ASA C-Series
 
 Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA série C sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA Spécifications techniques de la série C"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme répertoriée dans le tableau suivant pour obtenir des informations détaillées sur un modèle ASA particulier.
@@ -203,6 +264,7 @@ Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA série C
 |===
 
 
+[[netapp-fas-series]]
 === NetApp Série FAS
 
 Les contrôleurs de stockage FAS d'entrée de gamme sont pris en charge pour une utilisation dans un FlexPod Express. Les spécifications détaillées de tous les contrôleurs de stockage de la série FAS sont disponibles dans la https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau ci-dessous pour des informations détaillées sur un modèle FAS particulier.
@@ -215,9 +277,13 @@ Les contrôleurs de stockage FAS d'entrée de gamme sont pris en charge pour une
 
 
 | Série FAS2820 | https://docs.netapp.com/us-en/ontap-systems/fas2800/overview.html["Spécifications clés du FAS2820"^] 
+
+
+| Série FAS50 | https://docs.netapp.com/us-en/ontap-systems/fas50/overview.html["Spécifications clés du FAS50"^] 
 |===
 
 
+[[netapp-disk-shelves]]
 === Tiroirs disques NetApp
 
 Les spécifications techniques des baies de disques NetApp comprennent le format, le nombre de disques par baie et les modules d'E/S ; cette documentation est disponible dans le tableau suivant. Pour plus d'informations, veuillez consulter la  https://hwu.netapp.com/["NetApp Hardware Universe"^].
@@ -242,6 +308,7 @@ Les spécifications techniques des baies de disques NetApp comprennent le format
 |===
 
 
+[[netapp-drives]]
 === Disques NetApp
 
 Les spécifications techniques des disques NetApp incluent la taille, la capacité du disque, les tours/min des disques, les contrôleurs et les exigences de version ONTAP. Ces spécifications sont disponibles dans la section entraînements du http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^].

@@ -27,6 +27,7 @@ image:cloud-fabricpool_image10.png["Erreur : image graphique manquante"]
 
 
 
+[[create-an-s3-bucket]]
 == Créer un compartiment S3
 
 . Dans la console de gestion AWS depuis la page d'accueil, entrez S3 dans la barre de recherche.

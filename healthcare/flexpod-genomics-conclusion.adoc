@@ -20,6 +20,7 @@ De nombreuses organisations du secteur de la santé à travers le monde ont choi
 
 
 
+[[where-to-find-additional-information]]
 == Où trouver des informations complémentaires
 
 Pour en savoir plus sur les informations données dans ce livre blanc, consultez ces documents et sites web :
@@ -72,6 +73,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ope
 
 
 
+[[version-history]]
 == Historique des versions
 
 |===

@@ -18,6 +18,7 @@ FabricPool nécessite ONTAP 9.2 ou une version ultérieure. Les exigences suppl�
 
 
 
+[[platforms]]
 == Plateformes
 
 FabricPool est pris en charge sur les plateformes suivantes :
@@ -67,6 +68,7 @@ NOTE: Glacier Flexible Retrieval et Glacier Deep Archive ne sont pas pris en cha
 
 
 
+[[intercluster-lifs]]
 == LIF intercluster
 
 Les paires haute disponibilité du cluster qui utilisent FabricPool nécessitent deux interfaces logiques intercluster pour communiquer avec le niveau du cloud. NetApp recommande de créer un LIF intercluster sur des paires haute disponibilité supplémentaires pour relier de manière transparente des niveaux cloud aux agrégats sur ces nœuds.
@@ -80,6 +82,7 @@ NOTE: La désactivation ou la suppression d'une LIF intercluster interrompt la c
 
 
 
+[[connectivity]]
 == Connectivité
 
 La latence de lecture d'FabricPool dépend de la connectivité au niveau cloud. Les LIF intercluster utilisant des ports 10 Gbits/s, illustrées dans la figure suivante, offrent des performances adéquates. NetApp recommande de valider les latences et le débit d'un environnement réseau spécifique afin de déterminer son impact sur les performances d'FabricPool.
@@ -91,6 +94,7 @@ image:cloud-fabricpool_image6.png["Erreur : image graphique manquante"]
 
 
 
+[[object-store-profiler]]
 === Profileur de magasin d'objets
 
 Le profileur de magasin d'objets, comme illustré ci-dessous, est disponible via l'interface de ligne de commandes de ONTAP. Il teste la latence et les performances de débit des magasins d'objets avant qu'ils ne soient connectés à un agrégat FabricPool.
@@ -114,6 +118,7 @@ image:cloud-fabricpool_image7.png["Erreur : image graphique manquante"]
 
 
 
+[[volumes]]
 == Volumes
 
 Le provisionnement fin du stockage est une pratique standard pour l'administrateur d'infrastructures virtuelles FlexPod. NetApp Virtual Storage Console (VSC) provisionne des volumes de stockage pour les datastores VMware sans les garanties d'espace (provisionnement fin) et avec des paramètres d'efficacité du stockage optimisés conformément aux meilleures pratiques NetApp. Si VSC est utilisé pour créer des datastores VMware, aucune action supplémentaire n'est requise, car aucune garantie d'espace ne doit être attribuée au volume du datastore.
@@ -128,6 +133,7 @@ Réglage du `space-guarantee none` paramètre fournit le provisionnement fin pou
 
 
 
+[[licensing]]
 == Licences
 
 Une licence basée sur la capacité est nécessaire pour connecter des fournisseurs de stockage objet tiers (tels qu'Amazon S3) à des tiers cloud pour les systèmes AFF et FAS Flash hybrides. FabricPool

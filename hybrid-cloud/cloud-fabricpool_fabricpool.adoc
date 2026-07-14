@@ -15,6 +15,7 @@ summary: 'FabricPool est une solution de stockage hybride dans ONTAP qui utilise
 
 
 
+[[fabricpool-overview]]
 == Présentation de FabricPool
 
 FabricPool est une solution de stockage hybride dans ONTAP qui utilise un agrégat 100 % Flash (SSD) comme Tier de performance et un magasin d'objets dans un service de cloud public en tant que Tier cloud. Cette configuration permet le déplacement des données basé sur des règles, en fonction de l'accès fréquent ou non aux données. FabricPool est pris en charge dans ONTAP pour les agrégats AFF et 100 % SSD sur les plateformes FAS. Le traitement des données est effectué au niveau des blocs, dans la mesure où les blocs de données sont fréquemment utilisés dans le Tier de performance 100 % Flash et où les blocs fortement sollicités sont balisés comme inactives.
@@ -30,6 +31,7 @@ Dans ONTAP 9.6, FabricPool s'intègre avec tous les principaux fournisseurs de c
 
 
 
+[[the-composite-aggregate]]
 == L'agrégat composite
 
 Une instance FabricPool est créée en associant un agrégat Flash ONTAP à un magasin d'objets cloud, par exemple un compartiment AWS S3, afin de créer un agrégat composite. Lorsque les volumes sont créés dans l'agrégat composite, ils peuvent bénéficier des fonctionnalités de Tiering de FabricPool. Lorsque les données sont écrites sur le volume, ONTAP attribue une température à chacun des blocs de données. Lors de la première écriture du bloc, une température de stockage est affectée. Lorsque le temps passe, si les données ne sont pas utilisées, elles sont soumises à un processus de refroidissement jusqu'à ce qu'elles soient finalement attribuées à l'état froid. Ces blocs de données peu utilisés sont ensuite hiérarchisés à partir de l'agrégat SSD de performance et vers le magasin d'objets cloud.
@@ -38,6 +40,7 @@ Période entre le moment où un bloc est désigné comme étant froid et le mome
 
 
 
+[[inactive-data-reporting]]
 === Reporting des données inactives
 
 Le reporting pour les données inactives est disponible dans ONTAP pour vous aider à évaluer la quantité de données inactives pouvant être hiérarchisées à partir d'un agrégat. L'IDR est activé par défaut dans ONTAP 9.6 et utilise une stratégie de refroidissement de 31 jours par défaut pour déterminer quelles données du volume sont inactives.
@@ -47,6 +50,7 @@ NOTE: La quantité de données inactives dans le Tier dépend des règles de Tie
 
 
 
+[[object-creation-and-data-movement]]
 == La création d'objets et le déplacement des données
 
 FabricPool fonctionne au niveau bloc NetApp WAFL, les blocs de refroidissement, les concaténer en objets de stockage et les migrer vers un Tier cloud. Chaque objet FabricPool est de 4 Mo et comprend 1,024 blocs de 4 Ko. La taille d'objet est fixée à 4 Mo en fonction des recommandations de performances des principaux fournisseurs cloud, et ne peut pas être modifiée. Si les blocs inactifs sont lus et mis à chaud, seuls les blocs requis de l'objet 4 Mo sont récupérés et transférés vers le Tier de performance Ni l'objet dans son intégralité, ni le fichier ne sont migrés à nouveau. Seuls les blocs nécessaires sont migrés.
@@ -60,12 +64,14 @@ Si l'utilisation du Tier de performance dépasse les 70 % de capacité, les donn
 
 
 
+[[reclaim-performance-tier-space]]
 == Récupération de l'espace de Tier de performance
 
 Comme mentionné précédemment, l'utilisation principale de FabricPool est de faciliter l'utilisation la plus efficace du stockage Flash sur site haute performance. Les données inactives sous forme de snapshots de volume et de sauvegardes de machines virtuelles au sein de l'infrastructure virtuelle FlexPod peuvent occuper une quantité significative de stockage Flash coûteux. Pour libérer les fonctionnalités de stockage au niveau de la performance, deux règles de Tiering sont disponibles : Snapshot uniquement ou Auto.
 
 
 
+[[snapshot-only-tiering-policy]]
 === Règle de Tiering uniquement Snapshot
 
 La règle de Tiering uniquement Snapshot, illustrée dans la figure suivante, déplace les données Snapshot des volumes inactives et les sauvegardes SnapCenter pour vSphere des machines virtuelles qui occupent de l'espace, mais qui ne partagent pas les blocs avec le système de fichiers actif dans un magasin d'objets cloud. La règle de Tiering uniquement pour Snapshot déplace les blocs de données inactives vers le Tier cloud. Pour restaurer les données, les blocs à froid dans le cloud sont fortement sollicités et sont déplacés vers le Tier de performance Flash sur site.
@@ -74,6 +80,7 @@ image:cloud-fabricpool_image4.png["Erreur : image graphique manquante"]
 
 
 
+[[auto-tiering-policy]]
 === Règle de hiérarchisation automatique
 
 La règle de hiérarchisation automatique du stockage FabricPool, illustrée dans la figure suivante, déplace non seulement les blocs de données des snapshots inactifs vers le cloud, mais déplace également les blocs de données inactives du système de fichiers actif. Cela peut inclure les modèles de VM et toutes les données de VM inutilisées dans le volume du datastore. Les blocs froids déplacés sont contrôlés par le `tiering-minimum-cooling-days` réglage du volume. Si les blocs inactifs du Tier cloud sont lus de manière aléatoire par une application, les blocs fortement sollicités sont alors retransférés vers le Tier de performance. Toutefois, si les blocs inactifs sont lus par un processus séquentiel tel qu'un antivirus, les blocs restent inactifs et restent conservés dans le magasin d'objets cloud. Ils ne sont pas déplacés vers le Tier de performance.
@@ -87,12 +94,14 @@ image:cloud-fabricpool_image5.png["Erreur : image graphique manquante"]
 
 
 
+[[all-tiering-policy]]
 === Toutes les règles de Tiering
 
 À la différence des règles Auto et Snapshot uniquement, toutes les règles de Tiering déplacent immédiatement des volumes entiers de données vers le Tier cloud. Cette règle convient mieux aux volumes secondaires de protection des données ou d'archivage pour lesquels les données doivent être conservées à des fins historiques ou réglementaires, mais peu utilisées. La règle All n'est pas recommandée pour les volumes du datastore VMware car les données écrites sur le datastore sont immédiatement déplacées vers le niveau cloud. Les opérations de lecture suivantes sont effectuées depuis le cloud et peuvent éventuellement introduire des problèmes de performances pour les machines virtuelles et les applications qui résident dans le volume du datastore.
 
 
 
+[[security]]
 == Sécurité
 
 La sécurité est une préoccupation majeure pour le cloud et pour FabricPool. Toutes les fonctions de sécurité natives d'ONTAP sont prises en charge dans le Tier de performance, et le déplacement des données est sécurisé lors de leur transfert vers le Tier cloud. FabricPool utilise le https://tools.ietf.org/html/rfc5288["AES-256-GCM"^] algorithme de chiffrement sur le tier de performance et maintien de ce chiffrement de bout en bout dans le tier cloud. Les blocs de données qui sont déplacés vers le magasin d'objets cloud sont sécurisés par la sécurité de la couche de transport (TLS) v1.2 afin de préserver la confidentialité et l'intégrité des données entre les tiers de stockage.
@@ -102,6 +111,7 @@ NOTE: La communication avec le magasin d'objets cloud sur une connexion non chif
 
 
 
+[[data-encryption]]
 === Chiffrement des données
 
 Le cryptage des données est indispensable à la protection de la propriété intellectuelle, des informations commerciales et des informations personnellement identifiables des clients. FabricPool prend entièrement en charge NVE (NetApp Volume Encryption) et NetApp Storage Encryption (NSE) pour conserver les stratégies de protection des données existantes. Toutes les données chiffrées stockées sur le Tier de performance restent chiffrées lors de leur déplacement vers le Tier cloud. Les clés de chiffrement côté client sont la propriété de ONTAP, et les clés de chiffrement de magasin d'objets côté serveur sont la propriété de leur magasin d'objets cloud respectif. Les données qui ne sont pas chiffrées avec NVE sont chiffrées à l'aide de l'algorithme AES-256-GCM. Aucun autre chiffrement AES-256 n'est pris en charge.

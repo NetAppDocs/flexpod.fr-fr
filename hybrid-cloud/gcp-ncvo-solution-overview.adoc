@@ -17,6 +17,7 @@ Ruchika Lahoti, NetApp
 
 
 
+[[introduction]]
 == Introduction
 
 L'objectif de protection des données avec reprise après incident est essentiel à la continuité de l'activité. La reprise d'activité permet aux entreprises de basculer leurs opérations sur un emplacement secondaire, puis de restaurer et de rétablir leur fonctionnement vers le site primaire de manière efficace et fiable. Le développement d'une stratégie de reprise après incident est une priorité IT si l'on persiste avec plusieurs problèmes tels que les catastrophes naturelles, les défaillances réseau, les vulnérabilités logicielles et les erreurs humaines.
@@ -42,12 +43,14 @@ Cette solution offre de nombreux avantages, notamment :
 
 
 
+[[audience]]
 == Public
 
 Le public visé peut inclure, sans s'y limiter, les ingénieurs commerciaux, les consultants sur le terrain, les services professionnels, les responsables INFORMATIQUES, Ingénieurs partenaires, ingénieurs de fiabilité des sites, architectes cloud, ingénieurs cloud et clients qui souhaitent exploiter une infrastructure conçue pour optimiser l'efficacité IT et favoriser l'innovation IT.
 
 
 
+[[solution-topology]]
 == Topologie de la solution
 
 Cette section décrit la topologie logique de la solution. La figure ci-dessous illustre la topologie de la solution de l'environnement FlexPod sur site, de NetApp Cloud Volumes ONTAP exécuté sur Google Cloud, Cisco Intersight et NetApp Cloud Manager.
