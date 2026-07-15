@@ -27,10 +27,10 @@ Voici un ensemble de messages clés à retenir lors de cette configuration :
 
 . Nous avons utilisé un processeur graphique PCIe NVIDIA Tesla P6 dans un slot mezzanine des serveurs UCS B200 M5.
 +
-image:flexpod-genomics-image18.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image18.png[""]
 
 +
-image:flexpod-genomics-image19.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image19.png[""]
 
 . Pour cette configuration, nous nous sommes inscrits sur le portail partenaires NVIDIA et avons obtenu une licence d'évaluation (également appelée droit) pour pouvoir utiliser les GPU en mode de calcul.
 . Nous avons téléchargé le logiciel NVIDIA vGPU requis du site Web dédié aux partenaires NVIDIA.
@@ -75,32 +75,32 @@ Wed Aug 18 21:37:19 2021
 ....
 . À l'aide de vCenter, https://blogs.vmware.com/apps/2018/09/using-gpus-with-virtual-machines-on-vsphere-part-2-vmdirectpath-i-o.html["configurer"^] Les paramètres du périphérique graphique sur « Shared Direct ».
 +
-image:flexpod-genomics-image20.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image20.png[""]
 
 +
-image:flexpod-genomics-image21.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image21.png[""]
 
 . Assurez-vous que le démarrage sécurisé est désactivé pour la machine virtuelle RedHat.
 . Assurez-vous que le micrologiciel des options de démarrage VM est défini sur EFI ( https://docs.vmware.com/en/VMware-vSphere-Bitfusion/3.0/Install-Guide/GUID-2005A8C6-4FDC-46DF-BB6B-989F6E91F3E2.html["réf"^]).
 +
-image:flexpod-genomics-image22.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image22.png[""]
 
 . Assurez-vous que les PARAMÈTRES suivants sont ajoutés à VM Options Advanced Edit Configuration. La valeur du `pciPassthru.64bitMMIOSizeGB` Le paramètre dépend de la mémoire du GPU et du nombre de GPU affectés à la machine virtuelle. Par exemple :
 +
 .. Si une machine virtuelle est affectée à 4 GPU V100 de 32 Go, la valeur doit être 128.
 .. Si une machine virtuelle est affectée à 4 processeurs graphiques P6 de 16 Go, cette valeur doit être 64.
 +
-image:flexpod-genomics-image23.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image23.png[""]
 
 +
-image:flexpod-genomics-image24.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image24.png[""]
 
 
 
 . Lorsque vous ajoutez des vGPU en tant que nouveau périphérique PCI à la machine virtuelle dans vCenter, veillez à sélectionner NVIDIA GRID vGPU comme type de périphérique PCI.
 . Choisissez le profil GPU correct qui suites le GPU utilisé, la mémoire GPU et son usage : par exemple, les graphiques plutôt que le calcul.
 +
-image:flexpod-genomics-image25.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image25.png[""]
 
 . Sur la VM RedHat Linux, les pilotes NVIDIA peuvent être installés en exécutant la commande suivante :
 +
@@ -159,7 +159,7 @@ Wed Aug 18 20:30:56 2021
 
 . Après avoir redémarré la VM, vous devriez voir une entrée sous clients sous Licence dans le serveur de licences comme indiqué ci-dessous.
 +
-image:flexpod-genomics-image26.png["Erreur : image graphique manquante"]
+image:flexpod-genomics-image26.png[""]
 
 . Se reporter à la section Configuration des solutions pour plus d'informations sur le téléchargement des logiciels GATK et Cromwell.
 . Une fois que la GATK peut utiliser des GPU sur site, le langage de description du workflow `*. wdl` possède les attributs d'exécution comme indiqué ci-dessous.

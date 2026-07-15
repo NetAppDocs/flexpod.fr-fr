@@ -35,7 +35,7 @@ Pour créer un cluster vSphere, procédez comme suit :
 . Activez la reprise sur incident et vSphere HA en cochant les cases.
 . Cliquez sur OK.
 +
-image:express-c-series-aff220-deploy_image49.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image49.png[""]
 
 
 
@@ -46,7 +46,7 @@ image:express-c-series-aff220-deploy_image49.png["Erreur : image graphique manqu
 
 . Cliquez avec le bouton droit de la souris sur le cluster et sélectionnez Ajouter un hôte.
 +
-image:express-c-series-aff220-deploy_image50.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image50.png[""]
 
 . Pour ajouter un hôte ESXi au cluster, procédez comme suit :
 +

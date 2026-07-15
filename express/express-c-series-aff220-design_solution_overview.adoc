@@ -13,7 +13,7 @@ FlexPod Express est conçu pour exécuter des charges de travail de virtualisati
 
 La figure suivante présente les composants matériels inclus dans la solution FlexPod Express.
 
-image:express-c-series-aff220-design_image3.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-design_image3.png[""]
 
 
 
@@ -29,7 +29,7 @@ Ce document est destiné à ceux qui souhaitent tirer parti d'une infrastructure
 
 Cette solution tire parti des dernières technologies de NetApp, Cisco et VMware. Cette solution présente le nouveau système NetApp AFF A220, qui exécute le logiciel ONTAP 9.4, deux commutateurs Cisco Nexus 3172P et des serveurs en rack Cisco UCS C220 M5 exécutant VMware vSphere 6.7. Cette solution validée utilise une technologie 10 Gigabit Ethernet (10GbE). La figure suivante présente une vue d'ensemble. Des conseils sont également fournis sur la manière d'évoluer en ajoutant deux nœuds d'hyperviseur à la fois afin que l'architecture FlexPod Express puisse s'adapter aux besoins commerciaux en constante évolution de l'entreprise.
 
-image:express-c-series-aff220-design_image4.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-design_image4.png[""]
 
 
 NOTE: L'Ethernet 40 GbE n'est pas validé, mais il s'agit d'une infrastructure prise en charge.

@@ -76,7 +76,7 @@ Comme mentionné précédemment, l'utilisation principale de FabricPool est de f
 
 La règle de Tiering uniquement Snapshot, illustrée dans la figure suivante, déplace les données Snapshot des volumes inactives et les sauvegardes SnapCenter pour vSphere des machines virtuelles qui occupent de l'espace, mais qui ne partagent pas les blocs avec le système de fichiers actif dans un magasin d'objets cloud. La règle de Tiering uniquement pour Snapshot déplace les blocs de données inactives vers le Tier cloud. Pour restaurer les données, les blocs à froid dans le cloud sont fortement sollicités et sont déplacés vers le Tier de performance Flash sur site.
 
-image:cloud-fabricpool_image4.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image4.png[""]
 
 
 
@@ -90,7 +90,7 @@ Lors de l'utilisation de la règle de Tiering automatique, les blocs fréquemmen
 
 NOTE: Le profileur de magasin d'objets doit être utilisé pour tester la latence et le débit vers le magasin d'objets avant de le rattacher à un agrégat FabricPool.
 
-image:cloud-fabricpool_image5.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image5.png[""]
 
 
 

@@ -15,7 +15,7 @@ summary: 'Les ransomwares sont un type de malware basé sur la cryptovirologie, 
 
 Arvind Ramakrishnan, NetApp
 
-En partenariat avec :image:cisco logo.png["Erreur : image graphique manquante"]
+En partenariat avec image:cisco logo.png[""]
 
 [role="lead"]
 Pour comprendre un ransomware, il est nécessaire de comprendre d'abord quelques points de clé sur la cryptographie. Les méthodes Cryptographiques permettent le cryptage de données avec une clé secrète partagée (cryptage de clé symétrique) ou une paire de clés (cryptage de clé asymétrique). L'une de ces clés est une clé publique largement disponible et l'autre est une clé privée non divulguée.

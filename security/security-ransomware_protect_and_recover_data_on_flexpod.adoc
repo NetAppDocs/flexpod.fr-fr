@@ -34,15 +34,15 @@ Cette section décrit l'état des fichiers avant une attaque sur la machine virt
 
 Le dossier documents de la machine virtuelle contient un ensemble de fichiers PDF qui n'ont pas encore été cryptés par le programme malveillant WannaCry.
 
-image:security-ransomware_image3.png["Erreur : image graphique manquante"]
+image:security-ransomware_image3.png[""]
 
 La capture d'écran suivante montre le partage CIFS qui a été mappé sur la machine virtuelle.
 
-image:security-ransomware_image4.png["Erreur : image graphique manquante"]
+image:security-ransomware_image4.png[""]
 
 La capture d'écran suivante présente les fichiers du partage CIFS `fpolicy_share` Cela n'a pas encore été chiffré par le programme malveillant de WannaCry.
 
-image:security-ransomware_image5.png["Erreur : image graphique manquante"]
+image:security-ransomware_image5.png[""]
 
 
 
@@ -53,19 +53,19 @@ Les détails sur l'efficacité du stockage et la taille de la copie Snapshot ava
 
 Des économies de stockage de 19 % ont été réalisées grâce à la déduplication sur le volume hébergeant la machine virtuelle.
 
-image:security-ransomware_image6.png["Erreur : image graphique manquante"]
+image:security-ransomware_image6.png[""]
 
 Des économies de stockage de 45 % ont été réalisées grâce à la déduplication sur le partage CIFS `fpolicy_share`.
 
-image:security-ransomware_image7.png["Erreur : image graphique manquante"]
+image:security-ransomware_image7.png[""]
 
 Une taille de copie Snapshot de 456 Ko a été observée pour le volume hébergeant la machine virtuelle.
 
-image:security-ransomware_image8.png["Erreur : image graphique manquante"]
+image:security-ransomware_image8.png[""]
 
 Une taille de copie Snapshot de 160 Ko a été observée pour le partage CIFS `fpolicy_share`.
 
-image:security-ransomware_image9.png["Erreur : image graphique manquante"]
+image:security-ransomware_image9.png[""]
 
 
 
@@ -78,11 +78,11 @@ Les étapes suivantes montrent comment le binaire du programme malveillant Wanna
 
 . Le programme malveillant sécurisé a été extrait.
 +
-image:security-ransomware_image10.png["Erreur : image graphique manquante"]
+image:security-ransomware_image10.png[""]
 
 . Le binaire a été exécuté.
 +
-image:security-ransomware_image11.png["Erreur : image graphique manquante"]
+image:security-ransomware_image11.png[""]
 
 
 
@@ -95,11 +95,11 @@ Le système de fichiers local et le partage CIFS mappé ont été cryptés par l
 
 Le programme malveillant commence à crypter des fichiers avec des extensions WNCRY.
 
-image:security-ransomware_image12.png["Erreur : image graphique manquante"]
+image:security-ransomware_image12.png[""]
 
 Le programme malveillant crypte tous les fichiers de la machine virtuelle locale et le partage mappé.
 
-image:security-ransomware_image13.png["Erreur : image graphique manquante"]
+image:security-ransomware_image13.png[""]
 
 
 
@@ -109,15 +109,15 @@ Au moment où le programme malveillant a commencé à chiffrer les fichiers, il 
 
 Nous avons détecté une augmentation spectaculaire de la taille de l'instantané à 820.98MB pour le volume hébergeant le partage CIFS pendant l'attaque.
 
-image:security-ransomware_image14.png["Erreur : image graphique manquante"]
+image:security-ransomware_image14.png[""]
 
 Nous avons détecté une augmentation de la taille de la copie Snapshot à 404,3 Mo pour le volume hébergeant la machine virtuelle.
 
-image:security-ransomware_image15.png["Erreur : image graphique manquante"]
+image:security-ransomware_image15.png[""]
 
 L'efficacité du stockage pour le volume hébergeant le partage CIFS a été réduite à 34 %.
 
-image:security-ransomware_image16.png["Erreur : image graphique manquante"]
+image:security-ransomware_image16.png[""]
 
 
 
@@ -131,23 +131,23 @@ Pour restaurer la machine virtuelle, procédez comme suit :
 
 . Utiliser la copie Snapshot que vous avez créée avec SnapCenter pour restaurer la machine virtuelle.
 +
-image:security-ransomware_image17.png["Erreur : image graphique manquante"]
+image:security-ransomware_image17.png[""]
 
 . Sélectionnez la copie Snapshot cohérente avec VMware souhaitée pour la restauration.
 +
-image:security-ransomware_image18.png["Erreur : image graphique manquante"]
+image:security-ransomware_image18.png[""]
 
 . L'intégralité du serveur virtuel est restaurée et redémarrée.
 +
-image:security-ransomware_image19.png["Erreur : image graphique manquante"]
+image:security-ransomware_image19.png[""]
 
 . Cliquez sur Terminer pour lancer le processus de restauration.
 +
-image:security-ransomware_image20.png["Erreur : image graphique manquante"]
+image:security-ransomware_image20.png[""]
 
 . La machine virtuelle et ses fichiers sont restaurés.
 +
-image:security-ransomware_image21.png["Erreur : image graphique manquante"]
+image:security-ransomware_image21.png[""]
 
 
 
@@ -157,15 +157,15 @@ Pour restaurer le partage CIFS, procédez comme suit :
 
 . Utilisez la copie Snapshot du volume prise avant l'attaque pour restaurer le partage.
 +
-image:security-ransomware_image22.png["Erreur : image graphique manquante"]
+image:security-ransomware_image22.png[""]
 
 . Cliquez sur OK pour lancer l'opération de restauration.
 +
-image:security-ransomware_image23.png["Erreur : image graphique manquante"]
+image:security-ransomware_image23.png[""]
 
 . Afficher le partage CIFS après la restauration.
 +
-image:security-ransomware_image24.png["Erreur : image graphique manquante"]
+image:security-ransomware_image24.png[""]
 
 
 
@@ -192,8 +192,8 @@ Avec cette stratégie, les fichiers avec les extensions WNCRY, Locky et ad4c ne 
 
 Afficher l'état des fichiers avant d'attaquer, ils sont non cryptés et dans un système propre.
 
-image:security-ransomware_image25.png["Erreur : image graphique manquante"]
+image:security-ransomware_image25.png[""]
 
 Les fichiers de la machine virtuelle sont chiffrés. Le programme malveillant WannaCry tente de crypter les fichiers du partage CIFS, mais FPolicy l'empêche de modifier les fichiers.
 
-image:security-ransomware_image26.png["Erreur : image graphique manquante"]
+image:security-ransomware_image26.png[""]

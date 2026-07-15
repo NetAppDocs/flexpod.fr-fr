@@ -10,7 +10,7 @@ summary: 'Les tendances du secteur témoignent d"une vaste transformation des da
 
 Savita Kumari, NetApp
 
-En partenariat avec :image:cisco logo.png["Erreur : image graphique manquante"]
+En partenariat avec image:cisco logo.png[""]
 
 [role="lead"]
 Les tendances du secteur témoignent d'une vaste transformation des data centers en infrastructure partagée et cloud computing. Elles recherchent par ailleurs une solution simple et efficace pour les succursales et les bureaux distants, exploitant la technologie qu'elles connaissent bien dans leur data Center.

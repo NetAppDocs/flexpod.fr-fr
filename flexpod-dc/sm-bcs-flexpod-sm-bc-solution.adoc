@@ -30,7 +30,7 @@ Les deux sites FlexPod nécessitent une connectivité réseau qui répond aux ex
 
 La solution NetApp ONTAP SM-BC assure une réplication synchrone entre les deux clusters de stockage NetApp pour une haute disponibilité et la reprise après incident dans un campus ou une zone métropolitaine. Le médiateur ONTAP déployé sur un troisième site surveille la solution et permet un basculement automatique en cas d'incident sur site. La figure suivante fournit une vue d'ensemble des composants de la solution.
 
-image:sm-bcs-image4.png["Erreur : image graphique manquante"]
+image:sm-bcs-image4.png[""]
 
 Avec la solution FlexPod SM-BC, vous pouvez déployer un cloud privé basé sur VMware vSphere sur une infrastructure distribuée mais intégrée. La solution intégrée permet de coordonner plusieurs sites en tant qu'infrastructure unique afin de protéger les services de données contre différents scénarios de point de défaillance unique et une défaillance complète du site.
 
@@ -69,7 +69,7 @@ Cisco UCS est une infrastructure informatique intégrée qui offre des ressource
 
 La figure suivante présente quelques exemples de composants de serveur UCS, dont des serveurs en rack UCS C-Series, des châssis UCS 5108 avec serveurs lames B-Series et le nouveau châssis UCS X9508 avec nœuds de calcul X-Series. Les serveurs en rack Cisco UCS C-Series sont disponibles dans un ou deux formats d'unité de rack (RU), avec processeurs Intel et AMD, ainsi que dans plusieurs vitesses de CPU, cœurs, mémoire et options d'E/S. Les serveurs lames Cisco UCS B-Series et les nouveaux nœuds de calcul X-Series sont également disponibles avec plusieurs options de processeur, de mémoire et d'E/S, et tous sont pris en charge dans l'architecture FlexPod pour répondre aux diverses exigences de l'entreprise.
 
-image:sm-bcs-image5.png["Erreur : image graphique manquante"]
+image:sm-bcs-image5.png[""]
 
 En plus des serveurs rack M6 nouvelle génération C220/C225/C240/C245, des serveurs lames B200 M6 et des nœuds de calcul X210c illustrés dans cette figure, les générations précédentes de serveurs rack et lame peuvent également être utilisées si elles sont toujours prises en charge.
 
@@ -85,7 +85,7 @@ Le contrôleur UCSTM X 9108 25G IFM est doté de huit ports Ethernet unifiés 25
 
 La figure suivante représente les générations d'IOM UCS 2408 et antérieures pour le châssis UCS 5108 et le module 9108 IFM pour le châssis X9508.
 
-image:sm-bcs-image6.png["Erreur : image graphique manquante"]
+image:sm-bcs-image6.png[""]
 
 
 
@@ -95,7 +95,7 @@ Les interconnexions de fabric Cisco UCS (IF) offrent une connectivité et une ge
 
 Il existe deux variantes pour les IFI Cisco UCS de quatrième génération : UCS FI 6454 et 64108. Ils comprennent la prise en charge de ports Ethernet 10/25 Gbit/s, de ports Ethernet 1/10/25 Gbit/s, de ports Ethernet UP-link 40/100 Gbit/s et de ports unifiés prenant en charge les ports Ethernet 10/25 Gbit/s ou Fibre Channel 8/16/32 Gbit/s. La figure suivante montre les IFI Cisco UCS de quatrième génération, ainsi que les modèles de troisième génération également pris en charge.
 
-image:sm-bcs-image7.png["Erreur : image graphique manquante"]
+image:sm-bcs-image7.png[""]
 
 
 NOTE: Pour prendre en charge le châssis Cisco UCS X-Series, des interconnexions de fabric de quatrième génération configurées en mode géré InterSight (IMM) sont requises. Cependant, le châssis Cisco UCS 5108 B-series peut être pris en charge aussi bien en mode IMM qu'en mode géré UCSM.
@@ -109,7 +109,7 @@ NOTE: Le système UCS FI 6324 utilise le format de module d'E/S et est intégré
 
 Les cartes d'interface virtuelle Cisco UCS (VICS) unifient la gestion des systèmes et la connectivité LAN et SAN pour les serveurs rack et lames. Il prend en charge jusqu'à 256 périphériques virtuels, soit en tant que cartes d'interface réseau virtuelles (vNIC), soit en tant que cartes de bus hôte virtuelles (vHBA) utilisant la technologie Cisco SingleConnect. Suite à la virtualisation, les cartes VIC simplifient considérablement la connectivité réseau et réduisent le nombre d'adaptateurs réseau, de câbles et de ports de commutation nécessaires au déploiement de la solution. La figure suivante présente certaines des Cisco UCS VICS disponibles pour les serveurs B-Series et C-Series, ainsi que les nœuds de calcul X-Series.
 
-image:sm-bcs-image8.png["Erreur : image graphique manquante"]
+image:sm-bcs-image8.png[""]
 
 Les différents modèles d'adaptateurs prennent en charge différents serveurs lame et rack avec différents nombres de ports, vitesses de port et formats de LAN modulaire sur la carte mère (mLOM), cartes mezzanine et interfaces PCIe. Les adaptateurs prennent en charge certaines combinaisons de Ethernet 10/25/40/100-G et FCoE (Fibre Channel over Ethernet). Ils intègrent la technologie CNA (Converged Network adapter) de Cisco, prennent en charge un ensemble complet de fonctionnalités et simplifient la gestion des adaptateurs et le déploiement des applications. Par exemple, le VIC prend en charge la technologie VM-FEX (Data Center Virtual machine Fabric Extender) de Cisco, qui étend les ports d'interconnexion de structure Cisco UCS aux machines virtuelles, simplifiant ainsi le déploiement de la virtualisation des serveurs.
 
@@ -132,7 +132,7 @@ Dans le choix d'un modèle de switch pour un déploiement FlexPod, de nombreux f
 
 La validation de nombreux CVD récents de FlexPod utilise des commutateurs Cisco Nexus 9000, tels que les Nexus 9336C-FX2 et Nexus 93180YC-FX3. Ils offrent des ports haute performance 40/100G et 10//25G, une faible latence et une efficacité énergétique exceptionnelle dans un format compact 1U. Des vitesses supplémentaires sont prises en charge via des ports de liaison ascendante et des câbles de dérivation. La figure ci-dessous présente quelques switchs Cisco Nexus 9k et 3K, notamment les Nexus 9336C-FX2 et Nexus 3232C utilisés pour cette validation.
 
-image:sm-bcs-image9.png["Erreur : image graphique manquante"]
+image:sm-bcs-image9.png[""]
 
 Voir https://www.cisco.com/c/en/us/products/switches/data-center-switches/index.html["Commutateurs pour data Center Cisco"^] Pour plus d'informations sur les commutateurs Nexus disponibles ainsi que leurs spécifications et leurs documentations.
 
@@ -142,7 +142,7 @@ Voir https://www.cisco.com/c/en/us/products/switches/data-center-switches/index.
 
 Les switchs de fabric Cisco MDS 9100/9200/9300 sont des composants facultatifs pour l'architecture FlexPod. Ces commutateurs sont extrêmement fiables, hautement flexibles, sécurisés et offrent une visibilité sur le flux du trafic dans le maillage. La figure suivante présente quelques exemples de commutateurs MDS qui peuvent être utilisés pour créer des structures SAN FC redondantes pour une solution FlexPod, afin de répondre aux besoins des applications et de l'entreprise.
 
-image:sm-bcs-image10.png["Erreur : image graphique manquante"]
+image:sm-bcs-image10.png[""]
 
 Les commutateurs Cisco MDS 9132T/9148T/9396T haute performance 32G Multilayer Fabric sont économiques et extrêmement fiables, flexibles et évolutifs. Les fonctionnalités avancées du réseau de stockage facilitent la gestion et sont compatibles avec l'ensemble de la gamme Cisco MDS 9000 pour une implémentation SAN fiable.
 
@@ -165,7 +165,7 @@ NetApp AFF et les contrôleurs de stockage ASA fournissent également une base s
 
 Comme le montre la figure suivante, NetApp propose différents contrôleurs de stockage et tiroirs disques afin de répondre à vos exigences en termes de performances et de capacité. Pour plus d'informations sur les fonctionnalités et les spécifications des contrôleurs NetApp AFF et ASA, consultez le tableau suivant et consultez les liens vers les pages produits.
 
-image:sm-bcs-image11.png["Erreur : image graphique manquante"]
+image:sm-bcs-image11.png[""]
 
 |===
 | Famille de produits | Caractéristiques techniques 
@@ -185,23 +185,23 @@ Consulter le https://www.netapp.com/data-storage/disk-shelves-storage-media/["Do
 
 Les solutions FlexPod sont flexibles en topologie et peuvent évoluer verticalement ou horizontalement pour répondre à différents besoins. Une solution qui exige une protection de continuité de l'activité et qui ne contient que des ressources minimales de calcul et de stockage peuvent exploiter une topologie de la solution simple, comme l'illustre la figure suivante. Cette topologie simple utilise les serveurs rack UCS C-Series et les contrôleurs AFF/ASA avec des disques SSD dans le contrôleur sans tiroirs disques supplémentaires.
 
-image:sm-bcs-image12.png["Erreur : image graphique manquante"]
+image:sm-bcs-image12.png[""]
 
 Ses composants redondants de calcul, de réseau et de stockage sont interconnectés par la connectivité redondante entre les composants. Ce design haute disponibilité assure la résilience de la solution et permet de résister à un seul point de défaillance. La conception multisite et les relations de réplication de données synchrone ONTAP SM-BC fournissent des services de données stratégiques, malgré un risque de défaillance d'un stockage sur un seul site.
 
 Une topologie de déploiement asymétrique qui pourrait être utilisée par les entreprises entre un data Center et une succursale dans une zone métropolitaine pourrait ressembler à la figure suivante. Pour ce design asymétrique, le data Center requiert un FlexPod plus performant avec davantage de ressources de calcul et de stockage. Cependant, les besoins de la succursale sont moins importants et peuvent être satisfaits par un FlexPod beaucoup plus petit.
 
-image:sm-bcs-image13.png["Erreur : image graphique manquante"]
+image:sm-bcs-image13.png[""]
 
 Pour les entreprises dont les besoins en ressources de calcul et de stockage sont plus importants et sur plusieurs sites, une structure multisite basée sur VXLAN permet à plusieurs sites d'avoir une structure réseau transparente afin de faciliter la mobilité des applications et de servir une application depuis n'importe quel site.
 
 Il peut y avoir une solution FlexPod existante au moyen de châssis Cisco UCS 5108 et de serveurs lames B-Series qui doivent être protégés par une nouvelle instance FlexPod. La nouvelle instance FlexPod peut utiliser le tout dernier châssis UCS X9508 avec des nœuds de calcul X210c gérés par Cisco Intersight, comme l'illustre la figure suivante. Dans ce cas, les systèmes FlexPod de chaque site sont connectés à une structure de data Center plus vaste, et les sites sont connectés via un réseau d'interconnexion pour former une structure multisite VXLAN.
 
-image:sm-bcs-image14.png["Erreur : image graphique manquante"]
+image:sm-bcs-image14.png[""]
 
 Pour les entreprises disposant d'un data Center et de plusieurs succursales dans une zone métropolitaine, qui doivent tous être protégées afin d'assurer la continuité de l'activité, La topologie de déploiement FlexPod SM-BC illustrée dans la figure suivante peut être mise en œuvre pour protéger les services d'applications et de données stratégiques afin d'atteindre un RPO nul et un RTO proche de zéro pour toutes les succursales.
 
-image:sm-bcs-image15.png["Erreur : image graphique manquante"]
+image:sm-bcs-image15.png[""]
 
 Pour ce modèle de déploiement, chaque succursale établit les relations SM-BC et les groupes de cohérence dont elle a besoin avec le centre de données. Vous devez tenir compte des limites d'objets SM-BC prises en charge, de sorte que les relations de groupes de cohérence et le nombre de points de terminaison globaux ne dépassent pas les valeurs maximales prises en charge au niveau du datacenter.
 

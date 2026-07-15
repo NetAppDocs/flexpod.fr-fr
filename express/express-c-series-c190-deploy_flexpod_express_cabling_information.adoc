@@ -18,7 +18,7 @@ Cette validation de référence est câblée comme indiqué dans les figures et 
 
 Cette figure illustre le câblage de validation de référence.
 
-image:express-c-series-c190-deploy_image3.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image3.png[""]
 
 Le tableau suivant répertorie les informations de câblage du commutateur Cisco Nexus 31108PC-V-A.
 

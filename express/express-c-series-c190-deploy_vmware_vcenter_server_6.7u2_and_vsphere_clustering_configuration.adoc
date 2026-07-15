@@ -35,7 +35,7 @@ Pour créer un cluster vSphere, procédez comme suit :
 . Activez la reprise sur incident et vSphere HA en cochant les cases.
 . Cliquez sur OK.
 +
-image:express-c-series-c190-deploy_image45.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image45.png[""]
 
 
 
@@ -48,7 +48,7 @@ Pour ajouter les hôtes ESXi au cluster, procédez comme suit :
 
 . Cliquez avec le bouton droit de la souris sur le cluster et sélectionnez Ajouter un hôte.
 +
-image:express-c-series-c190-deploy_image46.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image46.png[""]
 
 . Pour ajouter un hôte ESXi au cluster, procédez comme suit :
 +
@@ -84,7 +84,7 @@ Pour configurer coredump sur les hôtes ESXi, procédez comme suit :
 . Cliquez sur services et sélectionnez VMware vSphere ESXI Dump Collector.
 . Démarrez le service VMware vSphere ESXI Dump Collector.
 +
-image:express-c-series-c190-deploy_image47.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image47.png[""]
 
 . À l'aide de SSH, connectez-vous à l'hôte IP ESXi de gestion, entrez root pour le nom d'utilisateur et entrez le mot de passe racine.
 . Exécutez les commandes suivantes :
@@ -96,7 +96,7 @@ esxcli system coredump network check
 ....
 . Le message `Verified the configured netdump server is running` s'affiche après la saisie de la commande finale.
 +
-image:express-c-series-c190-deploy_image48.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image48.png[""]
 
 +
 

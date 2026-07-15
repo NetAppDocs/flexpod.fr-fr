@@ -44,7 +44,7 @@ Mécanisme de chiffrement logiciel des données au repos, disponible à partir d
 
 Voici comment fonctionne le processus : lorsque les données sont cryptées, elles sont envoyées au module cryptographique validé FIPS 140-2 de niveau 1. Le module cryptographique crypte les données et les renvoie à la couche RAID. Les données cryptées sont alors envoyées au disque. Par conséquent, avec la combinaison de NVE et de NAE, les données sont déjà chiffrées sur le disque. Les lectures suivent la trajectoire inverse. En d'autres termes, les données quittent le disque chiffré, sont envoyées au RAID, elles sont déchiffrées par le module cryptographique et sont ensuite envoyées le reste de la pile, comme illustré dans la figure suivante.
 
-image:flexpod-fips-image3.png["Erreur : image graphique manquante"]
+image:flexpod-fips-image3.png[""]
 
 
 NOTE: NVE utilise un module cryptographique logiciel conforme à la norme FIPS 140-2 de niveau 1.
@@ -108,7 +108,7 @@ NSE utilise les disques SED pour effectuer le chiffrement des données à l'aide
 
 NSE est configuré pour utiliser des disques à autochiffrement FIPS 140-2 de niveau 2 pour faciliter la conformité et les retours de disques de secours, en assurant la protection des données au repos via le chiffrement de disque transparent AES 256 bits. Ces disques effectuent toutes les opérations de chiffrement des données en interne, comme illustré dans la figure ci-dessous, notamment la génération de clés de chiffrement. Pour empêcher tout accès non autorisé aux données, le système de stockage doit s'authentifier auprès du disque à l'aide d'une clé d'authentification établie lors de la première utilisation du disque.
 
-image:flexpod-fips-image4.png["Erreur : image graphique manquante"]
+image:flexpod-fips-image4.png[""]
 
 
 NOTE: NSE utilise un chiffrement matériel sur chaque disque certifié conforme à la norme FIPS 140-2 de niveau 2.
@@ -122,7 +122,7 @@ Pour plus d'informations sur NSE, reportez-vous au https://www.netapp.com/pdf.ht
 
 La norme FIPS 140-2 s'applique au module cryptographique, tel que défini par la limite, comme illustré dans la figure suivante.
 
-image:flexpod-fips-image5.png["Erreur : image graphique manquante"]
+image:flexpod-fips-image5.png[""]
 
 Le gestionnaire de clés assure le suivi de toutes les clés de cryptage utilisées par ONTAP. Les disques SED NSE utilisent le gestionnaire de clés pour définir les clés d'authentification pour les disques SED NSE. Avec le gestionnaire de clés, la solution combinée NVE et NAE est composée d'un module cryptographique logiciel, de clés de chiffrement et d'un gestionnaire de clés. Pour chaque volume, NVE utilise une clé de chiffrement des données XTS-AES 256 unique, qui stocke le gestionnaire de clés. La clé utilisée pour un volume de données est unique pour le volume de données du cluster et est générée lors de la création du volume chiffré. De même, un volume NAE utilise des clés de chiffrement des données XTS-AES 256 uniques par agrégat, ce que le gestionnaire de clés stocke également. Les clés NAE sont générées lors de la création de l'agrégat chiffré. ONTAP ne prégénère pas de clés, ne les réutilisez pas ou ne les affiche pas en texte clair : elles sont stockées et protégées par le gestionnaire de clés.
 

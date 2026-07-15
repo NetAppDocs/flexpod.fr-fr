@@ -27,7 +27,7 @@ Comme illustré dans la figure ci-dessous, la gamme FlexPod comprend trois solut
 * *FlexPod Select.* intègre les meilleurs aspects de FlexPod Datacenter et adapte l'infrastructure à une application donnée.
 
 
-image:express-c-series-aff220-design_image2.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-design_image2.png[""]
 
 
 

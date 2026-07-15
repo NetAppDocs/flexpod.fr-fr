@@ -62,7 +62,7 @@ NetApp recommande d'implémenter un démarrage SAN pour les serveurs Cisco UCS d
 
 Lors du démarrage SAN iSCSI, chaque serveur Cisco UCS est affecté à deux vNIC iSCSI (une pour chaque structure SAN), qui fournissent une connectivité redondante sur tout le réseau de stockage. Les ports de stockage dans cet exemple, e2a et e2e, qui sont connectés aux commutateurs Cisco Nexus, sont regroupés pour former un port logique appelé groupe d'interface (ifgrp) (dans cet exemple, a0A). Les VLAN iSCSI sont créés sur le groupe initiateur et les LIF iSCSI sont créées sur des groupes de ports iSCSI (dans cet exemple, a0A-<iSCSI-A-VLAN>). Le LUN de démarrage iSCSI est exposé aux serveurs via la LIF iSCSI en utilisant des igroups. Cette approche permet uniquement au serveur autorisé d'accéder à la LUN de démarrage. Pour disposition des ports et LIF, voir la figure ci-dessous.
 
-image:medical-imaging_image8.png["Erreur : image graphique manquante"]
+image:medical-imaging_image8.png[""]
 
 Contrairement aux interfaces réseau NAS, les interfaces réseau SAN ne sont pas configurées pour basculer en cas de défaillance. En revanche, si une interface réseau n'est plus disponible, l'hôte choisit un nouveau chemin optimisé vers une interface réseau disponible. ALUA, une norme prise en charge par NetApp, fournit des informations sur les cibles SCSI, qui permet à un hôte d'identifier le meilleur chemin d'accès au stockage.
 

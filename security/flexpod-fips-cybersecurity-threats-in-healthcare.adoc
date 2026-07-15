@@ -31,7 +31,7 @@ La liste suivante des organismes de soins de santé était ciblée par les agent
 
 La diversité des applications qui constituent une organisation de soins de santé est indéniable et de plus en plus complexe. Les bureaux de la sécurité de l'information doivent assurer la gouvernance d'une grande variété de systèmes ET ressources IT. La figure suivante illustre les capacités cliniques d'un système hospitalier type.
 
-image:flexpod-fips-image2.png["Erreur : image graphique manquante"]
+image:flexpod-fips-image2.png[""]
 
 Les données patient sont au cœur de cette image. La perte de données sur les patients et la stigmatisation associée aux affections médicales sensibles sont très réelles. Parmi les autres questions sensibles figurent le risque d’exclusion sociale, le chantage, le profilage, la vulnérabilité au marketing ciblé, l’exploitation et la responsabilité financière potentielle envers les payeurs à propos de l’information médicale au-delà des privilèges du payeur.
 

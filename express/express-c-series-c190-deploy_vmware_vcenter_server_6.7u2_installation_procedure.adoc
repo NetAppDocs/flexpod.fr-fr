@@ -34,11 +34,11 @@ Pour télécharger VMware vCenter Server Appliance (VCSA), procédez comme suit 
 . Cliquez sur installation.
 . Cliquez sur Suivant sur la page Introduction.
 +
-image:express-c-series-c190-deploy_image34.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image34.png[""]
 
 . Sélectionnez Embedded Platform Services Controller comme type de déploiement.
 +
-image:express-c-series-c190-deploy_image35.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image35.png[""]
 
 +
 
@@ -46,15 +46,15 @@ NOTE: Si nécessaire, le déploiement de contrôleur de services de plateforme e
 
 . Dans la cible de déploiement de l'appliance, entrez l'adresse IP d'un hôte ESXi que vous avez déployé, le nom d'utilisateur root et le mot de passe root.
 +
-image:express-c-series-c190-deploy_image36.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image36.png[""]
 
 . Définissez la machine virtuelle de l'appliance en saisissant VCSA comme nom de machine virtuelle et mot de passe root que vous souhaitez utiliser pour le VCSA.
 +
-image:express-c-series-c190-deploy_image37.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image37.png[""]
 
 . Choisissez la taille de déploiement qui correspond le mieux à votre environnement. Cliquez sur Suivant.
 +
-image:express-c-series-c190-deploy_image38.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image38.png[""]
 
 . Sélectionner `infra_datastore` datastore. Cliquez sur Suivant.
 . Entrez les informations suivantes sur la page configurer les paramètres réseau et cliquez sur Suivant.
@@ -69,11 +69,11 @@ image:express-c-series-c190-deploy_image38.png["Erreur : image graphique manquan
 
 . Sur la page prêt à terminer l'étape 1, vérifiez que les paramètres saisis sont corrects. Cliquez sur Terminer.
 +
-image:express-c-series-c190-deploy_image39.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image39.png[""]
 
 . Passez en revue les paramètres de l'étape 1 avant de commencer le déploiement de l'appliance.
 +
-image:express-c-series-c190-deploy_image40.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image40.png[""]
 
 +
 Le VCSA s'installe maintenant. Ce processus prend plusieurs minutes.
@@ -81,13 +81,13 @@ Le VCSA s'installe maintenant. Ce processus prend plusieurs minutes.
 . Une fois l'étape 1 terminée, un message s'affiche indiquant qu'il est terminé. Cliquez sur Continuer pour commencer la configuration de l'étape 2.
 . Sur la page Introduction de l'étape 2, cliquez sur Suivant.
 +
-image:express-c-series-c190-deploy_image41.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image41.png[""]
 
 . Entrez `\<<var_ntp_id>>` Pour l'adresse du serveur NTP. Vous pouvez entrer plusieurs adresses IP NTP.
 . Si vous prévoyez d'utiliser la haute disponibilité (HA) de vCenter Server, assurez-vous que l'accès SSH est activé.
 . Configurez le nom de domaine SSO, le mot de passe et le nom du site. Cliquez sur Suivant.
 +
-image:express-c-series-c190-deploy_image42.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image42.png[""]
 
 +
 
@@ -95,12 +95,12 @@ NOTE: Notez ces valeurs pour votre référence, en particulier si vous vous éca
 
 . Rejoignez le programme VMware Customer Experience si nécessaire. Cliquez sur Suivant.
 +
-image:express-c-series-c190-deploy_image43.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image43.png[""]
 
 . Affichez le récapitulatif de vos paramètres. Cliquez sur Terminer ou utilisez le bouton Retour pour modifier les paramètres.
 . Un message s'affiche indiquant que vous ne pourrez pas interrompre ou arrêter l'installation une fois qu'elle a démarré. Cliquez sur OK pour continuer.
 +
-image:express-c-series-c190-deploy_image44.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image44.png[""]
 
 +
 La configuration de l'appareil continue. Cette opération prend plusieurs minutes.

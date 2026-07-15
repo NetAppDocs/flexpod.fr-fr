@@ -3,7 +3,6 @@ section: flexpod-dc
 title: Data Center FlexPod
 entries:
 - title: FlexPod datacenter avec NetApp SnapMirror Business Continuity et ONTAP 9.10
-  type: solutions
   entries:
   - title: Introduction
     url: "/flexpod-dc/sm-bcs-introduction.html"

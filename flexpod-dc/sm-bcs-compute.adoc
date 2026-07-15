@@ -25,11 +25,11 @@ La configuration de calcul de la solution FlexPod SM-BC suit les bonnes pratique
 
 La connectivité entre les serveurs lames UCS B200 et les IOM est fournie par la carte VIC UCS 5108 via les connexions de fond de panier du châssis UCS. UCS 2204XP Fabric Extender utilisé pour la validation possède 16 ports 10G chacun pour la connexion aux huit serveurs lames demi-largeur, par exemple deux pour chaque serveur. Pour augmenter la bande passante de connectivité du serveur, vous pouvez ajouter un VIC supplémentaire basé sur mezzanine pour connecter le serveur au module UCS 2408 IOM alternatif qui fournit quatre connexions 10G à chaque serveur.
 
-image:sm-bcs-image17.png["Erreur : image graphique manquante"]
+image:sm-bcs-image17.png[""]
 
 La connectivité entre le châssis UCS 5108 et les IF UCS 6454 utilisés pour la validation sont assurées par le module IOM 2204XP qui utilise quatre connexions 10G. Les ports FI 1 à 4 sont configurés comme ports serveur pour ces connexions. Les ports FI 25 à 28 sont configurés en tant que ports de liaison ascendante du réseau vers les commutateurs Nexus A et B du site local. Les figures et tableaux suivants présentent le schéma de connectivité et les détails de connexion des ports pour les serveurs UCS 6454 IFF permettant de se connecter au châssis UCS 5108 et aux switchs Nexus.
 
-image:sm-bcs-image18.png["Erreur : image graphique manquante"]
+image:sm-bcs-image18.png[""]
 
 |===
 | Périphérique local | Port local | Périphérique distant | Port distant 
@@ -132,7 +132,7 @@ Dans le cas de la configuration de démarrage SAN iSCSI, les paramètres de dém
 
 La cible statique iSCSI peut être configurée dans la stratégie d'amorçage des modèles de profil de service sous la boîte de dialogue définir le paramètre d'amorçage iSCSI, comme illustré dans la figure suivante. La configuration recommandée des paramètres d'amorçage iSCSI est indiquée dans le tableau suivant, qui implémente la stratégie d'amorçage décrite ci-dessus pour obtenir une haute disponibilité.
 
-image:sm-bcs-image19.png["Erreur : image graphique manquante"]
+image:sm-bcs-image19.png[""]
 
 |===
 | Structure iSCSI | Priorité | Cible iSCSI | LIF iSCSI 

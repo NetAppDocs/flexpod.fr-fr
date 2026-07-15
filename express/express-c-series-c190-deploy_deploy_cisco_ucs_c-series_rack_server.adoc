@@ -50,7 +50,7 @@ NOTE: La version CIMC utilisée dans cette validation est CIMC 4.0.(4).
 Mettez le serveur sous tension et appuyez sur F8 lorsque vous êtes invité à entrer dans la configuration CIMC.
 
 +
-image:express-c-series-c190-deploy_image5.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image5.png[""]
 
 . Dans l'utilitaire de configuration de CIMC, définissez les options suivantes :
 +
@@ -82,7 +82,7 @@ Redondance des cartes réseau
 Aucune : `[X]`
 
 +
-image:express-c-series-c190-deploy_image6.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image6.png[""]
 
 
 
@@ -181,7 +181,7 @@ Pour définir la configuration de l'ordre de démarrage, procédez comme suit :
 . Dans la fenêtre du navigateur de l'interface CIMC, cliquez sur l'onglet calcul et sélectionnez BIOS.
 . Cliquez sur configurer l'ordre de démarrage, puis sur OK.
 +
-image:express-c-series-c190-deploy_image7.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image7.png[""]
 
 . Configurez les périphériques suivants en cliquant sur le périphérique sous Ajouter un périphérique de démarrage et en accédant à l'onglet Avancé :
 +
@@ -235,7 +235,7 @@ Port : 3
 . Cliquez sur Ajouter un périphérique.
 . Cliquez sur Enregistrer les modifications, puis sur Fermer.
 +
-image:express-c-series-c190-deploy_image8.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image8.png[""]
 
 . Redémarrez le serveur pour démarrer avec votre nouvel ordre de démarrage.
 
@@ -252,7 +252,7 @@ Procédez comme suit si votre serveur C-Series contient un contrôleur RAID. Auc
 . Faites défiler vers le bas jusqu'à PCIe Slot:HBA option ROM.
 . Si la valeur n'est pas déjà désactivée, définissez-la sur Désactivé.
 +
-image:express-c-series-c190-deploy_image9.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image9.png[""]
 
 
 
@@ -270,7 +270,7 @@ NOTE: Le port par défaut entre les ports 0, 1, 2 et 3 doit être désactivé av
 . Sous l'onglet général, décochez le canal de port.
 . Enregistrez les modifications et redémarrez le CIMC.
 +
-image:express-c-series-c190-deploy_image10.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image10.png[""]
 
 
 
@@ -301,13 +301,13 @@ Pour créer des vNIC iSCSI, procédez comme suit :
 ** Entrez `\<<var_iscsi_vlan_b>>` Comme le VLAN.
 ** Définissez le port de liaison montante sur 3.
 +
-image:express-c-series-c190-deploy_image11.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image11.png[""]
 
 
 
 . Sélectionnez vNIC eth1 sur la gauche.
 +
-image:express-c-series-c190-deploy_image12.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image12.png[""]
 
 . Sous Propriétés de démarrage iSCSI, entrez les détails de l'initiateur :
 +
@@ -316,7 +316,7 @@ image:express-c-series-c190-deploy_image12.png["Erreur : image graphique manquan
 ** Masque de sous-réseau : `\<<var_esxi_hostA_iscsiA_mask>>`
 ** Passerelle : `\<<var_esxi_hostA_iscsiA_gateway>>`
 +
-image:express-c-series-c190-deploy_image13.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image13.png[""]
 
 
 
@@ -352,7 +352,7 @@ NOTE: Assurez-vous d'enregistrer les noms IQN pour chaque vNIC. Vous en avez bes
 ** Masque de sous-réseau : `\<<var_esxi_hostb_iscsib_mask>>`
 ** Passerelle : `\<<var_esxi_hostb_iscsib_gateway>>`
 +
-image:express-c-series-c190-deploy_image14.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image14.png[""]
 
 
 
@@ -395,11 +395,11 @@ Pour configurer vNIC pour ESXi, procédez comme suit :
 . Définissez la MTU sur 9000. Cliquez sur Save Changes.
 . Définissez le VLAN sur le VLAN natif 2.
 +
-image:express-c-series-c190-deploy_image15.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image15.png[""]
 
 . Répétez les étapes 3 et 4 pour eth1, en vérifiant que le port uplink est défini sur 1 pour eth1.
 +
-image:express-c-series-c190-deploy_image16.png["Erreur : image graphique manquante"]
+image:express-c-series-c190-deploy_image16.png[""]
 
 +
 

@@ -45,7 +45,7 @@ Dans le champ Nom du conteneur, entrez le nom de compartiment ou du conteneur du
 . Cliquez sur Save and Attach Aggregates.
 
 
-image:cloud-fabricpool_image13.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image13.png[""]
 
 
 

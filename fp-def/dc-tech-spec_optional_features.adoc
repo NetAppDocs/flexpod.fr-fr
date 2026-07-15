@@ -25,29 +25,29 @@ FlexPod prend en charge les deux versions du logiciel NetApp MetroCluster pour u
 
 La figure suivante représente FlexPod Datacenter avec architecture NetApp MetroCluster.
 
-image:dc-tech-spec_image1.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image1.png[""]
 
 La figure suivante illustre le data Center FlexPod avec l'architecture MetroCluster IP de NetApp.
 
-image:dc-tech-spec_image2.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image2.png[""]
 
 À partir de ONTAP 9.8, ONTAP Mediator peut être déployé sur un troisième site pour surveiller la solution IP MetroCluster et faciliter le basculement non planifié automatisé lorsqu'un incident de site se produit.
 
 Dans le cas d'un déploiement de solution IP FlexPod MetroCluster avec une connectivité site à site étendue couche 2, vous pouvez réaliser des économies en partageant des liens ISL et en utilisant des commutateurs FlexPod comme commutateurs IP MetroCluster conformes si la bande passante réseau et les commutateurs répondent aux exigences indiquées dans la figure suivante, Qui représente la solution IP de FlexPod MetroCluster avec partage de liens ISL et commutateurs conformes.
 
-image:dc-tech-spec_image10.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image10.png[""]
 
 Les deux figures suivantes illustrent la structure multi-sites VXLAN et la structure de stockage IP MetroCluster pour une solution IP FlexPod MetroCluster avec déploiement de structure multisite VXLAN.
 
 * Structure multisite VXLAN pour solution IP FlexPod MetroCluster
 
 
-image:dc-tech-spec_image11.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image11.png[""]
 
 * Structure de stockage IP MetroCluster pour solution FlexPod MetroCluster IP
 
 
-image:dc-tech-spec_image12.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image12.png[""]
 
 
 
@@ -64,7 +64,7 @@ Pour plus d'informations sur la configuration de FlexPod et ses avantages en ter
 
 Pour plus d'informations sur la mise en œuvre de ONTAP, reportez-vous à https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["Tr-4684 : implémentation et configuration des SAN modernes avec NVMe"^]la section.
 
-image:dc-tech-spec_image3.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image3.png[""]
 
 
 
@@ -82,9 +82,9 @@ Pour plus de conseils sur une conception MDS, consultez le CVD https://www.cisco
 
 Les figures suivantes illustrent un exemple de data Center FlexPod pour FC avec connectivité MDS et FlexPod Datacenter pour FC avec Cisco Nexus 93180YC-FX, respectivement.
 
-image:dc-tech-spec_image4.jpg["Erreur : image graphique manquante"]
+image:dc-tech-spec_image4.jpg[""]
 
-image:dc-tech-spec_image5.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image5.png[""]
 
 
 
@@ -107,7 +107,7 @@ NOTE: L'utilisation des commutateurs Cisco Nexus 7000 ou 9000 s'oppose à l'util
 
 La figure suivante montre une configuration de la connectivité FC.
 
-image:dc-tech-spec_image6.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image6.png[""]
 
 
 
@@ -129,7 +129,7 @@ NOTE: L'utilisation de commutateurs Cisco Nexus 9000 Series évite l'utilisation
 
 La figure suivante montre un scénario de démarrage FCoE.
 
-image:dc-tech-spec_image7.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image7.png[""]
 
 
 
@@ -145,7 +145,7 @@ L'option de démarrage iSCSI présente les licences et la configuration matérie
 
 La figure suivante montre une configuration Ethernet uniquement qui est démarrée à l'aide d'iSCSI.
 
-image:dc-tech-spec_image8.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image8.png[""]
 
 
 
@@ -171,7 +171,7 @@ La configuration matérielle et de licence est la suivante :
 
 La figure suivante présente une configuration FC à connexion directe.
 
-image:dc-tech-spec_image9.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image9.png[""]
 
 *Notes:*
 
@@ -182,7 +182,7 @@ image:dc-tech-spec_image9.png["Erreur : image graphique manquante"]
 
 La figure suivante présente une configuration iSCSI/IP Direct-Connect unifiée.
 
-image:dc-tech-spec_image10.png["Erreur : image graphique manquante"]
+image:dc-tech-spec_image10.png[""]
 
 *Notes:*
 

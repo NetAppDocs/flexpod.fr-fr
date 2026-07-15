@@ -16,7 +16,7 @@ summary: 'Grâce à l"installation et à la configuration de Cloud Insights, nou
 [role="lead"]
 Grâce à l'installation et à la configuration de Cloud Insights, nous FlexPod examinons certaines des tâches que vous pouvez effectuer sur le tableau de bord afin d'évaluer et de contrôler votre environnement. Dans cette section, nous nous concentrons sur cinq cas d'utilisation principaux de Cloud Insights :
 
-* Intégration avec Active IQ
+* Intégration de Digital Advisor
 * Exploration des tableaux de bord en temps réel
 * Création de tableaux de bord personnalisés
 * Dépannage avancé
@@ -25,29 +25,29 @@ Grâce à l'installation et à la configuration de Cloud Insights, nous FlexPod 
 
 
 
-[[active-iq-integration]]
-== Intégration avec Active IQ
+[[digital-advisor-integration]]
+== Intégration de Digital Advisor
 
-Cloud Insights est totalement intégré à la plateforme de surveillance du stockage Active IQ. Un système ONTAP, déployé dans le cadre d'une solution de data Center FlexPod, est automatiquement configuré pour renvoyer les informations à NetApp via la fonction AutoSupport, qui est intégrée à chaque système. Ces rapports sont générés de manière programmée ou dynamique lorsqu'une panne est détectée dans le système. Les données communiquées via AutoSupport sont agrégées et affichées dans des tableaux de bord facilement accessibles sous le menu Active IQ de Cloud Insights.
+Cloud Insights est entièrement intégré à la plateforme de surveillance du stockage Digital Advisor. Un système ONTAP, déployé dans le cadre d'une solution FlexPod Datacenter, est automatiquement configuré pour transmettre des informations à NetApp via la fonction AutoSupport, qui est intégrée à chaque système. Ces rapports sont générés de manière planifiée ou dynamiquement dès qu'une anomalie est détectée dans le système. Les données transmises via AutoSupport sont agrégées et affichées dans des tableaux de bord facilement accessibles sous le menu Digital Advisor dans Cloud Insights.
 
 
 
-[[access-active-iq-information-through-the-cloud-insights-dashboard]]
-=== Accédez aux informations Active IQ via le tableau de bord Cloud Insights
+[[access-digital-advisor-information-through-the-cloud-insights-dashboard]]
+=== Accédez aux informations de Digital Advisor via le tableau de bord Cloud Insights
 
-Pour accéder aux informations de Active IQ via le tableau de bord Cloud Insights, effectuez les opérations suivantes :
+Pour accéder aux informations de Digital Advisor via le tableau de bord Cloud Insights, suivez les étapes suivantes :
 
 . Cliquez sur l'option Data Collector dans le menu Admin à gauche.
 +
-image:cloud-insights_image13.png["Erreur : image graphique manquante"]
+image:cloud-insights_image13.png[""]
 
 . Filtre pour le Data Collector spécifique à votre environnement. Dans cet exemple, nous filtrons par le terme FlexPod.
 +
-image:cloud-insights_image23.png["Erreur : image graphique manquante"]
+image:cloud-insights_image23.png[""]
 
 . Cliquez sur le Data Collector pour obtenir un résumé de l'environnement et des périphériques surveillés par ce collecteur.
 +
-image:cloud-insights_image24.png["Erreur : image graphique manquante"]
+image:cloud-insights_image24.png[""]
 
 +
 Sous la liste des périphériques en bas, cliquez sur le nom du système de stockage ONTAP surveillé. Un tableau de bord des informations collectées à propos du système s'affiche, avec les informations suivantes :
@@ -61,19 +61,19 @@ Sous la liste des périphériques en bas, cliquez sur le nom du système de stoc
 ** Latence moyenne
 ** Débit moyen
 +
-image:cloud-insights_image25.png["Erreur : image graphique manquante"]
+image:cloud-insights_image25.png[""]
 
 +
-De plus, sur cette page, sous la section politiques de performances, vous trouverez un lien vers NetApp Active IQ.
+Vous trouverez également sur cette page, dans la section Politiques de performance, un lien vers NetApp Digital Advisor.
 
 +
-image:cloud-insights_image26.png["Erreur : image graphique manquante"]
+image:cloud-insights_image26.png[""]
 
 
 
-. Pour ouvrir un nouvel onglet de navigateur et accéder à la page de réduction des risques, qui affiche les nœuds concernés et les risques critiques, et les actions à entreprendre pour corriger les problèmes identifiés, cliquez sur le lien Active IQ.
+. Pour ouvrir un nouvel onglet de navigateur et accéder à la page d’atténuation des risques, qui indique quels nœuds sont affectés, le niveau de criticité des risques et les mesures appropriées à prendre pour corriger les problèmes identifiés, cliquez sur le lien pour Digital Advisor.
 +
-image:cloud-insights_image27.png["Erreur : image graphique manquante"]
+image:cloud-insights_image27.png[""]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights peut afficher les tableaux de bord en temps réel des information
 
 À partir du tableau de bord du système de stockage, vous pouvez voir la dernière mise à jour des informations par le Data Collector. La figure ci-dessous en est un exemple.
 
-image:cloud-insights_image28.png["Erreur : image graphique manquante"]
+image:cloud-insights_image28.png[""]
 
 Par défaut, le tableau de bord du système de stockage affiche plusieurs graphiques interactifs qui présentent les metrics système de stockage interrogés ou à partir de chaque nœud, notamment la latence, les IOPS et le débit. La figure ci-dessous présente des exemples de ces graphiques par défaut.
 
-image:cloud-insights_image29.png["Erreur : image graphique manquante"]
+image:cloud-insights_image29.png[""]
 
 Par défaut, les graphiques affichent des informations des trois dernières heures, mais vous pouvez les définir sur un certain nombre de valeurs différentes ou sur une valeur personnalisée dans la liste déroulante située en haut à droite du tableau de bord du système de stockage. Ceci est illustré dans la figure ci-dessous.
 
-image:cloud-insights_image30.png["Erreur : image graphique manquante"]
+image:cloud-insights_image30.png[""]
 
 
 
@@ -115,21 +115,21 @@ Pour créer un tableau de bord personnalisé afin d'évaluer les ressources de s
 
 . Pour créer un tableau de bord personnalisé, placez le pointeur de la souris sur tableaux de bord dans le menu principal de Cloud Insights, puis cliquez sur + Nouveau tableau de bord dans la liste déroulante.
 +
-image:cloud-insights_image31.png["Erreur : image graphique manquante"]
+image:cloud-insights_image31.png[""]
 
 +
 La fenêtre Nouveau tableau de bord s'ouvre.
 
 . Nommez le tableau de bord et sélectionnez le type de widget utilisé pour afficher les données. Vous pouvez choisir parmi un certain nombre de types de graphique, même des notes ou des types de table pour présenter les données collectées.
 +
-image:cloud-insights_image32.png["Erreur : image graphique manquante"]
+image:cloud-insights_image32.png[""]
 
 . Choisissez des variables personnalisées dans le menu Ajouter une variable.
 +
 Cela permet de concentrer les données présentées pour afficher des facteurs plus spécifiques ou plus spécialisés.
 
 +
-image:cloud-insights_image33.png["Erreur : image graphique manquante"]
+image:cloud-insights_image33.png[""]
 
 . Pour créer un tableau de bord personnalisé, sélectionnez le type de widget que vous souhaitez utiliser, par exemple, un graphique à secteurs pour afficher l'utilisation du stockage par volume :
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png["Erreur : image graphique manquante"]
 .. Personnalisez les informations à afficher. Par défaut, cette sélection affiche les volumes de données ONTAP et liste les 10 premiers.
 .. Pour enregistrer le tableau de bord personnalisé, cliquez sur Enregistrer.
 +
-image:cloud-insights_image34.png["Erreur : image graphique manquante"]
+image:cloud-insights_image34.png[""]
 
 +
 Après avoir enregistré le widget personnalisé, le navigateur retourne à la page Nouveau tableau de bord, où il affiche le widget nouvellement créé et permet de réaliser une action interactive, telle que la modification de la période d'interrogation des données.
 
 +
-image:cloud-insights_image35.png["Erreur : image graphique manquante"]
+image:cloud-insights_image35.png[""]
 
 
 
@@ -157,11 +157,11 @@ image:cloud-insights_image35.png["Erreur : image graphique manquante"]
 [[advanced-troubleshooting]]
 === Dépannage avancé
 
-Cloud Insights permet d'appliquer des méthodes avancées de dépannage à n'importe quel environnement de stockage d'une infrastructure convergée FlexPod Datacenter. À l'aide des composants de chacune des fonctionnalités mentionnées ci-dessus : intégration d'Active IQ, tableaux de bord par défaut avec statistiques en temps réel et tableaux de bord personnalisés, les problèmes susceptibles d'apparaître sont détectés rapidement et résolus. Grâce à la liste des risques dans Active IQ, un client peut trouver des erreurs de configuration signalées qui pourraient entraîner un problème ou la détection de bogues qui ont été signalés et corrigés des versions de code, ce qui peut les résoudre. Les tableaux de bord en temps réel sur la page d'accueil de Cloud Insights permettent d'identifier des modèles de performances système qui pourraient être un indicateur précoce d'un problème en hausse et aider à le résoudre rapidement. Enfin, la possibilité de créer des tableaux de bord personnalisés permet aux clients de se concentrer sur les ressources les plus importantes de leur infrastructure et de les surveiller directement pour assurer la continuité de leurs objectifs.
+Cloud Insights permet d'appliquer des méthodes de dépannage avancées à tout environnement de stockage dans une infrastructure convergée FlexPod Datacenter. En utilisant les composants de chacune des fonctionnalités mentionnées ci-dessus : intégration de Digital Advisor, tableaux de bord par défaut avec statistiques en temps réel et tableaux de bord personnalisés, les problèmes susceptibles de survenir sont détectés précocement et résolus rapidement. En utilisant la liste des risques dans Digital Advisor, un client peut trouver les erreurs de configuration signalées susceptibles d'entraîner des problèmes, ainsi que les bogues signalés et les versions corrigées du code permettant de les résoudre. L'observation des tableaux de bord en temps réel sur la page d'accueil de Cloud Insights peut aider à découvrir des tendances dans les performances du système qui pourraient être un indicateur précoce d'un problème émergent et aider à le résoudre rapidement. Enfin, la possibilité de créer des tableaux de bord personnalisés permet aux clients de se concentrer sur les actifs les plus importants de leur infrastructure et de les surveiller directement afin de garantir qu'ils peuvent atteindre leurs objectifs de continuité d'activité.
 
 
 
 [[storage-optimization]]
 === Optimisation du stockage
 
-Outre la résolution de problèmes, Cloud Insights peut utiliser les données collectées pour optimiser le système de stockage ONTAP déployé dans une solution d'infrastructure convergée FlexPod Datacenter. Si un volume présente une latence élevée, peut-être parce que plusieurs ordinateurs virtuels exigeant des performances élevées partagent le même datastore, ces informations sont affichées dans le tableau de bord de Cloud Insights. Avec ces informations, l'administrateur de stockage peut choisir de migrer un ou plusieurs VM vers d'autres volumes, de migrer des volumes de stockage entre les niveaux d'agrégats ou entre les nœuds du système de stockage ONTAP, pour obtenir un environnement optimisé pour les performances. Les informations fournies par l'intégration de Active IQ à Cloud Insights permettent de mettre en évidence les problèmes de configuration qui entraînent des performances supérieures aux prévisions et de proposer les actions correctives recommandées qui, si elles sont mises en œuvre, peuvent résoudre les problèmes et garantir un système de stockage parfaitement réglé.
+Outre le dépannage, il est possible d'utiliser les données collectées par Cloud Insights pour optimiser le système de stockage ONTAP déployé dans une solution d'infrastructure convergée FlexPod Datacenter. Si un volume présente une latence élevée, peut-être parce que plusieurs machines virtuelles aux exigences de performance élevées partagent le même datastore, cette information est affichée sur le tableau de bord Cloud Insights. Avec ces informations, un administrateur de stockage peut choisir de migrer une ou plusieurs machines virtuelles vers d'autres volumes, de migrer des volumes de stockage entre différents niveaux d’agrégats, ou entre les nœuds du système de stockage ONTAP, ce qui permet d’optimiser les performances de l’environnement. Les informations issues de l’intégration de Digital Advisor avec Cloud Insights peuvent mettre en évidence des problèmes de configuration entraînant des performances inférieures aux attentes et fournir les actions correctives recommandées qui, si elles sont mises en œuvre, permettent de résoudre les problèmes et de garantir un système de stockage parfaitement optimisé.

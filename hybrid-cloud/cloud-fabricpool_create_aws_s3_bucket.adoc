@@ -23,7 +23,7 @@ FabricPool prend en charge la connexion d'un compartiment par agrégat, comme il
 
 Lors de la planification d'une architecture de stockage, réfléchissez à l'impact possible de la relation entre compartiment et agrégat sur les performances. De nombreux fournisseurs de magasin d'objets définissent un nombre maximal d'IOPS pris en charge au niveau du compartiment ou du conteneur. Les environnements qui requièrent des performances maximales doivent utiliser plusieurs compartiments pour réduire l'éventualité où les limites des IOPS du stockage objet pouvaient affecter les performances de plusieurs agrégats FabricPool. Il est préférable de connecter un compartiment ou un conteneur unique à tous les agrégats FabricPool d'un cluster pour des environnements qui privilégient les performances de Tier cloud.
 
-image:cloud-fabricpool_image10.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image10.png[""]
 
 
 
@@ -33,12 +33,12 @@ image:cloud-fabricpool_image10.png["Erreur : image graphique manquante"]
 . Dans la console de gestion AWS depuis la page d'accueil, entrez S3 dans la barre de recherche.
 . Sélectionnez stockage évolutif S3 dans le cloud.
 +
-image:cloud-fabricpool_image11.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image11.png[""]
 
 . Sur la page d'accueil S3, sélectionnez Créer un compartiment.
 . Entrez un nom compatible DNS et choisissez la région pour créer le compartiment.
 +
-image:cloud-fabricpool_image12.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image12.png[""]
 
 . Cliquez sur Créer pour créer le compartiment de stockage d'objets.
 

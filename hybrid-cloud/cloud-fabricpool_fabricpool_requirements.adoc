@@ -90,7 +90,7 @@ La latence de lecture d'FabricPool dépend de la connectivité au niveau cloud. 
 
 NOTE: Lorsque vous utilisez FabricPool dans des environnements à faibles performances, les exigences minimales de performance des applications client doivent rester respectées et les objectifs de délai de restauration doivent être ajustés en conséquence.
 
-image:cloud-fabricpool_image6.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image6.png[""]
 
 
 
@@ -114,7 +114,7 @@ storage aggregate object-store profiler show
 ....
 Les tiers cloud n'offrent pas des performances similaires à celles du Tier de performance (généralement Go par seconde). Même si les agrégats FabricPool peuvent facilement fournir des performances similaires aux disques SATA, ils tolèrent une latence pouvant atteindre 10 secondes et un faible débit pour les solutions de Tiering qui ne nécessitent pas de performances SATA.
 
-image:cloud-fabricpool_image7.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image7.png[""]
 
 
 
@@ -142,7 +142,7 @@ Les licences FabricPool sont disponibles en mode perpétuel ou par période (1 a
 
 Le Tiering dans le cloud s'arrête lorsque la quantité de données (capacité utilisée) stockée sur le Tier cloud atteint la capacité sous licence. Les données supplémentaires, y compris les copies SnapMirror vers les volumes utilisant la règle de hiérarchisation, ne peuvent pas être hiérarchisées tant que la capacité de licence n'est pas augmentée. Même si le Tiering s'arrête, les données restent accessibles à partir du Tier cloud. Les données inactives supplémentaires restent sur les disques SSD jusqu'à ce que la capacité sous licence augmente.
 
-Une licence FabricPool gratuite de 10 To basée sur une durée de validité est incluse lors de l'achat d'un nouveau cluster ONTAP 9.5 ou version ultérieure, même si des coûts de support supplémentaires peuvent s'appliquer. Les licences FabricPool (y compris la capacité supplémentaire pour les licences existantes) peuvent être achetées par incréments de 1 To.
+FabricPool licenses (y compris la capacité supplémentaire pour les licences existantes) peuvent être achetées par incréments de 1 To.
 
 Une licence FabricPool ne peut être supprimée que d'un cluster ne contenant aucun agrégat FabricPool.
 

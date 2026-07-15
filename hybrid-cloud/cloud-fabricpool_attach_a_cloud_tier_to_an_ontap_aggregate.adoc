@@ -31,13 +31,13 @@ Pour rattacher un Tier cloud à un agrégat via OnCommand System Manager, effect
 . Lancez OnCommand System Manager.
 . Cliquez sur applications et niveaux.
 +
-image:cloud-fabricpool_image14.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image14.png[""]
 
 . Cliquez sur niveaux de stockage.
 . Cliquer sur un agrégat.
 . Cliquez sur actions et sélectionnez attacher Cloud Tier.
 +
-image:cloud-fabricpool_image15.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image15.png[""]
 
 . Sélectionnez un Tier cloud.
 . Afficher et mettre à jour les règles de Tiering des volumes sur l'agrégat (facultatif). Par défaut, la règle de Tiering du volume est définie comme Snapshot uniquement.

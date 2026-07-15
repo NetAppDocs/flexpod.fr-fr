@@ -40,7 +40,7 @@ La procédure suivante décrit en détail la méthode de connexion à l'interfac
 . Dans le menu principal, sélectionnez l'onglet serveur.
 . Cliquez sur lancer la console KVM.
 +
-image:express-c-series-aff220-deploy_image21.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image21.png[""]
 
 . Dans la console KVM virtuelle, sélectionnez l'onglet Média virtuel.
 . Sélectionnez carte CD/DVD.
@@ -83,7 +83,7 @@ Le programme d'installation se charge. Cette opération prend plusieurs minutes.
 . Après avoir lu le contrat de licence de l'utilisateur final, acceptez-le et poursuivez l'installation en appuyant sur F11.
 . Sélectionnez le LUN NetApp précédemment configuré comme disque d'installation pour ESXi, et appuyez sur entrée pour poursuivre l'installation.
 +
-image:express-c-series-aff220-deploy_image22.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image22.png[""]
 
 . Sélectionnez la disposition de clavier appropriée et appuyez sur entrée.
 . Saisissez et confirmez le mot de passe racine, puis appuyez sur entrée.
@@ -112,7 +112,7 @@ La procédure suivante décrit comment ajouter le réseau de gestion pour chaque
 NOTE: Sélectionnez les ports qui correspondent à eth0 et eth1 dans CIMC.
 
 +
-image:express-c-series-aff220-deploy_image23.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image23.png[""]
 
 . Sélectionnez VLAN (facultatif) et appuyez sur entrée.
 . Saisissez l'ID du VLAN `\<<mgmt_vlan_id>>`. Appuyez sur entrée.
@@ -211,7 +211,7 @@ Vous avez besoin des informations du tableau suivant pour configurer chaque hôt
 . Sélectionnez réseau sur la gauche.
 . Sur la droite, sélectionnez l'onglet commutateurs virtuels.
 +
-image:express-c-series-aff220-deploy_image24.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image24.png[""]
 
 . Cliquez sur iSciBootvSwitch.
 . Sélectionnez Modifier les paramètres.
@@ -242,7 +242,7 @@ NOTE: Vmnic2 et vmnic3 sont utilisés pour le démarrage iSCSI dans cette config
 ** Entrez `\<<var_hosta_iscsib_mask>>` Pour masque de sous-réseau.
 ** Cliquez sur Créer .
 +
-image:express-c-series-aff220-deploy_image25.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image25.png[""]
 
 +
 
@@ -262,18 +262,18 @@ Pour configurer les chemins d'accès multiples iSCSI sur les hôtes ESXi, procé
 . Sélectionnez stockage dans le volet de navigation de gauche. Cliquez sur adaptateurs.
 . Sélectionnez la carte logicielle iSCSI et cliquez sur configurer iSCSI.
 +
-image:express-c-series-aff220-deploy_image26.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image26.png[""]
 
 . Sous cibles dynamiques, cliquez sur Ajouter une cible dynamique.
 +
-image:express-c-series-aff220-deploy_image27.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image27.png[""]
 
 . Saisissez l'adresse IP `iscsi_lif01a`.
 +
 ** Répétez l'opération avec les adresses IP `iscsi_lif01b`, `iscsi_lif02a`, et `iscsi_lif02b`.
 ** Cliquez sur Enregistrer la configuration.
 +
-image:express-c-series-aff220-deploy_image28.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image28.png[""]
 
 
 
@@ -290,7 +290,7 @@ NOTE: Vous pouvez trouver les adresses IP de la LIF iSCSI en exécutant la comma
 . Dans le volet de navigation de gauche, sélectionnez réseau.
 . Sélectionnez vSwitch0.
 +
-image:express-c-series-aff220-deploy_image29.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image29.png[""]
 
 . Sélectionnez Modifier les paramètres.
 . Remplacez la MTU par 9000.
@@ -305,7 +305,7 @@ image:express-c-series-aff220-deploy_image29.png["Erreur : image graphique manqu
 . Dans le volet de navigation de gauche, sélectionnez réseau.
 . Cliquez avec le bouton droit de la souris sur l'onglet groupes de ports.
 +
-image:express-c-series-aff220-deploy_image30.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image30.png[""]
 
 . Cliquez avec le bouton droit de la souris sur réseau VM et sélectionnez Modifier. Définissez l'ID du VLAN sur `\<<var_vm_traffic_vlan>>`.
 . Cliquez sur Ajouter un groupe de ports.
@@ -318,7 +318,7 @@ image:express-c-series-aff220-deploy_image30.png["Erreur : image graphique manqu
 
 . Cliquez sur l'onglet VMkernel NIC.
 +
-image:express-c-series-aff220-deploy_image31.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image31.png[""]
 
 . Sélectionnez Ajouter une carte réseau VMkernel.
 +
@@ -332,7 +332,7 @@ image:express-c-series-aff220-deploy_image31.png["Erreur : image graphique manqu
 ** Entrez `\<<var_hosta_nfs_mask>>` Pour masque de sous-réseau.
 ** Cliquez sur Créer .
 +
-image:express-c-series-aff220-deploy_image32.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image32.png[""]
 
 
 
@@ -349,7 +349,7 @@ image:express-c-series-aff220-deploy_image32.png["Erreur : image graphique manqu
 .. Entrez `\<<var_hosta_vmotion_mask>>` Pour masque de sous-réseau.
 .. Assurez-vous que la case vMotion est cochée après les paramètres IPv4.
 +
-image:express-c-series-aff220-deploy_image33.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image33.png[""]
 
 +
 
@@ -367,11 +367,11 @@ Les premiers datastores à monter sont le datastore infra_datastore_1 pour machi
 
 . Cliquez sur stockage dans le volet de navigation de gauche, puis sur Nouveau datastore.
 +
-image:express-c-series-aff220-deploy_image34.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image34.png[""]
 
 . Sélectionnez Mount NFS datastore.
 +
-image:express-c-series-aff220-deploy_image35.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image35.png[""]
 
 . Entrez ensuite les informations suivantes dans la page Détails du montage NFS :
 +
@@ -401,14 +401,14 @@ Pour configurer le protocole NTP pour un hôte ESXi, procédez comme suit :
 
 . Cliquez sur gérer dans le volet de navigation de gauche. Sélectionnez système dans le volet de droite, puis cliquez sur heure et date.
 +
-image:express-c-series-aff220-deploy_image36.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image36.png[""]
 
 . Sélectionnez utiliser le protocole d'heure du réseau (Activer le client NTP).
 . Sélectionnez Démarrer et Arrêter avec l'hôte comme stratégie de démarrage du service NTP.
 . Entrez `\<<var_ntp>>` En tant que serveur NTP. Vous pouvez définir plusieurs serveurs NTP.
 . Cliquez sur Enregistrer.
 +
-image:express-c-series-aff220-deploy_image37.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image37.png[""]
 
 
 
@@ -421,11 +421,11 @@ Ces étapes fournissent des détails sur le déplacement de l'emplacement du fic
 
 . Cliquez sur gérer dans le volet de navigation de gauche. Sélectionnez système dans le volet de droite, puis cliquez sur Permuter.
 +
-image:express-c-series-aff220-deploy_image38.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image38.png[""]
 
 . Cliquez sur Modifier les paramètres. Sélectionnez infra_swap dans les options datastore.
 +
-image:express-c-series-aff220-deploy_image39.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image39.png[""]
 
 . Cliquez sur Enregistrer.
 
@@ -480,7 +480,7 @@ Value of HardwareAcceleratedMove is 1
 . Installez le plug-in sur l'hôte ESXi à l'aide de la CLI ESX.
 . Redémarrez l'hôte ESXI.
 +
-image:express-c-series-aff220-deploy_image40.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image40.png[""]
 
 
 

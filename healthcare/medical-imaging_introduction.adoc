@@ -103,7 +103,7 @@ Le support coopératif FlexPod a un atout précieux si votre établissement de s
 
 
 
-image:medical-imaging_image2.png["Erreur : image graphique manquante"]
+image:medical-imaging_image2.png[""]
 
 
 

@@ -53,7 +53,7 @@ Pour modifier la règle de hiérarchisation d'un volume à l'aide de OnCommand S
 . Sélectionnez la règle de Tiering à appliquer au volume.
 . Cliquez sur Enregistrer.
 +
-image:cloud-fabricpool_image16.png["Erreur : image graphique manquante"]
+image:cloud-fabricpool_image16.png[""]
 
 
 

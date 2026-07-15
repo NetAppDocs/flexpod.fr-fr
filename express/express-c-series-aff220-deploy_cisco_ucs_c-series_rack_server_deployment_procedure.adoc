@@ -48,7 +48,7 @@ NOTE: La version CIMC utilisée dans cette validation est CIMC 3.1.3(g).
 . Reliez le dongle (KVM) du clavier, de la vidéo et de la souris Cisco (fourni avec le serveur) au port KVM situé à l'avant du serveur. Branchez un moniteur VGA et un clavier USB sur les ports de dongle KVM appropriés.
 . Mettez le serveur sous tension et appuyez sur F8 lorsque vous êtes invité à entrer dans la configuration CIMC.
 +
-image:express-c-series-aff220-deploy_image8.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image8.png[""]
 
 . Dans l'utilitaire de configuration de CIMC, définissez les options suivantes :
 +
@@ -71,7 +71,7 @@ image:express-c-series-aff220-deploy_image8.png["Erreur : image graphique manqua
 *** Redondance des cartes réseau
 *** Aucune : [x]
 +
-image:express-c-series-aff220-deploy_image9.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image9.png[""]
 
 
 
@@ -93,7 +93,7 @@ image:express-c-series-aff220-deploy_image9.png["Erreur : image graphique manqua
 *** Propriétés du port : utilisez les valeurs par défaut.
 *** Profils de port : laisser désactivé.
 +
-image:express-c-series-aff220-deploy_image10.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image10.png[""]
 
 
 
@@ -167,7 +167,7 @@ Pour définir la configuration de l'ordre de démarrage, procédez comme suit :
 . Dans la fenêtre du navigateur de l'interface CIMC, cliquez sur l'onglet serveur et sélectionnez BIOS.
 . Cliquez sur configurer l'ordre de démarrage, puis sur OK.
 +
-image:express-c-series-aff220-deploy_image11.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image11.png[""]
 
 . Configurez les périphériques suivants en cliquant sur le périphérique sous Ajouter un périphérique de démarrage et en accédant à l'onglet Avancé.
 +
@@ -202,7 +202,7 @@ image:express-c-series-aff220-deploy_image11.png["Erreur : image graphique manqu
 . Cliquez sur Ajouter un périphérique.
 . Cliquez sur Enregistrer les modifications, puis sur Fermer.
 +
-image:express-c-series-aff220-deploy_image12.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image12.png[""]
 
 . Redémarrez le serveur pour démarrer avec votre nouvel ordre de démarrage.
 
@@ -219,7 +219,7 @@ Procédez comme suit si votre serveur C-Series contient un contrôleur RAID. Auc
 . Faites défiler vers le bas jusqu'à PCIe Slot:HBA option ROM.
 . Si la valeur n'est pas déjà désactivée, définissez-la sur Désactivé.
 +
-image:express-c-series-aff220-deploy_image13.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image13.png[""]
 
 
 
@@ -244,7 +244,7 @@ Les étapes de configuration suivantes concernent le Cisco VIC 1387 pour l'amor�
 ** Mode VLAN : TRUNK
 ** Activer le démarrage PXE : vérifier
 +
-image:express-c-series-aff220-deploy_image14.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image14.png[""]
 
 
 
@@ -258,7 +258,7 @@ image:express-c-series-aff220-deploy_image14.png["Erreur : image graphique manqu
 
 . Sélectionnez le vNIC `iSCSI-vNIC-A` sur la gauche.
 +
-image:express-c-series-aff220-deploy_image15.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image15.png[""]
 
 . Sous Propriétés de démarrage iSCSI, entrez les détails de l'initiateur :
 +
@@ -267,7 +267,7 @@ image:express-c-series-aff220-deploy_image15.png["Erreur : image graphique manqu
 ** Masque de sous-réseau : \<<var_esxi_hostA_iscsiA_mask>>
 ** Passerelle : \<<var_esxi_hostA_iscsiA_Gateway>>
 +
-image:express-c-series-aff220-deploy_image16.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image16.png[""]
 
 
 
@@ -291,7 +291,7 @@ Vous pouvez obtenir le numéro IQN de stockage en exécutant le `vserver iscsi s
 NOTE: Assurez-vous d'enregistrer les noms IQN pour chaque vNIC. Vous en avez besoin pour une étape ultérieure.
 
 +
-image:express-c-series-aff220-deploy_image17.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image17.png[""]
 
 
 
@@ -339,16 +339,16 @@ NOTE: Assurez-vous d'enregistrer les noms IQN pour chaque vNIC. Vous en avez bes
 . Dans la fenêtre du navigateur de l'interface CIMC, cliquez sur Inventaire, puis sur cartes Cisco VIC dans le volet droit.
 . Sous cartes d'adaptateur, sélectionnez Cisco UCS VIC 1387, puis les vNIC en dessous.
 +
-image:express-c-series-aff220-deploy_image18.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image18.png[""]
 
 . Sélectionnez eth0, puis cliquez sur Propriétés.
 . Définissez la MTU sur 9000. Cliquez sur Save Changes.
 +
-image:express-c-series-aff220-deploy_image19.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image19.png[""]
 
 . Répétez les étapes 3 et 4 pour eth1, en vérifiant que le port de liaison montante est défini sur `1` pour eth1.
 +
-image:express-c-series-aff220-deploy_image20.png["Erreur : image graphique manquante"]
+image:express-c-series-aff220-deploy_image20.png[""]
 
 +
 

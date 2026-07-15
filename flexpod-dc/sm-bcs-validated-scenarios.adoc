@@ -44,11 +44,11 @@ Une fois la relation de groupe de cohérence SM-BC configurée et les LUN en mir
 
 La figure suivante illustre les chemins qu'un hôte ESXi peut prendre pour accéder à une LUN, par exemple LUN 0. Comme la LUN est connectée au site A contrôleur 01, seuls les deux chemins qui accèdent directement à la LUN via ce contrôleur sont actifs/optimisés et les six chemins restants sont actifs/non optimisés.
 
-image:sm-bcs-image47.png["Erreur : image graphique manquante"]
+image:sm-bcs-image47.png[""]
 
 La capture d'écran suivante des informations sur le chemin du périphérique de stockage montre comment l'hôte ESXi voit les deux types de chemins de périphérique. Les deux chemins actifs/optimisés sont indiqués comme ayant `active (I/O)` l'état du chemin, alors que les six chemins actifs/non optimisés sont affichés uniquement comme `active`. Notez également que la colonne cible affiche les deux cibles iSCSI et les adresses IP LIF iSCSI respectives pour obtenir les cibles.
 
-image:sm-bcs-image48.png["Erreur : image graphique manquante"]
+image:sm-bcs-image48.png[""]
 
 Lorsqu'un des contrôleurs de stockage est en panne pour cause de maintenance ou de mise à niveau, les deux chemins qui atteignent le contrôleur de panne ne sont plus disponibles et affichent le chemin d'accès à `dead` à la place.
 
@@ -67,11 +67,11 @@ Il est également possible d'utiliser le protocole NFS et les datastores NFS pou
 
 La capture d'écran suivante montre que les hôtes sont configurés pour monter des datastores iSCSI à partir des deux sites.
 
-image:sm-bcs-image49.png["Erreur : image graphique manquante"]
+image:sm-bcs-image49.png[""]
 
 Vous pouvez migrer des disques de machines virtuelles entre des datastores iSCSI disponibles depuis les deux sites, comme le montre la figure suivante. Pour considérations de performances, il est optimal de disposer de serveurs virtuels qui utilisent le stockage de leur cluster de stockage local afin de réduire les latences d'E/S des disques. Ceci est particulièrement vrai lorsque les deux sites sont situés à certaines distances, en raison de la latence de distance de aller-retour physique d'environ 1 ms par 100 km de distance.
 
-image:sm-bcs-image50.png["Erreur : image graphique manquante"]
+image:sm-bcs-image50.png[""]
 
 Des tests de vMotion d'machines virtuelles sur un hôte différent au niveau du même site, ainsi que sur plusieurs sites ont été réalisés et ont abouti. Après avoir migré manuellement une machine virtuelle sur plusieurs sites, la règle d'affinité VM/hôte s'active et retransfère la machine virtuelle au groupe où elle appartient dans la condition normale.
 
@@ -87,25 +87,25 @@ Pour lancer un basculement manuel des services de données de stockage du site A
 . Accédez à l'écran protection > relations pour confirmer que l'état de la relation de groupe de cohérence est `In Sync`. S'il se trouve toujours dans le `Synchronizing` attendez que l'état devienne `In Sync` avant d'effectuer un basculement.
 . Développez les points en regard du nom de la source et cliquez sur basculement.
 +
-image:sm-bcs-image51.png["Erreur : image graphique manquante"]
+image:sm-bcs-image51.png[""]
 
 . Confirmer le basculement pour que l'action démarre.
 +
-image:sm-bcs-image52.png["Erreur : image graphique manquante"]
+image:sm-bcs-image52.png[""]
 
 
 
 Peu de temps après le lancement du basculement des deux groupes de cohérence, `cg_esxi_a` et `cg_infra_datastore_a`, Sur l'interface graphique System Manager du site B, les E/S du site A servant à traiter les deux groupes de cohérence déplacés vers le site B. Ainsi, les E/S sur le site A sont considérablement réduites comme indiqué sur le site A volet performances de System Manager.
 
-image:sm-bcs-image53.png["Erreur : image graphique manquante"]
+image:sm-bcs-image53.png[""]
 
 Par contre, le volet performances du tableau de bord du site B System Manager affiche une augmentation significative des IOPS, en raison de la transmission des E/S supplémentaires transférées du site A à environ 130 000 IOPS, De plus, nous avons atteint un débit d'environ 1 Gbit/s, tout en maintenant une latence d'E/S inférieure à la milliseconde.
 
-image:sm-bcs-image54.png["Erreur : image graphique manquante"]
+image:sm-bcs-image54.png[""]
 
 Grâce à la migration transparente des E/S du site A vers le site B, les contrôleurs de stockage du site A peuvent désormais être mis en service afin de planifier la maintenance. Une fois le travail de maintenance ou le test terminé et que le cluster de stockage d'un site est réexécuté et opérationnel, vérifiez et attendez que l'état de protection du groupe de cohérence soit revenir à `In sync` Avant d'effectuer un basculement pour renvoyer les E/S de basculement du site B vers le site A. Notez que plus un site est arrêté pour les opérations de maintenance ou de test, plus il faut de temps pour synchroniser les données et que le groupe de cohérence est renvoyé au `In sync` état.
 
-image:sm-bcs-image55.png["Erreur : image graphique manquante"]
+image:sm-bcs-image55.png[""]
 
 
 
@@ -114,7 +114,7 @@ image:sm-bcs-image55.png["Erreur : image graphique manquante"]
 
 Un basculement de stockage non planifié peut se produire en cas d'incident réel ou lors d'une simulation d'incident. Par exemple, consultez la figure suivante dans laquelle le système de stockage sur le site A subit une panne de courant, un basculement de stockage non planifié est déclenché et les services de données pour les LUN du site A, protégés par les relations SM-BC, continuent à partir du site B.
 
-image:sm-bcs-image56.png["Erreur : image graphique manquante"]
+image:sm-bcs-image56.png[""]
 
 Pour simuler un incident de stockage au niveau du site A, les deux contrôleurs de stockage du site A peuvent être mis hors tension en mettant physiquement l'interrupteur afin de mettre fin à l'alimentation des contrôleurs, ou en utilisant la commande de gestion de l'alimentation système des processeurs de service du contrôleur de stockage pour mettre les contrôleurs hors tension.
 
@@ -124,21 +124,21 @@ Du point de vue des applications, les services de données font une pause brève
 
 Lors des tests de validation, l'outil IOMeter installé sur les machines virtuelles des deux sites génère des E/S dans leurs datastores locaux. Après la mise hors tension du site D'Un cluster, les E/S sont suspendues brièvement et ont repris ensuite. Reportez-vous aux deux figures suivantes pour les tableaux de bord du cluster de stockage sur le site A et le site B, respectivement avant le sinistre qui montrent environ 80 000 IOPS et un débit de 600 Mo/s sur chaque site.
 
-image:sm-bcs-image57.png["Erreur : image graphique manquante"]
+image:sm-bcs-image57.png[""]
 
-image:sm-bcs-image58.png["Erreur : image graphique manquante"]
+image:sm-bcs-image58.png[""]
 
 Après la mise hors tension des contrôleurs de stockage sur le site A, nous pouvons vérifier que les E/S du contrôleur de stockage du site B ont nettement augmenté pour fournir des services de données supplémentaires pour le compte du site A (voir la figure suivante). En outre, l'interface graphique des machines virtuelles IOMeter a également démontré la continuité des E/S malgré la panne du cluster de stockage sur le site. Notez que si d'autres datastores sont sauvegardés par des LUN non protégées par des relations SM-BC, ces datastores ne seront plus accessibles en cas d'incident de stockage. Par conséquent, il est important d'évaluer les besoins métier des diverses données d'application et de les placer correctement dans des datastores protégés par des relations SM-BC pour assurer la continuité de l'activité.
 
-image:sm-bcs-image59.png["Erreur : image graphique manquante"]
+image:sm-bcs-image59.png[""]
 
 Le site D'Un cluster ne fonctionne pas, mais les relations des groupes cohérents s'affichent `Out of sync` état comme indiqué dans la figure suivante. Une fois que le système est de nouveau sous tension pour les contrôleurs de stockage du site A, le cluster de stockage démarre et la synchronisation des données entre le site A et le site B se produit automatiquement.
 
-image:sm-bcs-image60.png["Erreur : image graphique manquante"]
+image:sm-bcs-image60.png[""]
 
 Avant de renvoyer les services de données du site B vers le site A, vous devez consulter le site A System Manager et vérifier que les relations SM-BC sont bien établies et que leur état est de nouveau synchronisé. Après avoir confirmé que les groupes de cohérence sont en cours de synchronisation, une opération de basculement manuel peut être lancée pour renvoyer les services de données dans les relations de groupe de cohérence vers le site A.
 
-image:sm-bcs-image61.png["Erreur : image graphique manquante"]
+image:sm-bcs-image61.png[""]
 
 
 
@@ -155,7 +155,7 @@ Pour préparer un site pour la maintenance planifiée des sites, une combinaison
 
 Avant d'effectuer la migration planifiée, mettez à jour la règle d'affinité VM/hôte afin que les machines virtuelles actuellement exécutées sur le site soient automatiquement migrées hors du site en cours de maintenance. La capture d'écran suivante montre un exemple de modification de la règle d'affinité VM/hôte du site A pour que les machines virtuelles migrent automatiquement du site A vers le site B. Au lieu de spécifier que les VM doivent maintenant s'exécuter sur le site B, il est également possible de désactiver temporairement la règle d'affinité pour que les VM puissent être migrées manuellement.
 
-image:sm-bcs-image62.png["Erreur : image graphique manquante"]
+image:sm-bcs-image62.png[""]
 
 Une fois les ordinateurs virtuels et les services de stockage migrés, vous pouvez mettre hors tension les serveurs, les contrôleurs de stockage, les tiroirs disques et les commutateurs, et réaliser les activités de maintenance du site nécessaires. Une fois la maintenance du site terminée et l'instance FlexPod renvoyée, vous pouvez modifier l'affinité des groupes d'hôtes pour que les VM reprennent leur site d'origine. Ensuite, vous devez modifier la règle d'affinité VM/site hôte "doit être exécuté sur des hôtes dans un groupe" en "devrait s'exécuter sur des hôtes dans un groupe" afin que les machines virtuelles soient autorisées à fonctionner sur des hôtes de l'autre site en cas d'incident. Pour les tests de validation, toutes les machines virtuelles ont été migrées avec succès vers l'autre site et les services de données se sont poursuivis sans problèmes après avoir effectué un basculement pour les relations SM-BC.
 
@@ -163,13 +163,13 @@ Pour la simulation d'incident imprévue à l'échelle du site, les serveurs et l
 
 La capture d'écran suivante montre que l'interface de ligne de commande du processeur de service des contrôleurs de stockage a été utilisée pour mettre hors tension le site D'Un cluster brusquement afin de simuler un incident de stockage sur le site.
 
-image:sm-bcs-image63.png["Erreur : image graphique manquante"]
+image:sm-bcs-image63.png[""]
 
 Les tableaux de bord des machines virtuelles de stockage des clusters, tels que capturés par l'outil NetApp Harvest Data et affichés dans le tableau de bord Grafana dans l'outil de surveillance NAbox, sont présentés dans les deux captures d'écran suivantes. Comme l'indique les graphiques à droite des IOPS et des débits, le cluster du site B récupère les charges de travail de stockage du cluster immédiatement après la panne du site A.
 
-image:sm-bcs-image64.png["Erreur : image graphique manquante"]
+image:sm-bcs-image64.png[""]
 
-image:sm-bcs-image65.png["Erreur : image graphique manquante"]
+image:sm-bcs-image65.png[""]
 
 
 
@@ -182,25 +182,25 @@ Dans le cadre de la validation des charges de travail stratégiques pour la solu
 
 L'outil de test de la base de données HammerDB a été configuré pour les tests avec la charge de travail TPROC-C de Microsoft SQL Server. Pour les configurations de construction de schéma, les options ont été mises à jour pour utiliser 100 entrepôts avec 10 utilisateurs virtuels comme indiqué dans la capture d'écran suivante.
 
-image:sm-bcs-image66.png["Erreur : image graphique manquante"]
+image:sm-bcs-image66.png[""]
 
 Une fois les options de création de schéma mises à jour, le processus de création de schéma a démarré. Quelques minutes plus tard, une erreur simulée de cluster de stockage du site B a été introduite en mettant hors tension les deux nœuds du cluster de stockage AFF A250 à environ la même heure à l'aide des commandes CLI du processeur système.
 
 Après une courte pause des transactions de base de données, le basculement automatique pour la correction des sinistres a débuté et les transactions ont repris. La capture d'écran ci-dessous montre la capture d'écran du compteur de transactions HammerDB. Étant donné que la base de données de Microsoft SQL Server réside généralement dans le cluster de stockage du site B, la transaction a été interrompue brièvement lorsque le stockage sur le site B s'est arrêté, puis reprise après le basculement automatisé.
 
-image:sm-bcs-image67.png["Erreur : image graphique manquante"]
+image:sm-bcs-image67.png[""]
 
 Les metrics du cluster de stockage ont été capturées à l'aide de l'outil NAbox et de l'outil de surveillance de récolte NetApp installé. Les résultats sont affichés dans les tableaux de bord prédéfinis de Grafana pour la machine virtuelle de stockage et autres objets de stockage. Le tableau de bord fournit des schémas de latence, de débit et d'IOPS, ainsi que des détails supplémentaires avec des statistiques de lecture et d'écriture séparées pour le site B et le site A.
 
 Cette capture d'écran présente le tableau de bord des performances NAbox Grafana pour cluster de stockage site B.
 
-image:sm-bcs-image68.png["Erreur : image graphique manquante"]
+image:sm-bcs-image68.png[""]
 
 Le cluster de stockage du site B était d'environ 100 000 IOPS avant l'introduction de l'incident. Ensuite, les mesures de performances ont montré une baisse nette de zéro à droite des graphiques dus à l'incident. Comme le cluster de stockage du site B était en panne, aucun élément ne pouvait être collecté à partir du cluster du site B après l'introduction du sinistre.
 
 À l'inverse, les IOPS du cluster de stockage du site A ont récupéré les charges de travail supplémentaires depuis le site B après le basculement automatisé. La charge de travail supplémentaire est facilement affichée à droite des graphiques IOPS et débit dans la capture d'écran suivante, qui montre le tableau de bord des performances de NAbox Grafana pour site De cluster de stockage.
 
-image:sm-bcs-image69.png["Erreur : image graphique manquante"]
+image:sm-bcs-image69.png[""]
 
 Le scénario de test d'incident de stockage ci-dessus a confirmé que la charge de travail de Microsoft SQL Server peut survivre à une panne complète du cluster de stockage sur le site B où réside la base de données. Une fois l'incident détecté et le basculement effectué, l'application a utilisé de manière transparente les services de données du site De cluster De stockage.
 
