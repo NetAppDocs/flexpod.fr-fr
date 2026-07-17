@@ -24,7 +24,7 @@ Les contrôleurs de stockage NetApp constituent la base du stockage de l'archite
 Des contrôleurs redondants des séries AFF, ASA ou FAS sont requis dans l’architecture FlexPod Express. Les contrôleurs exécutent le logiciel ONTAP. Lors de la commande des contrôleurs de stockage, la version logicielle souhaitée peut être préinstallée sur les contrôleurs. Pour ONTAP, le cluster peut être déployé soit avec une paire de commutateurs d’interconnexion de cluster, soit dans une configuration de cluster sans commutateur.
 
 
-NOTE: La configuration sans commutateur n'est prise en charge que pour une configuration à deux nœuds. Les commutateurs d'interconnexion de cluster sont nécessaires pour les configurations comportant plus de 4 nœuds et sont optionnels pour une configuration à deux nœuds.
+NOTE: La configuration sans commutateur n'est prise en charge que pour une configuration à deux nœuds. Les commutateurs d'interconnexion de cluster sont nécessaires pour les configurations comportant quatre nœuds ou plus, et sont optionnels pour une configuration à deux nœuds.
 
 Différentes options et configurations sont disponibles selon la plateforme de stockage choisie. Pour plus d'informations sur ces composants supplémentaires, veuillez contacter votre représentant commercial.
 
