@@ -128,7 +128,7 @@ Les tableaux ci-dessous répertorient les options de châssis et de nœuds de ca
 [[cisco-ucs-c-series-rack-server-options]]
 == Options de serveurs en rack Cisco UCS C-Series
 
-Les serveurs rack Cisco UCS série C sont disponibles en versions 1U et 2U, avec différentes options de processeur, de mémoire et d'E/S. Les références indiquées dans le tableau ci-dessous correspondent aux serveurs de base. Elles n'incluent pas les processeurs, la mémoire, les disques, ni les cartes Peripheral Component Interconnect Express (PCIe). De multiples options de configuration sont disponibles et sont prises en charge dans l'architecture FlexPod.
+Les serveurs rack Cisco UCS série C sont disponibles en versions une, deux et quatre unités de rack (RU), avec différentes options de processeur, de mémoire et d’E/S. Les références indiquées dans le tableau ci-dessous correspondent aux serveurs de base. Elles n’incluent pas les processeurs, la mémoire, les disques ni les cartes Peripheral Component Interconnect Express (PCIe). De multiples options de configuration sont disponibles et sont prises en charge dans l’architecture FlexPod.
 
 Le tableau suivant répertorie les options des serveurs en rack Cisco UCS C-Series.
 

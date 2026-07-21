@@ -27,4 +27,4 @@ Cette section décrit les recommandations de version logicielle pour FlexPod Exp
 
 
 
-NOTE: Tous les composants logiciels doivent être répertoriés et pris en charge dans le http://support.netapp.com/matrix/["NetApp IMT"^], tous les composants matériels NetApp et les versions ONTAP doivent être répertoriés et pris en charge sur https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^], et tous les composants matériels Cisco doivent être répertoriés et pris en charge sur https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
+NOTE: Tous les composants logiciels doivent être répertoriés et pris en charge dans le https://imt.netapp.com/imt/#welcome["NetApp IMT"^], tous les composants matériels NetApp et les versions ONTAP doivent être répertoriés et pris en charge sur https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^], et tous les composants matériels Cisco doivent être répertoriés et pris en charge sur https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
