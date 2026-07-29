@@ -235,29 +235,19 @@ Les contrôleurs de stockage NetApp AFF C-Series d'entrée de gamme sont pris en
 |===
 
 
-[[netapp-asa-a-series]]
-=== NetApp ASA A-Series
+[[netapp-asa]]
+=== NetApp ASA
 
-Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA série A sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA Spécifications techniques de la série A"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme répertoriée dans le tableau suivant pour obtenir des informations détaillées sur un modèle ASA particulier.
+Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA Spécifications techniques"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau suivant pour obtenir des informations détaillées sur un modèle ASA particulier.
 
 |===
-| Composant | NetApp Documentation de la plateforme de contrôleurs ASA A-Series 
+| Composant | NetApp Documentation de la plateforme de contrôleur ASA 
 
 
 | NetApp ASA A20 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a20-key-specifications.html["Caractéristiques principales de l'ASA A20"] 
 
 
 | NetApp ASA A30 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a30-key-specifications.html["Caractéristiques principales de l'ASA A30"] 
-|===
-
-
-[[netapp-asa-c-series]]
-=== NetApp ASA C-Series
-
-Les modèles d'entrée de gamme des contrôleurs de stockage NetApp ASA série C sont pris en charge pour une utilisation dans FlexPod Express. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA Spécifications techniques de la série C"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme répertoriée dans le tableau suivant pour obtenir des informations détaillées sur un modèle ASA particulier.
-
-|===
-| Composant | NetApp Documentation de la plateforme de contrôleurs ASA C-Series 
 
 
 | NetApp ASA C30 | https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["Caractéristiques principales de l'ASA C30"] 
