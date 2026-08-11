@@ -23,7 +23,7 @@ Cette solution tire parti de deux des derniers produits NetApp : les logiciels N
 [[aff-a220-system]]
 === Système AFF A220
 
-Pour plus d'informations sur le système matériel AFF A220, consultez le https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["Page d'accueil de AFF A-Series"^].
+Pour plus d'informations sur le système matériel AFF A220, consultez le https://www.netapp.com/aff-a-series/["Page d'accueil de AFF A-Series"^].
 
 
 
@@ -40,7 +40,7 @@ De plus, le partitionnement données-racines peut être utilisé sur le système
 
 image:express-c-series-aff220-design_image6.png[""]
 
-Il s'agit de quelques fonctionnalités clés qui complètent la solution FlexPod Express. Pour plus de détails sur les fonctions et fonctionnalités supplémentaires de ONTAP 9.4, consultez le https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["Fiche technique sur le logiciel de gestion des données ONTAP 9"^]. Voir aussi NetApp http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^] , qui a été mis à jour pour inclure ONTAP 9.4.
+Voici quelques fonctionnalités clés qui complètent la solution FlexPod Express. Pour plus de détails sur les fonctionnalités supplémentaires et la fonctionnalité d’ONTAP 9.4, consultez la  https://www.netapp.com/pdf.html?item=/media/7413-ds-3231-ontap-unified-data-storage-management.pdf["Fiche technique sur le logiciel de gestion des données ONTAP 9"^]. Consultez également la NetApp http://docs.netapp.com/ontap-9/index.jsp["Centre de documentation ONTAP 9"^], qui a été mise à jour pour inclure ONTAP 9.4.
 
 
 

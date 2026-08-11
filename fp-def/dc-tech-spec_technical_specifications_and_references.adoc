@@ -451,7 +451,7 @@ Tous les modèles actuels de contrôleurs de stockage NetApp AFF ASA A-Series so
 [[netapp-disk-shelves]]
 === Tiroirs disques NetApp
 
-Les spécifications techniques des tiroirs disques NetApp incluent la taille, le nombre de disques par boîtier et les modules d'E/S de tiroir. Cette documentation est disponible dans le tableau suivant. Pour plus d'informations, reportez-vous à la section http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Spécifications techniques des tiroirs disques et des supports de stockage NetApp"^] et le https://hwu.netapp.com/["NetApp Hardware Universe"^].
+Les spécifications techniques des baies de disques NetApp comprennent le format, le nombre de disques par baie et les modules d'E/S ; cette documentation se trouve dans le tableau suivant. Pour plus d'informations, consultez la  https://www.netapp.com/data-storage/disk-shelves-storage-media/["Spécifications techniques des tiroirs disques et des supports de stockage NetApp"^] et la  https://hwu.netapp.com/["NetApp Hardware Universe"^].
 
 |===
 | Composant | Documentation du tiroir disque FAS/AFF NetApp 

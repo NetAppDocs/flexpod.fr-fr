@@ -16,7 +16,7 @@ summary: Pour configurer la mise en cluster de VMware vCenter Server 6.7 et vSph
 [role="lead"]
 Pour configurer VMware vCenter Server 6.7 et la mise en cluster vSphere, procédez comme suit :
 
-. Accédez à `https://<<FQDN or IP of vCenter>>/vsphere-client/`.
+. Accédez à `+https://<<FQDN or IP of vCenter>>/vsphere-client/+`.
 . Cliquez sur lancer vSphere client.
 . Connectez-vous à l'aide du nom d'utilisateur mailto:administrator@vspehre.lockup[Administrator^]@vsphere.local et du mot de passe SSO que vous avez saisi lors du processus d'installation de VCSA.
 . Cliquez avec le bouton droit de la souris sur le nom du vCenter et sélectionnez Nouveau centre de données.

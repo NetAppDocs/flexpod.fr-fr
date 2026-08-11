@@ -118,7 +118,7 @@ Les tableaux ci-dessous répertorient les options de châssis et de nœuds de ca
 | Nœuds de calcul Cisco Unified Edge | Numéro de référence | Caractéristiques techniques 
 
 
-| Cisco UCS XE130c M8 Nœud de calcul | UCSXE-130C-M8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe130c-m8-compute-node-spec-sheet.pdfl["Cisco UCS XE130c M8 Nœud de calcul"] 
+| Cisco UCS XE130c M8 Nœud de calcul | UCSXE-130C-M8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-xe130c-m8-compute-node-spec-sheet.pdf["Cisco UCS XE130c M8 Nœud de calcul"] 
 
 
 | Cisco UCS XE150c M8 Nœud de calcul | UCSXE-150C-M8 | https://www.cisco.com/site/us/en/products/collateral/computing/unified-edge/ucs-xe150c-m8-compute-node-ds.html["Cisco UCS XE150c M8 Nœud de calcul"] 
@@ -142,9 +142,6 @@ Le tableau suivant répertorie les options des serveurs en rack Cisco UCS C-Seri
 | Cisco UCS C220 M8 | UCSC-C220-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m8-rack-server-ds.html["Serveur en rack Cisco UCS C220 M8"] 
 
 
-| CISCO UCS C225 M6 | UCSC-C225-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c225-m6-sff-rack-server-ds.html["Serveur rack Cisco UCS C225 M6"] 
-
-
 | Cisco UCS C225 M8 | UCSC-C225-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c225-m8-rack-server-ds.html["Serveur en rack Cisco UCS C225 M8"] 
 
 
@@ -152,9 +149,6 @@ Le tableau suivant répertorie les options des serveurs en rack Cisco UCS C-Seri
 
 
 | Cisco UCS C240 M8 | UCSC-C240-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m8-rack-server-ds.html["Serveur en rack Cisco UCS C240 M8"] 
-
-
-| CISCO UCS C245 M6 | UCSC-C245-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m6-sff-rack-server-ds.html["Serveur rack Cisco UCS C245 M6"] 
 
 
 | Cisco UCS C245 M8 | UCSC-C245-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m8-rack-server-ds.html["Serveur en rack Cisco UCS C245 M8"] 

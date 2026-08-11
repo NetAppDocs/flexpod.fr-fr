@@ -50,7 +50,7 @@ Cisco fournit les dates de fin de commercialisation et de fin de support sur les
 
 
 
-==== Informations sur la fin de commercialisation et la fin du support des serveurs Cisco UCS
+==== Informations relatives à la fin de commercialisation et à la fin du support pour les serveurs Cisco UCS
 
 * Accédez à link:https://www.cisco.com/c/en/us/support/eol/index.html["Page d’assistance produit Cisco"].
 * Sous *Catégories de produits*, sélectionnez *Serveurs - UCS et HCI* et cliquez sur votre type de serveur (exemple : *UCS C-Series Rack Servers*). Repérez votre modèle spécifique (exemple : *UCS C220 M5*) et consultez les dates de fin de commercialisation et de fin de support.
@@ -58,7 +58,7 @@ Cisco fournit les dates de fin de commercialisation et de fin de support sur les
 
 
 
-==== Informations relatives à la fin de commercialisation et à la fin du support des commutateurs Cisco Nexus
+==== Informations relatives à la fin de commercialisation et à la fin du support pour les commutateurs Cisco Nexus
 
 * Accédez à link:https://www.cisco.com/c/en/us/support/eol/index.html["Page d’assistance produit Cisco"].
 * Sous *Catégories de produits*, sélectionnez *Switches* et cliquez sur votre type de switch (exemple : *Nexus 9000*). Repérez votre modèle spécifique (exemple : *9236C*) et consultez les dates de fin de commercialisation et de fin de support.

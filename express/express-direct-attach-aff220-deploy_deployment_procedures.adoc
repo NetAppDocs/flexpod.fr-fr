@@ -527,10 +527,10 @@ NOTE: Ce système est configuré en cluster à 2 nœuds sans commutateur.
 | IP du serveur DNS (vous pouvez entrer plusieurs adresses) | \<<var_dns_server_ip>> 
 
 
-| SERVEUR NTP A IP | << switch-a-ntp-ip >> 
+| SERVEUR NTP A IP | +<< switch-a-ntp-ip >>+ 
 
 
-| IP DU SERVEUR NTP B | << switch-b-ntp-ip >> 
+| IP DU SERVEUR NTP B | +<< switch-b-ntp-ip >>+ 
 |===
 
 
