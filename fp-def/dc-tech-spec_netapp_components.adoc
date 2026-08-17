@@ -69,13 +69,13 @@ Le type de tiroir NetApp sélectionné détermine les types de disques disponibl
 
 NOTE: Pour connaître les références de tous les tiroirs disques et des disques, adressez-vous à votre ingénieur commercial.
 
-Pour plus d'informations sur les disques pris en charge, cliquez sur le lien NetApp Hardware Universe dans le tableau suivant, puis sélectionnez disques pris en charge.
+Pour plus d'informations sur les baies de disques et les supports de stockage, consultez le lien « Spécifications techniques des baies de disques et des supports de stockage » dans le tableau suivant.
 
 |===
 | Tiroir disque | Caractéristiques techniques 
 
 
-| DS224C .4+| http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Tiroirs disques et supports de stockage disques pris en charge sur NetApp Hardware Universe"] 
+| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["Spécifications techniques des étagères à disques et des supports de stockage"] 
 
 
 | DS212C 

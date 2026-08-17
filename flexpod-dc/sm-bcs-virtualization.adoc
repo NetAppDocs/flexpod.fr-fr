@@ -94,6 +94,6 @@ Pour le datastore de signal de détection, spécifiez les quatre datastores part
 
 image:sm-bcs-image46.png[""]
 
-Pour connaître les meilleures pratiques et les configurations pour VMware HA Cluster et VMware vSphere Metro Storage Cluster, consultez https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["Création et utilisation de clusters HA vSphere"^], https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["Cluster de stockage Metro VMware vSphere (vMSC)"^] Et VMware KB pour https://kb.vmware.com/s/article/83370["NetApp ONTAP avec NetApp SnapMirror Business Continuity (SM-BC) et VMware vSphere Metro Storage Cluster (vMSC)"^].
+Pour plus de bonnes pratiques et de configurations pour VMware HA Cluster et VMware vSphere Metro storage cluster, voir  https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["Création et utilisation de clusters HA vSphere"^], https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["Cluster de stockage Metro VMware vSphere (vMSC)"^] et  https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-vmsc-with-smas.html["NetApp ONTAP avec SnapMirror active sync (anciennement SM-BC) et VMware vSphere Metro Storage Cluster (vMSC)"^].
 
 link:sm-bcs-validated-scenarios.html["La validation des solutions : scénarios validés"]

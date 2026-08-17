@@ -32,7 +32,7 @@ Pour en savoir plus sur les informations données dans ce livre blanc, consultez
 * https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp2648.pdf["Module de chiffrement NetApp"^]
 * https://hhscyber.hhs.gov/Documents/HICP/tech-vol2-508.pdf["Cybersécurité pour les moyennes et grandes organisations dans le domaine de la santé"^]
 * https://csrc.nist.gov/projects/cryptographic-module-validation-program["Programme de validation des modules cryptographiques (CMVP). Base de données NIST CMVP pour les modules cryptographiques validés, y compris les offres Cisco."^]
-* https://www.netapp.com/pdf.html?item=/media/17073-ds-3898.pdf["NetApp Storage Encryption, disques avec autocryptage NVMe, NetApp Volume Encryption et NetApp Aggregate Encryption"^]
+* https://docs.netapp.com/us-en/ontap-technical-reports/ontap-security-hardening/storage-encryption.html["NetApp Storage Encryption, NetApp Volume Encryption et NetApp Aggregate Encryption"^]
 * https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf["NetApp Volume Encryption et chiffrement d'agrégat NetApp"^]
 * https://www.netapp.com/pdf.html?item=/media/7563-ds-3213-en.pdf["NetApp Storage Encryption"^]
 * https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["FlexPod pour les systèmes de dossiers médicaux électroniques"^]
