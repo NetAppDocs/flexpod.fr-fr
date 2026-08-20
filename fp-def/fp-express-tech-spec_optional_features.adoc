@@ -41,7 +41,7 @@ NetApp storage controllers peuvent être connectés directement aux interconnexi
 La configuration matérielle et de licence est la suivante :
 
 * Une licence de protocole est requise sur le contrôleur de stockage NetApp.
-* Un adaptateur Cisco UCS (initiateur) est requis sur le serveur. Pour obtenir la liste des adaptateurs Cisco UCS pris en charge, consultez le site NetApp http://mysupport.netapp.com/matrix["IMT"^].
+* Un adaptateur Cisco UCS (initiateur) est requis sur le serveur. Pour obtenir la liste des adaptateurs Cisco UCS pris en charge, consultez le NetApp https://imt.netapp.com["IMT"^].
 * Un adaptateur cible est requis sur le contrôleur de stockage NetApp.
 
 

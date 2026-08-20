@@ -72,7 +72,7 @@ NOTE: Pour connaître les références de tous les tiroirs disques et des disque
 
 Le tableau suivant répertorie les options de tiroir disque NetApp pour FlexPod Express ainsi que des liens vers leurs spécifications techniques.
 
-Pour obtenir la liste des disques compatibles avec votre tiroir disque, accédez à link:https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe"^], sous *Products > Storage > Shelves*, sélectionnez *ONTAP (AFF, ASA, FAS)*, sélectionnez la version d'ONTAP que vous utilisez, puis sélectionnez le type de tiroir (exemple : *DS212C*) et cliquez sur *Show Results*. Cliquez sur *Supported Drives* pour voir les disques pris en charge pour des versions spécifiques d'ONTAP et les tiroirs disques.
+Pour obtenir la liste des disques compatibles avec votre tiroir disque, accédez à link:https://hwu.netapp.com["NetApp Hardware Universe"^], sous *Products > Storage > Shelves*, sélectionnez *ONTAP (AFF, ASA, FAS)*, sélectionnez la version d'ONTAP que vous utilisez, puis sélectionnez le type de tiroir (exemple : *DS212C*) et cliquez sur *Show Results*. Cliquez sur *Supported Drives* pour voir les disques pris en charge pour des versions spécifiques d'ONTAP et les tiroirs disques.
 
 |===
 | Tiroir disque | Caractéristiques techniques 

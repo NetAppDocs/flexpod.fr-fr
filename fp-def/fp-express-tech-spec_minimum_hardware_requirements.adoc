@@ -27,5 +27,5 @@ La configuration matérielle minimale requise pour FlexPod Express est indiquée
 
 * Deux commutateurs Ethernet standard 10 Gbit/s en configuration redondante (Cisco Nexus 9200 et 9300)
 * Deux serveurs rack autonomes Cisco UCS C-Series avec une configuration de serveur rack autonome basée sur CIMC ou une configuration autonome Intersight, ou le Cisco UCS X-Series Direct avec une configuration gérée par Cisco Intersight (IMM).
-* Deux contrôleurs d'entrée de gamme NetApp AFF (A20, A30 ou C30), NetApp ASA (A20, A30 ou C30) ou NetApp FAS (2750, 2820 ou FAS 50) en configuration de paire à haute disponibilité (HA) déployés en cluster à deux nœuds
+* Deux contrôleurs d'entrée de gamme NetApp AFF (A20, A30 ou C30), NetApp ASA (A20, A30 ou C30) ou NetApp FAS (2750, 2820 ou 50) configurés en paire à haute disponibilité (HA) et déployés en cluster à deux nœuds
 
