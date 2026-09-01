@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_other_requirements.html 
-keywords: flexpod, datacenter, technical, specifications, requirements, interoperability 
+keywords: flexpod, datacenter, technical, specifications, requirements, broadcom, vmware, openshift 
 summary: 'Une architecture FlexPod doit également répondre à plusieurs exigences supplémentaires en matière d"interopérabilité et de support' 
 ---
 = Autres exigences
@@ -14,21 +14,8 @@ summary: 'Une architecture FlexPod doit également répondre à plusieurs exigen
 
 
 [role="lead"]
-Une architecture FlexPod nécessite une interopérabilité et des exigences de support supplémentaires :
+Les exigences supplémentaires pour FlexPod Datacenter comprennent les éléments suivants :
 
-* Tous les composants matériels et logiciels doivent être répertoriés et pris en charge par le système NetApp http://mysupport.netapp.com/matrix["IMT"^], le https://ucshcltool.cloudapps.cisco.com/public/["Liste de compatibilité matérielle et logicielle Cisco UCS"^], Et la matrice d'interopérabilité logicielle et matérielle Cisco UCS.
-* Des contrats de support valides sont requis pour tous les équipements, notamment :
-+
-** Prise en charge Smart Net Total Care (SmartNet) pour les équipements Cisco
-** Le support SupportEdge Advisor ou SupportEdge Premium pour les équipements NetApp
+* Si vous prévoyez d'utiliser VMware ESXi comme hyperviseur, consultez la link:https://compatibilityguide.broadcom.com/["Guide de compatibilité Broadcom"] pour vérifier que vos composants matériels et logiciels sont pris en charge.
+* Pour un déploiement basé sur OpenShift, assurez-vous de disposer des composants matériels et logiciels nécessaires et compatibles avec OpenShift. Consultez la link:https://catalog.redhat.com/en/search["Catalogue OpenShift"] pour plus d'informations.
 
-
-* Attributs de vente pertinents sur la commande client pour appuyer :
-+
-** Droits FlexPod
-** droits d'assistance pour la solution FlexPod
-
-
-
-
-Pour plus d'informations, visitez le site NetApp http://mysupport.netapp.com/matrix["IMT"^].

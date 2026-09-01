@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html 
+keywords: supported, versus, validated, flexpod, datacenter, configurations, imt 
+summary: 'L"architecture FlexPod est définie par l"ensemble des règles décrites dans ce document. Les composants matériels et les configurations logicielles doivent être pris en charge par la liste de compatibilité matérielle Cisco (HCL) et par l"IMT NetApp.' 
+---
+= Configurations prises en charge par rapport aux configurations FlexPod validées
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+L’architecture FlexPod est définie par l’ensemble des règles décrites dans ce document. Les composants matériels et les configurations logicielles doivent être pris en charge par le  https://ucshcltool.cloudapps.cisco.com/public["Liste de compatibilité matérielle Cisco (HCL)"^] et le  https://imt.netapp.com["Matrice d'interopérabilité NetApp (IMT)"^].
+
+Chaque Cisco Validated Design (CVD) ou NetApp Verified Architecture (NVA) représente une configuration FlexPod validée. Cisco et NetApp documentent ces combinaisons de configurations et les valident par des tests de bout en bout approfondis. Les déploiements FlexPod qui s'écartent de ces configurations sont entièrement pris en charge s'ils respectent les directives de ce document et si tous les composants sont répertoriés comme compatibles dans le Cisco HCL et le NetApp IMT.
+
+Par exemple, l'ajout de contrôleurs de stockage ou de serveurs Cisco UCS et la mise à niveau des logiciels vers des versions plus récentes sont entièrement pris en charge si les logiciels, le matériel et les configurations respectent les directives définies dans ce document.

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_technical_specifications_and_references.html 
-keywords: cisco, ucs, b, series, vic, switches, nexus, fas, aff, series 
-summary: 'Les spécifications techniques fournissent des détails sur les composants matériels d"une solution FlexPod, tels que les châssis, les FEXs, les serveurs, les commutateurs, et de stockage netapp.' 
+keywords: cisco, ucs, c-series, x-series, x-series-direct, vic, disk shelves, nexus, aff, asa, fas, afx 
+summary: 'Les spécifications techniques fournissent des détails sur les composants matériels d"une FlexPod solution, tels que les châssis, les serveurs, les commutateurs et les contrôleurs de stockage.' 
 ---
 = Spécifications techniques et références
 :hardbreaks:
@@ -14,90 +14,35 @@ summary: 'Les spécifications techniques fournissent des détails sur les compos
 
 
 [role="lead"]
-Les spécifications techniques fournissent des détails sur les composants matériels d'une solution FlexPod, tels que les châssis, les FEXs, les serveurs, les commutateurs, et de stockage netapp.
+Les spécifications techniques fournissent des détails sur les composants matériels d'une FlexPod solution, tels que les châssis, les serveurs, les commutateurs et les contrôleurs de stockage.
 
 
 
-[[cisco-ucs-b-series-blade-server-chassis]]
-== Châssis de serveur lame Cisco UCS B-Series
+[[cisco-ucs-fabric-interconnects]]
+== Interconnexions de fabric Cisco UCS
 
-Les spécifications techniques du châssis de serveur lame Cisco UCS B-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
-
-* Nombre d'unités de rack
-* Nombre maximum de lames
-* Fonctionnalité de structure unifiée
-* Bande passante d'E/S moyenne par serveur
-* Nombre de baies d'E/S pour les FEXs
-
-
-|===
-| Composant | Châssis de serveur lame Cisco UCS 5100 Series 
-
-
-| Unités en rack | 6 
-
-
-| Lames pleine largeur maximum | 4 
-
-
-| Lames demi-largeur maximum | 8 
-
-
-| Capacité de la structure unifiée | Oui. 
-
-
-| E/S du fond de panier central | Jusqu'à 80 Gbit/s de bande passante d'E/S par serveur 
-
-
-| Baies d'E/S pour FEXs | Deux baies pour Cisco UCS 2104XP, 2204/8XP, 2408XP et 2304 FEXs 
-|===
-Pour plus d'informations, reportez-vous à la section http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-5100-series-blade-server-chassis/data_sheet_c78-526830.html["Fiche technique sur les châssis de serveur lame Cisco UCS 5100 Series"^].
-
-
-
-[[cisco-ucs-b-series-blade-servers]]
-== Serveurs lames Cisco UCS B-Series
-
-Les spécifications techniques des serveurs lames Cisco UCS B-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
-
-* Nombre de sockets du processeur
-* Prise en charge du processeur
-* Capacité de la mémoire
-* Dimensionnement et vitesse
-* Prise en charge du démarrage SAN
-* Nombre de logements d'adaptateur mezzanine
-* Débit d'E/S maximal
-* Format
-* Nombre maximal de serveurs par châssis
-
+Les spécifications techniques de l'interconnexion Cisco UCS incluent le format, le nombre total de ports et d'emplacements d'extension, ainsi que la capacité de débit. Consultez le tableau ci-dessous pour les fiches techniques de l'interconnexion Cisco UCS.
 
 |===
 | Composant | Fiche technique Cisco UCS 
 
 
-| CISCO UCS B200 M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-2368888.html["Serveur lame Cisco UCS B200 M6"] 
-|===
+| Cisco UCS 6664 .2+| https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-6600-series-fabric-interconnect-specsheet.pdf["Cisco UCS 6600 Series Fabric Interconnects"] 
 
 
-[[cisco-ucs-c-series-rack-servers]]
-== Serveurs en rack Cisco UCS C-Series
-
-Les spécifications techniques des serveurs en rack Cisco UCS C-Series incluent la prise en charge du processeur, la capacité de mémoire maximale, le nombre de connecteurs PCIe et la taille du format. Pour plus d'informations sur les modèles de serveur UCS compatibles, consultez le https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle Cisco"^] liste. Les tableaux suivants illustrent les fiches techniques du serveur rack C-Series et l'option de châssis Cisco UCS C-Series, respectivement.
-
-|===
-| Composant | Fiche technique Cisco UCS 
+| Cisco UCS 6652 
 
 
-| CISCO UCS C220 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m6-sff-specsheet.pdf["Serveur en rack Cisco UCS C220 M6"] 
+| Cisco UCS 6536 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/cisco-ucs-6536-fabric-interconnect-spec-sheet.pdf["Interconnexion de fabric Cisco UCS 6536"] 
 
 
-| CISCO UCS C225 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c225-m6-sff-specsheet.pdf["Serveur rack Cisco UCS C225 M6"] 
+| Cisco UCS 6454 .2+| https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/6400-specsheet.pdf["Cisco UCS 6400 Series Fabric Interconnect"] 
 
 
-| CISCO UCS C240 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m6-sff-specsheet.pdf["Serveur en rack Cisco UCS C240 M6"] 
+| Cisco UCS 64108 
 
 
-| CISCO UCS C245 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c245m6-sff-specsheet.pdf["Serveur rack Cisco UCS C245 M6"] 
+| Interconnexion de fabric Cisco UCS 9108 100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-fabric-interconnect-9108-100g.pdf["Cisco UCS 9108 100G Interconnexion de fabric pour Cisco UCS X-Series Direct"] 
 |===
 
 
@@ -113,7 +58,7 @@ Les spécifications techniques du châssis Cisco UCS X-Series, comme illustré d
 
 
 |===
-| Composant | Châssis de nœud de calcul Cisco UCS 9508 X-Series 
+| Composant | châssis Cisco UCS X9508 
 
 
 | Unités en rack | 7 
@@ -134,7 +79,7 @@ Pour plus d'informations, reportez-vous à la section link:https://www.cisco.com
 [[cisco-ucs-x-series-compute-node]]
 == Nœud de calcul Cisco UCS X-Series
 
-Les spécifications techniques du nœud de calcul Cisco UCS X-Series, comme illustré dans le tableau ci-dessous, incluent les composants suivants :
+Les spécifications techniques du nœud de calcul Cisco UCS X-Series comprennent les composants suivants :
 
 * Nombre de sockets du processeur
 * Prise en charge du processeur
@@ -147,44 +92,81 @@ Les spécifications techniques du nœud de calcul Cisco UCS X-Series, comme illu
 * Nombre maximal de nœuds de calcul par châssis
 
 
+Consultez le tableau ci-dessous pour connaître les spécifications techniques des nœuds de calcul Cisco UCS X-Series.
+
 |===
 
 
 | Composant | Fiche technique Cisco UCS 
 
 
-| Cisco UCS X210c M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2465523.html?ccid=cc002456&oid=dstcsm026318["Nœud de calcul Cisco UCS X210c M6"] 
+| Cisco UCS X210c M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m7-compute-node-ds.html["Cisco UCS X210c M7 Nœud de calcul"] 
+
+
+| Cisco UCS X210c M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m8-compute-node-ds.html["Cisco UCS X210c M8 Nœud de calcul"] 
+
+
+| Cisco UCS X215c M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x215c-m8-compute-node-ds.html["Cisco UCS X215c M8 Nœud de calcul"] 
+
+
+| Cisco UCS X410c M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m7-compute-node-ds.html["Cisco UCS X410c M7 Nœud de calcul"] 
+
+
+| Cisco UCS X410c M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m8-compute-node-ds.html["Cisco UCS X410c M8 Nœud de calcul"] 
 |===
 
 
-[[gpu-recommendation-for-flexpod-ai-ml-and-dl]]
-== Recommandation de processeurs graphiques pour FlexPod ai, ML et DL
+[[cisco-ucs-c-series-rack-servers]]
+== Serveurs en rack Cisco UCS C-Series
 
-Les serveurs en rack Cisco UCS C-Series répertoriés dans le tableau ci-dessous peuvent être utilisés dans une architecture FlexPod pour héberger des charges de travail d'IA, DE ML et de DL. Les serveurs Cisco UCS C480 ML M5 sont dédiés aux charges de travail d'IA, DE ML et de DL, ainsi qu'aux processeurs graphiques SXM2 de NVIDIA, tandis que les autres serveurs utilisent des processeurs graphiques PCIe.
+Les spécifications techniques des serveurs rack Cisco UCS série C comprennent la prise en charge des processeurs, la capacité mémoire maximale, le nombre d'emplacements PCIe et le format. Pour plus de détails sur les modèles de serveurs UCS compatibles, consultez la  https://ucshcltool.cloudapps.cisco.com/public/["Compatibilité matérielle Cisco"^] liste.
 
-Le tableau ci-dessous répertorie également les GPU recommandés qui peuvent être utilisés avec ces serveurs.
+Consultez le tableau ci-dessous pour connaître les spécifications techniques des serveurs rack Cisco UCS série C.
 
 |===
-| Serveur | GPU 
+| Composant | Fiche technique Cisco UCS 
 
 
-| CISCO UCS C220 M6 | NVIDIA T4 
+| Cisco UCS C220 M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m7-rack-server-ds.html["Serveur en rack Cisco UCS C220 M7"] 
 
 
-| CISCO UCS C225 M6 | NVIDIA T4 
+| Cisco UCS C220 M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m8-rack-server-ds.html["Serveur en rack Cisco UCS C220 M8"] 
 
 
-| CISCO UCS C240 M6 | NVIDIA TESLA A10, A100 
+| CISCO UCS C225 M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c225-m6-sff-rack-server-ds.html["Serveur rack Cisco UCS C225 M6"] 
 
 
-| CISCO UCS C245 M6 | NVIDIA TESLA A10, A100 
+| Cisco UCS C240 M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m7-rack-server-ds.html["Serveur en rack Cisco UCS C240 M7"] 
+
+
+| Cisco UCS C240 M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m8-rack-server-ds.html["Serveur en rack Cisco UCS C240 M8"] 
+
+
+| CISCO UCS C245 M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m6-sff-rack-server-ds.html["Serveur rack Cisco UCS C245 M6"] 
+
+
+| Cisco UCS C245 M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m8-rack-server-ds.html["Serveur en rack Cisco UCS C245 M8"] 
+|===
+Consultez le tableau ci-dessous pour connaître les spécifications techniques et les options GPU des serveurs rack Cisco UCS C-Series optimisés pour les cas d'utilisation de l'IA.
+
+|===
+| Serveur en rack Cisco UCS C-Series | Caractéristiques techniques 
+
+
+| Cisco UCS C845A M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c845a-m8-rack-server-ds.html["Serveur en rack Cisco UCS C845A M8"] 
+
+
+| Cisco UCS C880A M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c880a-m8-rack-server-ds.html["Serveur en rack Cisco UCS C880A M8"] 
+
+
+| Cisco UCS C885A M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c885a-m8-ds.html["Serveur en rack Cisco UCS C885A M8"] 
 |===
 
 
-[[cisco-ucs-vic-adapters-for-cisco-ucs-b-series-blade-servers]]
-== Les adaptateurs Cisco UCS VIC pour serveurs lames Cisco UCS B-Series
+[[cisco-ucs-vic-adapters]]
+== Adaptateurs Cisco UCS VIC
 
-Les spécifications techniques des adaptateurs Cisco UCS Virtual interface Card (VIC) pour serveurs lames Cisco UCS B-Series incluent les composants suivants :
+Les spécifications techniques des adaptateurs Cisco UCS Virtual Interface Card (VIC) pour les serveurs Cisco comprennent les composants suivants :
 
 * Nombre de ports de liaison ascendante
 * Performances par port (IOPS)
@@ -200,141 +182,67 @@ Toutes les architectures FlexPod actuellement validées utilisent un système Ci
 | Composant | Fiche technique Cisco UCS 
 
 
-| Adaptateurs d'interface virtuelle Cisco UCS | https://www.cisco.com/c/en/us/products/interfaces-modules/unified-computing-system-adapters/index.html["Fiches techniques Cisco UCS VIC"] 
+| Adaptateurs d'interface virtuelle Cisco UCS | https://www.cisco.com/site/us/en/products/computing/servers-unified-computing-systems/fabric-interconnects-extenders/index.html#accordion-b3f362d53d-item-2d9aa2ccfd["Fiches techniques Cisco UCS VIC"] 
 |===
 
 
-[[cisco-ucs-fabric-interconnects]]
-== Interconnexions de fabric Cisco UCS
+[[cisco-nexus-switches]]
+== Commutateurs Cisco Nexus
 
-Les spécifications techniques des interconnexions de fabric Cisco UCS incluent la taille du format, le nombre total de ports et de connecteurs d'extension, ainsi que la capacité de débit. Le tableau suivant illustre les fiches techniques d'interconnexion de structure Cisco UCS.
-
-|===
-| Composant | Fiche technique Cisco UCS 
-
-
-| Cisco UCS 6248UP .2+| https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-6200-series-fabric-interconnects/index.html["Cisco UCS 6200 Series Fabric Interconnect"] 
-
-
-| Cisco UCS 6296UP 
-
-
-| Cisco UCS 6324 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-6300-series-fabric-interconnects/datasheet-c78-732207.html["Fabric Interconnect Cisco UCS 6324"] 
-
-
-| Cisco UCS 6300 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-6300-series-fabric-interconnects/datasheet-c78-736682.html["Cisco UCS 6300 Series Fabric Interconnect"] 
-
-
-| Cisco UCS 6454 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html["Cisco UCS 6400 Series Fabric Interconnect"] 
-|===
-
-
-[[cisco-nexus-5000-series-switches]]
-== Commutateurs Cisco Nexus série 5000
-
-Les spécifications techniques des commutateurs Cisco Nexus 5000 Series, y compris la taille au format, le nombre total de ports et la prise en charge des modules et des cartes filles de couche 3, sont fournies dans la fiche technique de chaque famille de modèles. Ces fiches techniques sont disponibles dans le tableau suivant.
+Les spécifications techniques des commutateurs Cisco Nexus sont détaillées dans la fiche technique de chaque modèle. Les spécifications comprennent la taille du format, le nombre de superviseurs, de modules de fabric et d'emplacements pour cartes d'interface, ainsi que le nombre maximal de ports. Ces fiches techniques se trouvent dans le tableau suivant.
 
 |===
 | Composant | Fiche technique Cisco Nexus 
 
 
-| Cisco Nexus 5548UP | http://www.cisco.com/en/US/products/ps11681/index.html["Commutateur Cisco Nexus 5548UP"] 
+| Cisco Nexus 9200 Series | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Commutateurs Cisco Nexus 9200 Series"] 
 
 
-| Cisco Nexus 5596UP (2U) | http://www.cisco.com/en/US/products/ps11577/index.html["Commutateur Cisco Nexus 5596UP"] 
+| Cisco Nexus 9300 Series | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html["Commutateurs Cisco Nexus 9300 Series"] 
 
 
-| Cisco Nexus 56128P | http://www.cisco.com/c/en/us/products/switches/nexus-56128p-switch/index.html["Commutateur Cisco Nexus 56128P"] 
+| Série Cisco Nexus 9400 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/nexus9400-series-switches-ds.html["Commutateurs Cisco Nexus de la gamme 9400"] 
 
 
-| Cisco Nexus 5672UP | http://www.cisco.com/c/en/us/products/switches/nexus-5672up-switch/index.html["Commutateur Cisco Nexus 5672UP"] 
+| Cisco Nexus 9500 Series | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729404.html["Commutateurs Cisco Nexus 9500 Series"] 
+
+
+| Série Cisco Nexus 9800 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/nexus9800-series-switches-ds.html["Commutateurs Cisco Nexus de la gamme 9800"] 
 |===
 
 
-[[cisco-nexus-7000-series-switches]]
-== Commutateurs Cisco Nexus série 7000
+[[cisco-mds-options]]
+== Options Cisco MDS
 
-Les spécifications techniques des commutateurs Cisco Nexus 7000 Series, y compris la taille au format et le nombre maximal de ports, sont indiquées dans la fiche technique de chaque gamme de modèles. Ces fiches techniques sont disponibles dans le tableau suivant.
-
-|===
-| Composant | Fiche technique Cisco Nexus 
-
-
-| Commutateurs Cisco Nexus 7004 .4+| http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/ps9512/Data_Sheet_C78-437762.html["Commutateurs Cisco Nexus 7000 Series"] 
-
-
-| Commutateurs Cisco Nexus 7009 
-
-
-| Commutateurs Cisco Nexus 7010 
-
-
-| Commutateurs Cisco Nexus 7018 
-
-
-| Commutateurs Cisco Nexus 7702 .4+| http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps9402/data_sheet_c78-728187.html["Commutateurs Cisco Nexus 7700 Series"] 
-
-
-| Commutateurs Cisco Nexus 7706 
-
-
-| Commutateurs Cisco Nexus 7710 
-
-
-| Commutateurs Cisco Nexus 7718 
-|===
-
-
-[[cisco-nexus-9000-series-switches]]
-== Commutateurs Cisco Nexus série 9000
-
-Les spécifications techniques des commutateurs Cisco Nexus 9000 Series figurent dans la fiche technique de chaque modèle. Les spécifications incluent la taille du format, le nombre de superviseurs, le module de structure et les logements de carte de ligne, ainsi que le nombre maximum de ports. Ces fiches techniques sont disponibles dans le tableau suivant.
+Les spécifications techniques des commutateurs Cisco Nexus sont contenues dans la fiche technique de chaque modèle, lesquelles sont répertoriées dans le tableau suivant.
 
 |===
-| Composant | Fiche technique Cisco Nexus 
+| Commutateur Cisco MDS | Description 
 
 
-| Cisco Nexus 9000 Series | http://www.cisco.com/c/en/us/products/switches/nexus-9000-series-switches/index.html["Commutateurs Cisco Nexus 9000 Series"] 
+| Commutateurs Cisco MDS 9100 Series | http://www.cisco.com/c/en/us/products/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-listing.html["Commutateurs Cisco MDS 9100 Series"] 
 
 
-| Cisco Nexus 9500 Series | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729404.html["Commutateurs Cisco Nexus 9500 Series"] 
+| Commutateurs Cisco MDS 9200 Series | https://www.cisco.com/c/en/us/products/storage-networking/mds-9200-series-multiservice-switches/datasheet-listing.html["Commutateurs Cisco MDS 9200 Series"] 
 
 
-| Cisco Nexus 9300 Series | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html["Commutateurs Cisco Nexus 9300 Series"] 
+| Commutateurs Cisco MDS 9300 Series | https://www.cisco.com/c/en/us/products/storage-networking/mds-9300-series-multilayer-fabric-switches/datasheet-listing.html["Commutateurs Cisco MDS 9300 Series"] 
 
 
-| Commutateur Cisco Nexus 9336PQ ACI Spine Switch | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-731792.html["Commutateur Cisco Nexus 9336PQ ACI Spine Switch"] 
-
-
-| Cisco Nexus 9200 Series | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Commutateurs de plateforme Cisco Nexus 9200"] 
+| Directeurs Cisco MDS 9700 Series | http://www.cisco.com/c/en/us/products/storage-networking/mds-9700-series-multilayer-directors/datasheet-listing.html["Commutateurs Cisco MDS série 9700"] 
 |===
 
 
 [[cisco-application-policy-infrastructure-controller]]
 == Contrôleur d'infrastructure des politiques d'applications Cisco
 
-Lorsque vous déployez Cisco ACI, en plus des éléments de la section link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Commutateurs Cisco Nexus 9000 Series"], Vous devez configurer trois circuits intégrés Cisco. Le tableau suivant répertorie la fiche technique du contrôleur APIC Cisco.
+Lors du déploiement de Cisco ACI, vous devez configurer trois Cisco APIC. Le tableau suivant présente la fiche technique des Cisco APIC.
 
 |===
 | Composant | Fiche technique de Cisco application Policy Infrastructure 
 
 
 | Contrôleur d'infrastructure des politiques d'applications Cisco | https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Fiche technique du contrôleur APIC Cisco"] 
-|===
-
-
-[[cisco-nexus-fabric-extender-details]]
-== Détails du extenseur de fabric Cisco Nexus
-
-Les spécifications techniques de Cisco Nexus FEX incluent la vitesse, le nombre de ports et de liaisons fixes ainsi que la taille des formats.
-
-Le tableau suivant répertorie la fiche technique FEX de Cisco Nexus 2000 Series.
-
-|===
-| Composant | Fiche technique sur les extenseur de fabric Cisco Nexus 
-
-
-| Fabric Extender Cisco Nexus 2000 Series | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-2000-series-fabric-extenders/data_sheet_c78-507093.html["Fiche technique FEX de la gamme Nexus 2000"] 
 |===
 
 
@@ -347,6 +255,8 @@ Pour plus d'informations sur les modules SFP, consultez les ressources suivantes
 * Pour plus d'informations sur le module SFP 25 Gb Cisco, reportez-vous à la section https://www.cisco.com/c/en/us/products/interfaces-modules/25-gigabit-modules/index.html["Modules Cisco 25 Gigabit"^].
 * Pour plus d'informations sur le module QSFP Cisco, reportez-vous au https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/data_sheet_c78-660083.html["Fiche technique sur les modules QSFP Cisco 40GBASE"^].
 * Pour plus d'informations sur le SFP Cisco 100 Gb, consultez la page https://www.cisco.com/c/en/us/products/interfaces-modules/100-gigabit-modules/index.html["Modules Cisco 100 Gigabit"^].
+* Pour plus d'informations sur le Cisco 200GB QSFP, consultez  https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/nb-06-200g-qsfp56-cables-trans-mod-ds-cte-en.html["Fiche technique des modules Cisco 200G QSFP56"^].
+* Pour plus d'informations sur le Cisco 400GB QSFP, voir https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/datasheet-c78-743172.html["Fiche technique des modules Cisco 400G QSFP56"^].
 * Pour plus d'informations sur le module SFP Cisco FC, reportez-vous au https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9000-series-multilayer-switches/product_data_sheet09186a00801bc698.html?dtid=osscdc000283["Fiche technique sur les émetteurs-récepteurs enfichables de la gamme Cisco MDS 9000"^].
 * Pour plus d'informations sur tous les modules SFP et émetteurs-récepteurs Cisco pris en charge, reportez-vous à la section http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/installation/note/78_15160.html["Notes d'installation du module SFP et SFP+ Cisco"^] et http://www.cisco.com/en/US/products/hw/modules/ps5455/prod_module_series_home.html["Modules émetteurs-récepteurs Cisco"^].
 
@@ -356,117 +266,156 @@ Pour plus d'informations sur les modules SFP, consultez les ressources suivantes
 [[netapp-storage-controllers]]
 == Contrôleurs de stockage NetApp
 
-Les spécifications techniques des contrôleurs de stockage NetApp incluent les composants suivants :
-
-* Configuration de châssis
-* Nombre d'unités de rack
-* Quantité de mémoire
-* Mise en cache NetApp FlashCache
-* Taille de l'agrégat
-* Taille du volume
-* Nombre de LUN
-* Stockage réseau pris en charge
-* Nombre maximal de volumes NetApp FlexVol
-* Nombre maximal d'hôtes SAN pris en charge
-* Nombre maximal de copies Snapshot
+Les spécifications techniques des contrôleurs de stockage NetApp comprennent la configuration de la plateforme, la capacité brute maximale, la mémoire, le facteur de forme, les exigences de version ONTAP, les tiroirs disques, etc.
 
 
 
+[[netapp-aff-a-series]]
+=== NetApp AFF A-Series
 
-[[fas-series]]
-=== Gamme FAS
+NetApp AFF A-Series Les contrôleurs de stockage sont pris en charge pour une utilisation dans FlexPod Datacenter. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["Spécifications techniques de la série AFF A"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau ci-dessous pour obtenir des informations détaillées sur un modèle AFF particulier.
 
-Tous les modèles de contrôleurs de stockage FAS disponibles sont pris en charge dans un data Center FlexPod. Les spécifications détaillées de tous les contrôleurs de stockage FAS sont disponibles dans le https://hwu.netapp.com/["NetApp Hardware Universe"^]. Pour plus d'informations sur un modèle FAS spécifique, reportez-vous à la documentation spécifique à la plate-forme répertoriée dans le tableau suivant.
+|===
+| Composant | Documentation sur la plateforme du contrôleur AFF A-Series 
+
+
+| NetApp AFF A20 | https://docs.netapp.com/us-en/ontap-systems/a20-30-50/a20-key-specifications.html["Caractéristiques principales de l'AFF A20"] 
+
+
+| NetApp AFF A30 | https://docs.netapp.com/us-en/ontap-systems/a20-30-50/a30-key-specifications.html["Caractéristiques principales de l'AFF A30"] 
+
+
+| NetApp AFF A50 | https://docs.netapp.com/us-en/ontap-systems/a20-30-50/a50-key-specifications.html["Caractéristiques principales de l'AFF A50"] 
+
+
+| NetApp AFF A70 | https://docs.netapp.com/us-en/ontap-systems/a70-90/a70-key-specifications.html["Caractéristiques principales de l'AFF A70"] 
+
+
+| NetApp AFF A90 | https://docs.netapp.com/us-en/ontap-systems/a70-90/a90-key-specifications.html["Caractéristiques principales de l'AFF A90"] 
+
+
+| NetApp AFF A1K | https://docs.netapp.com/us-en/ontap-systems/a1k/overview.html["Caractéristiques principales de l'AFF A1K"] 
+|===
+
+
+[[netapp-aff-c-series]]
+=== NetApp AFF C-Series
+
+NetApp AFF C-Series Les contrôleurs de stockage sont pris en charge pour une utilisation dans FlexPod Datacenter. Des informations supplémentaires sont disponibles dans la  https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["Spécifications techniques de la série AFF C"^] fiche technique et dans la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme répertoriée dans le tableau ci-dessous pour obtenir des informations détaillées sur un modèle AFF particulier.
+
+|===
+| Composant | Documentation de la plateforme de contrôleurs AFF C-Series 
+
+
+| NetApp AFF C30 | https://docs.netapp.com/us-en/ontap-systems/c30-60/c30-key-specifications.html["Caractéristiques principales de l'AFF C30"] 
+
+
+| NetApp AFF C60 | https://docs.netapp.com/us-en/ontap-systems/c30-60/c60-key-specifications.html["Caractéristiques principales de l'AFF C60"] 
+
+
+| NetApp AFF C80 | https://docs.netapp.com/us-en/ontap-systems/c80/overview.html["Caractéristiques principales de l'AFF C80"] 
+|===
+
+
+[[netapp-asa]]
+=== NetApp ASA
+
+NetApp ASA storage controllers sont pris en charge pour une utilisation dans FlexPod Datacenter. Des informations supplémentaires sont disponibles dans la https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA Spécifications techniques"^] fiche technique et dans la https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau ci-dessous pour obtenir des informations détaillées sur un modèle ASA particulier.
+
+|===
+| Composant | NetApp Documentation de la plateforme de contrôleur ASA 
+
+
+| NetApp ASA A20 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a20-key-specifications.html["Caractéristiques principales de l'ASA A20"] 
+
+
+| NetApp ASA A30 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a30-key-specifications.html["Caractéristiques principales de l'ASA A30"] 
+
+
+| NetApp ASA C30 | https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["Caractéristiques principales de l'ASA C30"] 
+
+
+| NetApp ASA A50 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a50-key-specifications.html["Caractéristiques principales de l'ASA A50"] 
+
+
+| NetApp ASA A70 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a70-key-specifications.html["Caractéristiques principales de l'ASA A70"] 
+
+
+| NetApp ASA A90 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a90-key-specifications.html["Caractéristiques principales de l'ASA A90"] 
+
+
+| NetApp ASA A1K | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a1k-key-specifications.html["Caractéristiques principales de l'ASA A1K"] 
+|===
+
+
+[[netapp-fas-series]]
+=== NetApp Série FAS
+
+Les contrôleurs de stockage FAS sont pris en charge pour une utilisation dans FlexPod Datacenter. Des informations supplémentaires sont disponibles dans link:https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["NetApp FAS Spécifications techniques"^] et le  https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau suivant pour obtenir des informations détaillées sur un modèle FAS spécifique.
 
 |===
 | Composant | Documentation sur la plateforme des contrôleurs de la gamme FAS 
 
 
-| Gamme FAS9000 | https://www.netapp.com/pdf.html?item=/media/8939-ds-3810.pdf["Fiche technique sur la gamme FAS9000"^] 
+| NetApp FAS2750 | https://docs.netapp.com/us-en/ontap-systems/fas2700/overview.html["FAS2750 Spécifications clés"^] 
 
 
-| Gamme FAS8700 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Fiche technique des baies FAS8700"^] 
+| NetApp FAS2820 | https://docs.netapp.com/us-en/ontap-systems/fas2800/overview.html["Spécifications clés du FAS2820"^] 
 
 
-| Gamme FAS8300 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Fiche technique FAS8300 Series"^] 
+| NetApp FAS50 | https://docs.netapp.com/us-en/ontap-systems/fas50/overview.html["Spécifications clés du FAS50"^] 
 
 
-| Gamme FAS500f | https://docs.netapp.com/us-en/ontap-systems/fas500f/index.html["Fiche technique sur la gamme FAS500f"] 
+| NetApp FAS70 | https://docs.netapp.com/us-en/ontap-systems/fas-70-90/fas70-key-specifications.html["Spécifications clés du FAS70"^] 
 
 
-| Gamme FAS2700 | https://www.netapp.com/pdf.html?item=/media/8937-ds-3929.pdf["Fiche technique des systèmes FAS2700 Series"^] 
+| NetApp FAS90 | https://docs.netapp.com/us-en/ontap-systems/fas-70-90/fas90-key-specifications.html["Spécifications clés du FAS90"^] 
 |===
 
 
-[[aff-a-series]]
-=== Gamme AFF A-Series
+[[netapp-afx]]
+=== NetApp AFX
 
-Tous les modèles actuels de contrôleurs de stockage NetApp AFF A-Series sont pris en charge dans FlexPod. Vous trouverez des informations supplémentaires dans la https://www.netapp.com/media/7828-DS-3582-AFF-A-Series.pdf["Caractéristiques techniques des systèmes AFF"^] fiche technique et dans le https://hwu.netapp.com/["NetApp Hardware Universe"^]. Pour plus d'informations sur un modèle AFF spécifique, reportez-vous à la documentation spécifique à la plate-forme répertoriée dans le tableau suivant.
-
-|===
-| Composant | Documentation sur la plateforme du contrôleur AFF A-Series 
-
-
-| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["Documentation de la plateforme AFF A800"] 
-
-
-| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/a700/install-setup.html["Documentation sur la plateforme AFF A700"] 
-
-
-| NetApp AFF A700s | https://docs.netapp.com/us-en/ontap-systems/a700s/install-setup.html["Documentation de la plateforme AFF A700s"] 
-
-
-| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/install-setup.html["Documentation sur la plateforme AFF A400"] 
-
-
-| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/install-setup.html["Documentation de la plateforme AFF A250"] 
-|===
-
-
-[[aff-asa-a-series]]
-=== GAMME AFF ASA A-SERIES
-
-Tous les modèles actuels de contrôleurs de stockage NetApp AFF ASA A-Series sont pris en charge dans FlexPod. Pour plus d'informations, consultez les documents relatifs à la baie SAN uniquement, le rapport technique sur les baies SAN 100 % Flash de ONTAP AFF et le rapport NetApp Hardware Universe. Pour plus d'informations sur un modèle AFF spécifique, reportez-vous à la documentation spécifique à la plate-forme répertoriée dans le tableau suivant.
+NetApp AFX storage controllers sont pris en charge pour une utilisation dans FlexPod Datacenter. Des informations complémentaires sont disponibles dans la https://www.netapp.com/pdf.html?item=/media/142853-ds-3466-netapp-afx-datasheet.pdf["NetApp AFX Spécifications techniques"^] fiche technique et dans la https://hwu.netapp.com/["NetApp Hardware Universe"^]. Consultez la documentation spécifique à la plateforme indiquée dans le tableau ci-dessous pour obtenir des informations détaillées sur un modèle AFX particulier.
 
 |===
-| Composant | Documentation sur la plateforme du contrôleur AFF A-Series 
 
 
-| NETAPP AFF ASA A800 | http://docs.netapp.com/allsan/index.jsp["Documentation de la plateforme AFF ASA A800"] 
+| Composant | NetApp Documentation de la plateforme de contrôleur AFX 
 
 
-| NETAPP AFF ASA A700 | http://docs.netapp.com/allsan/index.jsp["Documentation sur la plateforme AFF ASA A700"] 
+| NetApp AFX 1K .2+| https://docs.netapp.com/us-en/ontap-systems/afx/index.html["Documentation AFX"] 
 
 
-| NETAPP AFF ASA A400 | http://docs.netapp.com/allsan/index.jsp["Documentation sur la plateforme AFF ASA A400"] 
-
-
-| NETAPP AFF ASA A250 | http://docs.netapp.com/allsan/index.jsp["Documentation de la plateforme AFF ASA A250"] 
-
-
-| AVEC AFF ASA A220 | http://docs.netapp.com/allsan/index.jsp["Documentation de la plateforme AFF ASA A220"] 
+| NetApp AFX 2K 
 |===
 
 
 [[netapp-disk-shelves]]
 === Tiroirs disques NetApp
 
-Les spécifications techniques des baies de disques NetApp comprennent le format, le nombre de disques par baie et les modules d'E/S ; cette documentation se trouve dans le tableau suivant. Pour plus d'informations, consultez la  https://www.netapp.com/data-storage/disk-shelves-storage-media/["Spécifications techniques des tiroirs disques et des supports de stockage NetApp"^] et la  https://hwu.netapp.com/["NetApp Hardware Universe"^].
+Les spécifications techniques des baies de disques NetApp comprennent le format, le nombre de disques par baie et les modules d'E/S ; cette documentation est disponible dans le tableau suivant. Pour plus d'informations, veuillez consulter la  https://hwu.netapp.com/["NetApp Hardware Universe"^].
 
 |===
 | Composant | Documentation du tiroir disque FAS/AFF NetApp 
 
 
-| Tiroir disque NetApp DS212C | https://www.netapp.com/data-storage/disk-shelves-storage-media/["Documentation des tiroirs disques DS212C"] 
+| Tiroir disque NetApp DS212C .6+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["NetApp Documentation relative au compartiment à disques"] 
 
 
-| Tiroir disque NetApp DS224C | https://www.netapp.com/data-storage/disk-shelves-storage-media/["Documentation du tiroir disque DS224C"] 
+| Tiroir disque NetApp DS224C 
 
 
-| Tiroir disque DS460C NetApp | https://www.netapp.com/data-storage/disk-shelves-storage-media/["Documentation des tiroirs disques DS460C"] 
+| Tiroir disque DS460C NetApp 
 
 
-| Tiroir disque SSD NVMe-NS224 de NetApp | https://www.netapp.com/data-storage/disk-shelves-storage-media/["Documentation du tiroir disque NS224"] 
+| NetApp NS224 Étagère à disques 
+
+
+| NetApp NS224 avec étagère à disques NSM 100B 
+
+
+| NetApp NX224 Étagère à disques 
 |===
 
 

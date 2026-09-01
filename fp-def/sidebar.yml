@@ -48,16 +48,21 @@ entries:
     url: "/fp-def/dc-tech-spec_flexpod_platforms.html"
   - title: Règles FlexPod
     url: "/fp-def/dc-tech-spec_flexpod_rules.html"
+  - title: Configurations prises en charge par rapport aux configurations FlexPod
+      validées
+    url: "/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html"
   - title: NetApp ONTAP
     url: "/fp-def/dc-tech-spec_netapp_ontap.html"
   - title: Modes de fonctionnement du commutateur Cisco Nexus
     url: "/fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html"
   - title: Configuration matérielle minimale requise
     url: "/fp-def/dc-tech-spec_minimum_hardware_requirements.html"
-  - title: Configuration logicielle minimale requise
-    url: "/fp-def/dc-tech-spec_minimum_software_requirements.html"
+  - title: Recommandations de versions logicielles
+    url: "/fp-def/dc-tech-spec_software_version_recommendations.html"
   - title: Les besoins en connectivité
     url: "/fp-def/dc-tech-spec_connectivity_requirements.html"
+  - title: Topologies FlexPod Datacenter
+    url: "/fp-def/dc-tech-spec_topologies.html"
   - title: Autres exigences
     url: "/fp-def/dc-tech-spec_other_requirements.html"
   - title: Fonctionnalités en option
@@ -70,7 +75,9 @@ entries:
     url: "/fp-def/dc-tech-spec_power_and_cabling_requirements.html"
   - title: Spécifications techniques et références
     url: "/fp-def/dc-tech-spec_technical_specifications_and_references.html"
-  - title: Équipement existant
-    url: "/fp-def/dc-tech-spec_legacy_equipment.html"
+  - title: État du support de l'équipement
+    url: "/fp-def/dc-tech-spec_equipment_support_status.html"
+  - title: Déploiement automatisé
+    url: "/fp-def/dc-tech-spec_automation.html"
   - title: Où trouver des informations complémentaires
     url: "/fp-def/dc-tech-spec_where_to_find_additional_information.html"

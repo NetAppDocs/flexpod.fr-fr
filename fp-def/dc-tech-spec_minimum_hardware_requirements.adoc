@@ -16,40 +16,21 @@ summary: 'Une configuration FlexPod Datacenter présente des exigences matériel
 [role="lead"]
 Une configuration FlexPod Datacenter présente des exigences matérielles minimales, y compris, mais sans s'y limiter, les commutateurs, les interconnexions de fabric, les serveurs et les contrôleurs de stockage NetApp.
 
-Vous devez utiliser des serveurs Cisco UCS. Les serveurs C-Series et B-Series ont été utilisés dans les designs validés. Les Cisco Nexus Fabric Extender (FEXs) sont disponibles en option avec des serveurs C-Series.
-
 Une configuration FlexPod présente la configuration matérielle minimale suivante :
 
-* Deux commutateurs Cisco Nexus dans une configuration redondante. Cette configuration peut consister en deux commutateurs redondants des gammes Cisco Nexus 5000, 7000 ou 9000. Les deux commutateurs doivent être du même modèle et être configurés dans le même mode de fonctionnement.
-+
-Si vous déployez une architecture ACI, vous devez respecter les exigences supplémentaires suivantes :
-
-+
-** Déployez les commutateurs Cisco Nexus 9000 Series en topologie Leaf-Spine.
-** Utilisez trois contrôleurs d'infrastructure des politiques d'applications Cisco (contrôleurs APIC).
-
-
-* Deux Cisco UCS 6200, 6300 ou 6400 Series Fabric Interconnect dans une configuration redondante.
-* Serveurs Cisco UCS :
-+
-** Si la solution utilise des serveurs B-Series, un châssis de serveur lame Cisco UCS 5108 B-Series et deux serveurs lames Cisco UCS B-Series et deux modules d'E/S (IOM) de 2104, 2204/8, 2408 ou 2304.
-** Si la solution utilise des serveurs C-Series, deux serveurs en rack Cisco UCS C-Series.
-+
-Pour des déploiements de serveurs en rack Cisco UCS C-Series plus importants, vous pouvez choisir une paire de modules FEX 22 32PP. Toutefois, le 2232PP n'est pas obligatoire en termes de matériel.
+* Deux commutateurs Cisco Nexus en configuration redondante. Cette configuration peut comprendre deux commutateurs redondants de la série Cisco Nexus 9000 mentionnée précédemment. Les deux commutateurs doivent être du même modèle et configurés dans le même mode de fonctionnement.
 
 
 
-* Deux contrôleurs de stockage NetApp dans une configuration de paires haute disponibilité :
-+
-Cette configuration peut se composer de n'importe quel contrôleur de stockage NetApp FAS, AFF ou ASA pris en charge. Voir la https://hwu.netapp.com/["NetApp Hardware Universe"^] Application pour une liste actuelle des modèles de contrôleurs FAS, AFF et ASA pris en charge.
+NOTE: Si vous déployez une architecture ACI, vous devez respecter les exigences supplémentaires suivantes : * Déployez les commutateurs Cisco Nexus 9000 Series selon une topologie leaf-spine. * Utilisez trois Cisco Application Policy Infrastructure Controllers (APIC).
 
-+
-** La configuration haute disponibilité requiert deux interfaces redondantes par contrôleur pour l'accès aux données ; les interfaces peuvent être FCoE, FC ou Ethernet 10/25 Gb (GbE).
-** Si la solution utilise NetApp ONTAP, une topologie d'interconnexion de cluster approuvée par NetApp est requise. Pour plus d'informations, reportez-vous à la section https://hwu.netapp.com/Switch/Index["Commutateurs"^] De l'onglet NetApp Hardware Universe.
-** Si la solution utilise le protocole ONTAP, deux ports 10/25 GbE supplémentaires par contrôleur sont requis pour l'accès aux données.
-** Dans le cas de clusters ONTAP avec deux nœuds, vous pouvez configurer un cluster à deux nœuds sans commutateur.
-** Pour les clusters ONTAP de plus de deux nœuds, une paire de commutateurs d'interconnexion de cluster est requise.
+* Deux interconnexions de structure Cisco UCS 6400, 6500 ou 6600 Series dans une configuration redondante, si vous utilisez les serveurs rack UCS C-Series ou les systèmes modulaires X-Series.
+* Deux serveurs rack Cisco UCS série C avec connectivité FI et configuration gérée par Intersight (IMM), ou le Cisco UCS X-Series Direct avec Cisco IMM, ou le Cisco UCS X-Series Modular avec configuration gérée par Cisco Intersight (IMM).
 
 
-* Un tiroir disque NetApp avec tous les types de disques pris en charge. Voir l'onglet étagères du link:https://hwu.netapp.com/Shelves/Index?osTypeId=2032["NetApp Hardware Universe"^] vous trouverez la liste actuelle des modèles de tiroirs disques pris en charge.
+
+NOTE: Si vous utilisez les serveurs rack UCS sans connectivité FI, vous pouvez utiliser CIMC ou le mode autonome Intersight pour la gestion.
+
+* Deux contrôleurs NetApp AFF, NetApp ASA ou NetApp FAS configurés en paire haute disponibilité (HA) et déployés en cluster à deux nœuds. Si vous utilisez NetApp AFX, un minimum de quatre contrôleurs NetApp AFX est requis et doit être déployé en cluster HA à quatre nœuds, accompagné d'une paire de commutateurs d'interconnexion de cluster.
+* Un minimum d’un tiroir disque NetApp est requis pour les contrôleurs de stockage qui ne possèdent pas de tiroir disque intégré.
 

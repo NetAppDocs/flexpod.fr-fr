@@ -16,7 +16,7 @@ summary: La liste ci-dessous répertorie les conditions de connectivité requise
 [role="lead"]
 Une configuration FlexPod présente les exigences de connectivité suivantes :
 
-* Tous les composants doivent utiliser un réseau de gestion hors bande Ethernet 100 Mbit/s distinct.
+* Un réseau de gestion hors bande Ethernet 1Gb distinct est requis pour tous les composants.
 * NetApp vous recommande d'activer la prise en charge des trames Jumbo dans l'ensemble de l'environnement, mais pas requise.
 * Les ports autonomes des appliances Cisco UCS Fabric Interconnect sont recommandés uniquement pour les connexions iSCSI. Lorsque des connexions NAS sont utilisées avec des ports d'appliance, des commutateurs Nexus / compatibles supplémentaires sont requis pour certains scénarios de défaillance.
 * Aucun équipement supplémentaire ne peut être placé en ligne entre les composants principaux de FlexPod.
@@ -24,15 +24,15 @@ Une configuration FlexPod présente les exigences de connectivité suivantes :
 
 Connexions de liaison montante :
 
-* Les ports des contrôleurs de stockage NetApp doivent être connectés aux commutateurs des gammes Cisco Nexus 5000, 7000 ou 9000 pour prendre en charge les canaux de ports virtuels (VPC).
-* Les VPC sont requis des commutateurs Cisco Nexus 5000, 7000 ou 9000 vers les contrôleurs de stockage NetApp.
-* Les VPC sont requis des commutateurs Cisco Nexus 5000, 7000 ou 9000 vers les interconnexions de fabric.
+* Les ports des contrôleurs de stockage NetApp doivent être connectés aux commutateurs Cisco Nexus 9000 Series pour activer la prise en charge des canaux de ports virtuels (vPC).
+* Les vPC sont nécessaires depuis les commutateurs Cisco Nexus 9000 Series vers les contrôleurs de stockage NetApp.
+* Les vPC sont nécessaires des commutateurs Cisco Nexus 9000 Series vers les interconnexions de la structure.
 * Un minimum de deux connexions est requis pour un VPC. Le nombre de connexions au sein d'un VPC peut être augmenté en fonction des exigences de charge et de performances de l'application.
 
 
 Connexions directes :
 
-* Les ports des contrôleurs de stockage NetApp directement connectés aux Fabric Interconnect peuvent être regroupés pour activer un canal de port. VPC n'est pas pris en charge pour cette configuration.
+* NetApp Les ports du contrôleur de stockage qui sont directement connectés aux fabric interconnects (comme dans le cas de X-Series Direct) peuvent être regroupés pour activer un port channel. vPC n'est pas pris en charge pour cette configuration.
 * Les canaux de port FCoE sont recommandés pour les conceptions FCoE de bout en bout.
 
 
@@ -41,3 +41,5 @@ Démarrage SAN :
 * Les solutions FlexPod sont conçues autour d'une architecture de démarrage SAN qui utilise les protocoles iSCSI, FC ou FCoE. L'utilisation des technologies Boot-from-SAN offre la configuration la plus flexible pour l'infrastructure de data Center et permet d'accéder aux fonctionnalités avancées disponibles dans chaque composant de l'infrastructure. Bien que le démarrage à partir du SAN soit la configuration la plus efficace, le démarrage à partir du stockage du serveur local est une configuration valide et prise en charge.
 * Le démarrage SAN via FC-NVME n'est pas pris en charge.
 
+
+Reportez-vous à la section link:https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_topologies.html["Topologies FlexPod Datacenter"^] relative aux exigences de connectivité spécifiques à chaque topologie.
