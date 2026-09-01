@@ -10,7 +10,7 @@ summary: 'Pour plus d"informations, consultez le site Web de NetApp et le Guide 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

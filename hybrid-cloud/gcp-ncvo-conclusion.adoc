@@ -10,7 +10,7 @@ summary: 'Dans cette solution, le service de données cloud NetApp, Cloud Volume
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-validation.html["Précédent : validation de la solution."]

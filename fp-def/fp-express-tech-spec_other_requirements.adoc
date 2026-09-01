@@ -10,7 +10,7 @@ summary: Les autres conditions applicables à FlexPod Express sont répertoriée
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

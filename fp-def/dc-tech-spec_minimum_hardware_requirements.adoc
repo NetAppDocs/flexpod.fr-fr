@@ -10,7 +10,7 @@ summary: 'Une configuration FlexPod Datacenter présente des exigences matériel
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

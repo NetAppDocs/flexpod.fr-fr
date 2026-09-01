@@ -10,7 +10,7 @@ summary: La norme FIPS 140-2 spécifie les exigences de sécurité pour un modul
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Précédent : cyber-menaces dans le domaine de la santé."]

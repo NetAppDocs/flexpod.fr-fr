@@ -10,7 +10,7 @@ summary: Cette section décrit les exigences logicielles recommandées pour les 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'Le déploiement automatisé pour FlexPod Express est disponible via un
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

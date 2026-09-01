@@ -10,7 +10,7 @@ summary: 'Les spécifications techniques fournissent des détails sur les compos
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

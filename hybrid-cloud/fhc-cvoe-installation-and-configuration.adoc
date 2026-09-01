@@ -10,7 +10,7 @@ summary: Cette section décrit comment installer et configurer Cloud Volumes ONT
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-components.html["Précédent : composants de la solution."]

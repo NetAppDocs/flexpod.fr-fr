@@ -10,7 +10,7 @@ summary: 'Cette section décrit le nombre d"études et les exigences d"infrastru
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

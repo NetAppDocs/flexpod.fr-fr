@@ -10,7 +10,7 @@ summary: Cette section décrit les spécifications techniques importantes de cha
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

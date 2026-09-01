@@ -10,7 +10,7 @@ summary: 'Ce document détaille la configuration d"un système FlexPod Express e
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

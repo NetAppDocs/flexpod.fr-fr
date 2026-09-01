@@ -10,7 +10,7 @@ summary: Le tableau suivant illustre les versions validées du matériel et du l
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

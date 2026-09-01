@@ -10,7 +10,7 @@ summary: 'Il s"agit de quelques exemples de cas d"utilisation pour le contrôle 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

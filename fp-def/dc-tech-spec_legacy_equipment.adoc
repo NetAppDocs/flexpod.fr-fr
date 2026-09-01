@@ -10,7 +10,7 @@ summary: 'FlexPod est une solution flexible qui vous permet d"utiliser votre éq
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

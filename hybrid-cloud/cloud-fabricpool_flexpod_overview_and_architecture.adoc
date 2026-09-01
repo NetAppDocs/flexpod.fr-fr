@@ -10,7 +10,7 @@ summary: FlexPod est un ensemble défini de matériels et de logiciels qui const
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

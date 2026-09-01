@@ -10,7 +10,7 @@ summary: Pour créer des igroups, exécutez les commandes suivantes depuis la co
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

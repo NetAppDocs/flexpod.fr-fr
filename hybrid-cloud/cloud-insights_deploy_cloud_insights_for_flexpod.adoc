@@ -10,7 +10,7 @@ summary: Les tâches suivantes doivent être effectuées pour déployer Cloud In
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

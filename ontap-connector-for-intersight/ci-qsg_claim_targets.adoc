@@ -10,7 +10,7 @@ summary: Une fois Cisco InterSight Assist installé, vous pouvez demander vos sy
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

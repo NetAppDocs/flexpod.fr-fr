@@ -10,7 +10,7 @@ summary: Cette section décrit le déploiement automatisé du stockage NetApp da
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-configure-public-cloud-service-provider.html["Précédent : configuration du fournisseur de services clouds publics."]

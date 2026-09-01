@@ -10,7 +10,7 @@ summary: 'Les fonctionnalités NetApp décrites dans ce document vous aident à 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

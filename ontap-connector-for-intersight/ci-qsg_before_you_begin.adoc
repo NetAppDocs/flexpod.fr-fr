@@ -10,7 +10,7 @@ summary: Avant de commencer, installez ou mettez à niveau AIQ UM, créez un com
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

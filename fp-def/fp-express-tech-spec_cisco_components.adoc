@@ -10,7 +10,7 @@ summary: 'Cisco apporte une contribution substantielle à la conception et à l"
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

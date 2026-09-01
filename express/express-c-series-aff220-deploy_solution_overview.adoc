@@ -10,7 +10,7 @@ summary: 'Cette solution FlexPod Express fait partie du programme d"infrastructu
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

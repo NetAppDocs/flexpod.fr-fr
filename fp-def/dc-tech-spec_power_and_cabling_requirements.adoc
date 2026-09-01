@@ -10,7 +10,7 @@ summary: 'La conception d"une FlexPod pr√©sente des exigences minimales en mati√
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'La solution FlexPod Datacenter SM-BC protège les services de données
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-virtualization.html["Validation de la solution - virtualisation."]

@@ -10,7 +10,7 @@ summary: La configuration de calcul de la solution FlexPod SM-BC suit les bonnes
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-solution-validation_overview.html["Preivous : validation de la solution - Présentation."]

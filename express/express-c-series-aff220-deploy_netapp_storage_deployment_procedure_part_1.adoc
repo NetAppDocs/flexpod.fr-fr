@@ -10,7 +10,7 @@ summary: Suivez les étapes ci-dessous pour terminer la procédure de déploieme
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

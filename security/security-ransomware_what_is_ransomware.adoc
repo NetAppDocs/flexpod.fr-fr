@@ -10,7 +10,7 @@ summary: 'Les ransomwares sont un type de malware basé sur la cryptovirologie, 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Arvind Ramakrishnan, NetApp

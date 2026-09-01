@@ -10,7 +10,7 @@ summary: La conception du système FlexPod permet de créer une infrastructure f
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Cisco Intersight propose de nouvelles versions pour vous apporter de no
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

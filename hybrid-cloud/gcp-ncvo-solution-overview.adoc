@@ -10,7 +10,7 @@ summary: 'Ce rapport technique rassemble la solution d"infrastructure convergée
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Ruchika Lahoti, NetApp

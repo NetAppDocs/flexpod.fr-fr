@@ -10,7 +10,7 @@ summary: 'Ce document présente une présentation technique d"une infrastructure
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 JayaKishore Esanakula, NetApp John McAbel, Cisco

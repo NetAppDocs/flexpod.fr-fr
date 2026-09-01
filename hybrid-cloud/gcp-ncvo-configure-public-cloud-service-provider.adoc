@@ -10,7 +10,7 @@ summary: Cette page explique comment accéder à NetApp Cloud Manager et déploy
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["Précédent : intégration du cloud Terraform avec la condition préalable d'ICO."]

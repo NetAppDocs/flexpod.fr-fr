@@ -10,7 +10,7 @@ summary: Les informations suivantes décrivent la configuration logicielle minim
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

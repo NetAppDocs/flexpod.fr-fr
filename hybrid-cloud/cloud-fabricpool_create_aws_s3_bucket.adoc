@@ -10,7 +10,7 @@ summary: 'Les compartiments sont des conteneurs de stockage objet qui hébergent
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

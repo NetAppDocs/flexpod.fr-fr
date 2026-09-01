@@ -10,7 +10,7 @@ summary: Vous pouvez configurer la mise en cluster VMware vCenter Server 6.7 et 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

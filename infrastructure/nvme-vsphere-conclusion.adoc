@@ -10,7 +10,7 @@ summary: 'Grâce à FlexPod, Cisco et NetApp ont créé une plateforme à la foi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./..media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-test-results.html["Précédent : résultats du test."]

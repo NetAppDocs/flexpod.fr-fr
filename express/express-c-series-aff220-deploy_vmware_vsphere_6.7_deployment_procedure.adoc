@@ -10,7 +10,7 @@ summary: 'Cette section décrit les procédures d"installation de VMware ESXi 6.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

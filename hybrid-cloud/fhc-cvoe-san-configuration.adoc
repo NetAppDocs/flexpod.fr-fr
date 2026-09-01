@@ -10,7 +10,7 @@ summary: 'Cette section décrit la configuration côté hôte requise par le dos
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-installation-and-configuration.html["Précédent : installation et configuration."]

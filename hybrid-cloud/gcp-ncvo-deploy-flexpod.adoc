@@ -10,7 +10,7 @@ summary: 'Cette page répertorie les ressources nécessaires au déploiement d"u
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-components.html["Précédent : composants de la solution."]

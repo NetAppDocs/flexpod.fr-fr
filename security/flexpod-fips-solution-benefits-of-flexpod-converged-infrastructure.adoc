@@ -10,7 +10,7 @@ summary: 'Pour démontrer la configuration FIPS sur un système FlexPod, nous av
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["Précédent : stockage NetApp ONTAP de FlexPod et FIPS 140-2."]

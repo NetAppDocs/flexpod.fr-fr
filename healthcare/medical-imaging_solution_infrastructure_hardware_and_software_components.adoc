@@ -10,7 +10,7 @@ summary: 'Les tableaux ci-après répertorient les composants matériels et logi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 'FlexPod Express est une architecture préconçue et conforme aux bonne
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Sree Lakshmi Lanka, NetApp

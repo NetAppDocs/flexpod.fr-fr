@@ -10,7 +10,7 @@ summary: 'Pour créer des igroups, vous avez besoin des IQN de l"initiateur iSCS
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

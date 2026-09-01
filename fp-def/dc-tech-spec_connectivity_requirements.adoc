@@ -10,7 +10,7 @@ summary: La liste ci-dessous répertorie les conditions de connectivité requise
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

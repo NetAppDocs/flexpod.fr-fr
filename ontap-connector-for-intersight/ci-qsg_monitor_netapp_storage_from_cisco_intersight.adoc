@@ -10,7 +10,7 @@ summary: 'Une fois les cibles réclamées, les widgets de stockage NetApp, l"inv
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

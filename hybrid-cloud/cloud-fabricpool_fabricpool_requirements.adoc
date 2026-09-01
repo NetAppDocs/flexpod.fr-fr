@@ -10,7 +10,7 @@ summary: 'FabricPool nécessite ONTAP 9.2 ou une version ultérieure et des agr�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

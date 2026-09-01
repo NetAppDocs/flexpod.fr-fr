@@ -10,7 +10,7 @@ summary: 'Les architectures de référence FlexPod sont fournies sous la forme d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

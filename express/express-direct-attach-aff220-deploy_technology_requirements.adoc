@@ -10,7 +10,7 @@ summary: 'Un système FlexPod Express nécessite une combinaison de composants m
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

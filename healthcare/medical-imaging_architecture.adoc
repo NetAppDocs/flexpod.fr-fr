@@ -10,7 +10,7 @@ summary: 'L"architecture FlexPod est conçue pour assurer une haute disponibilit
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

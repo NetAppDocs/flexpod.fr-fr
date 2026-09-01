@@ -10,7 +10,7 @@ summary: 'Cette section décrit tous les composants de la solution nécessaires 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-overview.html["Précédent : présentation de la solution."]

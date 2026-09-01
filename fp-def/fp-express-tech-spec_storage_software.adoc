@@ -10,7 +10,7 @@ summary: 'Les systèmes d"exploitation de stockage répertoriés dans cette sect
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

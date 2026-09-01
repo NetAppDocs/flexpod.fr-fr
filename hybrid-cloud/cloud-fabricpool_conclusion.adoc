@@ -10,7 +10,7 @@ summary: 'La transition vers le cloud varie d"une entreprise à l"autre, et mêm
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

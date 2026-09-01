@@ -10,7 +10,7 @@ summary: 'Avec FlexPod, vous disposez d"une plateforme unique qui prend en charg
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Jaya Kishore Esanakula et Atul Bhalodia, NetApp

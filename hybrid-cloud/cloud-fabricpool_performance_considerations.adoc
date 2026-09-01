@@ -10,7 +10,7 @@ summary: 'Lors de l"étude du dimensionnement, il est important d"évaluer les �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

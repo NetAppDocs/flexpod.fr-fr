@@ -10,7 +10,7 @@ summary: 'Le logiciel NetApp ONTAP est installé sur chaque système NetApp FAS 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

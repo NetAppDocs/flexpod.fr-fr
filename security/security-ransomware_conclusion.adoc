@@ -10,7 +10,7 @@ summary: 'Les auteurs recommandent de ne pas payer une rançon en cas d"attaque,
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

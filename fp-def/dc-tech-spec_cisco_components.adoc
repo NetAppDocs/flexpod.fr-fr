@@ -10,7 +10,7 @@ summary: 'Cisco a considérablement contribué au design et à l"architecture de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

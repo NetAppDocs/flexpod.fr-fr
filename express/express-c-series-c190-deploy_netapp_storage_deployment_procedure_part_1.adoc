@@ -10,7 +10,7 @@ summary: Cette section décrit la procédure de déploiement du stockage NetApp 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Pour configurer la mise en cluster de VMware vCenter Server 6.7 et vSph
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

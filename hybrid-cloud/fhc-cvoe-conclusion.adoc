@@ -10,7 +10,7 @@ summary: 'La création d"un cloud hybride est un objectif pour la plupart des é
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-validation.html["Précédent : validation de la solution."]

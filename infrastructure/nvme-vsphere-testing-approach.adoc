@@ -10,7 +10,7 @@ summary: 'Cette section présente un résumé général du test de validation du
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-introduction.html["Précédent : introduction."]

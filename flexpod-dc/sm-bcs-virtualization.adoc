@@ -10,7 +10,7 @@ summary: 'Dans la solution multisite FlexPod SM-BC, un seul VMware vCenter gère
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-storage.html["Précédente : validation de la solution - stockage."]

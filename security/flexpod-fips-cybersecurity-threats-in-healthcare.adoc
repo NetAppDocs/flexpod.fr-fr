@@ -10,7 +10,7 @@ summary: 'Les menaces pour les soins de santé sont multidimensionnelles dans la
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-introduction.html["Précédent : introduction."]

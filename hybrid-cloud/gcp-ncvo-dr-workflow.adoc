@@ -10,7 +10,7 @@ summary: 'Cette page répertorie les 11 procédures nécessaires à la mise en �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Précédent : déploiement automatisé du stockage NetApp dans le cloud hybride."]

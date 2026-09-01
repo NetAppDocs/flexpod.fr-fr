@@ -10,7 +10,7 @@ summary: 'Lors de la mise en œuvre d"une stratégie FIPS 140-2-2, il est import
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-overview-of-fips-140-2.html["Précédent : présentation de la norme FIPS 140-2."]

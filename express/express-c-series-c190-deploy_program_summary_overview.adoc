@@ -10,7 +10,7 @@ summary: 'Les solutions FlexPod Datacenter et FlexPod Express proposent une conf
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Savita Kumari, NetApp

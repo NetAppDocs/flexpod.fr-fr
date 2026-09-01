@@ -10,7 +10,7 @@ summary: 'Lorsqu"un magasin d"objets est ajouté à et identifié par ONTAP, il 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

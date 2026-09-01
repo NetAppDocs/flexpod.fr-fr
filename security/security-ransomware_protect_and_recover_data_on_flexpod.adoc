@@ -10,7 +10,7 @@ summary: 'Cette section décrit comment les données d"un utilisateur final peuv
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

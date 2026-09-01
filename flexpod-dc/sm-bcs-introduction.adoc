@@ -10,7 +10,7 @@ summary: Cette page propose une présentation de la solution de FlexPod Datacent
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Jyh-shing Chen, NetApp

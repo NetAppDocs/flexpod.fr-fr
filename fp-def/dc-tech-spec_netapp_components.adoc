@@ -10,7 +10,7 @@ summary: 'Les contrôleurs de stockage NetApp constituent la base du stockage de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

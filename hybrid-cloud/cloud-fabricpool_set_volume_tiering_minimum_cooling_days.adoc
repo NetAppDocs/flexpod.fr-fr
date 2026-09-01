@@ -10,7 +10,7 @@ summary: 'Le paramètre de Tiering sur les jours minimum de refroidissement dét
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

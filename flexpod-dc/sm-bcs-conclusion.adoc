@@ -10,7 +10,7 @@ summary: 'Le FlexPod Datacenter avec SM-BC utilise une conception de data Center
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-validated-scenarios.html["Précédent : validation des solutions - scénarios validés"]

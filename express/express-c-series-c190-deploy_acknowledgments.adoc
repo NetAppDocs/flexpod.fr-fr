@@ -10,7 +10,7 @@ summary: Les auteurs souhaitent reconnaître John George pour son soutien et sa 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Cette section fournit des informations de référence pour le câblage 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

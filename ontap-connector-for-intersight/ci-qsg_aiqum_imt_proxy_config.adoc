@@ -10,7 +10,7 @@ summary: 'Les configurations de serveur proxy d"AIQ UM doivent être configurée
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

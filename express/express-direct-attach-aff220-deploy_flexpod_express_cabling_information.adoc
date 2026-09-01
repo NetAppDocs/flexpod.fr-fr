@@ -10,7 +10,7 @@ summary: Le câblage de la validation de référence est décrit dans les tablea
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: De nombreuses organisations du secteur de la santé à travers le monde
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["Précédent : configuration du GPU."]

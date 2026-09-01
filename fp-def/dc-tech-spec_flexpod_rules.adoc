@@ -10,7 +10,7 @@ summary: La conception de FlexPod permet de créer une infrastructure flexible q
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

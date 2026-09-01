@@ -10,7 +10,7 @@ summary: 'Sur cette page, nous revisiterons la solution avec un exemple de workf
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-execution-from-controller.html["Précédent : exécution Terraform à partir du contrôleur."]

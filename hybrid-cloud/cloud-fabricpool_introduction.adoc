@@ -10,7 +10,7 @@ summary: 'Dans ce rapport technique, nous passons en revue la fonctionnalité de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Scott Kovacs, NetApp

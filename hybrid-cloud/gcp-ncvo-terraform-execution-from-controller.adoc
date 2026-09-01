@@ -10,7 +10,7 @@ summary: 'Nous pouvons exécuter le plan Terraform à l"aide d"un contrôleur. V
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-dr-workflow.html["Précédent : flux de travail de reprise après incident."]

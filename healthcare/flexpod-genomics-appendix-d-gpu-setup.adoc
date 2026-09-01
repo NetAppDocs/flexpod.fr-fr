@@ -10,7 +10,7 @@ summary: 'Au moment de la publication, l"outil GATK n"a pas de prise en charge n
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-c.html["Précédent : sortie pour l'exécution de la GATK à l'aide du moteur Cromwell."]

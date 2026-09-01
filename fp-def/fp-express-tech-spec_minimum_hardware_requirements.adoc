@@ -10,7 +10,7 @@ summary: Cette section décrit la configuration matérielle minimale requise pou
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

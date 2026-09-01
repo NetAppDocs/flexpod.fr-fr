@@ -10,7 +10,7 @@ summary: Cette page répertorie les ressources nécessaires pour configurer Cisc
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-deploy-flexpod.html["Précédent : déployer FlexPod."]

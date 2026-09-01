@@ -10,7 +10,7 @@ summary: 'Une architecture FlexPod doit également répondre à plusieurs exigen
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

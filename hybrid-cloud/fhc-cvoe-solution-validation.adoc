@@ -10,7 +10,7 @@ summary: 'Cette section décrit la validation de la solution à partir de plusie
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-san-configuration.html["Précédent : configuration SAN."]

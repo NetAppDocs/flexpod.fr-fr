@@ -10,7 +10,7 @@ summary: 'Une fois que vous avez acquis un fichier de licence NetApp, vous pouve
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

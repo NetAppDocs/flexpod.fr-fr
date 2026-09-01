@@ -10,7 +10,7 @@ summary: La section suivante décrit la configuration du commutateur Cisco Nexus
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

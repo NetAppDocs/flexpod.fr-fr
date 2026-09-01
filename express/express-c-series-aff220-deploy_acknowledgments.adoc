@@ -10,7 +10,7 @@ summary: Les auteurs souhaitent reconnaître certaines personnes pour leur souti
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
