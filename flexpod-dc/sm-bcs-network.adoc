@@ -27,7 +27,7 @@ Les switchs FlexPod Nexus de chaque site procurent une connectivité locale entr
 
 Le schéma suivant présente la connectivité locale du commutateur Nexus sur chaque site. Outre ce qui est illustré dans le schéma, il existe aussi des connexions au réseau de gestion et de console pour chaque composant qui ne sont pas affichés. Les câbles de dérivation 40G à 4 x 10G sont utilisés pour connecter les commutateurs Nexus aux serveurs d'accès UCS ainsi qu'aux contrôleurs de stockage ONTAP AFF A250. Il est également possible d'utiliser des câbles de dérivation 100G à 4 x 25G pour accroître la vitesse de communication entre les commutateurs Nexus et les contrôleurs de stockage AFF A250. Pour plus de simplicité, les deux contrôleurs AFF A250 sont présentés côte à côte pour illustrer le câblage. Les deux connexions entre les deux contrôleurs de stockage permettent au système de stockage de former un cluster sans commutateur.
 
-image:sm-bcs-image20.png[""]
+image:sm-bcs-image20.png["Un schéma illustrant la connectivité locale redondante des FI 6454, Nexus et AFF A250"]
 
 Le tableau suivant montre la connectivité entre les switchs Nexus et les contrôleurs de stockage AFF A250 sur chaque site.
 
@@ -60,7 +60,7 @@ Le tableau suivant montre la connectivité entre les switchs Nexus et les contr�
 |===
 La connectivité entre les commutateurs FlexPod du site A et du site B est illustrée dans la figure suivante avec les détails de câblage répertoriés dans le tableau ci-dessous. Les connexions entre les deux commutateurs de chaque site correspondent aux liaisons VPC Peer. D'autre part, les connexions entre les commutateurs entre les sites fournissent les liaisons intersites. Les liaisons étendent les VLAN sur plusieurs sites pour la communication intercluster, la réplication des données SM-BC, la gestion intrabande et l'accès aux données pour les ressources des sites distants.
 
-image:sm-bcs-image21.png[""]
+image:sm-bcs-image21.png["Un diagramme illustrant les liaisons homologues vPC et les liaisons intersites entre les commutateurs FlexPod des sites A et B"]
 
 |===
 | Périphérique local | Port local | Périphérique distant | Port distant 

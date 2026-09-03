@@ -68,7 +68,7 @@ Pour que Cloud Insights puisse collecter des données, une entreprise doit dépl
 
 La figure suivante illustre l'architecture de la solution.
 
-image:cloud-insights_image2.png[""]
+image:cloud-insights_image2.png["Un schéma montrant Cisco UCS, les commutateurs Nexus, les contrôleurs NetApp AFF A800 et les commutateurs MDS interconnectés par des liaisons réseau"]
 
 
 

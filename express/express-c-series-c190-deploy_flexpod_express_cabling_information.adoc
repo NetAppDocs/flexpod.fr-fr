@@ -18,7 +18,7 @@ Cette validation de référence est câblée comme indiqué dans les figures et 
 
 Cette figure illustre le câblage de validation de référence.
 
-image:express-c-series-c190-deploy_image3.png[""]
+image:express-c-series-c190-deploy_image3.png["Un schéma montrant les vues arrière de deux commutateurs Nexus, de deux serveurs Cisco UCS et de contrôleurs AFF C190"]
 
 Le tableau suivant répertorie les informations de câblage du commutateur Cisco Nexus 31108PC-V-A.
 

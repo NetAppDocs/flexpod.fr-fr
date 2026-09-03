@@ -39,15 +39,15 @@ Pour accéder aux informations de Digital Advisor via le tableau de bord Cloud I
 
 . Cliquez sur l'option Data Collector dans le menu Admin à gauche.
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["Capture d'écran montrant le menu Admin avec les collecteurs de données sélectionnés dans Cloud Insights"]
 
 . Filtre pour le Data Collector spécifique à votre environnement. Dans cet exemple, nous filtrons par le terme FlexPod.
 +
-image:cloud-insights_image23.png[""]
+image:cloud-insights_image23.png["Capture d'écran de la page Collecteurs de données filtrée pour FlexPod Datacenter"]
 
 . Cliquez sur le Data Collector pour obtenir un résumé de l'environnement et des périphériques surveillés par ce collecteur.
 +
-image:cloud-insights_image24.png[""]
+image:cloud-insights_image24.png["Capture d'écran du résumé du collecteur de données FlexPod Datacenter avec la chronologie des événements et le périphérique de stockage signalé"]
 
 +
 Sous la liste des périphériques en bas, cliquez sur le nom du système de stockage ONTAP surveillé. Un tableau de bord des informations collectées à propos du système s'affiche, avec les informations suivantes :
@@ -61,19 +61,19 @@ Sous la liste des périphériques en bas, cliquez sur le nom du système de stoc
 ** Latence moyenne
 ** Débit moyen
 +
-image:cloud-insights_image25.png[""]
+image:cloud-insights_image25.png["Capture d'écran du tableau de bord de stockage aa14-a800 avec résumé, risques, données utilisateur et graphique de latence"]
 
 +
 Vous trouverez également sur cette page, dans la section Politiques de performance, un lien vers NetApp Digital Advisor.
 
 +
-image:cloud-insights_image26.png[""]
+image:cloud-insights_image26.png["Capture d'écran montrant les politiques de performance avec 35 risques détectés par Active IQ et une icône de lien externe"]
 
 
 
 . Pour ouvrir un nouvel onglet de navigateur et accéder à la page d’atténuation des risques, qui indique quels nœuds sont affectés, le niveau de criticité des risques et les mesures appropriées à prendre pour corriger les problèmes identifiés, cliquez sur le lien pour Digital Advisor.
 +
-image:cloud-insights_image27.png[""]
+image:cloud-insights_image27.png["Capture d'écran d'Active IQ Digital Advisor répertoriant les risques pour la santé et les actions correctives pour un système de stockage"]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights peut afficher les tableaux de bord en temps réel des information
 
 À partir du tableau de bord du système de stockage, vous pouvez voir la dernière mise à jour des informations par le Data Collector. La figure ci-dessous en est un exemple.
 
-image:cloud-insights_image28.png[""]
+image:cloud-insights_image28.png["Capture d'écran des détails de Cloud Insights Data Collector montrant une acquisition réussie il y a 3 minutes à 13h21"]
 
 Par défaut, le tableau de bord du système de stockage affiche plusieurs graphiques interactifs qui présentent les metrics système de stockage interrogés ou à partir de chaque nœud, notamment la latence, les IOPS et le débit. La figure ci-dessous présente des exemples de ces graphiques par défaut.
 
-image:cloud-insights_image29.png[""]
+image:cloud-insights_image29.png["Capture d'écran de Cloud Insights Expert View avec graphiques de latence, d'IOPS et de débit, et détails des ressources"]
 
 Par défaut, les graphiques affichent des informations des trois dernières heures, mais vous pouvez les définir sur un certain nombre de valeurs différentes ou sur une valeur personnalisée dans la liste déroulante située en haut à droite du tableau de bord du système de stockage. Ceci est illustré dans la figure ci-dessous.
 
-image:cloud-insights_image30.png[""]
+image:cloud-insights_image30.png["Capture d'écran du tableau de bord de stockage avec le menu déroulant de plage horaire affichant les 15 dernières minutes jusqu'à Personnalisé"]
 
 
 
@@ -115,21 +115,21 @@ Pour créer un tableau de bord personnalisé afin d'évaluer les ressources de s
 
 . Pour créer un tableau de bord personnalisé, placez le pointeur de la souris sur tableaux de bord dans le menu principal de Cloud Insights, puis cliquez sur + Nouveau tableau de bord dans la liste déroulante.
 +
-image:cloud-insights_image31.png[""]
+image:cloud-insights_image31.png["Capture d'écran du menu Cloud Insights Dashboards avec l'option « + Nouveau tableau de bord » mise en évidence"]
 
 +
 La fenêtre Nouveau tableau de bord s'ouvre.
 
 . Nommez le tableau de bord et sélectionnez le type de widget utilisé pour afficher les données. Vous pouvez choisir parmi un certain nombre de types de graphique, même des notes ou des types de table pour présenter les données collectées.
 +
-image:cloud-insights_image32.png[""]
+image:cloud-insights_image32.png["Capture d'écran des vignettes de sélection du type de widget du nouveau tableau de bord, incluant graphiques, jauges, notes et tableaux"]
 
 . Choisissez des variables personnalisées dans le menu Ajouter une variable.
 +
 Cela permet de concentrer les données présentées pour afficher des facteurs plus spécifiques ou plus spécialisés.
 
 +
-image:cloud-insights_image33.png[""]
+image:cloud-insights_image33.png["Capture d'écran montrant le menu Ajouter une variable avec un champ de recherche et une liste de variables sur un nouveau tableau de bord"]
 
 . Pour créer un tableau de bord personnalisé, sélectionnez le type de widget que vous souhaitez utiliser, par exemple, un graphique à secteurs pour afficher l'utilisation du stockage par volume :
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png[""]
 .. Personnalisez les informations à afficher. Par défaut, cette sélection affiche les volumes de données ONTAP et liste les 10 premiers.
 .. Pour enregistrer le tableau de bord personnalisé, cliquez sur Enregistrer.
 +
-image:cloud-insights_image34.png[""]
+image:cloud-insights_image34.png["Une capture d'écran montrant un widget de graphique circulaire « Capacité utilisée » configuré pour la capacité de volume de stockage utilisée"]
 
 +
 Après avoir enregistré le widget personnalisé, le navigateur retourne à la page Nouveau tableau de bord, où il affiche le widget nouvellement créé et permet de réaliser une action interactive, telle que la modification de la période d'interrogation des données.
 
 +
-image:cloud-insights_image35.png[""]
+image:cloud-insights_image35.png["Capture d'écran d'un tableau de bord Cloud Insights avec un widget de graphique circulaire représentant la capacité utilisée"]
 
 
 

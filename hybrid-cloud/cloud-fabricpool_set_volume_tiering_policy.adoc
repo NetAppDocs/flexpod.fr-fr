@@ -53,7 +53,7 @@ Pour modifier la règle de hiérarchisation d'un volume à l'aide de OnCommand S
 . Sélectionnez la règle de Tiering à appliquer au volume.
 . Cliquez sur Enregistrer.
 +
-image:cloud-fabricpool_image16.png[""]
+image:cloud-fabricpool_image16.png["Une capture d'écran qui montre la boîte de dialogue « Modifier la stratégie de hiérarchisation des volumes » avec les options de stratégie de hiérarchisation développées"]
 
 
 

@@ -40,11 +40,11 @@ Les figures suivantes illustrent les deux options de connectivité hôte.
 
 La figure suivante illustre les ports UTA 2 dans lesquels le module SFP+ peut être inséré.
 
-image:express-c-series-c190-design_image4.png[""]
+image:express-c-series-c190-design_image4.png["Un schéma montrant les vues arrière de deux contrôleurs AFF C190 avec ports UTA 2 pour modules SFP+"]
 
 La figure suivante illustre les ports 10GBASE-T pour la connexion via des câbles Ethernet RJ-45 traditionnels.
 
-image:express-c-series-c190-design_image5.png[""]
+image:express-c-series-c190-design_image5.png["Un schéma illustrant le panneau arrière d'un système AFF C190 avec des ports RJ-45 10GBASE-T"]
 
 
 NOTE: Pour l'option de port 10GBASE-T, vous devez disposer d'un commutateur uplink basé sur 10GBASE-T.
@@ -68,7 +68,7 @@ Les systèmes NetApp AFF C190 utilisent le nouveau logiciel de gestion des donn�
 
 ONTAP 9.6 propose plusieurs fonctionnalités particulièrement adaptées à la solution FlexPod Express. L'engagement de NetApp en faveur de l'efficacité du stockage est avant tout primordial, ce qui peut constituer l'une des fonctionnalités les plus importantes pour les déploiements de petite taille. ONTAP 9.6 propose les fonctionnalités d'efficacité du stockage de NetApp, telles que la déduplication, la compression, la compaction et le provisionnement fin. Le système WAFL de NetApp écrit toujours des blocs de 4 Ko. Par conséquent, la compaction combine plusieurs blocs dans un bloc de 4 Ko lorsque l'espace alloué des blocs de 4 Ko. La figure suivante illustre ce processus.
 
-image:express-c-series-c190-design_image6.png[""]
+image:express-c-series-c190-design_image6.png["Un diagramme montrant plusieurs blocs logiques de 4 Ko compactés en un seul bloc physique de 4 Ko"]
 
 ONTAP 9.6 prend désormais en charge une taille de bloc de 512 octets en option pour les volumes NVMe. Cette fonctionnalité est très efficace avec le VMFS (Virtual machine File System) de VMware, qui utilise de manière native un bloc de 512 octets. Vous pouvez conserver la taille 4K par défaut ou définir la taille de bloc de 512 octets.
 
@@ -95,7 +95,7 @@ La spécification Cisco Nexus 31108PC-V comprend les composants suivants :
 
 La figure suivante illustre le commutateur Cisco Nexus 31108PC-V.
 
-image:express-c-series-c190-design_image7.png[""]
+image:express-c-series-c190-design_image7.png["Vue de face d'un commutateur Cisco Nexus 31108PC-V doté de 48 ports SFP+ et de six ports QSFP28"]
 
 Pour plus d'informations sur les commutateurs Cisco Nexus 31108PC-V, reportez-vous à la section https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Fiche technique des commutateurs Cisco Nexus 3172PQ, 3172TQ, 3172TQ-32T, 3172PQ-XL et 3172TQ-XL"^].
 
@@ -116,7 +116,7 @@ Les serveurs en rack Cisco UCS C-Series offrent les avantages suivants :
 * Un plus grand choix pour les clients avec des avantages uniques dans un pack rack familier
 
 
-image:express-c-series-c190-design_image8.png[""]
+image:express-c-series-c190-design_image8.png["Vue de face d’un serveur en rack Cisco UCS C220 M5 avec deux baies de disques et la marque Cisco"]
 
 Le serveur en rack Cisco UCS C220 M5, présenté dans la figure ci-dessus, est l'un des serveurs applicatifs et d'infrastructure d'entreprise polyvalents les plus polyvalents du marché. Il s'agit d'un serveur en rack à deux sockets haute densité qui offre des performances et une efficacité de pointe pour une large gamme de charges de travail, notamment pour la virtualisation, la collaboration et les applications sans système d'exploitation. Les serveurs en rack Cisco UCS C-Series peuvent être déployés en tant que serveurs autonomes ou en tant que partie intégrante de Cisco UCS afin de tirer parti des innovations de Cisco en matière d'informatique unifiée, qui contribuent à réduire le coût total de possession des clients et à accroître leur souplesse commerciale.
 
@@ -129,7 +129,7 @@ Pour plus d'informations sur les serveurs C220 M5, reportez-vous à la section h
 
 L'adaptateur Cisco UCS VIC 1457 illustré dans la figure suivante est une carte LAN modulaire à quatre ports Small Form-factor pluggable (SFP28) sur carte mère (mLOM) conçue pour la génération M5 de serveurs Cisco UCS C-Series. La carte supporte Ethernet 10/25 Gbit/s ou FCoE. La carte peut présenter à l'hôte des interfaces conformes aux normes PCIe, qui peuvent être configurées dynamiquement en tant que cartes réseau ou HBA.
 
-image:express-c-series-c190-design_image9.png[""]
+image:express-c-series-c190-design_image9.png["Capture d'écran de l'adaptateur Cisco UCS VIC 1457 avec quatre ports SFP28 et un ventilateur de refroidissement"]
 
 Pour obtenir des informations complètes sur l'adaptateur Cisco UCS VIC 1457, consultez la page https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html["Fiche technique sur la carte d'interface virtuelle Cisco UCS série 1400"^].
 
@@ -186,6 +186,6 @@ La carte VIC 1457 de Cisco UCS est dotée de quatre ports physiques. Cette valid
 
 Dans une implémentation de démarrage iSCSI, le démarrage iSCSI nécessite des cartes d'interface réseau virtuelles (vNIC) distinctes pour le démarrage iSCSI. Ces vNIC utilisent le VLAN iSCSI de la structure appropriée comme VLAN natif et sont reliés aux vswitches de démarrage iSCSI, comme le montre la figure suivante.
 
-image:express-c-series-c190-design_image10.png[""]
+image:express-c-series-c190-design_image10.png["Un schéma montrant quatre vNIC connectées à FlexPod et aux vSwitches de démarrage iSCSI sur un hôte VMware ESXi 6.7 U2"]
 
 link:express-c-series-c190-design_conclusion.html["Suivant: Conclusion."]

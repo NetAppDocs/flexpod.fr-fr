@@ -46,7 +46,7 @@ Le séquençage est le processus de détermination de l'ordre exact des bases da
 
 La figure suivante montre le processus de l'échantillonnage à l'identification de variante, à l'annotation et à la prédiction.
 
-image:flexpod-genomics-image8.png[""]
+image:flexpod-genomics-image8.png["Un diagramme illustrant le flux de travail en génomique, depuis le prélèvement d'échantillons jusqu'aux modèles prédictifs, en passant par le séquençage, l'analyse des variants et l'intégration aux dossiers médicaux électroniques."]
 
 Le projet sur le génome humain a été achevé en avril 2003 et le projet a réalisé une simulation de très haute qualité de la séquence du génome humain disponible dans le domaine public. Ce génome de référence a initié une explosion de la recherche et du développement de capacités en génomique. Pratiquement chaque affection humaine a une signature dans les gènes de cet homme. Jusqu'à récemment, les médecins utilisaient les gènes pour prédire et déterminer les anomalies congénitales comme l'anémie falciforme, qui est causée par un certain modèle d'héritage causé par un changement dans un gène unique. Le Trésor des données mises à disposition par le projet du génome humain a conduit à l'avènement de l'état actuel des capacités en génomique.
 
@@ -95,40 +95,40 @@ Pour effectuer la configuration du laboratoire FlexPod, procédez comme suit :
 
 . La configuration et la validation du laboratoire FlexPod utilisent les réservations IP4 et les VLAN suivants.
 +
-image:flexpod-genomics-image10.png[""]
+image:flexpod-genomics-image10.png["Un tableau des réservations d'adresses IP VLAN indiquant les plages, les masques de sous-réseau, ainsi que les usages pour la gestion, les VM, NFS et iSCSI"]
 
 . Configuration des LUN de démarrage iSCSI sur le SVM ONTAP
 +
-image:flexpod-genomics-image9.png[""]
+image:flexpod-genomics-image9.png["Capture d'écran d'ONTAP System Manager montrant six LUN de démarrage ESXi dans la machine virtuelle de stockage Healthcare_SVM"]
 
 . Mapper les LUN sur des groupes initiateurs iSCSI.
 +
-image:flexpod-genomics-image11.png[""]
+image:flexpod-genomics-image11.png["Capture d'écran montrant ESXi_Boot_Lun_1 mappé au groupe d'initiateurs iSCSI GenomicsESXi_1"]
 
 +
-image:flexpod-genomics-image12.png[""]
+image:flexpod-genomics-image12.png["Capture d'écran d'ONTAP System Manager affichant les détails du LUN de démarrage ESXi mappé au groupe d'initiateurs GenomicsESXi_2"]
 
 . Installez vSphere 7.0 avec le démarrage iSCSI.
 . Enregistrez les hôtes ESXi avec vCenter.
 +
-image:flexpod-genomics-image13.png[""]
+image:flexpod-genomics-image13.png["Capture d'écran de l'inventaire du client vSphere montrant le dossier Genomics avec les hôtes ESXi et les machines virtuelles"]
 
 . Provisionner un datastore NFS `infra_datastore_nfs` Sur le stockage ONTAP.
 +
-image:flexpod-genomics-image14.png[""]
+image:flexpod-genomics-image14.png["Capture d'écran de ONTAP System Manager montrant le volume NFS Healthcare_Workload_NFS_Vol sélectionné en ligne"]
 
 . Ajoutez le datastore au vCenter.
 +
-image:flexpod-genomics-image16.png[""]
+image:flexpod-genomics-image16.png["Capture d'écran du vSphere Client affichant le résumé du datastore NFS 3 infra_datastore_nfs"]
 
 . À l'aide de vCenter, ajoutez un datastore NFS aux hôtes ESXi.
 +
-image:flexpod-genomics-image15.png[""]
+image:flexpod-genomics-image15.png["Capture d'écran du vSphere Client montrant les hôtes infra_datastore_nfs connectés avec un état normal"]
 
 . A l'aide de vCenter, créez une machine virtuelle Red Hat Enterprise Linux (RHEL) 8.3 pour exécuter GATK.
 . Un datastore NFS est présenté à la machine virtuelle et monté sur `/mnt/genomics`, Qui est utilisé pour stocker les exécutables GATK, les scripts, les fichiers de carte d'alignement binaire (BAM), les fichiers de référence, les fichiers d'index, les fichiers de dictionnaire et les fichiers de sortie pour les appels de variantes.
 +
-image:flexpod-genomics-image17.png[""]
+image:flexpod-genomics-image17.png["Capture d'écran d'un terminal Linux montrant /dev/sdb monté sur /mnt/genomics avec une utilisation de 2 %"]
 
 
 

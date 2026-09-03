@@ -45,7 +45,7 @@ Dans le champ Nom du conteneur, entrez le nom de compartiment ou du conteneur du
 . Cliquez sur Save and Attach Aggregates.
 
 
-image:cloud-fabricpool_image13.png[""]
+image:cloud-fabricpool_image13.png["Capture d'écran du formulaire Ajouter un niveau cloud configuré pour un fournisseur de niveau cloud Amazon S3"]
 
 
 

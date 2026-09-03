@@ -26,7 +26,7 @@ Toutefois, les configurations permettant d'exécuter des machines virtuelles sur
 
 La figure suivante montre une vue de virtualisation de la solution FlexPod SM-BC haut de gamme incluant à la fois des fonctionnalités VMware HA et vMSC afin d'offrir la haute disponibilité des services de calcul et de stockage. L'architecture de solution de data Center actif-actif permet la mobilité de la charge de travail entre les sites et assure la reprise après incident et la continuité de l'activité.
 
-image:sm-bcs-image39.png[""]
+image:sm-bcs-image39.png["Un schéma illustrant VMware HA et vSphere Metro Storage Cluster sur FlexPod sites A et B via une infrastructure multisite"]
 
 
 
@@ -35,7 +35,7 @@ image:sm-bcs-image39.png[""]
 
 La solution FlexPod SM-BC comprend des infrastructures FlexPod sur chaque site, une connectivité réseau entre les sites et un médiateur ONTAP déployé sur un troisième site afin d'atteindre les objectifs RPO et RTO requis. La figure suivante montre une connectivité réseau de bout en bout entre les serveurs Cisco UCS B200M5 sur chaque site et le système de stockage NetApp disposant de fonctionnalités SM-BC sur un site et sur plusieurs sites.
 
-image:sm-bcs-image40.png[""]
+image:sm-bcs-image40.png["Un schéma montrant les serveurs Cisco UCS B200 M5 et le stockage AFF A250 aux sites A et B, connectés via des commutateurs Nexus et un ONTAP Mediator au site C"]
 
 L'architecture de déploiement FlexPod est identique sur chaque site pour la validation de cette solution. Cependant, elle prend en charge les déploiements asymétriques et peut également être ajoutée aux solutions FlexPod existantes s'ils répondent aux exigences.
 
@@ -50,7 +50,7 @@ Chaque hôte du cluster est déployé à l'aide d'une mise en réseau virtuelle 
 
 Les commutateurs virtuels (vSwitch, VDS) sont déployés avec deux liaisons ascendantes par commutateur virtuel. Les liaisons ascendantes au niveau de l'hyperviseur ESXi sont appelées vmnics et vNIC virtuels (vNIC) sur le logiciel Cisco UCS. Les vNIC sont créés sur l'adaptateur Cisco UCS VIC de chaque serveur en utilisant des profils de service Cisco UCS. Six vNIC sont définis, deux pour vSwitch0, deux pour vDS0, deux pour vSwitch1 et deux pour les liaisons montantes iSCSI, comme illustré dans la figure suivante.
 
-image:sm-bcs-image41.png[""]
+image:sm-bcs-image41.png["Un schéma illustrant les commutateurs vSwitch0, vDS0, iSCSI-A et iSCSI-B avec six liaisons montantes vNIC"]
 
 VSwitch0 est défini lors de la configuration hôte VMware ESXi. Il contient le VLAN de gestion de l'infrastructure FlexPod et les ports VMK (hôte ESXi) pour la gestion. Un groupe de ports de machine virtuelle de gestion d'infrastructure est également placé sur vSwitch0 pour les machines virtuelles de gestion d'infrastructure stratégiques requises.
 
@@ -71,13 +71,13 @@ En utilisant un mécanisme d'affinité VM/hôte, vous pouvez utiliser des groupe
 
 La capture d'écran suivante montre que deux groupes d'hôtes et deux groupes de machines virtuelles sont créés pour les hôtes et les machines virtuelles du site A et du site B.
 
-image:sm-bcs-image42.png[""]
+image:sm-bcs-image42.png["Capture d'écran montrant les groupes de machines virtuelles/hôtes pour les hôtes et les machines virtuelles des sites A et B dans vSphere"]
 
 En outre, les deux figures suivantes montrent les règles VM/hôte créées pour les machines virtuelles du site A et du site B à exécuter sur les hôtes de leurs sites respectifs à l'aide de la stratégie « devrait s'exécuter sur les hôtes du groupe ».
 
-image:sm-bcs-image43.png[""]
+image:sm-bcs-image43.png["Capture d'écran de la boîte de dialogue Modifier la règle VM/hôte configurant les machines virtuelles du site A pour s'exécuter sur les hôtes du site A"]
 
-image:sm-bcs-image44.png[""]
+image:sm-bcs-image44.png["Capture d'écran de la boîte de dialogue Modifier la règle de VM/hôte pour les VM et les hôtes du site B avec l'option « Devrait s'exécuter sur les hôtes du groupe » dans la stratégie de groupe"]
 
 
 
@@ -88,11 +88,11 @@ VMware vSphere HA dispose d'un mécanisme de pulsation pour la validation de l'�
 
 Pour la validation de la solution, les deux adresses IP de gestion de cluster ONTAP sont utilisées comme adresse d'isolation. En outre, l'option avancée vSphere HA est recommandée `ds.heartbeatDsPerHost` avec une valeur de 4 a été ajoutée comme indiqué dans la figure suivante.
 
-image:sm-bcs-image45.png[""]
+image:sm-bcs-image45.png["Capture d'écran des options avancées de haute disponibilité vSphere avec quatre banques de données de pulsation et deux adresses d'isolation configurées"]
 
 Pour le datastore de signal de détection, spécifiez les quatre datastores partagés du cluster et complétez automatiquement, comme illustré dans la figure suivante.
 
-image:sm-bcs-image46.png[""]
+image:sm-bcs-image46.png["Capture d'écran des paramètres vSphere HA Heartbeat Datastores avec quatre banques de données spécifiées sélectionnées"]
 
 Pour plus de bonnes pratiques et de configurations pour VMware HA Cluster et VMware vSphere Metro storage cluster, voir  https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["Création et utilisation de clusters HA vSphere"^], https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["Cluster de stockage Metro VMware vSphere (vMSC)"^] et  https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-vmsc-with-smas.html["NetApp ONTAP avec SnapMirror active sync (anciennement SM-BC) et VMware vSphere Metro Storage Cluster (vMSC)"^].
 
