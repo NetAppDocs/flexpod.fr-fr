@@ -18,9 +18,12 @@ Divers produits Cisco Nexus peuvent être utilisés comme composant de commutati
 
 L’offre de Cisco dans le domaine des réseaux définis par logiciel s’appelle Application Centric Infrastructure (ACI). La gamme de produits Cisco Nexus, qui prend en charge le mode ACI (mode fabric), peut également être déployée en mode NX-OS.
 
+
+NOTE: Tous les commutateurs Cisco Nexus ne prennent pas en charge le mode ACI. Assurez-vous que le modèle spécifique que vous déployez répond à vos besoins opérationnels.
+
 L'ACI Cisco est destinée aux déploiements de data Center axés sur les besoins d'une application spécifique. Les applications sont instanciées via une série de profils et de contrats permettant la connectivité de l'hôte ou de la machine virtuelle (VM) jusqu'au stockage.
 
-FlexPod Datacenter est validé avec les deux modes de fonctionnement des commutateurs Cisco Nexus. Pour plus d'informations sur les modes ACI et NX-OS, consultez les pages Cisco suivantes :
+FlexPod Datacenter a été validé avec des commutateurs Cisco Nexus fonctionnant à la fois en mode NX-OS et en mode ACI. Les clients peuvent sélectionner le mode de fonctionnement qui correspond le mieux à leur architecture réseau, leur modèle opérationnel et leurs exigences d'automatisation. Pour plus d'informations sur les modes ACI et NX-OS, consultez les pages Cisco suivantes :
 
 * http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Application Centric Infrastructure (ACI) de Cisco"^]
 * https://www.cisco.com/site/us/en/products/networking/cloud-networking/nx-os/index.html["Logiciel Cisco NX-OS"^]

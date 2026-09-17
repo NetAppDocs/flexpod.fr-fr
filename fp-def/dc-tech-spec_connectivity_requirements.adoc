@@ -18,13 +18,13 @@ Une configuration FlexPod présente les exigences de connectivité suivantes :
 
 * Un réseau de gestion hors bande Ethernet 1Gb distinct est requis pour tous les composants.
 * NetApp vous recommande d'activer la prise en charge des trames Jumbo dans l'ensemble de l'environnement, mais pas requise.
-* Les ports autonomes des appliances Cisco UCS Fabric Interconnect sont recommandés uniquement pour les connexions iSCSI. Lorsque des connexions NAS sont utilisées avec des ports d'appliance, des commutateurs Nexus / compatibles supplémentaires sont requis pour certains scénarios de défaillance.
+* Les ports autonomes des appliances Cisco UCS Fabric Interconnect sont recommandés uniquement pour les connexions iSCSI. Lorsque des connexions NAS sont utilisées avec des ports d'appliance, des commutateurs Ethernet Cisco Nexus ou équivalents supplémentaires sont requis pour certains scénarios de défaillance.
 * Aucun équipement supplémentaire ne peut être placé en ligne entre les composants principaux de FlexPod.
 
 
 Connexions de liaison montante :
 
-* Les ports des contrôleurs de stockage NetApp doivent être connectés aux commutateurs Cisco Nexus 9000 Series pour activer la prise en charge des canaux de ports virtuels (vPC).
+* Les ports des contrôleurs de stockage NetApp doivent être connectés aux commutateurs Cisco Nexus 9000 Series.
 * Les vPC sont nécessaires depuis les commutateurs Cisco Nexus 9000 Series vers les contrôleurs de stockage NetApp.
 * Les vPC sont nécessaires des commutateurs Cisco Nexus 9000 Series vers les interconnexions de la structure.
 * Un minimum de deux connexions est requis pour un VPC. Le nombre de connexions au sein d'un VPC peut être augmenté en fonction des exigences de charge et de performances de l'application.
@@ -39,7 +39,7 @@ Connexions directes :
 Démarrage SAN :
 
 * Les solutions FlexPod sont conçues autour d'une architecture de démarrage SAN qui utilise les protocoles iSCSI, FC ou FCoE. L'utilisation des technologies Boot-from-SAN offre la configuration la plus flexible pour l'infrastructure de data Center et permet d'accéder aux fonctionnalités avancées disponibles dans chaque composant de l'infrastructure. Bien que le démarrage à partir du SAN soit la configuration la plus efficace, le démarrage à partir du stockage du serveur local est une configuration valide et prise en charge.
-* Le démarrage SAN via FC-NVME n'est pas pris en charge.
+* Le démarrage SAN via FC-NVMe n'est pas pris en charge.
 
 
 Reportez-vous à la section link:https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_topologies.html["Topologies FlexPod Datacenter"^] relative aux exigences de connectivité spécifiques à chaque topologie.

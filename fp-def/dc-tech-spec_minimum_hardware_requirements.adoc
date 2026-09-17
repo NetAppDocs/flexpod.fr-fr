@@ -25,12 +25,12 @@ Une configuration FlexPod présente la configuration matérielle minimale suivan
 NOTE: Si vous déployez une architecture ACI, vous devez respecter les exigences supplémentaires suivantes : * Déployez les commutateurs Cisco Nexus 9000 Series selon une topologie leaf-spine. * Utilisez trois Cisco Application Policy Infrastructure Controllers (APIC).
 
 * Deux interconnexions de structure Cisco UCS 6400, 6500 ou 6600 Series dans une configuration redondante, si vous utilisez les serveurs rack UCS C-Series ou les systèmes modulaires X-Series.
-* Deux serveurs rack Cisco UCS série C avec connectivité FI et configuration gérée par Intersight (IMM), ou le Cisco UCS X-Series Direct avec Cisco IMM, ou le Cisco UCS X-Series Modular avec configuration gérée par Cisco Intersight (IMM).
+* Deux serveurs rack Cisco UCS C-Series avec connectivité FI et configuration Intersight Managed Mode (IMM), ou le Cisco UCS X-Series Direct avec Cisco IMM, ou le Cisco UCS X-Series Modular avec Cisco IMM.
 
 
 
-NOTE: Si vous utilisez les serveurs rack UCS sans connectivité FI, vous pouvez utiliser CIMC ou le mode autonome Intersight pour la gestion.
+NOTE: Si vous utilisez les serveurs rack UCS sans connectivité FI, vous pouvez utiliser CIMC ou le mode autonome Intersight pour la gestion (ISM).
 
-* Deux contrôleurs NetApp AFF, NetApp ASA ou NetApp FAS configurés en paire haute disponibilité (HA) et déployés en cluster à deux nœuds. Si vous utilisez NetApp AFX, un minimum de quatre contrôleurs NetApp AFX est requis et doit être déployé en cluster HA à quatre nœuds, accompagné d'une paire de commutateurs d'interconnexion de cluster.
+* Deux contrôleurs NetApp AFF, NetApp ASA ou NetApp FAS dans une configuration de paire haute disponibilité (HA) déployée en cluster à deux nœuds. Si vous utilisez NetApp AFX, un minimum de quatre contrôleurs NetApp AFX est requis et ils doivent être déployés en cluster à quatre nœuds avec 2 paires HA ainsi qu'une paire de commutateurs d’interconnexion de cluster.
 * Un minimum d’un tiroir disque NetApp est requis pour les contrôleurs de stockage qui ne possèdent pas de tiroir disque intégré.
 
