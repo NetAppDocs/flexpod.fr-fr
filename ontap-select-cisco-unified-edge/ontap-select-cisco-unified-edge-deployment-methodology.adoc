@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-deployment-methodology.html 
+keywords: ontap select, cisco unified edge, deployment, methodology, flexpod 
+summary: 'Décrit les étapes générales pour l"octroi de licences, le dimensionnement, la configuration du stockage local et le déploiement de ONTAP Select sur Cisco Unified Edge.' 
+---
+= Méthodologie de déploiement de haut niveau
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cette section décrit les étapes générales relatives à l'octroi de licences, au dimensionnement, à la configuration du stockage local et au déploiement ONTAP Select sur Cisco Unified Edge.
+
+
+
+[[1-ontap-select-licensing]]
+== 1. Licence ONTAP Select
+
+Une licence Premium XL est requise pour l'utilisation de disques NVMe. Les clients peuvent choisir entre une licence de pool de capacité flexible qui partage la capacité entre plusieurs sites et une licence perpétuelle liée à un nœud spécifique. Consultez link:https://docs.netapp.com/us-en/ontap-select/concept_lic_workflow.html["Processus d'achat de licences pour ONTAP Select"] pour plus d'informations.
+
+
+
+[[2-obtain-ontap-select-deploy-software]]
+== 2. Obtenez le logiciel ONTAP Select Deploy
+
+ONTAP Select Deploy est l'utilitaire d'administration utilisé pour déployer et gérer les clusters ONTAP Select. Deploy est fourni sous forme de machine virtuelle Linux que vous devez installer avant de créer un cluster ONTAP Select. Il peut être installé depuis link:https://stackautomation.cisco.com/["Automatisation de la pile Cisco"] ou téléchargé au format .ova depuis le link:https://mysupport.netapp.com/site/["Site de support NetApp"].
+
+
+
+[[3-choose-ontap-select-virtual-machine-size]]
+== 3. Choisissez la taille de la machine virtuelle ONTAP Select
+
+ONTAP Select avec licence Premium XL peut être déployé avec des instances de machines virtuelles de petite, moyenne ou grande taille afin de répondre aux exigences de performances de stockage. Les nœuds de calcul XE130c ou XE150c à 12 cœurs peuvent prendre en charge les instances de petite ou moyenne taille, tandis que des nœuds à 20 ou 32 cœurs sont requis pour les instances de grande taille. Reportez-vous à link:https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_hardware.html#basic-hardware-requirements["Considérations relatives à l'hyperviseur VMware et au matériel pour ONTAP Select"] pour plus de détails sur les exigences de dimensionnement des instances.
+
+
+
+[[4-prepare-local-storage]]
+== 4. Préparer le stockage local
+
+La fonction VMDirectPath I/O Pass-through est utilisée sur les disques NVMe pour optimiser leurs performances. Ce paramètre expose les disques à la machine virtuelle, permettant à ONTAP d'avoir un accès PCI direct au périphérique. Consultez link:https://docs.netapp.com/us-en/ontap-select/task_chk_nvme_configure.html["Configurer un hôte ONTAP Select pour utiliser des disques NVMe"] pour plus d'informations sur l'activation du pass-through NVMe.
+
+L'un des quatre disques NVMe est utilisé comme disque système contenant le disque de démarrage de la machine virtuelle, le noyau et la NVRAM. Les trois autres disques sont configurés comme disques de données avec un RAID 4 logiciel afin d'assurer une protection par parité contre les pannes de disques individuels. Chaque disque de données est divisé en trois partitions : une petite partition racine et deux partitions de taille égale pour créer deux disques de données visibles dans la machine virtuelle ONTAP Select. Reportez-vous à link:https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html#ontap-select-virtual-and-physical-disks["Services de configuration RAID du logiciel ONTAP Select pour le stockage local connecté"] pour plus de détails.
+
+Le disque système peut avoir une capacité de stockage inférieure à celle des trois disques de données afin de réduire les coûts de stockage globaux de la solution. Un disque haute performance et haute endurance de 1,6 To (UCSXE-NVE11T6K1P) est suffisant.
+
+
+
+[[5-deploy-the-ontap-select-instance]]
+== 5. Déployez l'instance ONTAP Select
+
+ONTAP Select est déployé en tant que machine virtuelle à l'aide de l'outil ONTAP Select Deploy et de l'environnement d'hyperviseur pris en charge. Lors du déploiement, l'administrateur définit le nœud, les interfaces de gestion, les interfaces de données, la capacité et l'affectation des disques locaux. Une fois ONTAP Select en fonctionnement, les administrateurs doivent créer des volumes ou des LUN pour les applications locales et appliquer les stratégies, partages, groupes d'initiateurs ou contrôles d'accès appropriés.
