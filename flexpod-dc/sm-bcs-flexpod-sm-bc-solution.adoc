@@ -174,7 +174,7 @@ image:sm-bcs-image11.png["Un schéma qui montre les contrôleurs NetApp AFF et A
 | Gamme AFF | link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["Documentation sur la gamme AFF"^] 
 
 
-| Gamme ASA | link:https://docs.netapp.com/allsan/index.jsp["Documentation sur la gamme ASA"^] 
+| Systèmes ASA r2 | link:https://docs.netapp.com/us-en/ontap-systems/asa-r2/index.html["Documentation des systèmes ASA r2"^] 
 |===
 Consulter le https://www.netapp.com/data-storage/disk-shelves-storage-media/["Documentation relative aux tiroirs disques et aux supports de stockage NetApp"^] et https://hwu.netapp.com/["NetApp Hardware Universe"^] pour en savoir plus sur les tiroirs disques et les tiroirs disques pris en charge pour chaque modèle de contrôleur de stockage.
 
