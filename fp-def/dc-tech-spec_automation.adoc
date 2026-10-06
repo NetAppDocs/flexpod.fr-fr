@@ -10,7 +10,7 @@ summary: 'Le déploiement automatisé pour FlexPod Datacenter est disponible via
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

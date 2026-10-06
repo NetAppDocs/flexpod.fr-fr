@@ -10,7 +10,7 @@ summary: Les informations suivantes décrivent les recommandations de version lo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

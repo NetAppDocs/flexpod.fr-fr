@@ -279,7 +279,6 @@
   <block id="d3d9446802a44259755d38e6d163e820" category="cell">10</block>
   <block id="254f642527b45bc260048e30704edb39" category="cell">Configuration</block>
   <block id="1945ffc106a2a99fdaa0b14de9d5fcd2" category="cell">70 TO</block>
-  <block id="767945ca8f676ff25ce389fce1df6c41" category="summary">Cisco apporte une contribution substantielle à la conception et à l'architecture d'FlexPod Express. Il apporte les couches de calcul et de mise en réseau de la solution.</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">Cisco apporte une contribution substantielle à la conception et à l'architecture d'FlexPod Express. Il apporte les couches de calcul et de mise en réseau de la solution. Cette section décrit les composants Cisco UCS et Cisco Nexus disponibles pour FlexPod Express.</block>
   <block id="83842e9d3448fa9b32e931956ae716a9" category="section-title">Options de licence du support Cisco</block>
   <block id="107b85601e13443e848d96d910bee735" category="summary">Cette page propose une introduction à l'utilisation de FlexPod avec SAP HANA et d'autres applications SAP.</block>
@@ -8564,4 +8563,6 @@
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link-macro">Documentation des systèmes ASA r2</block>
   <block id="5a043bdfd29a9c2a632078901fc0d525" category="cell"><block ref="5a043bdfd29a9c2a632078901fc0d525" category="inline-link-macro-rx"></block></block>
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">Les centres hospitalo-universitaires et autres organisations du domaine de la santé et des sciences de la vie sont en bonne voie d’établir des centres d’excellence (COE) en génomique. Selon Dr. Charlie Gersbach, Dr. Greg Crawford et Dr. Tim E Reddy de Duke University, « Nous savons que les gènes ne sont pas activés ou désactivés par un simple interrupteur binaire, mais que cela résulte plutôt de multiples commutateurs de régulation génique qui fonctionnent ensemble.  » Ils ont également déterminé qu’« aucune de ces parties du génome ne fonctionne de manière isolée. Le génome est un réseau très complexe tissé par l’évolution » (<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>).</block>
+  <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">Aperçu des procédures de déploiement</block>
+  <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Cisco fournit les couches de calcul et de réseau de la conception et de l’architecture FlexPod Express, notamment les serveurs UCS et les commutateurs Nexus.</block>
 </blocks>
