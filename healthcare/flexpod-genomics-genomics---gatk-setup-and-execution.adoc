@@ -158,7 +158,7 @@ Nous avons téléchargé les fichiers BAM et les fichiers d'index, de dictionnai
 
 Cromwell est un moteur open-source axé sur les flux de travail scientifiques qui permet la gestion des flux de travail. Le moteur Cromwell peut fonctionner en deux https://cromwell.readthedocs.io/en/stable/Modes/["modes"^], Mode serveur ou mode d'exécution d'un seul flux de travail. Le comportement du moteur Cromwell peut être contrôlé à l'aide du https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["Fichier de configuration du moteur Cromwell"^].
 
-* *Le mode serveur.* active https://cromwell.readthedocs.io/en/stable/api/RESTAPI/["RESTful"^] Exécution de flux de travail dans le moteur Cromwell.
+* *Mode serveur.* Permet https://cromwell.readthedocs.io/en/stable/Modes/["RESTful"^] l'exécution de flux de travail dans le moteur Cromwell.
 * *Mode d'exécution.* le mode d'exécution est le mieux adapté à l'exécution de flux de travail uniques dans Cromwell, https://cromwell.readthedocs.io/en/stable/CommandLine/["réf"^] Pour obtenir un ensemble complet d'options disponibles en mode Run.
 
 
