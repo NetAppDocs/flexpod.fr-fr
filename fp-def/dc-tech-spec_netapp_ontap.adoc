@@ -16,4 +16,63 @@ summary: NetApp ONTAP est installé sur chaque système NetApp AFF, ASA, FAS et 
 [role="lead"]
 Le logiciel NetApp ONTAP est le système d'exploitation qui fonctionne sur les systèmes de stockage AFF, ASA, FAS et AFX. ONTAP offre une architecture de stockage hautement évolutive qui permet des opérations sans interruption, des mises à niveau sans interruption et une infrastructure de données agile. Avec le modèle de licence ONTAP One, tous les services de données d'entreprise sont inclus dans un seul package, simplifiant le déploiement et la gestion tout en offrant un accès complet aux fonctionnalités avancées. ONTAP assure une protection robuste des données grâce à des technologies telles que SnapMirror pour la réplication et la reprise après sinistre, ainsi que SnapCenter pour la sauvegarde et la restauration cohérentes au niveau des applications. Il intègre également des fonctionnalités de sécurité intégrées, notamment la protection autonome contre les ransomwares et le chiffrement, afin de protéger les données contre les menaces modernes. De plus, ONTAP permet une intégration transparente au cloud hybride grâce à des fonctionnalités telles que SnapMirror Cloud et la réplication basée sur S3, permettant la mobilité des données entre les environnements sur site et cloud tout en préservant la cohérence et le contrôle.
 
-Pour plus d'informations sur ONTAP, consultez la page produit  https://www.netapp.com/ontap-data-management-software/["Logiciel de gestion des données ONTAP"^].
+Pour plus d'informations sur ONTAP, consultez le https://docs.netapp.com/us-en/ontap-family/["Documentation produit ONTAP"^].
+
+
+
+[[recommended-ontap-featuresconfigurations]]
+== Fonctionnalités/configurations ONTAP recommandées
+
+FlexPod atteint les performances optimales, la redondance de niveau entreprise et la haute disponibilité décrites dans nos architectures vérifiées en utilisant les fonctionnalités/configurations suivantes :
+
+
+
+[[multipathing-and-logical-interfaces]]
+=== Chemins d'accès multiples et interfaces logiques
+
+L'architecture FlexPod est conçue pour assurer une haute disponibilité si un composant ou une liaison échoue dans l'ensemble de la pile de calcul, de réseau et de stockage. Plusieurs chemins réseau pour l'accès client et au stockage permettent l'équilibrage de la charge et l'utilisation optimale des ressources.
+
+Les E/S multivoies dans ONTAP sont réalisées à l'aide d'interfaces logiques. Une LIF (interface logique) est une adresse IP ou un WWPN associé à des caractéristiques telles qu'un rôle, un port d'attache, un nœud d'attache, une liste de ports vers lesquels basculer et une règle de pare-feu.
+
+Le tableau suivant répertorie le nombre minimal d'interfaces logiques à créer pour chaque protocole par nœud dans une paire haute disponibilité.
+
+|===
+| Protocole de stockage | Nombre d'interfaces logiques par nœud dans une paire haute disponibilité | Nombre d'interfaces logiques par paire haute disponibilité 
+
+
+| NFS / CIFS / S3 | 1 | 2 
+
+
+| iSCSI / NVMe sur TCP | 2 | 4 
+
+
+| FC / NVMe sur FC | 2 | 4 
+|===
+
+
+[[ontap-snapshot-snapmirror-and-snapcenter]]
+=== Snapshot ONTAP, SnapMirror et SnapCenter
+
+Un instantané est une image en lecture seule d'un volume à un instant précis. Après sa création, le système de fichier actif et l'instantané pointent vers les mêmes blocs de disque ; par conséquent, l'instantané n'utilise pas d'espace disque. Au fil du temps, l'image consomme un minimum d'espace de stockage et n'entraîne qu'une surcharge de performances négligeable, car elle n'enregistre que les modifications apportées aux fichiers depuis la dernière création de l'instantané. Vous pouvez utiliser un instantané pour récupérer des fichiers ou des LUN individuels, ou pour restaurer l'intégralité du contenu d'un volume. ONTAP compare les informations de pointage de l'instantané avec les données sur disque afin de reconstruire l'objet manquant ou endommagé, sans interruption ni impact significatif sur les performances.
+
+SnapMirror est une technologie de reprise après sinistre, conçue pour assurer le basculement du stockage principal vers un stockage secondaire sur un site géographiquement distant. Comme son nom l'indique, SnapMirror crée une réplique, ou miroir, de vos données de travail dans le stockage secondaire à partir duquel vous pouvez continuer à fournir des données en cas de catastrophe sur le site principal.
+
+Le logiciel SnapCenter est une plateforme simple, centralisée et évolutive qui assure une protection des données cohérent au niveau des applications pour les applications, les bases de données, les systèmes de fichiers hôtes et les machines virtuelles exécutés sur des systèmes ONTAP, où qu'ils se trouvent dans le cloud hybride.
+
+Nous recommandons aux clients d'intégrer la protection des données dans leur architecture FlexPod en utilisant des technologies telles que SnapMirror pour la réplication et la reprise après sinistre, ainsi que SnapCenter pour la sauvegarde et la restauration cohérentes au niveau des applications.
+
+
+
+[[secure-multi-tenancy]]
+=== Multitenancy sécurisée
+
+La mutualisation sécurisée consiste à utiliser des partitions virtuelles sécurisées au sein d'un environnement de stockage physique partagé afin de partager l'environnement physique entre plusieurs locataires distincts. Par exemple, un fournisseur de services de stockage peut configurer une baie de stockage de telle sorte que chacun de trois clients différents se voie attribuer une certaine partie de la capacité disque et des ressources réseau de la baie. Dans un environnement mutualisé sécurisé, chaque client n'a accès qu'aux ressources qui lui sont explicitement attribuées. Le client n'a pas accès aux données des autres clients et n'a même pas connaissance de l'existence des autres clients ni du fait qu'ils partagent une baie physique commune. Les environnements mutualisés sécurisés doivent également fournir un moyen de s'assurer qu'aucun locataire ne consomme une part si importante de la capacité de performance partagée que cela affecte les autres locataires.
+
+La mutualisation dans ONTAP s'effectue via des machines virtuelles de stockage (SVM) et des IP Spaces.
+
+À l'instar d'une machine virtuelle exécutée sur un hyperviseur, une SVM est une entité logique qui fait abstraction des ressources physiques. Une SVM fournit des données aux clients et aux hôtes à partir d'un ou plusieurs volumes, via une ou plusieurs interfaces logiques réseau (LIF).
+
+Les espaces IP permettent de configurer un seul cluster ONTAP afin qu'il soit accessible par des clients provenant de plusieurs domaines réseau administrativement distincts, même si ces clients utilisent la même plage de sous-réseaux d'adresses IP. Cela permet de séparer le trafic client pour garantir la confidentialité et la sécurité.
+
+
+NOTE: Pour connaître les meilleures pratiques de FlexPod concernant la configuration ONTAP, consultez le https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vvf_9_fc_boot_manual_deploy.html#NetAppONTAPStorageConfiguration["FlexPod CVD : NetApp ONTAP Configuration du stockage"^].
